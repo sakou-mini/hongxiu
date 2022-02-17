@@ -1,0 +1,137 @@
+syntax = "proto3";
+option java_multiple_files = false;
+option java_package = "com.donglai.protocol";
+option java_outer_classname = "HongXiu";
+import "Account.proto";
+import "Live.proto";
+import "Constant.proto";
+import "Common.proto";
+
+/*服务器主题*/
+enum TopicEnum {
+  GATE = 0;
+  ACCOUNT = 1;
+  LIVE = 2;
+  QUEUE = 3;
+}
+/*
+	协议名字规则 ({服务器主题}of{协议名})
+*/
+
+//TOPIC +Of+ messageName
+message HongXiuMessageRequest{
+  PlatformType platform = 10000;
+  oneof request {
+    //Heart Connected
+    GateOfHeartConnectedRequest gateOfHeartConnectedRequest = 999;
+
+    //Queue Server（used for server）
+    QueueOfAddQueueRequest queueOfAddQueueRequest = 1000; //队列服 新建队列通知
+    LiveOfQueueFinishRequest liveOfQueueFinishRequest = 1001; //直播服 队列完成通知
+    AccountOfQueueFinishRequest accountOfQueueFinishRequest = 1003; //账号服 队列完成通知
+    StatisticsOfQueueFinishRequest statisticsOfQueueFinishRequest = 1004; //统计服 队列完成
+
+    LiveOfModifyUserCoinListenerRequest liveOfModifyUserCoinListenerRequest = 1010;//修改玩家金币
+    LiveOfUserDisconnectionRequest liveOfUserDisconnectionRequest = 1011; //通知直播服玩家掉线（自动关播）
+    LiveOfUserConnectionRequest liveOfUserConnectionRequest = 1012;       //通知直播服玩家重连（恢复直播）
+
+    //注册
+    AccountOfRegisterRequest accountOfRegisterRequest = 13; //游客注册
+    //登录
+    AccountOfLoginRequest accountOfLoginRequest = 16;
+    AccountOfLogoutRequest accountOfLogoutRequest = 17;
+
+    AccountOfUpdatePasswordRequest accountOfUpdatePasswordRequest = 18;
+    AccountOfUpdateUserAvatarRequest accountOfUpdateUserAvatarRequest = 19;
+    AccountOfUpdateNicknameRequest accountOfUpdateNicknameRequest = 20;
+    AccountOfUpdateGenderRequest accountOfUpdateGenderRequest = 21;
+    AccountOfUpdateBirthDayRequest accountOfUpdateBirthDayRequest = 22;
+    AccountOfUpdateSignatureTextRequest accountOfUpdateSignatureTextRequest = 23;
+
+    AccountOfQueryUserInfosRequest accountOfQueryUserInfosRequest = 40;
+
+    LiveOfApplyLiveUserRequest liveOfApplyLiveUserRequest = 202;
+    LiveOfGetLiveRoomListRequest liveOfGetLiveRoomListRequest = 203;
+    LiveOfQueryRoomInfoRequest liveOfQueryRoomInfoRequest = 204;
+    LiveOfQueryLiveUserInfosRequest liveOfQueryLiveUserInfosRequest = 205;
+    LiveOfUpdateRoomImageRequest liveOfUpdateRoomImageRequest = 206;
+
+    //LiveModule
+    LiveOfStartLiveRequest liveOfStartLiveRequest = 220;
+    LiveOfEnterLiveRoomRequest liveOfEnterLiveRoomRequest = 221;
+    LiveOfSendBulletMessageRequest liveOfSendBulletMessageRequest = 222;
+    LiveOfAutoQuitRoomRequest liveOfAutoQuitRoomRequest = 223;  //this message only used fo server (close oldRoom record)
+    LiveOfQuitRoomRequest liveOfQuitRoomRequest = 224;
+    LiveOfEndLiveRequest liveOfEndLiveRequest = 225;
+    LiveOfSendGiftRequest liveOfSendGiftRequest = 226;
+    LiveOfSwitchLiveSourceLineRequest liveOfSwitchLiveSourceLineRequest = 227;
+    LiveOfQueryRoomAudienceInfoRequest liveOfQueryRoomAudienceInfoRequest = 228;
+    LiveOfSetRoomPlayingMusicInfoRequest liveOfSetRoomPlayingMusicInfoRequest = 229;
+    LiveOfSwitchLivePatternRequest liveOfSwitchLivePatternRequest = 230;
+
+    //rank
+    LiveOfQueryGiftIncomeRankRequest liveOfQueryGiftIncomeRankRequest = 248;
+    LiveOfQueryContributionRankRequest liveOfQueryContributionRankRequest = 249;
+    LiveOfQueryFansContributionRankRequest liveOfQueryFansContributionRankRequest = 250;
+
+  }
+}
+
+
+message HongXiuMessageReply {
+  ResultCode resultCode = 1;
+  oneof reply {
+    GateOfErrorReply gateOfErrorReply = 10000;
+
+    //Account module
+    //注册
+    AccountOfRepeatedLoginBroadcastMessage accountOfRepeatedLoginBroadcastMessage = 9;
+    AccountOfRegisterReply accountOfRegisterReply = 12;
+    AccountOfLoginReply accountOfLoginReply = 15;
+    AccountOfLogoutReply accountOfLogoutReply = 16;
+    AccountOfUpdatePasswordReply accountOfUpdatePasswordReply = 17;
+    AccountOfUpdateUserAvatarReply accountOfUpdateUserAvatarReply = 18;
+    AccountOfUpdateNicknameReply accountOfUpdateNicknameReply = 19;
+    AccountOfUpdateGenderReply accountOfUpdateGenderReply = 20;
+    AccountOfUpdateBirthDayReply accountOfUpdateBirthDayReply = 21;
+    AccountOfUpdateSignatureTextReply accountOfUpdateSignatureTextReply = 22;
+    AccountOfQueryUserInfosReply accountOfQueryUserInfosReply = 40;
+
+    LiveOfApplyLiveUserReply liveOfApplyLiveUserReply = 202;
+    LiveOfApplyLiveUserResultBroadcastMessage liveOfApplyLiveUserResultBroadcastMessage = 203;
+    LiveOfGetLiveRoomListReply liveOfGetLiveRoomListReply = 204;
+    LiveOfQueryRoomInfoReply  liveOfQueryRoomInfoReply = 205;
+    LiveOfQueryLiveUserInfosReply liveOfQueryLiveUserInfosReply = 206;
+
+    LiveOfUpdateRoomImageReply liveOfUpdateRoomImageReply = 207;
+    //恢复直播间的广播
+    LiveOfRecoverLiveRoomBroadcastMessage liveOfRecoverLiveRoomBroadcastMessage = 210;
+
+    //LiveModule
+    LiveOfStartLiveReply liveOfStartLiveReply = 220;
+    LiveOfEnterLiveRoomReply liveOfEnterLiveRoomReply = 221;
+    LiveOfEnterRoomBroadcastMessage liveOfEnterRoomBroadcastMessage = 222;
+    LiveOfSendBulletMessageReply liveOfSendBulletMessageReply = 223;
+    LiveOfBulletMessageBroadcastMessage liveOfBulletMessageBroadcastMessage = 224;
+    LiveOfQuitRoomReply liveOfQuitRoomReply = 225;
+    LiveOfQuitRoomBroadcastMessage liveOfQuitRoomBroadcastMessage = 226;
+    LiveOfEndLiveReply liveOfEndLiveReply = 227;
+    LiveOfEndLiveReadyBroadcastMessage liveOfEndLiveReadyBroadcastMessage = 228;
+    LiveOfEndLiveBroadcastMessage liveOfEndLiveBroadcastMessage = 229;
+    LiveOfSendGiftReply liveOfSendGiftReply = 230;
+    LiveOfSendGiftBroadcastMessage liveOfSendGiftBroadcastMessage = 231;
+    LiveOfSwitchLiveSourceLineReply liveOfSwitchLiveSourceLineReply = 232;
+    LiveOfSwitchLiveSourceLineBroadcastMessage liveOfSwitchLiveSourceLineBroadcastMessage = 233;
+    LiveOfQueryRoomAudienceInfoReply liveOfQueryRoomAudienceInfoReply = 234;
+    LiveOfSetRoomPlayingMusicInfoReply liveOfSetRoomPlayingMusicInfoReply = 235;
+    LiveOfRoomPlayingMusicChangeBroadcastMessage liveOfRoomPlayingMusicChangeBroadcastMessage = 236;
+    LiveOfSwitchLivePatternReply liveOfSwitchLivePatternReply = 237;
+    LiveOfSwitchLivePatternBroadcastMessage liveOfSwitchLivePatternBroadcastMessage = 238;
+
+    //rank
+    LiveOfQueryGiftIncomeRankReply liveOfQueryGiftIncomeRankReply = 255;
+    LiveOfQueryContributionRankReply liveOfQueryContributionRankReply = 256;
+    LiveOfQueryFansContributionRankReply liveOfQueryFansContributionRankReply = 257;
+  }
+}
+

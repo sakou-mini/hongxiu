@@ -1,0 +1,5 @@
+FROM adoptopenjdk/openjdk11
+MAINTAINER xiaotian "xiaotian@gmail.com"
+COPY ./live_server/web_duocai_module/package/web_duocai_module/ webDuocaiModule
+WORKDIR /usr/src/app
+ENTRYPOINT ["java","-jar","/webDuocaiModule/web_duocai_module-0.0.1-SNAPSHOT.jar"]

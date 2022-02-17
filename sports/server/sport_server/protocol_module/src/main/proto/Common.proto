@@ -1,0 +1,65 @@
+syntax = "proto3";
+option java_multiple_files = false;
+option java_package = "com.donglai.protocol";
+option java_outer_classname = "Common";
+import "Constant.proto";
+
+/*
+	协议名字规则 (服务器类别of协议名)
+*/
+message QueueOfAddQueueRequest{
+  string queueId = 1;
+}
+
+message LiveOfQueueFinishRequest{
+  string queueId = 1;
+}
+
+message StatisticsOfQueueFinishRequest{
+  string queueId = 1;
+}
+
+message GateOfHeartConnectedRequest{
+
+}
+message GateOfErrorReply{
+
+}
+
+message UserInfo {
+  string userId = 1;
+  string accountId = 2;
+  sint32 level = 3;
+  string avatarUrl = 4;
+  string nickname = 5;
+  int64 coin = 6;
+  UserType userType = 7;
+  string phoneNumber = 8;
+  bool isTourist = 9;
+  VipType vipLevel = 10;
+  string signatureText = 11;
+  string backgroundImage = 12;
+  GenderType gender = 13;
+  string region = 14;
+  int64 birthday = 15;
+  bool isLive = 18;
+  string school = 19;
+  string hometown = 20;
+  PlatformType platform = 21;
+  bool firstLogin = 22;
+}
+
+message PersonalSetting {
+  PermissionVisibleType commentPermission = 1;
+  PermissionVisibleType privateChatPermission = 2;
+  bool showFansAndLeaderList = 3;
+  bool showMyBlogsPraise = 4;
+}
+
+message Banner{
+  uint64 bannerId = 1;
+  string title = 2;
+  string bannerUrl = 3;
+  string jumpType = 4;
+  string jumpUrl = 5;
+}

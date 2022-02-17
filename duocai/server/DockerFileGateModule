@@ -1,0 +1,5 @@
+FROM adoptopenjdk/openjdk11
+MAINTAINER xiaotian "xiaotian@gmail.com"
+COPY ./live_server/gate_module/package/gate_module/ gateModule
+WORKDIR /usr/src/app
+ENTRYPOINT ["java","-Xmx512M","-Xms512M","-jar","/gateModule/gate_module-0.0.1-SNAPSHOT.jar"]

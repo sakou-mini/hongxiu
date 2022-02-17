@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="common_module" />
+        <module name="client_test" />
+        <module name="account_module" />
+        <module name="protocol_module" />
+        <module name="web_module" />
+        <module name="model_module" />
+        <module name="live_module" />
+        <module name="queue_module" />
+        <module name="netty_module" />
+        <module name="gate_module" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="account_module" target="11" />
+      <module name="client_test" target="11" />
+      <module name="common_module" target="11" />
+      <module name="gate_module" target="11" />
+      <module name="live_module" target="11" />
+      <module name="model_module" target="11" />
+      <module name="netty_module" target="11" />
+      <module name="protocol_module" target="11" />
+      <module name="queue_module" target="11" />
+      <module name="sport_server" target="11" />
+      <module name="web_module" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="account_module" options="-parameters" />
+      <module name="client_test" options="-parameters" />
+      <module name="common_module" options="-parameters" />
+      <module name="gate_module" options="-parameters" />
+      <module name="live_module" options="-parameters" />
+      <module name="model_module" options="-parameters" />
+      <module name="netty_module" options="-parameters" />
+      <module name="protocol_module" options="-parameters" />
+      <module name="queue_module" options="-parameters" />
+      <module name="web_module" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cc5ad1ad-919b-4bd6-be48-d731a95a0088" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:\Application\Maven\apache-maven-3.5.4" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="23KAky86IAGrK1vtlk4MaiO7RLs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="2" id="Remove" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web_module/src/main/java/com/donglai/web/web/dto/request" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.donglai.gate.util" />
+      <recent name="com.donglai.common.util" />
+      <recent name="com.donglai.live.message.services.queue.handler" />
+      <recent name="com.donglai.web.web.controller.system" />
+      <recent name="com.donglai.web.constant" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\CompanyProgram\sports\server\sport_server\web_module\src\main\java\com\donglai\web\web\dto\request" />
+      <recent name="E:\CompanyProgram\sports\server\sport_server\web_module\src\main\java\com\donglai\web\service\impl" />
+      <recent name="E:\CompanyProgram\sports\server\sport_server\web_module\src\main\java\com\donglai\web\service" />
+      <recent name="E:\CompanyProgram\sports\server\sport_server\web_module\src\main\java\com\donglai\web\web\dto\reply" />
+      <recent name="E:\CompanyProgram\sports\server\sport_server\web_module\src\main\java\com\donglai\web\process" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Queue">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HttpUtilTest.getTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="live_module" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.donglai.live.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.donglai.live.util" />
+      <option name="MAIN_CLASS_NAME" value="com.donglai.live.util.HttpUtilTest" />
+      <option name="METHOD_NAME" value="getTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HttpUtilTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="live_module" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.donglai.live.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.donglai.live.util" />
+      <option name="MAIN_CLASS_NAME" value="com.donglai.live.util.HttpUtilTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LiveStreamUtilTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="live_module" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.donglai.live.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.donglai.live.util" />
+      <option name="MAIN_CLASS_NAME" value="com.donglai.live.util.LiveStreamUtilTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Account" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="account_module" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.donglai.account.app.AccountApp" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_WORKING_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Gate" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
+      <module name="gate_module" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.donglai.gate.app.GateApp" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_WORKING_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Live" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="live_module" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.donglai.live.app.LiveLogicApp" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_WORKING_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Queue" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="queue_module" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.donglai.queue.app.QueueApp" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_WORKING_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="web_module" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.donglai.web.app.WebApp" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_WORKING_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.HttpUtilTest.getTest" />
+      <item itemvalue="JUnit.HttpUtilTest.test" />
+      <item itemvalue="JUnit.LiveStreamUtilTest.test" />
+      <item itemvalue="Spring Boot.Account" />
+      <item itemvalue="Spring Boot.Gate" />
+      <item itemvalue="Spring Boot.Live" />
+      <item itemvalue="Spring Boot.Queue" />
+      <item itemvalue="Spring Boot.WebApp" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.LiveStreamUtilTest.test" />
+        <item itemvalue="Spring Boot.WebApp" />
+        <item itemvalue="JUnit.HttpUtilTest.getTest" />
+        <item itemvalue="JUnit.HttpUtilTest.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\yty\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="E:\CompanyProgram\sports\server\sport_server" />
+          <option name="myCopyRoot" value="E:\CompanyProgram\sports\server\sport_server" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="E:\CompanyProgram\sports\server\sport_server" />
+          <option name="myCopyRoot" value="E:\CompanyProgram\sports\server\sport_server" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cc5ad1ad-919b-4bd6-be48-d731a95a0088" name="Default Changelist" comment="" />
+      <created>1641472566067</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1641472566067</updated>
+      <workItem from="1641472567971" duration="14000" />
+      <workItem from="1641472598120" duration="1136000" />
+      <workItem from="1641473796006" duration="16688000" />
+      <workItem from="1641553024427" duration="43582000" />
+      <workItem from="1641972807290" duration="5984000" />
+      <workItem from="1642138578688" duration="1857000" />
+      <workItem from="1642484172104" duration="2332000" />
+      <workItem from="1642590526539" duration="10863000" />
+      <workItem from="1642650189900" duration="12461000" />
+      <workItem from="1642669726902" duration="4804000" />
+      <workItem from="1642752409657" duration="9869000" />
+      <workItem from="1642840311152" duration="2682000" />
+      <workItem from="1643357446545" duration="968000" />
+      <workItem from="1643367070939" duration="284000" />
+      <workItem from="1644303267746" duration="32000" />
+      <workItem from="1644372327403" duration="4347000" />
+      <workItem from="1644388966548" duration="53000" />
+      <workItem from="1644394627082" duration="212000" />
+      <workItem from="1644808512748" duration="49221000" />
+    </task>
+    <task id="LOCAL-00001" summary="修改了体育赛事、api接口">
+      <created>1641808624543</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1641808624543</updated>
+    </task>
+    <task id="LOCAL-00002" summary="修改了体育赛事、api接口">
+      <created>1641812525449</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1641812525449</updated>
+    </task>
+    <task id="LOCAL-00003" summary="开播时添加体育赛事id，可以选择赛事进行开播">
+      <created>1641868789172</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1641868789172</updated>
+    </task>
+    <task id="LOCAL-00004" summary="添加查询主播赛事列表消息">
+      <created>1641871592085</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1641871592085</updated>
+    </task>
+    <task id="LOCAL-00005" summary="修改了体育默认资源">
+      <created>1641885178331</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1641885178331</updated>
+    </task>
+    <task id="LOCAL-00006" summary="体育网关日志修改">
+      <created>1641895024301</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1641895024301</updated>
+    </task>
+    <task id="LOCAL-00007" summary="修改了配置文件">
+      <created>1641896477946</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1641896477947</updated>
+    </task>
+    <task id="LOCAL-00008" summary="修改了配置文件">
+      <created>1641953816908</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1641953816908</updated>
+    </task>
+    <task id="LOCAL-00009" summary="修改随机 闭区间可能造成的问题">
+      <created>1641980145113</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1641980145113</updated>
+    </task>
+    <task id="LOCAL-00010" summary="修改了mongodb的连接端口 为27018">
+      <created>1642066105954</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1642066105954</updated>
+    </task>
+    <task id="LOCAL-00011" summary="user to proto 统一方法">
+      <created>1642066917111</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1642066917111</updated>
+    </task>
+    <task id="LOCAL-00012" summary="修改了默认path">
+      <created>1642487127657</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1642487127657</updated>
+    </task>
+    <task id="LOCAL-00013" summary="完成赛事直播的后台接口">
+      <created>1642668619849</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1642668619849</updated>
+    </task>
+    <task id="LOCAL-00014" summary="解决后端错误导致 跨域的问题">
+      <created>1642674391881</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1642674391881</updated>
+    </task>
+    <task id="LOCAL-00015" summary="修改了 测试环境mongodb的连接端口">
+      <created>1642760006665</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1642760006665</updated>
+    </task>
+    <task id="LOCAL-00016" summary="修改了 测试环境mongodb的连接端口">
+      <created>1642760038985</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1642760038985</updated>
+    </task>
+    <task id="LOCAL-00017" summary="完成了直播记录的修改">
+      <created>1642829552434</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1642829552434</updated>
+    </task>
+    <task id="LOCAL-00018" summary="修改了赛事缓存更新">
+      <created>1642840517552</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1642840517552</updated>
+    </task>
+    <task id="LOCAL-00019" summary="网速的直播线路 sjzooo.com 拉流不可用，调整了顺序">
+      <created>1644374500921</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1644374500921</updated>
+    </task>
+    <task id="LOCAL-00020" summary="网速的直播线路 sjzooo.com 拉流不可用，调整了顺序">
+      <created>1644376813626</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1644376813626</updated>
+    </task>
+    <task id="LOCAL-00021" summary="添加了日志打印">
+      <created>1644377454625</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1644377454625</updated>
+    </task>
+    <task id="LOCAL-00022" summary="添加了日志打印">
+      <created>1644377852283</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1644377852283</updated>
+    </task>
+    <task id="LOCAL-00023" summary="自增主键支持int">
+      <created>1644389017872</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1644389017872</updated>
+    </task>
+    <task id="LOCAL-00024" summary="登录校验用户状态，添加重复登陆广播通知">
+      <created>1644892576192</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1644892576192</updated>
+    </task>
+    <task id="LOCAL-00025" summary="完成了体育赛事后台">
+      <created>1644892697322</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1644892697322</updated>
+    </task>
+    <task id="LOCAL-00026" summary="更新了 svn 忽略路径">
+      <created>1644892804879</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1644892804879</updated>
+    </task>
+    <task id="LOCAL-00027" summary="删除无用控制器，修改了权限配置">
+      <created>1644894701701</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1644894701701</updated>
+    </task>
+    <task id="LOCAL-00028" summary="直播服开启每分钟任务，  检测H5域名可用性">
+      <created>1644896270687</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1644896270687</updated>
+    </task>
+    <task id="LOCAL-00029" summary="修改了赛事历史记录的查询方式， 和开播记录无关">
+      <created>1644904260611</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1644904260611</updated>
+    </task>
+    <task id="LOCAL-00030" summary="登录网关添加ip">
+      <created>1644908165024</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1644908165024</updated>
+    </task>
+    <task id="LOCAL-00031" summary="所有接口测试通过">
+      <created>1644913341540</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1644913341540</updated>
+    </task>
+    <task id="LOCAL-00032" summary="修复修改域名的bug">
+      <created>1644917718482</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1644917718482</updated>
+    </task>
+    <task id="LOCAL-00033" summary="修复开播的错误状态码">
+      <created>1644921551645</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1644921551645</updated>
+    </task>
+    <task id="LOCAL-00034" summary="修改了菜单配置">
+      <created>1644978679090</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1644978679090</updated>
+    </task>
+    <task id="LOCAL-00035" summary="修改了赛事列表web 记录 响应">
+      <created>1645069475062</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1645069475062</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修改了配置文件" />
+    <MESSAGE value="修改随机 闭区间可能造成的问题" />
+    <MESSAGE value="修改了mongodb的连接端口 为27018" />
+    <MESSAGE value="user to proto 统一方法" />
+    <MESSAGE value="修改了默认path" />
+    <MESSAGE value="完成赛事直播的后台接口" />
+    <MESSAGE value="解决后端错误导致 跨域的问题" />
+    <MESSAGE value="修改了 测试环境mongodb的连接端口" />
+    <MESSAGE value="完成了直播记录的修改" />
+    <MESSAGE value="修改了赛事缓存更新" />
+    <MESSAGE value="网速的直播线路 sjzooo.com 拉流不可用，调整了顺序" />
+    <MESSAGE value="添加了日志打印" />
+    <MESSAGE value="自增主键支持int" />
+    <MESSAGE value="登录校验用户状态，添加重复登陆广播通知" />
+    <MESSAGE value="完成了体育赛事后台" />
+    <MESSAGE value="更新了 svn 忽略路径" />
+    <MESSAGE value="删除无用控制器，修改了权限配置" />
+    <MESSAGE value="直播服开启每分钟任务，  检测H5域名可用性" />
+    <MESSAGE value="修改了赛事历史记录的查询方式， 和开播记录无关" />
+    <MESSAGE value="登录网关添加ip" />
+    <MESSAGE value="所有接口测试通过" />
+    <MESSAGE value="修复修改域名的bug" />
+    <MESSAGE value="修复开播的错误状态码" />
+    <MESSAGE value="修改了菜单配置" />
+    <MESSAGE value="修改了赛事列表web 记录 响应" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了赛事列表web 记录 响应" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1480" y="94" key="#Project_Structure" timestamp="1645078613349">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1480" y="94" key="#Project_Structure/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1645078613349" />
+    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1644895236937" />
+    <state x="414" y="174" width="1092" height="864" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1644921380771">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="174" width="1092" height="864" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1644921380771" />
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1642665343340">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1155" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1641894672425" />
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1642665343340" />
+    <state x="689" y="321" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1641808670587">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="689" y="321" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1641808670587" />
+    <state x="730" y="386" width="460" height="274" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1642594349792">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="730" y="386" width="460" height="274" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1642594349792" />
+    <state x="352" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1645009418918">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1376" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1642591119133" />
+    <state x="352" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1645009418918" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1644835581510">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1644835581510" />
+    <state x="715" y="221" key="#xdebugger.evaluate" timestamp="1644911714700">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="715" y="221" key="#xdebugger.evaluate/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1644911714700" />
+    <state x="-1246" y="127" width="946" height="822" key="CommitChangelistDialog2" timestamp="1645069472984">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1246" y="127" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1645069472984" />
+    <state x="-1213" y="121" width="946" height="822" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1645009544779" />
+    <state x="-1695" y="85" width="1552" height="870" key="DiffContextDialog" timestamp="1645069467329">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1695" y="85" width="1552" height="870" key="DiffContextDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1645069467329" />
+    <state x="225" y="86" key="DiffContextDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1645009523421" />
+    <state x="686" y="456" key="FileChooserDialogImpl" timestamp="1641472794452">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="686" y="456" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1641472794452" />
+    <state width="1340" height="340" key="GridCell.Tab.0.bottom" timestamp="1645078628212">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1340" height="340" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1645078628212" />
+    <state width="1877" height="387" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1645065536070" />
+    <state width="1340" height="340" key="GridCell.Tab.0.center" timestamp="1645078628212">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1340" height="340" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1645078628212" />
+    <state width="1877" height="387" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1645065536070" />
+    <state width="1340" height="340" key="GridCell.Tab.0.left" timestamp="1645078628212">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1340" height="340" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1645078628212" />
+    <state width="1877" height="387" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1645065536070" />
+    <state width="1340" height="340" key="GridCell.Tab.0.right" timestamp="1645078628212">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1340" height="340" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1645078628212" />
+    <state width="1877" height="387" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1645065536070" />
+    <state width="1877" height="505" key="GridCell.Tab.1.bottom" timestamp="1645078596279">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="505" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1645078596279" />
+    <state width="1877" height="387" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1645065536070" />
+    <state width="1877" height="505" key="GridCell.Tab.1.center" timestamp="1645078596279">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="505" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1645078596279" />
+    <state width="1877" height="387" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1645065536070" />
+    <state width="1877" height="505" key="GridCell.Tab.1.left" timestamp="1645078596278">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="505" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1645078596278" />
+    <state width="1877" height="387" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1645065536070" />
+    <state width="1877" height="505" key="GridCell.Tab.1.right" timestamp="1645078596279">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="505" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1645078596279" />
+    <state width="1877" height="387" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1645065536070" />
+    <state width="1877" height="487" key="GridCell.Tab.2.bottom" timestamp="1645076478970">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="487" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1645076478970" />
+    <state width="1877" height="387" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1645065536070" />
+    <state width="1877" height="487" key="GridCell.Tab.2.center" timestamp="1645076478970">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="487" key="GridCell.Tab.2.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1645076478970" />
+    <state width="1877" height="387" key="GridCell.Tab.2.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1645065536070" />
+    <state width="1877" height="487" key="GridCell.Tab.2.left" timestamp="1645076478970">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="487" key="GridCell.Tab.2.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1645076478970" />
+    <state width="1877" height="387" key="GridCell.Tab.2.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1645065536070" />
+    <state width="1877" height="487" key="GridCell.Tab.2.right" timestamp="1645076478970">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="487" key="GridCell.Tab.2.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1645076478970" />
+    <state width="1877" height="387" key="GridCell.Tab.2.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1645065536070" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1641536745454">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1641536745454" />
+    <state x="773" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1641472818220">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="773" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1641472818220" />
+    <state x="459" y="248" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1642823576102">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="459" y="248" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1642823576102" />
+    <state x="-1720" y="160" width="1376" height="1028" key="dock-window-1" timestamp="1642820576284">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1720" y="160" width="1376" height="1028" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1642820576284" />
+    <state x="-1697" y="-14" width="1376" height="1028" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1642762844591" />
+    <state x="661" y="252" width="675" height="536" key="find.popup" timestamp="1644907802046">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="661" y="252" width="675" height="536" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1644907802046" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1644908523581">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1644908523581" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1641781450056">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1641781450056" />
+  </component>
+</project>

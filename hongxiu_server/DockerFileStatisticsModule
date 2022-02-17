@@ -1,0 +1,5 @@
+FROM adoptopenjdk/openjdk11
+MAINTAINER xiaotian "xiaotian@gmail.com"
+COPY ./live_server/statistics_module/package/statistics_module/ statisticsModule
+WORKDIR /usr/src/app
+ENTRYPOINT ["java","-Xmx512M","-Xms512M","-jar","/statisticsModule/statistics_module-0.0.1-SNAPSHOT.jar"]

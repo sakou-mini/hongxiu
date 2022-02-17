@@ -1,0 +1,5 @@
+FROM adoptopenjdk/openjdk11
+MAINTAINER xiaotian "xiaotian@gmail.com"
+COPY ./live_server/live_module/package/live_module/ liveModule
+WORKDIR /usr/src/app
+ENTRYPOINT ["java","-jar","/liveModule/live_module-0.0.1-SNAPSHOT.jar"]

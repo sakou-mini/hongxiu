@@ -1,0 +1,182 @@
+[
+  {
+    "menuId": "2",
+    "name": "直播监控列表",
+    "auth": "live_list",
+    "apiPath": "/api/v1/live/liveMonitor"
+  },
+  {
+    "menuId": "2",
+    "name": "关闭直播",
+    "auth": "live_close",
+    "apiPath": "/api/v1/live/closeLive"
+  },
+  {
+    "menuId": "4",
+    "name": "主播列表",
+    "auth": "liveUser_list",
+    "apiPath": "/api/v1/liveUser/liveUserList"
+  },
+  {
+    "menuId": "4",
+    "name": "主播封禁/启用",
+    "auth": "liveUser_approval",
+    "apiPath": "/api/v1/liveUser/updateStatus"
+  },
+  {
+    "menuId": "4",
+    "name": "主播详情",
+    "auth": "liveUser_detail",
+    "apiPath": "/api/v1/liveUser/liveUserDetail"
+  },
+  {
+    "menuId": "4",
+    "name": "主播密码修改",
+    "auth": "liveUser_updatePwd",
+    "apiPath": "/api/v1/liveUser/updatePassword"
+  },
+  {
+    "menuId": "5",
+    "name": "赛事 当前列表(活跃)",
+    "auth": "event_active",
+    "apiPath": "/api/v1/sportEvent/local"
+  },
+  {
+    "menuId": "5",
+    "name": "赛事 历史列表(过期)",
+    "auth": "event_history",
+    "apiPath": "/api/v1/sportEvent/history"
+  },
+  {
+    "menuId": "5",
+    "name": "赛事 配置",
+    "auth": "event_config",
+    "apiPath": "/api/v1/sportEvent/settingEvent"
+  },
+  {
+    "menuId": "6",
+    "name": "赛事开播记录列表",
+    "auth": "liveRecord_list",
+    "apiPath": "/api/v1/live/liveRecord"
+  },
+  {
+    "menuId": "7",
+    "name": "CDN列表",
+    "auth": "cdn_list",
+    "apiPath": "/api/v1/cdn/cdnList"
+  },
+  {
+    "menuId": "7",
+    "name": "CDN启用/关闭",
+    "auth": "cdn_enable",
+    "apiPath": "/api/v1/cdn/enableOrClose"
+  },
+  {
+    "menuId": "7",
+    "name": "CDN域名配置",
+    "auth": "cdn_domainConfig",
+    "apiPath": "/api/v1/cdn/liveDomainConfig"
+  },
+  {
+    "menuId": "9",
+    "name": "H5域名列表",
+    "auth": "domain_list",
+    "apiPath": "/api/v1/domainConfig/domainList"
+  },
+  {
+    "menuId": "9",
+    "name": "H5域名添加",
+    "auth": "domain_add",
+    "apiPath": "/api/v1/domainConfig/addDomain"
+  },
+  {
+    "menuId": "9",
+    "name": "H5域名修改",
+    "auth": "domain_update",
+    "apiPath": "/api/v1/domainConfig/updateDomain"
+  },
+  {
+    "menuId": "9",
+    "name": "H5域名删除",
+    "auth": "domain_del",
+    "apiPath": "/api/v1/domainConfig/deleteDomain"
+  },
+  {
+    "menuId": "10",
+    "name": "后台账号列表",
+    "auth": "backUser_list",
+    "apiPath": "/api/v1/backofficeUser/userList"
+  },
+  {
+    "menuId": "10",
+    "name": "后台账号修改密码",
+    "auth": "backUser_updatePwd",
+    "apiPath": "/api/v1/backofficeUser/updatePassword"
+  },
+  {
+    "menuId": "10",
+    "name": "后台账号 启用/关闭",
+    "auth": "backUser_enable",
+    "apiPath": "/api/v1/backofficeUser/enableOrClose"
+  },
+  {
+    "menuId": "10",
+    "name": "后台账号 修改",
+    "auth": "backUser_update",
+    "apiPath": "/api/v1/backofficeUser/update"
+  },
+  {
+    "menuId": "10",
+    "name": "后台账号 添加",
+    "auth": "backUser_add",
+    "apiPath": "/api/v1/backofficeUser/add"
+  },
+  {
+    "menuId": "10",
+    "name": "后台账号 删除",
+    "auth": "backUser_del",
+    "apiPath": "/api/v1/backofficeUser/del"
+  },
+  {
+    "menuId": "11",
+    "name": "组别 添加",
+    "auth": "role_add",
+    "apiPath": "/api/v1/role/addRole"
+  },
+  {
+    "menuId": "11",
+    "name": "组别 删除",
+    "auth": "role_del",
+    "apiPath": "/api/v1/role/deleteRole"
+  },
+  {
+    "menuId": "11",
+    "name": "组别 启用/关闭",
+    "auth": "role_del",
+    "apiPath": "/api/v1/role/enableOrClose"
+  },
+  {
+    "menuId": "11",
+    "name": "组别 列表",
+    "auth": "role_list",
+    "apiPath": "/api/v1/role/findConditionList"
+  },
+  {
+    "menuId": "11",
+    "name": "组别 菜单",
+    "auth": "role_menu",
+    "apiPath": "/api/v1/role/roleMenu"
+  },
+  {
+    "menuId": "11",
+    "name": "组别 修改",
+    "auth": "role_update",
+    "apiPath": "/api/v1/role/roleUpdate"
+  },
+  {
+    "menuId": "12",
+    "name": "后台操作日志列表",
+    "auth": "log_list",
+    "apiPath": "/api/v1/backOfficeLog/logList"
+  }
+]

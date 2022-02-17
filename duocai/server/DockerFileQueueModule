@@ -1,0 +1,5 @@
+FROM adoptopenjdk/openjdk11
+MAINTAINER xiaotian "xiaotian@gmail.com"
+COPY ./live_server/queue_module/package/queue_module/ queueModule
+WORKDIR /usr/src/app
+ENTRYPOINT ["java","-Xmx512M","-Xms512M","-jar","/queueModule/queue_module-0.0.1-SNAPSHOT.jar"]

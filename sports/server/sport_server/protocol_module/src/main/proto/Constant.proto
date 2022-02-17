@@ -1,0 +1,191 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_package = "com.donglai.protocol";
+option java_outer_classname = "Constant";
+
+enum ResultCode{
+  SUCCESS = 0;
+  NOT_AUTHORIZED = 1;
+  UNKNOWN_MESSAGE = 2;
+  //account server result code
+  ACCOUNT_NAME_ALREADY_EXIST = 3;
+  USER_NOT_FOUND = 4;
+  PASSWORD_ERROR = 5;
+  MISSING_OR_ILLEGAL_PARAMETERS = 6;
+  REPEATED_APPLY_LIVEUSER = 7;
+  LIVEUSER_NOT_EXIT = 8;
+  PASSWORD_ILLEGAL = 9;
+  OVER_NICK_MAX_MODIFY_COUNT = 10;
+  NICK_REPEATED = 11 ;
+  UNOFFICIAL_USER = 12;
+  NICKNAME_ILLEGAL = 13;
+  NOT_LIVEUSER = 14;
+  ROOM_NOT_EXIT = 15;
+  ROOM_NOT_LIVE = 16;
+  BULLET_MESSAGE_FORMAT_ERROR = 17;
+  SEND_MESSAGE_TOO_SOON = 18;
+  GIFT_NOT_FOUND = 19;
+  GIFT_NUM_ILLEGAL = 20;
+  COIN_NOT_ENOUGH = 21;
+
+  CAN_NOT_FOLLOWING_YOURSELF = 22;
+  ALREADY_FOLLOWING = 23;
+  NOT_FOLLOWING = 24;
+
+  CAN_NOT_CHAT_YOURSELF = 25;
+  BIRTHDAY_ERROR = 26;
+  SIGNATURE_TEXT_LENGTH_ERROR = 27;
+  REGION_IS_EMPTY = 28;
+  LIVE_LINE_NOT_EXIT = 29;
+  LIVE_PARAM_ERROR = 30;
+  IN_BLACK_LIST = 31;
+  SCHOOL_IS_EMPTY = 32;
+  HOMETOWN_IS_EMPTY = 33;
+  SPORT_EVENT_NOT_EXIT = 34;
+  SPORT_EVENT_OVERDUE = 35;
+
+  //blog server result code
+  BLOGS_PARAM_MISSING = 50;
+  BLOGS_CONTENT_EMPTY_OR_TOO_LONG = 51;
+  BLOGS_THUMBNAIL_EMPTY = 52;
+  BLOGS_RESOURCE_OVER_LIMIT = 53;
+  BLOGS_PUBLISH_OVERLIMIT = 54;
+  BLOGS_NOT_EXIT = 55;
+  BLOGS_COMMENT_NOT_EXIT = 56;
+  BLOGS_COMMENT_CONTENT_TOO_LONG = 57;
+  BLOGS_NOT_AUTHOR = 58;
+  OFFICIAL_USER_NOT_EXIT = 60;
+
+  HIGH_FREQUENCY = 61;
+  ERROR_PHONE = 62;
+  ERROR_AUTH_CODE = 63;
+  USER_CATEGORY_ERROR = 64;
+
+  MUSIC_NOT_EXIT = 70;
+  MUSIC_DISABLED = 71;
+
+  NO_PERMISSION = 100;
+  ACCOUNT_BANNED = 201; //账号被封禁
+  UNKNOWN = 2000;
+}
+
+enum VipType{
+  LOCKED = 0;
+  RANGER = 1;
+  KNIGHT = 2;
+  BARON = 3;
+  ROYAL_FAMILY = 4;
+  EMPEROR = 5;
+  SAINT = 6;
+}
+
+enum GenderType{
+  Gender_NULL = 0;
+  MALE = 1;
+  FEMALE = 2;
+}
+
+enum UserType{
+  NORMAL = 0;
+  TYPE_LIVEUSER = 1;
+  TYPE_LIVE_UNAPPROVED = 2;
+  TYPE_LIVEUSER_APPROVED = 3;
+  TYPE_LIVE_APPROVE_FAILED = 4;
+}
+
+enum LiveUserStatus {
+  LIVE_OFFLINE = 0;
+  LIVE_LIVE = 1;
+}
+
+enum LivePattern{
+  LIVE_VIDEO = 0;
+  LIVE_AUDIO = 1;
+}
+
+enum LiveTag {
+  JIAOYOU = 0;
+  MENGCHONG = 1;
+  YANZHI = 2;
+  TIAOWU = 3;
+  CHANGGE = 4;
+}
+
+enum GiftPriceType{
+  GIFT_PRICE_NULL = 0;
+  GIFT_PRICE_GAMECOIN = 1;
+  GIFT_PRICE_GOLDBEAN = 2;
+}
+
+enum FollowType{
+  FOLLOW_TYPE_NULL = 0;
+  FOLLOW = 1;
+  UNFOLLOW = 2;
+}
+enum BlogsStatus {
+  BLOGS_UNAPPROVED = 0;
+  BLOGS_PASS = 1;
+  BLOGS_NO_PASS = 2;
+  BLOGS_APPROVED = 3;
+  BLOGS_DRAFT = 4;
+}
+
+enum CommentStatus{
+  COMMENT_UNAPPROVED = 0;
+  COMMENT_PASS = 1;
+  COMMENT_NO_PASS = 2;
+}
+
+enum BlogsType {
+  BLOGS_DEFAULT = 0;
+  BLOGS_IMAGE = 1;
+  BLOGS_VIDEO = 2;
+  BLOGS_AUDIO = 3;
+}
+
+enum PermissionVisibleType{
+  PERMISSION_ALL = 0;
+  PERMISSION_FRIEND = 1;
+  PERMISSION_LEADER = 2;
+  PERMISSION_PRIVATE = 3;
+}
+
+enum PlatformType {
+  HONG_XIU = 0;
+  DUOCAI = 1;
+  SPORT = 2;
+}
+
+enum RankType {
+  INCOME_RANK = 0;
+  CONTRIBUTION_RANK = 1;
+}
+
+enum QueryTimeType{
+  ALL = 0;
+  TODAY = 1;
+}
+
+enum LoginType{
+  THIRD_PARTY_LOGIN = 0;
+  PHONE_LOGIN = 1;
+  ACCOUNT_LOGIN = 2;
+}
+
+enum AuthCodeType{
+  ACCOUNT_AUTH = 0; //账号验证码（可用于登录、注册）
+  FIND_PWD = 1; //找回密码验证码
+}
+
+enum SortType{
+  SORT_DEFAULT = 0;
+  SORT_LIKENUM = 1;
+  SORT_TIME = 2;
+  SORT_COMMENT = 3;
+}
+
+enum SearchType{
+  BLGOS = 0;
+  USER = 1;
+}

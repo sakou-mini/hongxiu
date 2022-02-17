@@ -1,0 +1,95 @@
+syntax = "proto3";
+option java_multiple_files = false;
+option java_package = "com.donglai.protocol";
+option java_outer_classname = "Account";
+import "Constant.proto";
+import "Common.proto";
+
+message AccountOfRepeatedLoginBroadcastMessage{
+
+}
+message AccountOfLoginRequest{
+  string accountId = 1;
+  string password = 2;
+}
+
+message AccountOfLoginReply{
+  UserInfo userInfo = 1;
+}
+
+message AccountOfLogoutRequest{
+
+}
+
+message AccountOfLogoutReply{
+
+}
+
+message AccountOfRegisterRequest{
+  string nickname = 1;
+  string password = 2;
+  string mobileCode = 3;
+}
+
+message AccountOfRegisterReply{
+  string password = 1;
+  string accountId = 2;
+}
+
+
+message AccountOfUpdatePasswordRequest{
+  string oldPassword = 1;
+  string newPassword = 2;
+}
+
+message AccountOfUpdatePasswordReply {
+  UserInfo userInfo = 1;
+}
+
+message AccountOfUpdateUserAvatarRequest{
+  string avatarUrl = 1;
+}
+
+message AccountOfUpdateUserAvatarReply{
+  UserInfo userInfo = 1;
+}
+
+message AccountOfUpdateNicknameRequest{
+  string nickname = 1;
+}
+
+message AccountOfUpdateNicknameReply{
+  UserInfo userInfo = 1;
+}
+
+message AccountOfUpdateGenderRequest {
+  GenderType gender = 1;
+}
+
+message AccountOfUpdateGenderReply {
+  UserInfo userInfo = 1;
+}
+
+message AccountOfUpdateBirthDayRequest {
+  string birthDay = 1 ;
+}
+
+message AccountOfUpdateBirthDayReply {
+  UserInfo userInfo = 1;
+}
+
+message AccountOfUpdateSignatureTextRequest {
+  string context = 1;
+}
+
+message AccountOfUpdateSignatureTextReply {
+  UserInfo userInfo = 1;
+}
+
+message AccountOfQueryUserInfosRequest{
+  repeated string userIds = 1;
+}
+
+message AccountOfQueryUserInfosReply {
+  repeated UserInfo userInfos = 1;
+}

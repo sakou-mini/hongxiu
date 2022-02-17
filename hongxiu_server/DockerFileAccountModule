@@ -1,0 +1,5 @@
+FROM adoptopenjdk/openjdk11
+MAINTAINER xiaotian "xiaotian@gmail.com"
+COPY ./live_server/account_module/package/account_module/ accountModule
+WORKDIR /usr/src/app
+ENTRYPOINT ["java","-Xmx512M","-Xms512M","-jar","/accountModule/account_module-0.0.1-SNAPSHOT.jar"]

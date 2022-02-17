@@ -1,0 +1,5 @@
+FROM adoptopenjdk/openjdk11
+MAINTAINER xiaotian "xiaotian@gmail.com"
+COPY ./sport_server/live_module/package/live_module/ liveModule
+WORKDIR /usr/src/app
+ENTRYPOINT ["java","-Xmx512M","-Xms512M","-jar","/liveModule/live_module-0.0.1-SNAPSHOT.jar"]
