@@ -1,0 +1,310 @@
+2022-01-27 10:45:02 上午 [Thread: main][ Class:com.donglai.account.app.AccountApp >> Method: org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55) ]
+INFO:Starting AccountApp on DESKTOP-VNJ9PIL with PID 20688 (E:\CompanyProgram\hongxiu\hongxiu_server\live_server\account_module\target\classes started by yty in E:\CompanyProgram\hongxiu\hongxiu_server\live_server\account_module)
+2022-01-27 10:45:02 上午 [Thread: main][ Class:com.donglai.account.app.AccountApp >> Method: org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651) ]
+INFO:No active profile set, falling back to default profiles: default
+2022-01-27 10:45:03 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-27 10:45:03 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-01-27 10:45:03 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 104ms. Found 37 MongoDB repository interfaces.
+2022-01-27 10:45:03 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-27 10:45:03 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-01-27 10:45:03 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 15ms. Found 0 JPA repository interfaces.
+2022-01-27 10:45:03 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-27 10:45:03 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-01-27 10:45:03 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 4ms. Found 0 Redis repository interfaces.
+2022-01-27 10:45:04 上午 [Thread: main][ Class:org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor >> Method: org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:181) ]
+INFO:Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-27 10:45:04 上午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:110) ]
+INFO:HikariPool-1 - Starting...
+2022-01-27 10:45:04 上午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:123) ]
+INFO:HikariPool-1 - Start completed.
+2022-01-27 10:45:04 上午 [Thread: main][ Class:org.redisson.Version >> Method: org.redisson.Version.logVersion(Version.java:41) ]
+INFO:Redisson 3.16.1
+2022-01-27 10:45:04 上午 [Thread: task-1][ Class:org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean >> Method: org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) ]
+INFO:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-27 10:45:05 上午 [Thread: redisson-netty-4-6][ Class:org.redisson.connection.pool.MasterPubSubConnectionPool >> Method: org.redisson.connection.pool.ConnectionPool$1.lambda$run$0(ConnectionPool.java:166) ]
+INFO:1 connections initialized for localhost/127.0.0.1:6379
+2022-01-27 10:45:05 上午 [Thread: redisson-netty-4-5][ Class:org.redisson.connection.pool.MasterConnectionPool >> Method: org.redisson.connection.pool.ConnectionPool$1.lambda$run$0(ConnectionPool.java:166) ]
+INFO:1 connections initialized for localhost/127.0.0.1:6379
+2022-01-27 10:45:05 上午 [Thread: main][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='rs0'}
+2022-01-27 10:45:05 上午 [Thread: main][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Adding discovered server localhost:27017 to client view of cluster
+2022-01-27 10:45:05 上午 [Thread: cluster-ClusterId{value='61f207317795991ac72a70bf', description='null'}-localhost:27017][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Opened connection [connectionId{localValue:1, serverValue:524}] to localhost:27017
+2022-01-27 10:45:05 上午 [Thread: cluster-ClusterId{value='61f207317795991ac72a70bf', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3786200, setName='rs0', canonicalAddress=localhost:27017, hosts=[localhost:27017], passives=[], arbiters=[], primary='localhost:27017', tagSet=TagSet{[]}, electionId=7fffffff0000000000000014, setVersion=1, lastWriteDate=Thu Jan 27 10:44:49 CST 2022, lastUpdateTimeNanos=582500072195900}
+2022-01-27 10:45:05 上午 [Thread: cluster-ClusterId{value='61f207317795991ac72a70bf', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Setting max election id to 7fffffff0000000000000014 from replica set primary localhost:27017
+2022-01-27 10:45:05 上午 [Thread: cluster-ClusterId{value='61f207317795991ac72a70bf', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Setting max set version to 1 from replica set primary localhost:27017
+2022-01-27 10:45:05 上午 [Thread: cluster-ClusterId{value='61f207317795991ac72a70bf', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Discovered replica set primary localhost:27017
+2022-01-27 10:45:05 上午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-01-27 10:45:05 上午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-01-27 10:45:05 上午 [Thread: main][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Opened connection [connectionId{localValue:2, serverValue:525}] to localhost:27017
+2022-01-27 10:45:06 上午 [Thread: main][ Class:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor >> Method: org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.lambda$buildAutowiringMetadata$1(AutowiredAnnotationBeanPostProcessor.java:478) ]
+INFO:Autowired annotation is not supported on static fields: public static final com.donglai.common.service.RedisService com.donglai.account.process.LiveProcess.redisService
+2022-01-27 10:45:07 上午 [Thread: main][ Class:org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler >> Method: org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:181) ]
+INFO:Initializing ExecutorService
+2022-01-27 10:45:07 上午 [Thread: main][ Class:org.springframework.data.repository.config.DeferredRepositoryInitializationListener >> Method: org.springframework.data.repository.config.DeferredRepositoryInitializationListener.onApplicationEvent(DeferredRepositoryInitializationListener.java:49) ]
+INFO:Triggering deferred initialization of Spring Data repositories…
+2022-01-27 10:45:07 上午 [Thread: main][ Class:org.springframework.data.repository.config.DeferredRepositoryInitializationListener >> Method: org.springframework.data.repository.config.DeferredRepositoryInitializationListener.onApplicationEvent(DeferredRepositoryInitializationListener.java:53) ]
+INFO:Spring Data repositories initialized!
+2022-01-27 10:45:07 上午 [Thread: main][ Class:com.donglai.account.app.AccountApp >> Method: org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61) ]
+INFO:Started AccountApp in 5.425 seconds (JVM running for 6.334)
+2022-01-27 11:28:51 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler >> Method: org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.shutdown(ExecutorConfigurationSupport.java:218) ]
+INFO:Shutting down ExecutorService
+2022-01-27 11:28:51 上午 [Thread: SpringContextShutdownHook][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Closed connection [connectionId{localValue:2, serverValue:525}] to localhost:27017 because the pool has been closed.
+2022-01-27 11:28:51 上午 [Thread: SpringContextShutdownHook][ Class:org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean >> Method: org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:598) ]
+INFO:Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-27 11:28:51 上午 [Thread: SpringContextShutdownHook][ Class:org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor >> Method: org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.shutdown(ExecutorConfigurationSupport.java:218) ]
+INFO:Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-27 11:28:51 上午 [Thread: SpringContextShutdownHook][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:350) ]
+INFO:HikariPool-1 - Shutdown initiated...
+2022-01-27 11:28:51 上午 [Thread: SpringContextShutdownHook][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:352) ]
+INFO:HikariPool-1 - Shutdown completed.
+2022-01-27 13:36:28 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-27 13:36:28 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-01-27 13:36:28 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 114ms. Found 37 MongoDB repository interfaces.
+2022-01-27 13:36:28 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-27 13:36:28 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-01-27 13:36:28 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 15ms. Found 0 JPA repository interfaces.
+2022-01-27 13:36:28 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-27 13:36:28 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-01-27 13:36:28 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 5ms. Found 0 Redis repository interfaces.
+2022-01-27 13:36:29 下午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:110) ]
+INFO:HikariPool-1 - Starting...
+2022-01-27 13:36:29 下午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:123) ]
+INFO:HikariPool-1 - Start completed.
+2022-01-27 13:36:29 下午 [Thread: main][ Class:org.redisson.Version >> Method: org.redisson.Version.logVersion(Version.java:41) ]
+INFO:Redisson 3.16.1
+2022-01-27 13:36:30 下午 [Thread: redisson-netty-4-6][ Class:org.redisson.connection.pool.MasterPubSubConnectionPool >> Method: org.redisson.connection.pool.ConnectionPool$1.lambda$run$0(ConnectionPool.java:166) ]
+INFO:1 connections initialized for localhost/127.0.0.1:6379
+2022-01-27 13:36:30 下午 [Thread: redisson-netty-4-5][ Class:org.redisson.connection.pool.MasterConnectionPool >> Method: org.redisson.connection.pool.ConnectionPool$1.lambda$run$0(ConnectionPool.java:166) ]
+INFO:1 connections initialized for localhost/127.0.0.1:6379
+2022-01-27 13:36:30 下午 [Thread: main][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='rs0'}
+2022-01-27 13:36:30 下午 [Thread: main][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Adding discovered server localhost:27017 to client view of cluster
+2022-01-27 13:36:30 下午 [Thread: cluster-ClusterId{value='61f22f5eea81aa1bb3749dc5', description='null'}-localhost:27017][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Opened connection [connectionId{localValue:1, serverValue:548}] to localhost:27017
+2022-01-27 13:36:30 下午 [Thread: cluster-ClusterId{value='61f22f5eea81aa1bb3749dc5', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3562200, setName='rs0', canonicalAddress=localhost:27017, hosts=[localhost:27017], passives=[], arbiters=[], primary='localhost:27017', tagSet=TagSet{[]}, electionId=7fffffff0000000000000014, setVersion=1, lastWriteDate=Thu Jan 27 13:36:09 CST 2022, lastUpdateTimeNanos=592785442096300}
+2022-01-27 13:36:30 下午 [Thread: cluster-ClusterId{value='61f22f5eea81aa1bb3749dc5', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Setting max election id to 7fffffff0000000000000014 from replica set primary localhost:27017
+2022-01-27 13:36:30 下午 [Thread: cluster-ClusterId{value='61f22f5eea81aa1bb3749dc5', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Setting max set version to 1 from replica set primary localhost:27017
+2022-01-27 13:36:30 下午 [Thread: cluster-ClusterId{value='61f22f5eea81aa1bb3749dc5', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Discovered replica set primary localhost:27017
+2022-01-27 13:36:30 下午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-01-27 13:36:30 下午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-01-27 13:36:31 下午 [Thread: main][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Opened connection [connectionId{localValue:2, serverValue:549}] to localhost:27017
+2022-01-27 13:36:32 下午 [Thread: main][ Class:org.springframework.data.repository.config.DeferredRepositoryInitializationListener >> Method: org.springframework.data.repository.config.DeferredRepositoryInitializationListener.onApplicationEvent(DeferredRepositoryInitializationListener.java:49) ]
+INFO:Triggering deferred initialization of Spring Data repositories…
+2022-01-27 13:36:32 下午 [Thread: main][ Class:org.springframework.data.repository.config.DeferredRepositoryInitializationListener >> Method: org.springframework.data.repository.config.DeferredRepositoryInitializationListener.onApplicationEvent(DeferredRepositoryInitializationListener.java:53) ]
+INFO:Spring Data repositories initialized!
+2022-01-27 13:40:33 下午 [Thread: SpringContextShutdownHook][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Closed connection [connectionId{localValue:2, serverValue:549}] to localhost:27017 because the pool has been closed.
+2022-01-27 13:40:33 下午 [Thread: SpringContextShutdownHook][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:350) ]
+INFO:HikariPool-1 - Shutdown initiated...
+2022-01-27 13:40:33 下午 [Thread: SpringContextShutdownHook][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:352) ]
+INFO:HikariPool-1 - Shutdown completed.
+2022-01-27 13:41:06 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-27 13:41:06 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-01-27 13:41:06 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 104ms. Found 37 MongoDB repository interfaces.
+2022-01-27 13:41:06 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-27 13:41:06 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-01-27 13:41:06 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 15ms. Found 0 JPA repository interfaces.
+2022-01-27 13:41:06 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-27 13:41:06 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-01-27 13:41:06 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 5ms. Found 0 Redis repository interfaces.
+2022-01-27 13:41:06 下午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:110) ]
+INFO:HikariPool-1 - Starting...
+2022-01-27 13:41:07 下午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:123) ]
+INFO:HikariPool-1 - Start completed.
+2022-01-27 13:41:07 下午 [Thread: main][ Class:org.redisson.Version >> Method: org.redisson.Version.logVersion(Version.java:41) ]
+INFO:Redisson 3.16.1
+2022-01-27 13:41:08 下午 [Thread: redisson-netty-4-5][ Class:org.redisson.connection.pool.MasterPubSubConnectionPool >> Method: org.redisson.connection.pool.ConnectionPool$1.lambda$run$0(ConnectionPool.java:166) ]
+INFO:1 connections initialized for localhost/127.0.0.1:6379
+2022-01-27 13:41:08 下午 [Thread: redisson-netty-4-6][ Class:org.redisson.connection.pool.MasterConnectionPool >> Method: org.redisson.connection.pool.ConnectionPool$1.lambda$run$0(ConnectionPool.java:166) ]
+INFO:1 connections initialized for localhost/127.0.0.1:6379
+2022-01-27 13:41:08 下午 [Thread: main][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='rs0'}
+2022-01-27 13:41:08 下午 [Thread: main][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Adding discovered server localhost:27017 to client view of cluster
+2022-01-27 13:41:08 下午 [Thread: cluster-ClusterId{value='61f23074fd55b63d8cf4decb', description='null'}-localhost:27017][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Opened connection [connectionId{localValue:1, serverValue:550}] to localhost:27017
+2022-01-27 13:41:08 下午 [Thread: cluster-ClusterId{value='61f23074fd55b63d8cf4decb', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=4302400, setName='rs0', canonicalAddress=localhost:27017, hosts=[localhost:27017], passives=[], arbiters=[], primary='localhost:27017', tagSet=TagSet{[]}, electionId=7fffffff0000000000000014, setVersion=1, lastWriteDate=Thu Jan 27 13:40:49 CST 2022, lastUpdateTimeNanos=593062961458500}
+2022-01-27 13:41:08 下午 [Thread: cluster-ClusterId{value='61f23074fd55b63d8cf4decb', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Setting max election id to 7fffffff0000000000000014 from replica set primary localhost:27017
+2022-01-27 13:41:08 下午 [Thread: cluster-ClusterId{value='61f23074fd55b63d8cf4decb', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Setting max set version to 1 from replica set primary localhost:27017
+2022-01-27 13:41:08 下午 [Thread: cluster-ClusterId{value='61f23074fd55b63d8cf4decb', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Discovered replica set primary localhost:27017
+2022-01-27 13:41:08 下午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-01-27 13:41:08 下午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-01-27 13:41:08 下午 [Thread: main][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Opened connection [connectionId{localValue:2, serverValue:551}] to localhost:27017
+2022-01-27 13:41:09 下午 [Thread: main][ Class:org.springframework.data.repository.config.DeferredRepositoryInitializationListener >> Method: org.springframework.data.repository.config.DeferredRepositoryInitializationListener.onApplicationEvent(DeferredRepositoryInitializationListener.java:49) ]
+INFO:Triggering deferred initialization of Spring Data repositories…
+2022-01-27 13:41:09 下午 [Thread: main][ Class:org.springframework.data.repository.config.DeferredRepositoryInitializationListener >> Method: org.springframework.data.repository.config.DeferredRepositoryInitializationListener.onApplicationEvent(DeferredRepositoryInitializationListener.java:53) ]
+INFO:Spring Data repositories initialized!
+2022-01-27 14:01:15 下午 [Thread: SpringContextShutdownHook][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Closed connection [connectionId{localValue:2, serverValue:551}] to localhost:27017 because the pool has been closed.
+2022-01-27 14:01:15 下午 [Thread: SpringContextShutdownHook][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:350) ]
+INFO:HikariPool-1 - Shutdown initiated...
+2022-01-27 14:01:15 下午 [Thread: SpringContextShutdownHook][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:352) ]
+INFO:HikariPool-1 - Shutdown completed.
+2022-01-27 14:05:32 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-27 14:05:32 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-01-27 14:05:33 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 140ms. Found 37 MongoDB repository interfaces.
+2022-01-27 14:05:33 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-27 14:05:33 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-01-27 14:05:33 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 15ms. Found 0 JPA repository interfaces.
+2022-01-27 14:05:33 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-27 14:05:33 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-01-27 14:05:33 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 5ms. Found 0 Redis repository interfaces.
+2022-01-27 14:05:33 下午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:110) ]
+INFO:HikariPool-1 - Starting...
+2022-01-27 14:05:33 下午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:123) ]
+INFO:HikariPool-1 - Start completed.
+2022-01-27 14:05:34 下午 [Thread: main][ Class:org.redisson.Version >> Method: org.redisson.Version.logVersion(Version.java:41) ]
+INFO:Redisson 3.16.1
+2022-01-27 14:05:34 下午 [Thread: redisson-netty-4-5][ Class:org.redisson.connection.pool.MasterPubSubConnectionPool >> Method: org.redisson.connection.pool.ConnectionPool$1.lambda$run$0(ConnectionPool.java:166) ]
+INFO:1 connections initialized for localhost/127.0.0.1:6379
+2022-01-27 14:05:34 下午 [Thread: redisson-netty-4-6][ Class:org.redisson.connection.pool.MasterConnectionPool >> Method: org.redisson.connection.pool.ConnectionPool$1.lambda$run$0(ConnectionPool.java:166) ]
+INFO:1 connections initialized for localhost/127.0.0.1:6379
+2022-01-27 14:05:35 下午 [Thread: main][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='rs0'}
+2022-01-27 14:05:35 下午 [Thread: main][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Adding discovered server localhost:27017 to client view of cluster
+2022-01-27 14:05:35 下午 [Thread: cluster-ClusterId{value='61f2362f2e73d94ad70526bc', description='null'}-localhost:27017][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Opened connection [connectionId{localValue:1, serverValue:569}] to localhost:27017
+2022-01-27 14:05:35 下午 [Thread: cluster-ClusterId{value='61f2362f2e73d94ad70526bc', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=4292800, setName='rs0', canonicalAddress=localhost:27017, hosts=[localhost:27017], passives=[], arbiters=[], primary='localhost:27017', tagSet=TagSet{[]}, electionId=7fffffff0000000000000014, setVersion=1, lastWriteDate=Thu Jan 27 14:05:19 CST 2022, lastUpdateTimeNanos=594529846326000}
+2022-01-27 14:05:35 下午 [Thread: cluster-ClusterId{value='61f2362f2e73d94ad70526bc', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Setting max election id to 7fffffff0000000000000014 from replica set primary localhost:27017
+2022-01-27 14:05:35 下午 [Thread: cluster-ClusterId{value='61f2362f2e73d94ad70526bc', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Setting max set version to 1 from replica set primary localhost:27017
+2022-01-27 14:05:35 下午 [Thread: cluster-ClusterId{value='61f2362f2e73d94ad70526bc', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Discovered replica set primary localhost:27017
+2022-01-27 14:05:35 下午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-01-27 14:05:35 下午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-01-27 14:05:35 下午 [Thread: main][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Opened connection [connectionId{localValue:2, serverValue:570}] to localhost:27017
+2022-01-27 14:05:37 下午 [Thread: main][ Class:org.springframework.data.repository.config.DeferredRepositoryInitializationListener >> Method: org.springframework.data.repository.config.DeferredRepositoryInitializationListener.onApplicationEvent(DeferredRepositoryInitializationListener.java:49) ]
+INFO:Triggering deferred initialization of Spring Data repositories…
+2022-01-27 14:05:37 下午 [Thread: main][ Class:org.springframework.data.repository.config.DeferredRepositoryInitializationListener >> Method: org.springframework.data.repository.config.DeferredRepositoryInitializationListener.onApplicationEvent(DeferredRepositoryInitializationListener.java:53) ]
+INFO:Spring Data repositories initialized!
+2022-01-27 14:32:36 下午 [Thread: SpringContextShutdownHook][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Closed connection [connectionId{localValue:2, serverValue:570}] to localhost:27017 because the pool has been closed.
+2022-01-27 14:32:36 下午 [Thread: SpringContextShutdownHook][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:350) ]
+INFO:HikariPool-1 - Shutdown initiated...
+2022-01-27 14:32:36 下午 [Thread: SpringContextShutdownHook][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:352) ]
+INFO:HikariPool-1 - Shutdown completed.
+2022-01-27 14:33:00 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-27 14:33:00 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-01-27 14:33:00 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 116ms. Found 37 MongoDB repository interfaces.
+2022-01-27 14:33:00 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-27 14:33:00 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-01-27 14:33:00 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 17ms. Found 0 JPA repository interfaces.
+2022-01-27 14:33:00 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-27 14:33:00 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-01-27 14:33:00 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2022-01-27 14:33:01 下午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:110) ]
+INFO:HikariPool-1 - Starting...
+2022-01-27 14:33:01 下午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:123) ]
+INFO:HikariPool-1 - Start completed.
+2022-01-27 14:33:01 下午 [Thread: main][ Class:org.redisson.Version >> Method: org.redisson.Version.logVersion(Version.java:41) ]
+INFO:Redisson 3.16.1
+2022-01-27 14:33:02 下午 [Thread: redisson-netty-4-6][ Class:org.redisson.connection.pool.MasterPubSubConnectionPool >> Method: org.redisson.connection.pool.ConnectionPool$1.lambda$run$0(ConnectionPool.java:166) ]
+INFO:1 connections initialized for localhost/127.0.0.1:6379
+2022-01-27 14:33:02 下午 [Thread: redisson-netty-4-5][ Class:org.redisson.connection.pool.MasterConnectionPool >> Method: org.redisson.connection.pool.ConnectionPool$1.lambda$run$0(ConnectionPool.java:166) ]
+INFO:1 connections initialized for localhost/127.0.0.1:6379
+2022-01-27 14:33:02 下午 [Thread: main][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='rs0'}
+2022-01-27 14:33:02 下午 [Thread: main][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Adding discovered server localhost:27017 to client view of cluster
+2022-01-27 14:33:02 下午 [Thread: cluster-ClusterId{value='61f23c9ed998f042af99a448', description='null'}-localhost:27017][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Opened connection [connectionId{localValue:1, serverValue:598}] to localhost:27017
+2022-01-27 14:33:02 下午 [Thread: cluster-ClusterId{value='61f23c9ed998f042af99a448', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=4282700, setName='rs0', canonicalAddress=localhost:27017, hosts=[localhost:27017], passives=[], arbiters=[], primary='localhost:27017', tagSet=TagSet{[]}, electionId=7fffffff0000000000000014, setVersion=1, lastWriteDate=Thu Jan 27 14:32:46 CST 2022, lastUpdateTimeNanos=596177535949100}
+2022-01-27 14:33:02 下午 [Thread: cluster-ClusterId{value='61f23c9ed998f042af99a448', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Setting max election id to 7fffffff0000000000000014 from replica set primary localhost:27017
+2022-01-27 14:33:02 下午 [Thread: cluster-ClusterId{value='61f23c9ed998f042af99a448', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Setting max set version to 1 from replica set primary localhost:27017
+2022-01-27 14:33:02 下午 [Thread: cluster-ClusterId{value='61f23c9ed998f042af99a448', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Discovered replica set primary localhost:27017
+2022-01-27 14:33:02 下午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-01-27 14:33:02 下午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-01-27 14:33:03 下午 [Thread: main][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Opened connection [connectionId{localValue:2, serverValue:599}] to localhost:27017
+2022-01-27 14:33:04 下午 [Thread: main][ Class:org.springframework.data.repository.config.DeferredRepositoryInitializationListener >> Method: org.springframework.data.repository.config.DeferredRepositoryInitializationListener.onApplicationEvent(DeferredRepositoryInitializationListener.java:49) ]
+INFO:Triggering deferred initialization of Spring Data repositories…
+2022-01-27 14:33:04 下午 [Thread: main][ Class:org.springframework.data.repository.config.DeferredRepositoryInitializationListener >> Method: org.springframework.data.repository.config.DeferredRepositoryInitializationListener.onApplicationEvent(DeferredRepositoryInitializationListener.java:53) ]
+INFO:Spring Data repositories initialized!
+2022-01-27 15:56:19 下午 [Thread: SpringContextShutdownHook][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Closed connection [connectionId{localValue:2, serverValue:599}] to localhost:27017 because the pool has been closed.
+2022-01-27 15:56:19 下午 [Thread: SpringContextShutdownHook][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:350) ]
+INFO:HikariPool-1 - Shutdown initiated...
+2022-01-27 15:56:19 下午 [Thread: SpringContextShutdownHook][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:352) ]
+INFO:HikariPool-1 - Shutdown completed.

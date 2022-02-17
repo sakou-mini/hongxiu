@@ -1,0 +1,255 @@
+{
+  "systemMenu": [
+    {
+      "id": "1",
+      "name": "首页",
+      "icon": "el-icon-s-promotion",
+      "redirect": "/index/system/realTimeData",
+      "children": [
+        {
+          "id": "1-1",
+          "path": "/index/system/realTimeData",
+          "name": "首页"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "数据报表",
+      "icon": "el-icon-s-data",
+      "redirect": "/index/system/newUserChart",
+      "children": [
+        {
+          "id": "2-1",
+          "path": "/index/system/newUserChart",
+          "name": "新增用户"
+        },
+        {
+          "id": "2-2",
+          "path": "/index/system/activeUserChart",
+          "name": "活跃用户"
+        },
+        {
+          "id": "2-3",
+          "path": "/index/system/retainedUserChart",
+          "name": "用户留存"
+        },
+        {
+          "id": "2-4",
+          "path": "/index/system/conversionRatesChart",
+          "name": "付费转化"
+        },
+        {
+          "id": "2-5",
+          "path": "/index/system/mobileDevicesChart",
+          "name": "相关设备"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "用户管理",
+      "icon": "el-icon-data-analysis",
+      "redirect": "/index/system/userList",
+      "children": [
+        {
+          "id": "3-1",
+          "path": "/index/system/userList",
+          "name": "用户列表"
+        },
+        {
+          "id": "3-2",
+          "path": "/index/system/banUserList",
+          "name": "封禁用户列表"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "主播管理",
+      "icon": "el-icon-video-camera-solid",
+      "redirect": "/index/system/liveUserRoom",
+      "children": [
+        {
+          "id": "4-1",
+          "path": "/index/system/liveUserRoom",
+          "name": "直播监控"
+        },
+        {
+          "id": "4-2",
+          "path": "/index/system/liveUserList",
+          "name": "主播列表"
+        },
+        {
+          "id": "4-3",
+          "path": "/index/system/banLiveUserList",
+          "name": "封禁主播列表"
+        },
+        {
+          "id": "4-4",
+          "path": "/index/system/liveUserRecord",
+          "name": "直播记录"
+        },
+        {
+          "id": "4-5",
+          "path": "/index/system/liveUserAttendance",
+          "name": "直播考勤"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "审核管理",
+      "icon": "el-icon-s-check",
+      "redirect": "/index/system/liveUserExamine",
+      "children": [
+        {
+          "id": "5-1",
+          "path": "/index/system/liveUserExamine",
+          "name": "主播审核"
+        },
+        {
+          "id": "5-2",
+          "path": "/index/system/liveUserAuditRecord",
+          "name": "主播审核记录"
+        },
+        {
+          "id": "5-3",
+          "path": "/index/system/personDiaryExamine",
+          "name": "动态审核"
+        },
+        {
+          "id": "5-4",
+          "path": "/index/system/personDiaryAuditRecord",
+          "name": "动态审核记录"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "动态管理",
+      "icon": "el-icon-s-help",
+      "redirect": "/index/system/personDiaryList",
+      "children": [
+        {
+          "id": "6-1",
+          "path": "/index/system/personDiaryList",
+          "name": "动态列表"
+        },
+        {
+          "id": "6-2",
+          "path": "/index/system/personDiaryUpload",
+          "name": "上传动态"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "礼物管理",
+      "icon": "el-icon-present",
+      "redirect": "/index/system/giftList",
+      "children": [
+        {
+          "id": "7-1",
+          "path": "/index/system/giftList",
+          "name": "礼物列表"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "公告管理",
+      "icon": "el-icon-chat-line-square",
+      "redirect": "/index/system/sendBackOfficeMessage",
+      "children": [
+        {
+          "id": "8-1",
+          "path": "/index/system/sendBackOfficeMessage",
+          "name": "走马灯消息"
+        },
+        {
+          "id": "8-2",
+          "path": "/index/system/messageSettings",
+          "name": "直播公告"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "客服管理",
+      "icon": "el-icon-service",
+      "redirect": "/index/system/feedback",
+      "children": [
+        {
+          "id": "9-1",
+          "path": "/index/system/feedback",
+          "name": "反馈信息"
+        },
+        {
+          "id": "9-2",
+          "path": "/index/system/liveUserReport",
+          "name": "主播举报"
+        },
+        {
+          "id": "9-3",
+          "path": "/index/system/personDiaryReport",
+          "name": "动态举报"
+        },
+        {
+          "id": "9-4",
+          "path": "/index/system/userReport",
+          "name": "用户举报"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "推荐管理",
+      "icon": "el-icon-magic-stick",
+      "redirect": "/index/system/carousel",
+      "children": [
+        {
+          "id": "10-1",
+          "path": "/index/system/carousel",
+          "name": "轮播图设置"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "name": "服务器管理",
+      "icon": "el-icon-cpu",
+      "redirect": "/index/system/serverList",
+      "children": [
+        {
+          "id": "11-1",
+          "path": "/index/system/serverList",
+          "name": "服务器状态"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "name": "操作记录",
+      "icon": "el-icon-s-order",
+      "redirect": "/index/system/backOfficeLoginRecord",
+      "children": [
+        {
+          "id": "12-1",
+          "path": "/index/system/backOfficeLoginRecord",
+          "name": "后台登录记录"
+        },
+        {
+          "id": "12-2",
+          "path": "/index/system/coinOperationRecord",
+          "name": "用户金币操作记录"
+        },
+        {
+          "id": "12-3",
+          "path": "/index/system/serverOperationRecord",
+          "name": "服务器操作记录"
+        }
+      ]
+    }
+  ]
+}

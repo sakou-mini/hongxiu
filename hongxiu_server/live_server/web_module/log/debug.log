@@ -1,0 +1,484 @@
+2022-02-17 11:04:19 上午 [Thread: main][ Class:com.donglai.web.app.WebApp >> Method: org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55) ]
+INFO:Starting WebApp on DESKTOP-VNJ9PIL with PID 34072 (E:\CompanyProgram\hongxiu\hongxiu_server\live_server\web_module\target\classes started by yty in E:\CompanyProgram\hongxiu\hongxiu_server\live_server\web_module)
+2022-02-17 11:04:19 上午 [Thread: main][ Class:com.donglai.web.app.WebApp >> Method: org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651) ]
+INFO:No active profile set, falling back to default profiles: default
+2022-02-17 11:04:23 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-02-17 11:04:23 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-02-17 11:04:23 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 146ms. Found 48 MongoDB repository interfaces.
+2022-02-17 11:04:23 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-02-17 11:04:23 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-02-17 11:04:23 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 16ms. Found 0 JPA repository interfaces.
+2022-02-17 11:04:23 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-02-17 11:04:23 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-02-17 11:04:23 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 7ms. Found 0 Redis repository interfaces.
+2022-02-17 11:04:24 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'shiroRedisProperties' of type [com.donglai.web.config.shiro.ShiroRedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:24 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'securityProperties' of type [com.donglai.web.config.shiro.SecurityProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:24 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean '(inner bean)#2a484710' of type [org.springframework.beans.factory.config.PropertiesFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:24 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean '(inner bean)#2a484710' of type [java.util.Properties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:24 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean '(inner bean)#15a8cebd' of type [org.springframework.data.repository.core.support.PropertiesBasedNamedQueries] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:24 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean '(inner bean)#20ffb8d5' of type [org.springframework.data.repository.core.support.RepositoryFragmentsFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:24 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean '(inner bean)#20ffb8d5' of type [org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:24 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'spring.data.mongodb-org.springframework.boot.autoconfigure.mongo.MongoProperties' of type [org.springframework.boot.autoconfigure.mongo.MongoProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:24 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'org.springframework.boot.autoconfigure.data.mongo.MongoDatabaseFactoryDependentConfiguration' of type [org.springframework.boot.autoconfigure.data.mongo.MongoDatabaseFactoryDependentConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:24 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'org.springframework.boot.autoconfigure.data.mongo.MongoDatabaseFactoryConfiguration' of type [org.springframework.boot.autoconfigure.data.mongo.MongoDatabaseFactoryConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:24 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration' of type [org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:24 上午 [Thread: main][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='rs0'}
+2022-02-17 11:04:24 上午 [Thread: main][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Adding discovered server localhost:27017 to client view of cluster
+2022-02-17 11:04:24 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'mongo' of type [com.mongodb.client.internal.MongoClientImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:24 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'mongoDatabaseFactory' of type [org.springframework.data.mongodb.core.SimpleMongoClientDatabaseFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:24 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'org.springframework.boot.autoconfigure.data.mongo.MongoDataConfiguration' of type [org.springframework.boot.autoconfigure.data.mongo.MongoDataConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:24 上午 [Thread: cluster-ClusterId{value='620dbb38f50e3718bea16a2b', description='null'}-localhost:27017][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Opened connection [connectionId{localValue:1, serverValue:536}] to localhost:27017
+2022-02-17 11:04:24 上午 [Thread: cluster-ClusterId{value='620dbb38f50e3718bea16a2b', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=5503000, setName='rs0', canonicalAddress=localhost:27017, hosts=[localhost:27017], passives=[], arbiters=[], primary='localhost:27017', tagSet=TagSet{[]}, electionId=7fffffff0000000000000015, setVersion=1, lastWriteDate=Thu Feb 17 11:04:00 CST 2022, lastUpdateTimeNanos=746469815922600}
+2022-02-17 11:04:24 上午 [Thread: cluster-ClusterId{value='620dbb38f50e3718bea16a2b', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Setting max election id to 7fffffff0000000000000015 from replica set primary localhost:27017
+2022-02-17 11:04:24 上午 [Thread: cluster-ClusterId{value='620dbb38f50e3718bea16a2b', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Setting max set version to 1 from replica set primary localhost:27017
+2022-02-17 11:04:24 上午 [Thread: cluster-ClusterId{value='620dbb38f50e3718bea16a2b', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Discovered replica set primary localhost:27017
+2022-02-17 11:04:24 上午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-02-17 11:04:24 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'mongoCustomConversions' of type [org.springframework.data.mongodb.core.convert.MongoCustomConversions] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:24 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'mongoMappingContext' of type [org.springframework.data.mongodb.core.mapping.MongoMappingContext] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:24 上午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-02-17 11:04:24 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'mappingMongoConverter' of type [org.springframework.data.mongodb.core.convert.MappingMongoConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:24 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'mongoTemplate' of type [org.springframework.data.mongodb.core.MongoTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:24 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'menuRepository' of type [org.springframework.data.mongodb.repository.support.MongoRepositoryFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:24 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'menuRepository' of type [com.sun.proxy.$Proxy116] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:24 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'menuService' of type [com.donglai.web.db.backoffice.service.MenuService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:24 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'myShiroConfiguration' of type [com.donglai.web.config.shiro.MyShiroConfiguration$$EnhancerBySpringCGLIB$$156d03da] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:24 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'redisSessionDAO' of type [org.crazycake.shiro.RedisSessionDAO] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:25 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'sessionManager' of type [com.donglai.web.config.shiro.session.MySessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:25 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'shiroCacheManager' of type [org.crazycake.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:25 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'hashedCredentialsMatcher' of type [org.apache.shiro.authc.credential.HashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:25 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'myShiroRealm' of type [com.donglai.web.config.shiro.MyShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:25 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:25 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:25 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'redisConfig' of type [com.donglai.common.config.redis.RedisConfig$$EnhancerBySpringCGLIB$$6236d6db] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:04:25 上午 [Thread: main][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Opened connection [connectionId{localValue:2, serverValue:537}] to localhost:27017
+2022-02-17 11:04:25 上午 [Thread: main][ Class:org.springframework.boot.web.embedded.tomcat.TomcatWebServer >> Method: org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:108) ]
+INFO:Tomcat initialized with port(s): 8007 (http)
+2022-02-17 11:04:26 上午 [Thread: main][ Class:org.springframework.web.context.ContextLoader >> Method: org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284) ]
+INFO:Root WebApplicationContext: initialization completed in 6181 ms
+2022-02-17 11:04:26 上午 [Thread: main][ Class:org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor >> Method: org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:181) ]
+INFO:Initializing ExecutorService 'applicationTaskExecutor'
+2022-02-17 11:04:26 上午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:110) ]
+INFO:HikariPool-1 - Starting...
+2022-02-17 11:04:26 上午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:123) ]
+INFO:HikariPool-1 - Start completed.
+2022-02-17 11:04:26 上午 [Thread: main][ Class:org.redisson.Version >> Method: org.redisson.Version.logVersion(Version.java:41) ]
+INFO:Redisson 3.16.1
+2022-02-17 11:04:27 上午 [Thread: task-1][ Class:org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean >> Method: org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) ]
+INFO:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-17 11:04:27 上午 [Thread: redisson-netty-4-6][ Class:org.redisson.connection.pool.MasterPubSubConnectionPool >> Method: org.redisson.connection.pool.ConnectionPool$1.lambda$run$0(ConnectionPool.java:166) ]
+INFO:1 connections initialized for localhost/127.0.0.1:6379
+2022-02-17 11:04:27 上午 [Thread: redisson-netty-4-5][ Class:org.redisson.connection.pool.MasterConnectionPool >> Method: org.redisson.connection.pool.ConnectionPool$1.lambda$run$0(ConnectionPool.java:166) ]
+INFO:1 connections initialized for localhost/127.0.0.1:6379
+2022-02-17 11:04:29 上午 [Thread: main][ Class:com.donglai.model.config.mongodb.MongoSetUp >> Method: com.donglai.model.config.mongodb.MongoSetUp.transactionManager(MongoSetUp.java:40) ]
+INFO:开启了mongodb 事务
+2022-02-17 11:04:29 上午 [Thread: main][ Class:springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping >> Method: springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods(PropertySourcedRequestMappingHandlerMapping.java:69) ]
+INFO:Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-02-17 11:04:30 上午 [Thread: main][ Class:org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext >> Method: org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:558) ]
+WARN:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8007 is already in use
+2022-02-17 11:04:30 上午 [Thread: main][ Class:org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean >> Method: org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:598) ]
+INFO:Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-17 11:04:30 上午 [Thread: main][ Class:org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor >> Method: org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.shutdown(ExecutorConfigurationSupport.java:218) ]
+INFO:Shutting down ExecutorService 'applicationTaskExecutor'
+2022-02-17 11:04:30 上午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:350) ]
+INFO:HikariPool-1 - Shutdown initiated...
+2022-02-17 11:04:30 上午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:352) ]
+INFO:HikariPool-1 - Shutdown completed.
+2022-02-17 11:04:30 上午 [Thread: main][ Class:org.springframework.jmx.export.annotation.AnnotationMBeanExporter >> Method: org.springframework.jmx.support.MBeanRegistrationSupport.doUnregister(MBeanRegistrationSupport.java:211) ]
+INFO:Could not unregister MBean [com.github.tobato.fastdfs.domain.conn:name=fdfsConnectionPool,type=FdfsConnectionPool] as said MBean is not registered (perhaps already unregistered by an external process)
+2022-02-17 11:04:30 上午 [Thread: main][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Closed connection [connectionId{localValue:2, serverValue:537}] to localhost:27017 because the pool has been closed.
+2022-02-17 11:04:30 上午 [Thread: main][ Class:org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener >> Method: org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage(ConditionEvaluationReportLoggingListener.java:136) ]
+INFO:
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-02-17 11:04:30 上午 [Thread: main][ Class:org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter >> Method: org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report(LoggingFailureAnalysisReporter.java:40) ]
+ERROR:
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8007 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8007 or configure this application to listen on another port.
+
+2022-02-17 11:12:02 上午 [Thread: main][ Class:com.donglai.web.app.WebApp >> Method: org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55) ]
+INFO:Starting WebApp on DESKTOP-VNJ9PIL with PID 26688 (E:\CompanyProgram\hongxiu\hongxiu_server\live_server\web_module\target\classes started by yty in E:\CompanyProgram\hongxiu\hongxiu_server\live_server\web_module)
+2022-02-17 11:12:02 上午 [Thread: main][ Class:com.donglai.web.app.WebApp >> Method: org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651) ]
+INFO:No active profile set, falling back to default profiles: default
+2022-02-17 11:12:03 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-02-17 11:12:03 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-02-17 11:12:03 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 131ms. Found 48 MongoDB repository interfaces.
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 15ms. Found 0 JPA repository interfaces.
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 5ms. Found 0 Redis repository interfaces.
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'shiroRedisProperties' of type [com.donglai.web.config.shiro.ShiroRedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'securityProperties' of type [com.donglai.web.config.shiro.SecurityProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean '(inner bean)#4ae8fb2a' of type [org.springframework.beans.factory.config.PropertiesFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean '(inner bean)#4ae8fb2a' of type [java.util.Properties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean '(inner bean)#3b170235' of type [org.springframework.data.repository.core.support.PropertiesBasedNamedQueries] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean '(inner bean)#5a4464c5' of type [org.springframework.data.repository.core.support.RepositoryFragmentsFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean '(inner bean)#5a4464c5' of type [org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'spring.data.mongodb-org.springframework.boot.autoconfigure.mongo.MongoProperties' of type [org.springframework.boot.autoconfigure.mongo.MongoProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'org.springframework.boot.autoconfigure.data.mongo.MongoDatabaseFactoryDependentConfiguration' of type [org.springframework.boot.autoconfigure.data.mongo.MongoDatabaseFactoryDependentConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'org.springframework.boot.autoconfigure.data.mongo.MongoDatabaseFactoryConfiguration' of type [org.springframework.boot.autoconfigure.data.mongo.MongoDatabaseFactoryConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration' of type [org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='rs0'}
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Adding discovered server localhost:27017 to client view of cluster
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'mongo' of type [com.mongodb.client.internal.MongoClientImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'mongoDatabaseFactory' of type [org.springframework.data.mongodb.core.SimpleMongoClientDatabaseFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'org.springframework.boot.autoconfigure.data.mongo.MongoDataConfiguration' of type [org.springframework.boot.autoconfigure.data.mongo.MongoDataConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:04 上午 [Thread: cluster-ClusterId{value='620dbd04792e6e4f1549e61e', description='null'}-localhost:27017][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Opened connection [connectionId{localValue:1, serverValue:538}] to localhost:27017
+2022-02-17 11:12:04 上午 [Thread: cluster-ClusterId{value='620dbd04792e6e4f1549e61e', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3797700, setName='rs0', canonicalAddress=localhost:27017, hosts=[localhost:27017], passives=[], arbiters=[], primary='localhost:27017', tagSet=TagSet{[]}, electionId=7fffffff0000000000000015, setVersion=1, lastWriteDate=Thu Feb 17 11:11:48 CST 2022, lastUpdateTimeNanos=746930034581900}
+2022-02-17 11:12:04 上午 [Thread: cluster-ClusterId{value='620dbd04792e6e4f1549e61e', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Setting max election id to 7fffffff0000000000000015 from replica set primary localhost:27017
+2022-02-17 11:12:04 上午 [Thread: cluster-ClusterId{value='620dbd04792e6e4f1549e61e', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Setting max set version to 1 from replica set primary localhost:27017
+2022-02-17 11:12:04 上午 [Thread: cluster-ClusterId{value='620dbd04792e6e4f1549e61e', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Discovered replica set primary localhost:27017
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'mongoCustomConversions' of type [org.springframework.data.mongodb.core.convert.MongoCustomConversions] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'mongoMappingContext' of type [org.springframework.data.mongodb.core.mapping.MongoMappingContext] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'mappingMongoConverter' of type [org.springframework.data.mongodb.core.convert.MappingMongoConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:04 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'mongoTemplate' of type [org.springframework.data.mongodb.core.MongoTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:05 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'menuRepository' of type [org.springframework.data.mongodb.repository.support.MongoRepositoryFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:05 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'menuRepository' of type [com.sun.proxy.$Proxy116] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:05 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'menuService' of type [com.donglai.web.db.backoffice.service.MenuService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:05 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'myShiroConfiguration' of type [com.donglai.web.config.shiro.MyShiroConfiguration$$EnhancerBySpringCGLIB$$11eec3ba] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:05 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'redisSessionDAO' of type [org.crazycake.shiro.RedisSessionDAO] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:05 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'sessionManager' of type [com.donglai.web.config.shiro.session.MySessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:05 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'shiroCacheManager' of type [org.crazycake.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:05 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'hashedCredentialsMatcher' of type [org.apache.shiro.authc.credential.HashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:05 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'myShiroRealm' of type [com.donglai.web.config.shiro.MyShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:05 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:05 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:05 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'redisConfig' of type [com.donglai.common.config.redis.RedisConfig$$EnhancerBySpringCGLIB$$5eb896bb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:12:05 上午 [Thread: main][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Opened connection [connectionId{localValue:2, serverValue:539}] to localhost:27017
+2022-02-17 11:12:05 上午 [Thread: main][ Class:org.springframework.boot.web.embedded.tomcat.TomcatWebServer >> Method: org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:108) ]
+INFO:Tomcat initialized with port(s): 8007 (http)
+2022-02-17 11:12:05 上午 [Thread: main][ Class:org.springframework.web.context.ContextLoader >> Method: org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284) ]
+INFO:Root WebApplicationContext: initialization completed in 3441 ms
+2022-02-17 11:12:06 上午 [Thread: main][ Class:org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor >> Method: org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:181) ]
+INFO:Initializing ExecutorService 'applicationTaskExecutor'
+2022-02-17 11:12:06 上午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:110) ]
+INFO:HikariPool-1 - Starting...
+2022-02-17 11:12:06 上午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:123) ]
+INFO:HikariPool-1 - Start completed.
+2022-02-17 11:12:06 上午 [Thread: main][ Class:org.redisson.Version >> Method: org.redisson.Version.logVersion(Version.java:41) ]
+INFO:Redisson 3.16.1
+2022-02-17 11:12:06 上午 [Thread: task-1][ Class:org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean >> Method: org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) ]
+INFO:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-17 11:12:07 上午 [Thread: redisson-netty-4-5][ Class:org.redisson.connection.pool.MasterPubSubConnectionPool >> Method: org.redisson.connection.pool.ConnectionPool$1.lambda$run$0(ConnectionPool.java:166) ]
+INFO:1 connections initialized for localhost/127.0.0.1:6379
+2022-02-17 11:12:07 上午 [Thread: redisson-netty-4-6][ Class:org.redisson.connection.pool.MasterConnectionPool >> Method: org.redisson.connection.pool.ConnectionPool$1.lambda$run$0(ConnectionPool.java:166) ]
+INFO:1 connections initialized for localhost/127.0.0.1:6379
+2022-02-17 11:12:09 上午 [Thread: main][ Class:com.donglai.model.config.mongodb.MongoSetUp >> Method: com.donglai.model.config.mongodb.MongoSetUp.transactionManager(MongoSetUp.java:40) ]
+INFO:开启了mongodb 事务
+2022-02-17 11:12:09 上午 [Thread: main][ Class:springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping >> Method: springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods(PropertySourcedRequestMappingHandlerMapping.java:69) ]
+INFO:Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-02-17 11:12:09 上午 [Thread: main][ Class:org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext >> Method: org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:558) ]
+WARN:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8007 is already in use
+2022-02-17 11:12:10 上午 [Thread: main][ Class:org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean >> Method: org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:598) ]
+INFO:Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-17 11:12:10 上午 [Thread: main][ Class:org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor >> Method: org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.shutdown(ExecutorConfigurationSupport.java:218) ]
+INFO:Shutting down ExecutorService 'applicationTaskExecutor'
+2022-02-17 11:12:10 上午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:350) ]
+INFO:HikariPool-1 - Shutdown initiated...
+2022-02-17 11:12:10 上午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:352) ]
+INFO:HikariPool-1 - Shutdown completed.
+2022-02-17 11:12:10 上午 [Thread: main][ Class:org.springframework.jmx.export.annotation.AnnotationMBeanExporter >> Method: org.springframework.jmx.support.MBeanRegistrationSupport.doUnregister(MBeanRegistrationSupport.java:211) ]
+INFO:Could not unregister MBean [com.github.tobato.fastdfs.domain.conn:name=fdfsConnectionPool,type=FdfsConnectionPool] as said MBean is not registered (perhaps already unregistered by an external process)
+2022-02-17 11:12:10 上午 [Thread: main][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Closed connection [connectionId{localValue:2, serverValue:539}] to localhost:27017 because the pool has been closed.
+2022-02-17 11:12:10 上午 [Thread: main][ Class:org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener >> Method: org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage(ConditionEvaluationReportLoggingListener.java:136) ]
+INFO:
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-02-17 11:12:10 上午 [Thread: main][ Class:org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter >> Method: org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report(LoggingFailureAnalysisReporter.java:40) ]
+ERROR:
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8007 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8007 or configure this application to listen on another port.
+
+2022-02-17 11:13:06 上午 [Thread: main][ Class:com.donglai.web.app.WebApp >> Method: org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55) ]
+INFO:Starting WebApp on DESKTOP-VNJ9PIL with PID 27812 (E:\CompanyProgram\hongxiu\hongxiu_server\live_server\web_module\target\classes started by yty in E:\CompanyProgram\hongxiu\hongxiu_server\live_server\web_module)
+2022-02-17 11:13:06 上午 [Thread: main][ Class:com.donglai.web.app.WebApp >> Method: org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651) ]
+INFO:No active profile set, falling back to default profiles: default
+2022-02-17 11:13:07 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-02-17 11:13:07 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-02-17 11:13:07 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 139ms. Found 48 MongoDB repository interfaces.
+2022-02-17 11:13:07 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-02-17 11:13:07 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-02-17 11:13:07 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 16ms. Found 0 JPA repository interfaces.
+2022-02-17 11:13:07 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-02-17 11:13:07 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-02-17 11:13:07 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 5ms. Found 0 Redis repository interfaces.
+2022-02-17 11:13:08 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'shiroRedisProperties' of type [com.donglai.web.config.shiro.ShiroRedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:08 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'securityProperties' of type [com.donglai.web.config.shiro.SecurityProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:08 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean '(inner bean)#23648d2d' of type [org.springframework.beans.factory.config.PropertiesFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:08 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean '(inner bean)#23648d2d' of type [java.util.Properties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:08 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean '(inner bean)#6682e6a5' of type [org.springframework.data.repository.core.support.PropertiesBasedNamedQueries] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:08 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean '(inner bean)#587f4f63' of type [org.springframework.data.repository.core.support.RepositoryFragmentsFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:08 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean '(inner bean)#587f4f63' of type [org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:08 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'spring.data.mongodb-org.springframework.boot.autoconfigure.mongo.MongoProperties' of type [org.springframework.boot.autoconfigure.mongo.MongoProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:08 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'org.springframework.boot.autoconfigure.data.mongo.MongoDatabaseFactoryDependentConfiguration' of type [org.springframework.boot.autoconfigure.data.mongo.MongoDatabaseFactoryDependentConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:08 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'org.springframework.boot.autoconfigure.data.mongo.MongoDatabaseFactoryConfiguration' of type [org.springframework.boot.autoconfigure.data.mongo.MongoDatabaseFactoryConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:08 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration' of type [org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:08 上午 [Thread: main][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='rs0'}
+2022-02-17 11:13:08 上午 [Thread: main][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Adding discovered server localhost:27017 to client view of cluster
+2022-02-17 11:13:08 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'mongo' of type [com.mongodb.client.internal.MongoClientImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:08 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'mongoDatabaseFactory' of type [org.springframework.data.mongodb.core.SimpleMongoClientDatabaseFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:08 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'org.springframework.boot.autoconfigure.data.mongo.MongoDataConfiguration' of type [org.springframework.boot.autoconfigure.data.mongo.MongoDataConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:08 上午 [Thread: cluster-ClusterId{value='620dbd440beed066a0a497c2', description='null'}-localhost:27017][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Opened connection [connectionId{localValue:1, serverValue:540}] to localhost:27017
+2022-02-17 11:13:08 上午 [Thread: cluster-ClusterId{value='620dbd440beed066a0a497c2', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3774300, setName='rs0', canonicalAddress=localhost:27017, hosts=[localhost:27017], passives=[], arbiters=[], primary='localhost:27017', tagSet=TagSet{[]}, electionId=7fffffff0000000000000015, setVersion=1, lastWriteDate=Thu Feb 17 11:12:48 CST 2022, lastUpdateTimeNanos=746993947050600}
+2022-02-17 11:13:08 上午 [Thread: cluster-ClusterId{value='620dbd440beed066a0a497c2', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Setting max election id to 7fffffff0000000000000015 from replica set primary localhost:27017
+2022-02-17 11:13:08 上午 [Thread: cluster-ClusterId{value='620dbd440beed066a0a497c2', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Setting max set version to 1 from replica set primary localhost:27017
+2022-02-17 11:13:08 上午 [Thread: cluster-ClusterId{value='620dbd440beed066a0a497c2', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Discovered replica set primary localhost:27017
+2022-02-17 11:13:08 上午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-02-17 11:13:08 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'mongoCustomConversions' of type [org.springframework.data.mongodb.core.convert.MongoCustomConversions] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:08 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'mongoMappingContext' of type [org.springframework.data.mongodb.core.mapping.MongoMappingContext] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:08 上午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-02-17 11:13:08 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'mappingMongoConverter' of type [org.springframework.data.mongodb.core.convert.MappingMongoConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:08 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'mongoTemplate' of type [org.springframework.data.mongodb.core.MongoTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:08 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'menuRepository' of type [org.springframework.data.mongodb.repository.support.MongoRepositoryFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:08 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'menuRepository' of type [com.sun.proxy.$Proxy116] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:08 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'menuService' of type [com.donglai.web.db.backoffice.service.MenuService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:08 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'myShiroConfiguration' of type [com.donglai.web.config.shiro.MyShiroConfiguration$$EnhancerBySpringCGLIB$$5c434423] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:09 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'redisSessionDAO' of type [org.crazycake.shiro.RedisSessionDAO] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:09 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'sessionManager' of type [com.donglai.web.config.shiro.session.MySessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:09 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'shiroCacheManager' of type [org.crazycake.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:09 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'hashedCredentialsMatcher' of type [org.apache.shiro.authc.credential.HashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:09 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'myShiroRealm' of type [com.donglai.web.config.shiro.MyShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:09 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:09 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:09 上午 [Thread: main][ Class:org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker >> Method: org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:335) ]
+INFO:Bean 'redisConfig' of type [com.donglai.common.config.redis.RedisConfig$$EnhancerBySpringCGLIB$$a90d1724] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-17 11:13:09 上午 [Thread: main][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Opened connection [connectionId{localValue:2, serverValue:541}] to localhost:27017
+2022-02-17 11:13:09 上午 [Thread: main][ Class:org.springframework.boot.web.embedded.tomcat.TomcatWebServer >> Method: org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:108) ]
+INFO:Tomcat initialized with port(s): 8007 (http)
+2022-02-17 11:13:09 上午 [Thread: main][ Class:org.springframework.web.context.ContextLoader >> Method: org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284) ]
+INFO:Root WebApplicationContext: initialization completed in 3346 ms
+2022-02-17 11:13:09 上午 [Thread: main][ Class:org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor >> Method: org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:181) ]
+INFO:Initializing ExecutorService 'applicationTaskExecutor'
+2022-02-17 11:13:10 上午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:110) ]
+INFO:HikariPool-1 - Starting...
+2022-02-17 11:13:10 上午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:123) ]
+INFO:HikariPool-1 - Start completed.
+2022-02-17 11:13:10 上午 [Thread: main][ Class:org.redisson.Version >> Method: org.redisson.Version.logVersion(Version.java:41) ]
+INFO:Redisson 3.16.1
+2022-02-17 11:13:10 上午 [Thread: task-1][ Class:org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean >> Method: org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) ]
+INFO:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-17 11:13:11 上午 [Thread: redisson-netty-4-6][ Class:org.redisson.connection.pool.MasterPubSubConnectionPool >> Method: org.redisson.connection.pool.ConnectionPool$1.lambda$run$0(ConnectionPool.java:166) ]
+INFO:1 connections initialized for localhost/127.0.0.1:6379
+2022-02-17 11:13:11 上午 [Thread: redisson-netty-4-5][ Class:org.redisson.connection.pool.MasterConnectionPool >> Method: org.redisson.connection.pool.ConnectionPool$1.lambda$run$0(ConnectionPool.java:166) ]
+INFO:1 connections initialized for localhost/127.0.0.1:6379
+2022-02-17 11:13:13 上午 [Thread: main][ Class:com.donglai.model.config.mongodb.MongoSetUp >> Method: com.donglai.model.config.mongodb.MongoSetUp.transactionManager(MongoSetUp.java:40) ]
+INFO:开启了mongodb 事务
+2022-02-17 11:13:13 上午 [Thread: main][ Class:springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping >> Method: springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods(PropertySourcedRequestMappingHandlerMapping.java:69) ]
+INFO:Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-02-17 11:13:13 上午 [Thread: main][ Class:org.springframework.boot.web.embedded.tomcat.TomcatWebServer >> Method: org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:220) ]
+INFO:Tomcat started on port(s): 8007 (http) with context path ''
+2022-02-17 11:13:13 上午 [Thread: main][ Class:springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper >> Method: springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:160) ]
+INFO:Context refreshed
+2022-02-17 11:13:13 上午 [Thread: main][ Class:springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper >> Method: springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:163) ]
+INFO:Found 1 custom documentation plugin(s)
+2022-02-17 11:13:13 上午 [Thread: main][ Class:springfox.documentation.spring.web.scanners.ApiListingReferenceScanner >> Method: springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan(ApiListingReferenceScanner.java:41) ]
+INFO:Scanning for api listing references
+2022-02-17 11:13:14 上午 [Thread: main][ Class:springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator >> Method: springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40) ]
+INFO:Generating unique operation named: findListUsingPOST_1
+2022-02-17 11:13:14 上午 [Thread: main][ Class:springfox.documentation.spring.web.readers.parameter.ParameterDataTypeReader >> Method: springfox.documentation.spring.web.readers.parameter.ParameterDataTypeReader.apply(ParameterDataTypeReader.java:92) ]
+WARN:Trying to infer dataType java.util.Set<java.lang.Integer>
+2022-02-17 11:13:14 上午 [Thread: main][ Class:springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator >> Method: springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40) ]
+INFO:Generating unique operation named: addMusicUsingPOST_1
+2022-02-17 11:13:14 上午 [Thread: main][ Class:springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator >> Method: springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40) ]
+INFO:Generating unique operation named: addMusicUsingPOST_2
+2022-02-17 11:13:14 上午 [Thread: main][ Class:springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator >> Method: springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40) ]
+INFO:Generating unique operation named: deleteUsingPOST_1
+2022-02-17 11:13:14 上午 [Thread: main][ Class:springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator >> Method: springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40) ]
+INFO:Generating unique operation named: findListUsingPOST_2
+2022-02-17 11:13:14 上午 [Thread: main][ Class:springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator >> Method: springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40) ]
+INFO:Generating unique operation named: deleteUsingPOST_2
+2022-02-17 11:13:14 上午 [Thread: main][ Class:springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator >> Method: springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40) ]
+INFO:Generating unique operation named: findListUsingPOST_3
+2022-02-17 11:13:14 上午 [Thread: main][ Class:springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator >> Method: springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40) ]
+INFO:Generating unique operation named: insertUsingPOST_1
+2022-02-17 11:13:14 上午 [Thread: main][ Class:springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator >> Method: springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40) ]
+INFO:Generating unique operation named: updateStatusUsingPOST_1
+2022-02-17 11:13:14 上午 [Thread: main][ Class:springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator >> Method: springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40) ]
+INFO:Generating unique operation named: updateUsingPOST_1
+2022-02-17 11:13:14 上午 [Thread: main][ Class:springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator >> Method: springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40) ]
+INFO:Generating unique operation named: findUserListUsingPOST_1
+2022-02-17 11:13:14 上午 [Thread: main][ Class:springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator >> Method: springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40) ]
+INFO:Generating unique operation named: findVideoListUsingPOST_1
+2022-02-17 11:13:14 上午 [Thread: main][ Class:springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator >> Method: springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40) ]
+INFO:Generating unique operation named: addUserUsingPOST_1
+2022-02-17 11:13:14 上午 [Thread: main][ Class:springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator >> Method: springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40) ]
+INFO:Generating unique operation named: updateStatusUsingPOST_2
+2022-02-17 11:13:14 上午 [Thread: main][ Class:springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator >> Method: springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40) ]
+INFO:Generating unique operation named: callbackUsingPOST_1
+2022-02-17 11:13:14 上午 [Thread: main][ Class:org.springframework.data.repository.config.DeferredRepositoryInitializationListener >> Method: org.springframework.data.repository.config.DeferredRepositoryInitializationListener.onApplicationEvent(DeferredRepositoryInitializationListener.java:49) ]
+INFO:Triggering deferred initialization of Spring Data repositories…
+2022-02-17 11:13:14 上午 [Thread: main][ Class:org.springframework.data.repository.config.DeferredRepositoryInitializationListener >> Method: org.springframework.data.repository.config.DeferredRepositoryInitializationListener.onApplicationEvent(DeferredRepositoryInitializationListener.java:53) ]
+INFO:Spring Data repositories initialized!
+2022-02-17 11:13:14 上午 [Thread: main][ Class:com.donglai.web.app.WebApp >> Method: org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61) ]
+INFO:Started WebApp in 8.989 seconds (JVM running for 10.711)

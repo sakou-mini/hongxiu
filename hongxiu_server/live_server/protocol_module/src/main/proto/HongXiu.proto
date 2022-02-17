@@ -1,0 +1,330 @@
+syntax = "proto3";
+option java_multiple_files = false;
+option java_package = "com.donglai.protocol";
+option java_outer_classname = "HongXiu";
+import "Account.proto";
+import "Live.proto";
+import "Constant.proto";
+import "Common.proto";
+import "Blog.proto";
+
+/*服务器主题*/
+enum TopicEnum {
+  GATE = 0;
+  ACCOUNT = 1;
+  LIVE = 2;
+  QUEUE = 3;
+  BLOGS = 4;
+  STATISTICS = 5;
+}
+/*
+	协议名字规则 ({服务器主题}of{协议名})
+*/
+
+//TOPIC +Of+ messageName
+message HongXiuMessageRequest{
+  PlatformType platform = 10000;
+  oneof request {
+    //Heart Connected
+    GateOfHeartConnectedRequest gateOfHeartConnectedRequest = 999;
+
+    //Queue Server（used for server）
+    QueueOfAddQueueRequest queueOfAddQueueRequest = 1000; //队列服 新建队列通知
+    LiveOfQueueFinishRequest liveOfQueueFinishRequest = 1001; //直播服 队列完成通知
+    BlogsOfQueueFinishRequest blogsOfQueueFinishRequest = 1003; //动态服 队列完成通知
+    StatisticsOfQueueFinishRequest statisticsOfQueueFinishRequest = 1004; //统计服 队列完成
+
+    LiveOfModifyUserCoinListenerRequest liveOfModifyUserCoinListenerRequest = 1010;//修改玩家金币
+    LiveOfUserDisconnectionRequest liveOfUserDisconnectionRequest = 1011; //通知直播服玩家掉线（自动关播）
+    LiveOfUserConnectionRequest liveOfUserConnectionRequest = 1012;       //通知直播服玩家重连（恢复直播）
+
+
+    AccountOfGetAuthCodeRequest accountOfGetAuthCodeRequest = 10;
+    AccountOfVerifyAccountAuthCodeRequest accountOfVerifyAccountAuthCodeRequest = 12;
+    //注册
+    AccountOfRegisterRequest accountOfRegisterRequest = 13; //游客注册
+    AccountOfThirdPartySignUpRequest accountOfThirdPartySignUpRequest = 14; //第三方注册
+    AccountOfPhoneNumberSignUpRequest accountOfPhoneNumberSignUpRequest = 15;//手机号注册
+    //登录
+    AccountOfLoginRequest accountOfLoginRequest = 16;
+    AccountOfLogoutRequest accountOfLogoutRequest = 17;
+
+    AccountOfUpdatePasswordRequest accountOfUpdatePasswordRequest = 18;
+    AccountOfUpdateUserAvatarRequest accountOfUpdateUserAvatarRequest = 19;
+    AccountOfUpdateNicknameRequest accountOfUpdateNicknameRequest = 20;
+    AccountOfUpdateGenderRequest accountOfUpdateGenderRequest = 21;
+    AccountOfUpdateBirthDayRequest accountOfUpdateBirthDayRequest = 22;
+    AccountOfUpdateSignatureTextRequest accountOfUpdateSignatureTextRequest = 23;
+    AccountOfUpdateRegionRequest accountOfUpdateRegionRequest = 24;
+    AccountOfUpdateSchoolRequest accountOfUpdateSchoolRequest = 25;
+    AccountOfUpdateHomeTownRequest accountOfUpdateHomeTownRequest = 26;
+
+    AccountOfQueryUserInfosRequest accountOfQueryUserInfosRequest = 40;
+    AccountOfQueryPersonalSettingRequest accountOfQueryPersonalSettingRequest = 41;
+    AccountOfFistLoginRequest accountOfFistLoginRequest = 42;
+    AccountOfSetPersonalSettingRequest accountOfSetPersonalSettingRequest = 43;
+
+    AccountOfFollowUserRequest accountOfFollowUserRequest = 44;
+    AccountOfUnFollowUserRequest accountOfUnFollowUserRequest = 45;
+    AccountOfQueryUserLeaderListRequest accountOfQueryUserLeaderListRequest = 46;
+    AccountOfQueryUserFollowerListRequest accountOfQueryUserFollowerListRequest = 47;
+    //是否是用户粉丝
+    AccountOfIsFollowRequest accountOfIsFollowRequest = 48;
+    //别名
+    AccountOfUpdateLeadAliasRequest accountOfUpdateLeadAliasRequest = 49;
+
+
+    //私聊
+    AccountOfPrivateChatRequest accountOfPrivateChatRequest = 50;
+    //私聊列表
+    AccountOfPrivateChatListRequest accountOfPrivateChatListRequest = 51;
+    //私聊会话删除
+    AccountOfPrivateChatListDelRequest accountOfPrivateChatListDelRequest = 52;
+    //私聊拉黑
+    AccountOfPrivateChatInBlackRequest accountOfPrivateChatInBlackRequest = 53;
+    //黑名单删除
+    AccountOfPrivateChatBlackDelRequest accountOfPrivateChatBlackDelRequest = 54;
+    //黑名单恢复
+    AccountOfPrivateChatBlackRegainRequest accountOfPrivateChatBlackRegainRequest = 55;
+    //聊天记录已读
+    AccountOfPrivateChatIsReadRequest accountOfPrivateChatIsReadRequest = 56;
+    //聊天记录列表
+    AccountOfPrivateChatMessageListRequest accountOfPrivateChatMessageListRequest = 57;
+    //聊天会话搜索
+    AccountOfPrivateChatSearchRequest accountOfPrivateChatSearchRequest = 58;
+
+    //反馈
+    AccountOfFeedbackRequest accountOfFeedbackRequest = 59;
+
+    AccountOfBlackListRequest accountOfBlackListRequest = 60;
+
+    AccountOfLikeMessageRequest accountOfLikeMessageRequest = 61;
+
+    AccountOfSimpleRecommendUserRequest accountOfSimpleRecommendUserRequest = 62;
+
+    AccountOfReportUserRequest accountOfReportUserRequest = 63;
+
+    AccountOfFinishTaskRequest accountOfFinishTaskRequest = 64;
+
+    AccountOfFindTaskListRequest accountOfFindTaskListRequest = 65;
+
+
+
+
+    //TODO (DELETE) replatce by accountOfLogin
+    LiveOfLoginRequest liveOfLoginRequest = 200;
+    //TODO (DELETE) Just usedFor server
+    LiveOfLogoutRequest liveOfLogoutRequest = 201;
+
+    LiveOfApplyLiveUserRequest liveOfApplyLiveUserRequest = 202;
+    LiveOfGetLiveRoomListRequest liveOfGetLiveRoomListRequest = 203;
+    LiveOfQueryRoomInfoRequest liveOfQueryRoomInfoRequest = 204;
+    LiveOfQueryLiveUserInfosRequest liveOfQueryLiveUserInfosRequest = 205;
+    LiveOfUpdateRoomImageRequest liveOfUpdateRoomImageRequest = 206;
+
+    //LiveModule
+    LiveOfStartLiveRequest liveOfStartLiveRequest = 220;
+    LiveOfEnterLiveRoomRequest liveOfEnterLiveRoomRequest = 221;
+    LiveOfSendBulletMessageRequest liveOfSendBulletMessageRequest = 222;
+    LiveOfAutoQuitRoomRequest liveOfAutoQuitRoomRequest = 223;  //this message only used fo server (close oldRoom record)
+    LiveOfQuitRoomRequest liveOfQuitRoomRequest = 224;
+    LiveOfEndLiveRequest liveOfEndLiveRequest = 225;
+    LiveOfSendGiftRequest liveOfSendGiftRequest = 226;
+    LiveOfSwitchLiveSourceLineRequest liveOfSwitchLiveSourceLineRequest = 227;
+    LiveOfQueryRoomAudienceInfoRequest liveOfQueryRoomAudienceInfoRequest = 228;
+    LiveOfSetRoomPlayingMusicInfoRequest liveOfSetRoomPlayingMusicInfoRequest = 229;
+    LiveOfSwitchLivePatternRequest liveOfSwitchLivePatternRequest = 230;
+
+    //rank
+    LiveOfQueryGiftIncomeRankRequest liveOfQueryGiftIncomeRankRequest = 248;
+    LiveOfQueryContributionRankRequest liveOfQueryContributionRankRequest = 249;
+    LiveOfQueryFansContributionRankRequest liveOfQueryFansContributionRankRequest = 250;
+
+    //messageList
+    LiveOfMessageListQueryUserLeadersRequest liveOfMessageListQueryUserLeadersRequest = 260;
+
+
+
+    //Diary
+    BlogsOfRecommendationRequest blogsOfRecommendationRequest = 2000; //推荐
+    BlogsOfCreateBlogsRequest blogsOfCreateBlogsRequest = 2001; //创建博客
+    BlogsOfAttentionBlogsRequest blogsOfAttentionBlogsRequest = 2002;
+    BlogsOfDiscoverBlogsRequest blogsOfDiscoverBlogsRequest = 2003;
+    BlogsOfQueryUserBlogsInfoRequest blogsOfQueryUserBlogsInfoRequest = 2004;
+    BlogsOfQueryBlogsDetailRequest blogsOfQueryBlogsDetailRequest = 2005;
+    BlogsOfPlayBlogsRequest blogsOfPlayBlogsRequest = 2006;
+    BlogsOfQueryUserLikeBlogsRequest blogsOfQueryUserLikeBlogsRequest = 2007;
+    BlogsOfQueryUserFavoritesBlogsRequest blogsOfQueryUserFavoritesBlogsRequest = 2008;
+
+    BlogsOfQueryBlogsCommentRequest blogsOfQueryBlogsCommentRequest = 2009;
+    BlogsOfLikeBlogsRequest blogsOfLikeBlogsRequest = 2010;
+    BlogsOfLikeCommentRequest blogsOfLikeCommentRequest = 2011;
+    BlogsOfCommentBlogsRequest blogsOfCommentBlogsRequest = 2012;
+    BlogsOfQueryCommentByIdsRequest blogsOfQueryCommentByIdsRequest = 2013;
+    BlogsOfSearchRequest blogsOfSearchRequest = 2014;
+    BlogsOfDraftRequest blogsOfDraftRequest = 2015; //保存到草稿箱
+    BlogsOfDraftPublishOrDeleteRequest blogsOfDraftPublishOrDeleteRequest = 2016;//发布或删除草稿箱作品
+    BlogsOfDeleteBlogsRequest blogsOfDeleteBlogsRequest = 2017;
+    //Banner
+    BlogsOfBannerQueryRequest blogsOfBannerQueryRequest = 2018;
+    //互动消息
+    BlogsOfInteractiveListRequest blogsOfInteractiveListRequest = 2019;
+
+    BlogsOfReportCommentRequest blogsOfReportCommentRequest = 2020;
+
+    BlogsOfReportVideoRequest blogsOfReportVideoRequest = 2021;
+  }
+}
+
+
+message HongXiuMessageReply {
+  ResultCode resultCode = 1;
+  oneof reply {
+    GateOfErrorReply gateOfErrorReply = 10000;
+
+    AccountOfRepeatedLoginBroadcastMessage accountOfRepeatedLoginBroadcastMessage = 9;
+    AccountOfGetAuthCodeReply accountOfGetAuthCodeReply = 10;
+    AccountOfVerifyAccountAuthCodeReply accountOfVerifyAccountAuthCodeReply = 11;
+    //注册
+    AccountOfRegisterReply accountOfRegisterReply = 12;
+    AccountOfThirdPartySignUpReply accountOfThirdPartySignUpReply = 13;
+    AccountOfPhoneNumberSignUpReply accountOfPhoneNumberSignUpReply = 14;
+
+    AccountOfLoginReply accountOfLoginReply = 15;
+    AccountOfLogoutReply accountOfLogoutReply = 16;
+
+
+    AccountOfUpdatePasswordReply accountOfUpdatePasswordReply = 17;
+    AccountOfUpdateUserAvatarReply accountOfUpdateUserAvatarReply = 18;
+    AccountOfUpdateNicknameReply accountOfUpdateNicknameReply = 19;
+    AccountOfUpdateGenderReply accountOfUpdateGenderReply = 20;
+    AccountOfUpdateBirthDayReply accountOfUpdateBirthDayReply = 21;
+    AccountOfUpdateSignatureTextReply accountOfUpdateSignatureTextReply = 22;
+    AccountOfUpdateRegionReply accountOfUpdateRegionReply = 23;
+    AccountOfUpdateSchoolRequest accountOfUpdateSchoolRequest = 24;
+    AccountOfUpdateHomeTownRequest accountOfUpdateHomeTownRequest = 25;
+
+    AccountOfQueryUserInfosReply accountOfQueryUserInfosReply = 40;
+    AccountOfQueryPersonalSettingReply accountOfQueryPersonalSettingReply = 41;
+    AccountOfFistLoginReply accountOfFistLoginReply = 42;
+    AccountOfSetPersonalSettingReply accountOfSetPersonalSettingReply = 43;
+
+    AccountOfFollowUserReply accountOfFollowUserReply = 44;
+    AccountOfUnFollowUserReply accountOfUnFollowUserReply = 45;
+    AccountOfFollowUserBroadcastMessage accountOfFollowUserBroadcastMessage = 46;
+    AccountOfQueryUserLeaderListReply accountOfQueryUserLeaderListReply = 47;
+    AccountOfQueryUserFollowerListReply accountOfQueryUserFollowerListReply = 48;
+    //是否是用户粉丝
+    AccountOfIsFollowReply accountOfIsFollowReply = 49;
+    AccountOfUpdateLeadAliasReply accountOfUpdateLeadAliasReply = 50;
+    AccountOfFeedbackReply accountOfFeedbackReply = 51;
+
+    //===私聊功能==============
+    //私聊
+    AccountOfPrivateChatReply accountOfPrivateChatReply = 60;
+    AccountOfPrivateChatBroadCastMessage accountOfPrivateChatBroadCastMessage = 61;
+    //私聊列表
+    AccountOfPrivateChatListReply accountOfPrivateChatListReply = 62;
+    //私聊会话删除
+    AccountOfPrivateChatListDelReply accountOfPrivateChatListDelReply = 63;
+    //私聊拉黑
+    AccountOfPrivateChatInBlackReply accountOfPrivateChatInBlackReply = 64;
+    //黑名单删除
+    AccountOfPrivateChatBlackDelReply accountOfPrivateChatBlackDelReply = 65;
+    //黑名单恢复
+    AccountOfPrivateChatBlackRegainReply accountOfPrivateChatBlackRegainReply = 66;
+    //聊天记录列表
+    AccountOfPrivateChatMessageListReply accountOfPrivateChatMessageListReply = 67;
+    //聊天记录已读
+    AccountOfPrivateChatIsReadReply accountOfPrivateChatIsReadReply = 68;
+    //聊天会话搜索
+    AccountOfPrivateChatSearchReply accountOfPrivateChatSearchReply = 69;
+    //黑名单列表
+    AccountOfBlackListReply accountOfBlackListReply = 70;
+
+    AccountOfLikeMessageReply accountOfLikeMessageReply = 71;
+
+    AccountOfSimpleRecommendUserReply accountOfSimpleRecommendUserReply = 72;
+
+    AccountOfReportUserReply accountOfReportUserReply = 73;
+
+    AccountOfFinishTaskReply accountOfFinishTaskReply = 74;
+
+    AccountOfFindTaskListReply accountOfFindTaskListReply = 75;
+
+
+    LiveOfLoginReply liveOfLoginReply = 200;
+    LiveOfLogoutReply liveOfLogoutReply = 201;
+
+
+    LiveOfApplyLiveUserReply liveOfApplyLiveUserReply = 202;
+    LiveOfApplyLiveUserResultBroadcastMessage liveOfApplyLiveUserResultBroadcastMessage = 203;
+    LiveOfGetLiveRoomListReply liveOfGetLiveRoomListReply = 204;
+    LiveOfQueryRoomInfoReply  liveOfQueryRoomInfoReply = 205;
+    LiveOfQueryLiveUserInfosReply liveOfQueryLiveUserInfosReply = 206;
+
+    LiveOfUpdateRoomImageReply liveOfUpdateRoomImageReply = 207;
+    //恢复直播间的广播
+    LiveOfRecoverLiveRoomBroadcastMessage liveOfRecoverLiveRoomBroadcastMessage = 210;
+
+    //LiveModule
+    LiveOfStartLiveReply liveOfStartLiveReply = 220;
+    LiveOfEnterLiveRoomReply liveOfEnterLiveRoomReply = 221;
+    LiveOfEnterRoomBroadcastMessage liveOfEnterRoomBroadcastMessage = 222;
+    LiveOfSendBulletMessageReply liveOfSendBulletMessageReply = 223;
+    LiveOfBulletMessageBroadcastMessage liveOfBulletMessageBroadcastMessage = 224;
+    LiveOfQuitRoomReply liveOfQuitRoomReply = 225;
+    LiveOfQuitRoomBroadcastMessage liveOfQuitRoomBroadcastMessage = 226;
+    LiveOfEndLiveReply liveOfEndLiveReply = 227;
+    LiveOfEndLiveReadyBroadcastMessage liveOfEndLiveReadyBroadcastMessage = 228;
+    LiveOfEndLiveBroadcastMessage liveOfEndLiveBroadcastMessage = 229;
+    LiveOfSendGiftReply liveOfSendGiftReply = 230;
+    LiveOfSendGiftBroadcastMessage liveOfSendGiftBroadcastMessage = 231;
+    LiveOfSwitchLiveSourceLineReply liveOfSwitchLiveSourceLineReply = 232;
+    LiveOfSwitchLiveSourceLineBroadcastMessage liveOfSwitchLiveSourceLineBroadcastMessage = 233;
+    LiveOfQueryRoomAudienceInfoReply liveOfQueryRoomAudienceInfoReply = 234;
+    LiveOfSetRoomPlayingMusicInfoReply liveOfSetRoomPlayingMusicInfoReply = 235;
+    LiveOfRoomPlayingMusicChangeBroadcastMessage liveOfRoomPlayingMusicChangeBroadcastMessage = 236;
+    LiveOfSwitchLivePatternReply liveOfSwitchLivePatternReply = 237;
+    LiveOfSwitchLivePatternBroadcastMessage liveOfSwitchLivePatternBroadcastMessage = 238;
+
+    //rank
+    LiveOfQueryGiftIncomeRankReply liveOfQueryGiftIncomeRankReply = 255;
+    LiveOfQueryContributionRankReply liveOfQueryContributionRankReply = 256;
+    LiveOfQueryFansContributionRankReply liveOfQueryFansContributionRankReply = 257;
+
+    //messageList
+    LiveOfMessageListQueryUserLeadersReply liveOfMessageListQueryUserLeadersReply = 260;
+
+
+    //=======================blogServer=====================
+    BlogsOfRecommendationReply blogsOfRecommendationReply = 2000;
+    BlogsOfCreateBlogsReply blogsOfCreateBlogsReply = 2001;
+    BlogsOfAttentionBlogsReply blogsOfAttentionBlogsReply = 2002;
+    BlogsOfDiscoverBlogsReply blogsOfDiscoverBlogsReply = 2003;
+    BlogsOfQueryUserBlogsInfoReply blogsOfQueryUserBlogsInfoReply = 2004;
+    BlogsOfQueryBlogsDetailReply blogsOfQueryBlogsDetailReply = 2005;
+    BlogsOfPlayBlogsReply blogsOfPlayBlogsReply = 2006;
+    BlogsOfQueryUserLikeBlogsReply blogsOfQueryUserLikeBlogsReply = 2007;
+    BlogsOfQueryUserFavoritesBlogsReply blogsOfQueryUserFavoritesBlogsReply = 2008;
+    BlogsOfQueryBlogsCommentReply blogsOfQueryBlogsCommentReply = 2009;
+    BlogsOfLikeBlogsReply blogsOfLikeBlogsReply = 2010;
+    BlogsOfInteractiveBroadcastMessage blogsOfInteractiveBroadcastMessage = 2011;
+    BlogsOfLikeCommentReply BlogsOfLikeCommentReply = 2012;
+    BlogsOfCommentBlogsReply blogsOfCommentBlogsReply = 2013;
+    BlogsOfQueryCommentByIdsReply blogsOfQueryCommentByIdsReply = 2014;
+    BlogsOfSearchReply blogsOfSearchReply = 2015;
+    BlogsOfDraftReply blogsOfDraftReply = 2016;
+    BlogsOfDraftPublishOrDeleteReply blogsOfDraftPublishOrDeleteReply = 2017;
+    BlogsOfDeleteBlogsReply blogsOfDeleteBlogsReply = 2018;
+    //Banner
+    BlogsOfBannerQueryReply blogsOfBannerQueryReply = 2019;
+
+    //互动消息\
+    BlogsOfInteractiveListReply BlogsOfInteractiveListReply = 2020;
+
+    BlogsOfReportCommentReply blogsOfReportCommentReply = 2021;
+    BlogsOfReportVideoReply  BlogsOfReportVideoReply = 2022;
+  }
+}
+

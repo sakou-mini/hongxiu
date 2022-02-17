@@ -1,0 +1,22 @@
+2022-01-27 13:44:48 下午 [Thread: main][ Class:com.donglai.gate.app.GateApp >> Method: org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55) ]
+INFO:Starting GateApp on DESKTOP-VNJ9PIL with PID 1468 (E:\CompanyProgram\hongxiu\hongxiu_server\live_server\gate_module\target\classes started by yty in E:\CompanyProgram\hongxiu\hongxiu_server\live_server\gate_module)
+2022-01-27 13:44:48 下午 [Thread: main][ Class:com.donglai.gate.app.GateApp >> Method: org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651) ]
+INFO:No active profile set, falling back to default profiles: default
+2022-01-27 13:44:50 下午 [Thread: main][ Class:com.donglai.gate.app.GateApp >> Method: org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61) ]
+INFO:Started GateApp in 2.716 seconds (JVM running for 4.185)
+2022-01-27 13:44:51 下午 [Thread: task-1][ Class:com.donglai.gate.app.SetUp >> Method: com.donglai.gate.app.SetUp.startListener(SetUp.java:30) ]
+INFO:start netty by port :7005
+2022-01-27 13:44:51 下午 [Thread: task-1][ Class:com.donglai.netty.http.NettyHttpServer >> Method: com.donglai.netty.http.NettyHttpServer.bind(NettyHttpServer.java:30) ]
+INFO:start server success on port 7005
+2022-01-27 14:01:15 下午 [Thread: task-1][ Class:com.donglai.netty.http.NettyHttpServer >> Method: com.donglai.netty.http.NettyHttpServer.bind(NettyHttpServer.java:33) ]
+WARN:start server failed on port 7005
+2022-01-27 14:05:27 下午 [Thread: main][ Class:com.donglai.gate.app.GateApp >> Method: org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55) ]
+INFO:Starting GateApp on DESKTOP-VNJ9PIL with PID 20364 (E:\CompanyProgram\hongxiu\hongxiu_server\live_server\gate_module\target\classes started by yty in E:\CompanyProgram\hongxiu\hongxiu_server\live_server\gate_module)
+2022-01-27 14:05:27 下午 [Thread: main][ Class:com.donglai.gate.app.GateApp >> Method: org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651) ]
+INFO:No active profile set, falling back to default profiles: default
+2022-01-27 14:05:30 下午 [Thread: main][ Class:com.donglai.gate.app.GateApp >> Method: org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61) ]
+INFO:Started GateApp in 2.966 seconds (JVM running for 3.889)
+2022-01-27 14:05:30 下午 [Thread: task-1][ Class:com.donglai.gate.app.SetUp >> Method: com.donglai.gate.app.SetUp.startListener(SetUp.java:30) ]
+INFO:start netty by port :7005
+2022-01-27 14:05:30 下午 [Thread: task-1][ Class:com.donglai.netty.http.NettyHttpServer >> Method: com.donglai.netty.http.NettyHttpServer.bind(NettyHttpServer.java:30) ]
+INFO:start server success on port 7005

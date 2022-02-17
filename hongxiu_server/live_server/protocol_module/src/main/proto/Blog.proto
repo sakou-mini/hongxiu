@@ -1,0 +1,298 @@
+syntax = "proto3";
+option java_multiple_files = false;
+option java_package = "com.donglai.protocol";
+option java_outer_classname = "Blog";
+import "Constant.proto";
+import "Common.proto";
+
+message BlogsInfo {
+  string blogsId = 1;
+  string authorId = 2;
+  string createTime = 3;
+  string content = 4;
+  BlogsType type = 5;
+  repeated string resourceUrl = 6;
+  repeated string thumbnail = 7;
+  string likeNum = 8;
+  string commentNum = 9;
+  repeated uint32  labelsIds = 10;
+  BlogsMusicInfo blogsMusicInfo = 11;
+  BlogsStatus status = 12;
+}
+
+message BlogsMusicInfo{
+  string id = 1;
+  string musicName = 2;
+  string musicUrl = 3;
+  string musicAuthor = 4;
+  string musicCoverUrl = 5;
+  uint32 duration = 6;
+
+}
+
+message BlogsOfRecommendationRequest {
+  repeated uint32 labelsIds = 1;
+}
+
+message BlogsOfRecommendationReply {
+  repeated string blogsId = 1;
+}
+
+message BlogsOfCreateBlogsRequest{
+  string content = 1;
+  repeated string resourceUrl = 2;
+  repeated string thumbnail = 3;
+  BlogsType type = 4;
+  string musicId = 5;
+  bool isDraft = 6;
+  repeated int32 labels = 7;
+  int32 height = 8;
+  int32 width = 9;
+}
+
+message BlogsOfCreateBlogsReply{
+  BlogsInfo blogsInfo = 1;
+}
+
+message BlogsOfAttentionBlogsRequest{
+  repeated string userIds = 1;
+  SortType sort = 2;
+  //查询类型：ATTENTION_RECOMMEND_DEFAULT 则 优先查询关注的动态、无则推荐用户 ，ATTENTION_RECOMMEND_USER 只推荐用户
+  AttentionQueryType queryType = 3;
+}
+
+message BlogsOfAttentionBlogsReply{
+  repeated string blogsIds = 1;  //推荐的动态
+  repeated RecommendAuthor recommendAuthor = 2; //推荐的用户
+}
+
+message RecommendAuthor{
+  UserInfo userInfo = 1;
+  repeated string blogsIds = 2;
+  string backgroundResourceUrl = 3;
+}
+
+message BlogsOfDiscoverBlogsRequest{
+  repeated uint32 labelsIds = 1;
+
+}
+
+message BlogsOfDiscoverBlogsReply{
+  repeated string blogsIds = 2;
+}
+message BlogsOfQueryUserBlogsInfoRequest {
+  string userId = 1;
+}
+
+message BlogsOfQueryUserBlogsInfoReply{
+  string likeNum = 1;
+  string publishBlogsNum = 2;
+  string likeBlogsNum = 3;
+  string favoritesBlogsNum = 4;
+  repeated string publishBlogs = 5;
+  string userId = 6;
+}
+
+message BlogsOfQueryBlogsDetailRequest {
+  repeated string blogsId = 1;
+}
+
+message BlogsDetail {
+  BlogsInfo blogsInfo = 1;
+  UserInfo userInfo = 2;
+  bool isLike = 4;
+  bool isFollow = 5;
+}
+
+message BlogsOfQueryBlogsDetailReply {
+  repeated BlogsDetail blogsDetails = 1;
+}
+
+message BlogsOfPlayBlogsRequest {
+  string blogsId = 1;
+}
+
+message BlogsOfPlayBlogsReply {
+
+}
+
+message BlogsOfQueryUserLikeBlogsRequest{
+  string userId = 1 ;
+}
+
+message BlogsOfQueryUserLikeBlogsReply{
+  repeated string blogsIds = 1;
+}
+
+message BlogsOfQueryUserFavoritesBlogsRequest{
+  string userId = 1 ;
+}
+
+message BlogsOfQueryUserFavoritesBlogsReply{
+  repeated string blogsIds = 1;
+}
+
+message BlogsOfQueryBlogsCommentRequest {
+  string blogsId = 1;
+  int32 rows = 3;
+  repeated string excludeReplyIds = 5;
+}
+
+message BlogsComment {
+  string commentId = 1;
+  string text = 2;
+  string replyTime = 3;
+  string parentCommentId = 4;
+  repeated string replyCommentIds = 5; //commentReplyIds
+  string likeNum = 6;
+  bool isLike = 7;
+  string fromUserId = 8;
+  string toUserId = 9;
+}
+
+message BlogsOfQueryBlogsCommentReply{
+  repeated BlogsComment blogsComments = 1;
+  string totalCommentNum = 2;
+  string totalCommentLikeNum = 3;
+  string blogsId = 4;
+}
+
+message BlogsOfLikeBlogsRequest {
+  string blogsId = 1;
+}
+
+message BlogsOfLikeBlogsReply {
+  string likeNum = 1;
+  bool  isLike = 2;
+  string blogsId = 3;
+}
+
+message BlogsOfLikeCommentRequest {
+  string commentId = 1;
+}
+
+message BlogsOfLikeCommentReply {
+  string likeNum = 1;
+  bool  isLike = 2;
+  string commentId = 3;
+}
+
+message BlogsOfCommentBlogsRequest{
+  string blogsId = 1;
+  string text = 2;
+  string commentId = 3;   //use by reply
+  string replyToUserId = 4;  //use by reply
+}
+
+message BlogsOfCommentBlogsReply{
+  BlogsComment blogsComment = 1;
+  string blogsId = 2;
+}
+
+message BlogsOfQueryCommentByIdsRequest {
+  repeated string commentIds = 1;
+}
+
+message BlogsOfQueryCommentByIdsReply{
+  repeated BlogsComment blogsComments = 1;
+}
+
+//搜索
+message BlogsOfSearchRequest{
+  string keyword = 1;
+  SortType sort = 2;
+  SearchType searchType = 3;
+}
+
+message BlogsOfSearchReply{
+  repeated string blogsIds = 1;
+  repeated UserBlogsInfo userBlogsInfo = 2;
+  string keyword = 3;
+  SearchType searchType = 4;
+}
+
+message UserBlogsInfo{
+  UserInfo userInfo = 1;
+  int64 likeNum = 2;
+  int64  blogsNum = 3;
+}
+
+//草稿箱
+message BlogsOfDraftRequest{
+  string userId = 1 ;
+}
+message BlogsOfDraftReply{
+  repeated string blogsIds = 1;
+}
+//草稿发布
+message BlogsOfDraftPublishOrDeleteRequest{
+  string blogsId = 1;
+  uint32 publishOrDelete = 2; // 0发布 1删除
+}
+message BlogsOfDraftPublishOrDeleteReply{
+
+}
+//音乐库列表查询
+message BlogsOfMusicSearchRequest{
+}
+
+message BlogsOfMusicSearchReply{
+
+}
+
+message BlogsOfDeleteBlogsRequest{
+  string blogsId = 1;
+}
+
+message BlogsOfDeleteBlogsReply{
+
+}
+
+//轮播图查询
+message BlogsOfBannerQueryRequest{
+
+}
+
+message BlogsOfBannerQueryReply{
+  repeated Banner banner = 1;
+}
+
+message Interactive {
+  InteractiveType interactive = 1;
+  string blogsId = 2;
+  string comment = 3;
+  string fromUserId = 5;
+  string createTime = 6;
+}
+
+
+message BlogsOfInteractiveBroadcastMessage{
+  Interactive interactive = 1;
+}
+
+
+message BlogsOfInteractiveListRequest{
+  uint32 size = 1 ;
+}
+
+message BlogsOfInteractiveListReply{
+  repeated Interactive interactive = 1;
+}
+
+message BlogsOfReportCommentRequest{
+  uint64 commentId = 1;
+  string reason = 2;
+}
+
+message BlogsOfReportCommentReply{
+
+}
+
+message BlogsOfReportVideoRequest{
+  uint64 blogsId = 1;
+  string reason = 2;
+}
+
+message BlogsOfReportVideoReply{
+
+}

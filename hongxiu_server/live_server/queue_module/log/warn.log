@@ -1,0 +1,10 @@
+2022-02-17 11:04:07 上午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-02-17 11:04:07 上午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-02-17 11:04:10 上午 [Thread: kafka-producer-network-thread | producer-1][ Class:org.apache.kafka.clients.NetworkClient >> Method: org.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater.handleSuccessfulResponse(NetworkClient.java:1070) ]
+WARN:[Producer clientId=producer-1] Error while fetching metadata with correlation id 1 : {LIVE=LEADER_NOT_AVAILABLE}
+2022-02-17 11:04:10 上午 [Thread: kafka-producer-network-thread | producer-1][ Class:org.apache.kafka.clients.NetworkClient >> Method: org.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater.handleSuccessfulResponse(NetworkClient.java:1070) ]
+WARN:[Producer clientId=producer-1] Error while fetching metadata with correlation id 3 : {LIVE=LEADER_NOT_AVAILABLE}
+2022-02-17 11:04:10 上午 [Thread: kafka-producer-network-thread | producer-1][ Class:org.apache.kafka.clients.NetworkClient >> Method: org.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater.handleSuccessfulResponse(NetworkClient.java:1070) ]
+WARN:[Producer clientId=producer-1] Error while fetching metadata with correlation id 6 : {STATISTICS=LEADER_NOT_AVAILABLE}

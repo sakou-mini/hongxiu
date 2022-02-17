@@ -1,0 +1,440 @@
+[
+  {
+    "menuId": "2",
+    "name": "首页获取今日统计数据",
+    "auth": "index_today_total",
+    "apiPath": "/api/v1/index/todayServerData"
+  },
+  {
+    "menuId": "2",
+    "name": "首页每日统计数据",
+    "auth": "index_day_total",
+    "apiPath": "/api/v1/index/dailyOfServerData"
+  },
+  {
+    "menuId": "4",
+    "name": "视频列表",
+    "auth": "blogs_list",
+    "apiPath": "/api/v1/blogs/blogsList"
+  },
+  {
+    "menuId": "4",
+    "name": "审核动态",
+    "auth": "blogs_approval",
+    "apiPath": "/api/v1/blogs/approvalBlogs"
+  },
+  {
+    "menuId": "4",
+    "name": "动态详情",
+    "auth": "blogs_detail",
+    "apiPath": "/api/v1/blogs/blogsDetail"
+  },
+  {
+    "menuId": "4",
+    "name": "编辑动态",
+    "auth": "blogs_edit",
+    "apiPath": "/api/v1/blogs/editBlogs"
+  },
+  {
+    "menuId": "5",
+    "name": "评论列表查询",
+    "auth": "blogs_comment_list",
+    "apiPath": "/api/v1/blogs/commentList"
+  },
+  {
+    "menuId": "5",
+    "name": "审核评论",
+    "auth": "blogs_comment_approval",
+    "apiPath": "/api/v1/blogs/approvalComment"
+  },
+  {
+    "menuId": "6",
+    "name": "标签列表",
+    "auth": "label_list",
+    "apiPath": "/api/v1/label/findLabelList"
+  },
+  {
+    "menuId": "6",
+    "name": "添加标签",
+    "auth": "label_add",
+    "apiPath": "/api/v1/label/addLabel"
+  },
+  {
+    "menuId": "6",
+    "name": "删除标签",
+    "auth": "label_del",
+    "apiPath": "/api/v1/label/delLabelList"
+  },
+  {
+    "menuId": "6",
+    "name": "编辑标签",
+    "auth": "label_edit",
+    "apiPath": "/api/v1/label/update"
+  },
+  {
+    "menuId": "7",
+    "name": "音乐列表",
+    "auth": "music_edit",
+    "apiPath": "/api/v1/music/musicList"
+  },
+  {
+    "menuId": "7",
+    "name": "审核音乐",
+    "auth": "music_approval",
+    "apiPath": "/api/v1/music/auditMusic"
+  },
+  {
+    "menuId": "7",
+    "name": "新增音乐",
+    "auth": "music_add",
+    "apiPath": "/api/v1/music/addMusic"
+  },
+  {
+    "menuId": "7",
+    "name": "删除音乐",
+    "auth": "music_delete",
+    "apiPath": "/api/v1/music/delMusic"
+  },
+  {
+    "menuId": "8",
+    "name": "用户列表",
+    "auth": "user_list",
+    "apiPath": "/api/v1/user/getUserList"
+  },
+  {
+    "menuId": "9",
+    "name": "用户审核",
+    "auth": "user_approval",
+    "apiPath": ""
+  },
+  {
+    "menuId": "9",
+    "name": "用户重置",
+    "auth": "user_reset",
+    "apiPath": "/api/v1/user/resetUser"
+  },
+  {
+    "menuId": "9",
+    "name": "用户添加",
+    "auth": "user_add",
+    "apiPath": "/api/v1/user/addUser"
+  },
+  {
+    "menuId": "9",
+    "name": "用户详情",
+    "auth": "user_add",
+    "apiPath": "/api/v1/user/getUserInfo"
+  },
+  {
+    "menuId": "8",
+    "name": "游客列表",
+    "auth": "tourist_list",
+    "apiPath": "/api/v1/tourist/touristList"
+  },
+  {
+    "menuId": "8",
+    "name": "游客报表",
+    "auth": "tourist_chart",
+    "apiPath": "/api/v1/tourist/touristStatisticsList"
+  },
+  {
+    "menuId": "2",
+    "name": "App管理",
+    "auth": "app_manager",
+    "apiPath": ""
+  },
+  {
+    "menuId": "12",
+    "name": "Banner管理",
+    "auth": "banner",
+    "apiPath": ""
+  },
+  {
+    "menuId": "15",
+    "name": "轮播图列表",
+    "auth": "banner_list",
+    "apiPath": "/api/v1/banner/findList"
+  },
+  {
+    "menuId": "15",
+    "name": "轮播图删除",
+    "auth": "banner_del",
+    "apiPath": "/api/v1/banner/delete"
+  },
+  {
+    "menuId": "15",
+    "name": "轮播图添加",
+    "auth": "banner_add",
+    "apiPath": "/api/v1/banner/insert"
+  },
+  {
+    "menuId": "15",
+    "name": "轮播图修改",
+    "auth": "banner_edit",
+    "apiPath": "/api/v1/banner/update"
+  },
+  {
+    "menuId": "12",
+    "name": "视频推荐",
+    "auth": "blogs_recommend",
+    "apiPath": ""
+  },
+  {
+    "menuId": "16",
+    "name": "推荐视频列表",
+    "auth": "blogs_recommend_list",
+    "apiPath": "/api/v1/recommend/findVideoList"
+  },
+  {
+    "menuId": "16",
+    "name": "推荐视频删除",
+    "auth": "blogs_recommend_del",
+    "apiPath": "/api/v1/recommend/deletedVideo"
+  },
+  {
+    "menuId": "12",
+    "name": "推荐用户",
+    "auth": "user_recommend",
+    "apiPath": ""
+  },
+  {
+    "menuId": "16",
+    "name": "推荐用户列表",
+    "auth": "user_recommend_list",
+    "apiPath": "/api/v1/recommend/findUserList"
+  },
+  {
+    "menuId": "16",
+    "name": "推荐用户删除",
+    "auth": "user_recommend_del",
+    "apiPath": "/api/v1/recommend/deletedUser"
+  },
+  {
+    "menuId": "16",
+    "name": "推荐用户添加",
+    "auth": "user_recommend_add",
+    "apiPath": "/api/v1/recommend/addUser"
+  },
+  {
+    "menuId": "2",
+    "name": "举报管理",
+    "auth": "report",
+    "apiPath": ""
+  },
+  {
+    "menuId": "18",
+    "name": "举报视频",
+    "auth": "report_video",
+    "apiPath": ""
+  },
+  {
+    "menuId": "18",
+    "name": "举报视频列表",
+    "auth": "report_video_list",
+    "apiPath": "/api/v1/report/findVideoList"
+  },
+  {
+    "menuId": "18",
+    "name": "举报视频查看",
+    "auth": "report_video_check",
+    "apiPath": "/api/v1/report/updateVideoHandel"
+  },
+  {
+    "menuId": "18",
+    "name": "举报评论",
+    "auth": "report_comment",
+    "apiPath": ""
+  },
+  {
+    "menuId": "20",
+    "name": "举报评论列表",
+    "auth": "report_comment_list",
+    "apiPath": "/api/v1/report/findCommentList"
+  },
+  {
+    "menuId": "20",
+    "name": "举报评论查看",
+    "auth": "report_comment_list",
+    "apiPath": "/api/v1/report/updateCommentHandel"
+  },
+  {
+    "menuId": "18",
+    "name": "举报用户",
+    "auth": "report_user",
+    "apiPath": ""
+  },
+  {
+    "menuId": "21",
+    "name": "举报用户列表",
+    "auth": "report_user_list",
+    "apiPath": "/api/v1/report/findUserList"
+  },
+  {
+    "menuId": "21",
+    "name": "举报用户查看",
+    "auth": "report_user_list",
+    "apiPath": "/api/v1/report/updateUserHandel"
+  },
+  {
+    "menuId": "2",
+    "name": "系统管理",
+    "auth": "system",
+    "apiPath": ""
+  },
+  {
+    "menuId": "22",
+    "name": "机器人管理",
+    "auth": "system_robot",
+    "apiPath": ""
+  },
+  {
+    "menuId": "23",
+    "name": "机器人新增",
+    "auth": "system_robot_add",
+    "apiPath": ""
+  },
+  {
+    "menuId": "23",
+    "name": "机器人禁用启用",
+    "auth": "system_robot_disabled",
+    "apiPath": ""
+  },
+  {
+    "menuId": "23",
+    "name": "机器人编辑",
+    "auth": "system_robot_edit",
+    "apiPath": ""
+  },
+  {
+    "menuId": "22",
+    "name": "敏感词管理",
+    "auth": "system_sensitive",
+    "apiPath": ""
+  },
+  {
+    "menuId": "24",
+    "name": "敏感词列表",
+    "auth": "system_sensitive_list",
+    "apiPath": "/api/v1/keyword/findList"
+  },
+  {
+    "menuId": "24",
+    "name": "敏感词删除",
+    "auth": "system_sensitive_check",
+    "apiPath": "/api/v1/keyword/delete"
+  },
+  {
+    "menuId": "24",
+    "name": "敏感词添加",
+    "auth": "system_sensitive_add",
+    "apiPath": "/api/v1/keyword/insert"
+  },
+  {
+  "menuId": "24",
+  "name": "敏感词修改",
+  "auth": "system_sensitive_edit",
+  "apiPath": "/api/v1/keyword/updateStatus"
+  },
+  {
+    "menuId": "22",
+    "name": "账号管理",
+    "auth": "system_account",
+    "apiPath": ""
+  },
+  {
+    "menuId": "25",
+    "name": "账号新增",
+    "auth": "system_account_add",
+    "apiPath": "/api/v1/user/addUser"
+  },
+  {
+    "menuId": "25",
+    "name": "账号编辑 重置",
+    "auth": "system_account_edit",
+    "apiPath": "/api/v1/user/resetUser"
+  },
+  {
+    "menuId": "25",
+    "name": "账号详情",
+    "auth": "system_account_info",
+    "apiPath": "/api/v1/user/getUserInfo"
+  },
+  {
+    "menuId": "25",
+    "name": "账号禁用启用",
+    "auth": "system_account_disabled",
+    "apiPath": "/api/v1/user/updateStatus"
+  },
+  {
+    "menuId": "22",
+    "name": "组别管理",
+    "auth": "system_group",
+    "apiPath": ""
+  },
+  {
+    "menuId": "26",
+    "name": "组别新增",
+    "auth": "system_group_add",
+    "apiPath": "/api/v1/role/addRole"
+  },
+  {
+  "menuId": "26",
+  "name": "组别编辑",
+  "auth": "system_group_edit",
+  "apiPath": "/api/v1/role/updateRoleStatus"
+  },
+  {
+    "menuId": "26",
+    "name": "组别禁用启用",
+    "auth": "system_group_disabled",
+    "apiPath": "/api/v1/role/deleteRole"
+  },
+  {
+    "menuId": "22",
+    "name": "反馈建议",
+    "auth": "system_feedback",
+    "apiPath": ""
+  },
+  {
+    "menuId": "27",
+    "name": "反馈建议列表",
+    "auth": "system_feedback_list",
+    "apiPath": "/api/v1/feedback/findList"
+  },
+  {
+    "menuId": "27",
+    "name": "反馈建议查看",
+    "auth": "system_feedback_check",
+    "apiPath": "/api/v1/feedback/check"
+  },
+  {
+    "menuId": "27",
+    "name": "反馈建议删除",
+    "auth": "system_feedback_delete",
+    "apiPath": "/api/v1/feedback/delete"
+  },
+  {
+    "menuId": "27",
+    "name": "反馈建议回复",
+    "auth": "system_feedback_reply",
+    "apiPath": "/api/v1/feedback/reply"
+  },
+  {
+    "menuId": "22",
+    "name": "安全日志",
+    "auth": "system_log",
+    "apiPath": ""
+  },
+  {
+    "menuId": "28",
+    "name": "安全日志列表",
+    "auth": "system_log_list",
+    "apiPath": "/api/vi/backOfficeLog/findList"
+  },
+  {
+    "menuId": "28",
+    "name": "安全日志列表导出",
+    "auth": "system_log_list_out",
+    "apiPath": ""
+  }
+]

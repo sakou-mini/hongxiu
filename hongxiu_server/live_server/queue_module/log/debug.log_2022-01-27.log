@@ -1,0 +1,1546 @@
+2022-01-27 13:54:59 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-27 13:54:59 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-01-27 13:54:59 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 130ms. Found 37 MongoDB repository interfaces.
+2022-01-27 13:55:00 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-27 13:55:00 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-01-27 13:55:00 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 20ms. Found 0 JPA repository interfaces.
+2022-01-27 13:55:00 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-27 13:55:00 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-01-27 13:55:00 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 5ms. Found 0 Redis repository interfaces.
+2022-01-27 13:55:00 下午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:110) ]
+INFO:HikariPool-1 - Starting...
+2022-01-27 13:55:00 下午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:123) ]
+INFO:HikariPool-1 - Start completed.
+2022-01-27 13:55:01 下午 [Thread: main][ Class:org.redisson.Version >> Method: org.redisson.Version.logVersion(Version.java:41) ]
+INFO:Redisson 3.16.1
+2022-01-27 13:55:02 下午 [Thread: redisson-netty-4-6][ Class:org.redisson.connection.pool.MasterPubSubConnectionPool >> Method: org.redisson.connection.pool.ConnectionPool$1.lambda$run$0(ConnectionPool.java:166) ]
+INFO:1 connections initialized for localhost/127.0.0.1:6379
+2022-01-27 13:55:02 下午 [Thread: redisson-netty-4-5][ Class:org.redisson.connection.pool.MasterConnectionPool >> Method: org.redisson.connection.pool.ConnectionPool$1.lambda$run$0(ConnectionPool.java:166) ]
+INFO:1 connections initialized for localhost/127.0.0.1:6379
+2022-01-27 13:55:02 下午 [Thread: main][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='rs0'}
+2022-01-27 13:55:02 下午 [Thread: main][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Adding discovered server localhost:27017 to client view of cluster
+2022-01-27 13:55:02 下午 [Thread: cluster-ClusterId{value='61f233b6cf51aa6e2563d3a7', description='null'}-localhost:27017][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Opened connection [connectionId{localValue:1, serverValue:556}] to localhost:27017
+2022-01-27 13:55:02 下午 [Thread: cluster-ClusterId{value='61f233b6cf51aa6e2563d3a7', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=4795000, setName='rs0', canonicalAddress=localhost:27017, hosts=[localhost:27017], passives=[], arbiters=[], primary='localhost:27017', tagSet=TagSet{[]}, electionId=7fffffff0000000000000014, setVersion=1, lastWriteDate=Thu Jan 27 13:54:49 CST 2022, lastUpdateTimeNanos=593897059572900}
+2022-01-27 13:55:02 下午 [Thread: cluster-ClusterId{value='61f233b6cf51aa6e2563d3a7', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Setting max election id to 7fffffff0000000000000014 from replica set primary localhost:27017
+2022-01-27 13:55:02 下午 [Thread: cluster-ClusterId{value='61f233b6cf51aa6e2563d3a7', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Setting max set version to 1 from replica set primary localhost:27017
+2022-01-27 13:55:02 下午 [Thread: cluster-ClusterId{value='61f233b6cf51aa6e2563d3a7', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Discovered replica set primary localhost:27017
+2022-01-27 13:55:02 下午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-01-27 13:55:02 下午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-01-27 13:55:02 下午 [Thread: main][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Opened connection [connectionId{localValue:2, serverValue:557}] to localhost:27017
+2022-01-27 13:55:04 下午 [Thread: main][ Class:org.apache.kafka.clients.consumer.ConsumerConfig >> Method: org.apache.kafka.common.config.AbstractConfig.logAll(AbstractConfig.java:347) ]
+INFO:ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 100
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = queue-consumer-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2022-01-27 13:55:04 下午 [Thread: main][ Class:org.apache.kafka.common.utils.AppInfoParser >> Method: org.apache.kafka.common.utils.AppInfoParser$AppInfo.<init>(AppInfoParser.java:117) ]
+INFO:Kafka version: 2.5.0
+2022-01-27 13:55:04 下午 [Thread: main][ Class:org.apache.kafka.common.utils.AppInfoParser >> Method: org.apache.kafka.common.utils.AppInfoParser$AppInfo.<init>(AppInfoParser.java:118) ]
+INFO:Kafka commitId: 66563e712b0b9f84
+2022-01-27 13:55:04 下午 [Thread: main][ Class:org.apache.kafka.common.utils.AppInfoParser >> Method: org.apache.kafka.common.utils.AppInfoParser$AppInfo.<init>(AppInfoParser.java:119) ]
+INFO:Kafka startTimeMs: 1643262904387
+2022-01-27 13:55:04 下午 [Thread: main][ Class:org.apache.kafka.clients.consumer.KafkaConsumer >> Method: org.apache.kafka.clients.consumer.KafkaConsumer.subscribe(KafkaConsumer.java:974) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Subscribed to topic(s): QUEUE
+2022-01-27 13:55:04 下午 [Thread: main][ Class:org.springframework.data.repository.config.DeferredRepositoryInitializationListener >> Method: org.springframework.data.repository.config.DeferredRepositoryInitializationListener.onApplicationEvent(DeferredRepositoryInitializationListener.java:49) ]
+INFO:Triggering deferred initialization of Spring Data repositories…
+2022-01-27 13:55:04 下午 [Thread: main][ Class:org.springframework.data.repository.config.DeferredRepositoryInitializationListener >> Method: org.springframework.data.repository.config.DeferredRepositoryInitializationListener.onApplicationEvent(DeferredRepositoryInitializationListener.java:53) ]
+INFO:Spring Data repositories initialized!
+2022-01-27 13:55:04 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.Metadata >> Method: org.apache.kafka.clients.Metadata.update(Metadata.java:280) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Cluster ID: QAESlS8bTz-QQiEQdhLSyg
+2022-01-27 13:55:04 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.AbstractCoordinator >> Method: org.apache.kafka.clients.consumer.internals.AbstractCoordinator$FindCoordinatorResponseHandler.onSuccess(AbstractCoordinator.java:797) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Discovered group coordinator 192.168.0.113:9092 (id: 2147483647 rack: null)
+2022-01-27 13:55:04 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.AbstractCoordinator >> Method: org.apache.kafka.clients.consumer.internals.AbstractCoordinator.sendJoinGroupRequest(AbstractCoordinator.java:552) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] (Re-)joining group
+2022-01-27 13:55:04 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61ef9e1c2851422c8a9daff1----------执行
+2022-01-27 13:55:04 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.AbstractCoordinator >> Method: org.apache.kafka.clients.consumer.internals.AbstractCoordinator.joinGroupIfNeeded(AbstractCoordinator.java:455) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Join group failed with org.apache.kafka.common.errors.MemberIdRequiredException: The group member needs to have a valid member id before actually entering a consumer group
+2022-01-27 13:55:04 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.AbstractCoordinator >> Method: org.apache.kafka.clients.consumer.internals.AbstractCoordinator.sendJoinGroupRequest(AbstractCoordinator.java:552) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] (Re-)joining group
+2022-01-27 13:55:04 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.ConsumerCoordinator >> Method: org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.performAssignment(ConsumerCoordinator.java:604) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Finished assignment for group at generation 43: {consumer-queue-consumer-group-1-8cce1836-392f-4cf7-899b-c767ba95eab2=Assignment(partitions=[QUEUE-0])}
+2022-01-27 13:55:04 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.AbstractCoordinator >> Method: org.apache.kafka.clients.consumer.internals.AbstractCoordinator$2.onSuccess(AbstractCoordinator.java:503) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Successfully joined group with generation 43
+2022-01-27 13:55:04 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.ConsumerCoordinator >> Method: org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.invokePartitionsAssigned(ConsumerCoordinator.java:273) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Adding newly assigned partitions: QUEUE-0
+2022-01-27 13:55:04 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.ConsumerCoordinator >> Method: org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.refreshCommittedOffsetsIfNeeded(ConsumerCoordinator.java:792) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Setting offset for partition QUEUE-0 to the committed offset FetchPosition{offset=2020, offsetEpoch=Optional[0], currentLeader=LeaderAndEpoch{leader=Optional[192.168.0.113:9092 (id: 0 rack: null)], epoch=0}}
+2022-01-27 13:55:05 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 13:55:05 下午 [Thread: pool-2-thread-1][ Class:org.apache.kafka.clients.producer.ProducerConfig >> Method: org.apache.kafka.common.config.AbstractConfig.logAll(AbstractConfig.java:347) ]
+INFO:ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = default
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2022-01-27 13:55:05 下午 [Thread: pool-2-thread-1][ Class:org.apache.kafka.common.utils.AppInfoParser >> Method: org.apache.kafka.common.utils.AppInfoParser$AppInfo.<init>(AppInfoParser.java:117) ]
+INFO:Kafka version: 2.5.0
+2022-01-27 13:55:05 下午 [Thread: pool-2-thread-1][ Class:org.apache.kafka.common.utils.AppInfoParser >> Method: org.apache.kafka.common.utils.AppInfoParser$AppInfo.<init>(AppInfoParser.java:118) ]
+INFO:Kafka commitId: 66563e712b0b9f84
+2022-01-27 13:55:05 下午 [Thread: pool-2-thread-1][ Class:org.apache.kafka.common.utils.AppInfoParser >> Method: org.apache.kafka.common.utils.AppInfoParser$AppInfo.<init>(AppInfoParser.java:119) ]
+INFO:Kafka startTimeMs: 1643262905145
+2022-01-27 13:55:05 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f133963dc998058a5db0bb"
+
+2022-01-27 13:55:05 下午 [Thread: kafka-producer-network-thread | producer-1][ Class:org.apache.kafka.clients.Metadata >> Method: org.apache.kafka.clients.Metadata.update(Metadata.java:280) ]
+INFO:[Producer clientId=producer-1] Cluster ID: QAESlS8bTz-QQiEQdhLSyg
+2022-01-27 13:55:05 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f0f43f0958b30e94db99d3----------执行
+2022-01-27 13:55:05 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f12ed3491745593b674aed----------执行
+2022-01-27 13:55:05 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f12fcc0958b30e94db9ccd----------执行
+2022-01-27 13:55:05 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.addTask(QueueProcess.java:52) ]
+ERROR:未找到执行队列 61f133963dc998058a5db0bb ,延后重新查找 ！
+2022-01-27 13:55:05 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 13:55:05 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f133d1e438fa4ef80e8fca"
+
+2022-01-27 13:55:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.addTask(QueueProcess.java:52) ]
+ERROR:未找到执行队列 61f133d1e438fa4ef80e8fca ,延后重新查找 ！
+2022-01-27 13:55:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 13:55:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f134cc0ba6be0f26f76360"
+
+2022-01-27 13:55:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.addTask(QueueProcess.java:52) ]
+ERROR:未找到执行队列 61f134cc0ba6be0f26f76360 ,延后重新查找 ！
+2022-01-27 13:55:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 13:55:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f233ba0958b30e94db9cd0"
+
+2022-01-27 13:55:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 13:55:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f233ba0958b30e94db9cd3"
+
+2022-01-27 13:55:07 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 13:55:07 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f233ba93da5f4c6f030e10"
+
+2022-01-27 13:55:07 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 13:55:07 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f233baf0e08f5c260c9072"
+
+2022-01-27 13:55:26 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f233baf0e08f5c260c9072----------执行
+2022-01-27 13:55:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 13:55:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f233cef0e08f5c260c9075"
+
+2022-01-27 13:55:46 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f233cef0e08f5c260c9075----------执行
+2022-01-27 13:55:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 13:55:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f233e2f0e08f5c260c9078"
+
+2022-01-27 13:56:06 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f233e2f0e08f5c260c9078----------执行
+2022-01-27 13:56:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 13:56:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f233f6f0e08f5c260c907b"
+
+2022-01-27 13:56:06 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f233ba0958b30e94db9cd3----------执行
+2022-01-27 13:56:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 13:56:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f233f60958b30e94db9cd6"
+
+2022-01-27 13:56:26 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f233f6f0e08f5c260c907b----------执行
+2022-01-27 13:56:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 13:56:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f2340af0e08f5c260c907e"
+
+2022-01-27 13:56:46 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f2340af0e08f5c260c907e----------执行
+2022-01-27 13:56:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 13:56:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f2341ef0e08f5c260c9081"
+
+2022-01-27 13:57:06 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f2341ef0e08f5c260c9081----------执行
+2022-01-27 13:57:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 13:57:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23432f0e08f5c260c9084"
+
+2022-01-27 13:57:06 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f233f60958b30e94db9cd6----------执行
+2022-01-27 13:57:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 13:57:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f234320958b30e94db9cd9"
+
+2022-01-27 13:57:26 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23432f0e08f5c260c9084----------执行
+2022-01-27 13:57:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 13:57:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23446f0e08f5c260c9087"
+
+2022-01-27 13:57:46 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23446f0e08f5c260c9087----------执行
+2022-01-27 13:57:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 13:57:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f2345af0e08f5c260c908a"
+
+2022-01-27 13:58:06 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f2345af0e08f5c260c908a----------执行
+2022-01-27 13:58:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 13:58:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f2346ef0e08f5c260c908d"
+
+2022-01-27 13:58:06 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f234320958b30e94db9cd9----------执行
+2022-01-27 13:58:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 13:58:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f2346e0958b30e94db9cdc"
+
+2022-01-27 13:58:26 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f2346ef0e08f5c260c908d----------执行
+2022-01-27 13:58:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 13:58:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23482f0e08f5c260c9090"
+
+2022-01-27 13:58:46 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23482f0e08f5c260c9090----------执行
+2022-01-27 13:58:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 13:58:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23496f0e08f5c260c9093"
+
+2022-01-27 13:59:06 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23496f0e08f5c260c9093----------执行
+2022-01-27 13:59:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 13:59:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f234aaf0e08f5c260c9096"
+
+2022-01-27 13:59:06 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f2346e0958b30e94db9cdc----------执行
+2022-01-27 13:59:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 13:59:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f234aa0958b30e94db9cdf"
+
+2022-01-27 13:59:26 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f234aaf0e08f5c260c9096----------执行
+2022-01-27 13:59:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 13:59:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f234bef0e08f5c260c9099"
+
+2022-01-27 13:59:46 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f234bef0e08f5c260c9099----------执行
+2022-01-27 13:59:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 13:59:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f234d2f0e08f5c260c909c"
+
+2022-01-27 14:00:06 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f234d2f0e08f5c260c909c----------执行
+2022-01-27 14:00:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:00:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f234e6f0e08f5c260c909f"
+
+2022-01-27 14:00:06 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f234aa0958b30e94db9cdf----------执行
+2022-01-27 14:00:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:00:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f234e60958b30e94db9ce2"
+
+2022-01-27 14:00:26 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f234e6f0e08f5c260c909f----------执行
+2022-01-27 14:00:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:00:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f234faf0e08f5c260c90a2"
+
+2022-01-27 14:00:46 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f234faf0e08f5c260c90a2----------执行
+2022-01-27 14:00:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:00:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f2350ef0e08f5c260c90a5"
+
+2022-01-27 14:01:06 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f234e60958b30e94db9ce2----------执行
+2022-01-27 14:01:06 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f2350ef0e08f5c260c90a5----------执行
+2022-01-27 14:01:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:01:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f235220958b30e94db9ce5"
+
+2022-01-27 14:01:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:01:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23522f0e08f5c260c90a8"
+
+2022-01-27 14:01:15 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.ConsumerCoordinator >> Method: org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.invokePartitionsRevoked(ConsumerCoordinator.java:292) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Revoke previously assigned partitions QUEUE-0
+2022-01-27 14:01:15 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.AbstractCoordinator >> Method: org.apache.kafka.clients.consumer.internals.AbstractCoordinator.maybeLeaveGroup(AbstractCoordinator.java:979) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Member consumer-queue-consumer-group-1-8cce1836-392f-4cf7-899b-c767ba95eab2 sending LeaveGroup request to coordinator 192.168.0.113:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2022-01-27 14:01:15 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.KafkaConsumer >> Method: org.apache.kafka.clients.consumer.KafkaConsumer.unsubscribe(KafkaConsumer.java:1082) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Unsubscribed all topics or patterns and assigned partitions
+2022-01-27 14:01:15 下午 [Thread: SpringContextShutdownHook][ Class:org.apache.kafka.clients.producer.KafkaProducer >> Method: org.apache.kafka.clients.producer.KafkaProducer.close(KafkaProducer.java:1182) ]
+INFO:[Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2022-01-27 14:01:15 下午 [Thread: SpringContextShutdownHook][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Closed connection [connectionId{localValue:2, serverValue:557}] to localhost:27017 because the pool has been closed.
+2022-01-27 14:01:15 下午 [Thread: SpringContextShutdownHook][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:350) ]
+INFO:HikariPool-1 - Shutdown initiated...
+2022-01-27 14:01:15 下午 [Thread: SpringContextShutdownHook][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:352) ]
+INFO:HikariPool-1 - Shutdown completed.
+2022-01-27 14:06:50 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-27 14:06:50 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-01-27 14:06:50 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 153ms. Found 37 MongoDB repository interfaces.
+2022-01-27 14:06:50 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-27 14:06:50 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-01-27 14:06:50 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 31ms. Found 0 JPA repository interfaces.
+2022-01-27 14:06:50 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-27 14:06:50 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-01-27 14:06:50 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2022-01-27 14:06:51 下午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:110) ]
+INFO:HikariPool-1 - Starting...
+2022-01-27 14:06:51 下午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:123) ]
+INFO:HikariPool-1 - Start completed.
+2022-01-27 14:06:52 下午 [Thread: main][ Class:org.redisson.Version >> Method: org.redisson.Version.logVersion(Version.java:41) ]
+INFO:Redisson 3.16.1
+2022-01-27 14:06:53 下午 [Thread: redisson-netty-4-5][ Class:org.redisson.connection.pool.MasterConnectionPool >> Method: org.redisson.connection.pool.ConnectionPool$1.lambda$run$0(ConnectionPool.java:166) ]
+INFO:1 connections initialized for localhost/127.0.0.1:6379
+2022-01-27 14:06:53 下午 [Thread: redisson-netty-4-6][ Class:org.redisson.connection.pool.MasterPubSubConnectionPool >> Method: org.redisson.connection.pool.ConnectionPool$1.lambda$run$0(ConnectionPool.java:166) ]
+INFO:1 connections initialized for localhost/127.0.0.1:6379
+2022-01-27 14:06:53 下午 [Thread: main][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='rs0'}
+2022-01-27 14:06:53 下午 [Thread: main][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Adding discovered server localhost:27017 to client view of cluster
+2022-01-27 14:06:53 下午 [Thread: cluster-ClusterId{value='61f2367da8a8816bdd3daea0', description='null'}-localhost:27017][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Opened connection [connectionId{localValue:1, serverValue:571}] to localhost:27017
+2022-01-27 14:06:53 下午 [Thread: cluster-ClusterId{value='61f2367da8a8816bdd3daea0', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=20600200, setName='rs0', canonicalAddress=localhost:27017, hosts=[localhost:27017], passives=[], arbiters=[], primary='localhost:27017', tagSet=TagSet{[]}, electionId=7fffffff0000000000000014, setVersion=1, lastWriteDate=Thu Jan 27 14:06:39 CST 2022, lastUpdateTimeNanos=594608477818800}
+2022-01-27 14:06:53 下午 [Thread: cluster-ClusterId{value='61f2367da8a8816bdd3daea0', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Setting max election id to 7fffffff0000000000000014 from replica set primary localhost:27017
+2022-01-27 14:06:53 下午 [Thread: cluster-ClusterId{value='61f2367da8a8816bdd3daea0', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Setting max set version to 1 from replica set primary localhost:27017
+2022-01-27 14:06:53 下午 [Thread: cluster-ClusterId{value='61f2367da8a8816bdd3daea0', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Discovered replica set primary localhost:27017
+2022-01-27 14:06:53 下午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-01-27 14:06:53 下午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-01-27 14:06:54 下午 [Thread: main][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Opened connection [connectionId{localValue:2, serverValue:572}] to localhost:27017
+2022-01-27 14:06:56 下午 [Thread: main][ Class:org.apache.kafka.clients.consumer.ConsumerConfig >> Method: org.apache.kafka.common.config.AbstractConfig.logAll(AbstractConfig.java:347) ]
+INFO:ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 100
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = queue-consumer-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2022-01-27 14:06:56 下午 [Thread: main][ Class:org.apache.kafka.common.utils.AppInfoParser >> Method: org.apache.kafka.common.utils.AppInfoParser$AppInfo.<init>(AppInfoParser.java:117) ]
+INFO:Kafka version: 2.5.0
+2022-01-27 14:06:56 下午 [Thread: main][ Class:org.apache.kafka.common.utils.AppInfoParser >> Method: org.apache.kafka.common.utils.AppInfoParser$AppInfo.<init>(AppInfoParser.java:118) ]
+INFO:Kafka commitId: 66563e712b0b9f84
+2022-01-27 14:06:56 下午 [Thread: main][ Class:org.apache.kafka.common.utils.AppInfoParser >> Method: org.apache.kafka.common.utils.AppInfoParser$AppInfo.<init>(AppInfoParser.java:119) ]
+INFO:Kafka startTimeMs: 1643263616118
+2022-01-27 14:06:56 下午 [Thread: main][ Class:org.apache.kafka.clients.consumer.KafkaConsumer >> Method: org.apache.kafka.clients.consumer.KafkaConsumer.subscribe(KafkaConsumer.java:974) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Subscribed to topic(s): QUEUE
+2022-01-27 14:06:56 下午 [Thread: main][ Class:org.springframework.data.repository.config.DeferredRepositoryInitializationListener >> Method: org.springframework.data.repository.config.DeferredRepositoryInitializationListener.onApplicationEvent(DeferredRepositoryInitializationListener.java:49) ]
+INFO:Triggering deferred initialization of Spring Data repositories…
+2022-01-27 14:06:56 下午 [Thread: main][ Class:org.springframework.data.repository.config.DeferredRepositoryInitializationListener >> Method: org.springframework.data.repository.config.DeferredRepositoryInitializationListener.onApplicationEvent(DeferredRepositoryInitializationListener.java:53) ]
+INFO:Spring Data repositories initialized!
+2022-01-27 14:06:56 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.Metadata >> Method: org.apache.kafka.clients.Metadata.update(Metadata.java:280) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Cluster ID: QAESlS8bTz-QQiEQdhLSyg
+2022-01-27 14:06:56 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.AbstractCoordinator >> Method: org.apache.kafka.clients.consumer.internals.AbstractCoordinator$FindCoordinatorResponseHandler.onSuccess(AbstractCoordinator.java:797) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Discovered group coordinator 192.168.0.113:9092 (id: 2147483647 rack: null)
+2022-01-27 14:06:56 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.AbstractCoordinator >> Method: org.apache.kafka.clients.consumer.internals.AbstractCoordinator.sendJoinGroupRequest(AbstractCoordinator.java:552) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] (Re-)joining group
+2022-01-27 14:06:56 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f233ba93da5f4c6f030e10----------执行
+2022-01-27 14:06:56 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.AbstractCoordinator >> Method: org.apache.kafka.clients.consumer.internals.AbstractCoordinator.joinGroupIfNeeded(AbstractCoordinator.java:455) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Join group failed with org.apache.kafka.common.errors.MemberIdRequiredException: The group member needs to have a valid member id before actually entering a consumer group
+2022-01-27 14:06:56 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.AbstractCoordinator >> Method: org.apache.kafka.clients.consumer.internals.AbstractCoordinator.sendJoinGroupRequest(AbstractCoordinator.java:552) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] (Re-)joining group
+2022-01-27 14:06:56 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.ConsumerCoordinator >> Method: org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.performAssignment(ConsumerCoordinator.java:604) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Finished assignment for group at generation 45: {consumer-queue-consumer-group-1-12a8cc22-792f-4935-8f5c-c7d6c4e68627=Assignment(partitions=[QUEUE-0])}
+2022-01-27 14:06:56 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.AbstractCoordinator >> Method: org.apache.kafka.clients.consumer.internals.AbstractCoordinator$2.onSuccess(AbstractCoordinator.java:503) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Successfully joined group with generation 45
+2022-01-27 14:06:56 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.ConsumerCoordinator >> Method: org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.invokePartitionsAssigned(ConsumerCoordinator.java:273) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Adding newly assigned partitions: QUEUE-0
+2022-01-27 14:06:57 下午 [Thread: pool-2-thread-1][ Class:org.apache.kafka.clients.producer.ProducerConfig >> Method: org.apache.kafka.common.config.AbstractConfig.logAll(AbstractConfig.java:347) ]
+INFO:ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = default
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2022-01-27 14:06:57 下午 [Thread: pool-2-thread-1][ Class:org.apache.kafka.common.utils.AppInfoParser >> Method: org.apache.kafka.common.utils.AppInfoParser$AppInfo.<init>(AppInfoParser.java:117) ]
+INFO:Kafka version: 2.5.0
+2022-01-27 14:06:57 下午 [Thread: pool-2-thread-1][ Class:org.apache.kafka.common.utils.AppInfoParser >> Method: org.apache.kafka.common.utils.AppInfoParser$AppInfo.<init>(AppInfoParser.java:118) ]
+INFO:Kafka commitId: 66563e712b0b9f84
+2022-01-27 14:06:57 下午 [Thread: pool-2-thread-1][ Class:org.apache.kafka.common.utils.AppInfoParser >> Method: org.apache.kafka.common.utils.AppInfoParser$AppInfo.<init>(AppInfoParser.java:119) ]
+INFO:Kafka startTimeMs: 1643263617174
+2022-01-27 14:06:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.ConsumerCoordinator >> Method: org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.refreshCommittedOffsetsIfNeeded(ConsumerCoordinator.java:792) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Setting offset for partition QUEUE-0 to the committed offset FetchPosition{offset=2051, offsetEpoch=Optional[0], currentLeader=LeaderAndEpoch{leader=Optional[192.168.0.113:9092 (id: 0 rack: null)], epoch=0}}
+2022-01-27 14:06:57 下午 [Thread: kafka-producer-network-thread | producer-1][ Class:org.apache.kafka.clients.Metadata >> Method: org.apache.kafka.clients.Metadata.update(Metadata.java:280) ]
+INFO:[Producer clientId=producer-1] Cluster ID: QAESlS8bTz-QQiEQdhLSyg
+2022-01-27 14:06:57 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f235220958b30e94db9ce5----------执行
+2022-01-27 14:06:57 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23522f0e08f5c260c90a8----------执行
+2022-01-27 14:06:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:06:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f236810958b30e94db9ce8"
+
+2022-01-27 14:07:05 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:07:05 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f236878561e4161cfb2b2f"
+
+2022-01-27 14:07:57 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f236810958b30e94db9ce8----------执行
+2022-01-27 14:07:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:07:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f236bd0958b30e94db9ceb"
+
+2022-01-27 14:08:57 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f236bd0958b30e94db9ceb----------执行
+2022-01-27 14:08:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:08:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f236f90958b30e94db9cee"
+
+2022-01-27 14:09:57 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f236f90958b30e94db9cee----------执行
+2022-01-27 14:09:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:09:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f237350958b30e94db9cf1"
+
+2022-01-27 14:10:57 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f237350958b30e94db9cf1----------执行
+2022-01-27 14:10:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:10:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f237710958b30e94db9cf4"
+
+2022-01-27 14:11:57 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f237710958b30e94db9cf4----------执行
+2022-01-27 14:11:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:11:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f237ad0958b30e94db9cf7"
+
+2022-01-27 14:12:57 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f237ad0958b30e94db9cf7----------执行
+2022-01-27 14:12:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:12:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f237e90958b30e94db9cfa"
+
+2022-01-27 14:13:57 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f237e90958b30e94db9cfa----------执行
+2022-01-27 14:13:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:13:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f238250958b30e94db9cfd"
+
+2022-01-27 14:14:57 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f238250958b30e94db9cfd----------执行
+2022-01-27 14:14:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:14:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f238610958b30e94db9d00"
+
+2022-01-27 14:15:57 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f238610958b30e94db9d00----------执行
+2022-01-27 14:15:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:15:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f2389d0958b30e94db9d03"
+
+2022-01-27 14:16:57 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f2389d0958b30e94db9d03----------执行
+2022-01-27 14:16:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:16:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f238d90958b30e94db9d06"
+
+2022-01-27 14:17:03 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f236878561e4161cfb2b2f----------执行
+2022-01-27 14:17:03 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:17:03 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f238df8561e4161cfb2b32"
+
+2022-01-27 14:17:57 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f238d90958b30e94db9d06----------执行
+2022-01-27 14:17:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:17:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f239150958b30e94db9d09"
+
+2022-01-27 14:18:57 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f239150958b30e94db9d09----------执行
+2022-01-27 14:18:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:18:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f239510958b30e94db9d0c"
+
+2022-01-27 14:19:57 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f239510958b30e94db9d0c----------执行
+2022-01-27 14:19:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:19:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f2398d0958b30e94db9d0f"
+
+2022-01-27 14:20:57 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f2398d0958b30e94db9d0f----------执行
+2022-01-27 14:20:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:20:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f239c90958b30e94db9d12"
+
+2022-01-27 14:21:57 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f239c90958b30e94db9d12----------执行
+2022-01-27 14:21:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:21:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23a050958b30e94db9d15"
+
+2022-01-27 14:22:57 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23a050958b30e94db9d15----------执行
+2022-01-27 14:22:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:22:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23a410958b30e94db9d18"
+
+2022-01-27 14:23:57 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23a410958b30e94db9d18----------执行
+2022-01-27 14:23:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:23:57 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23a7d0958b30e94db9d1b"
+
+2022-01-27 14:24:57 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23a7d0958b30e94db9d1b----------执行
+2022-01-27 14:24:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:24:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23aba0958b30e94db9d1e"
+
+2022-01-27 14:25:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23aba0958b30e94db9d1e----------执行
+2022-01-27 14:25:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:25:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23af60958b30e94db9d21"
+
+2022-01-27 14:26:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23af60958b30e94db9d21----------执行
+2022-01-27 14:26:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:26:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23b320958b30e94db9d24"
+
+2022-01-27 14:27:03 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f238df8561e4161cfb2b32----------执行
+2022-01-27 14:27:03 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:27:03 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23b378561e4161cfb2b35"
+
+2022-01-27 14:27:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23b320958b30e94db9d24----------执行
+2022-01-27 14:27:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:27:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23b6e0958b30e94db9d27"
+
+2022-01-27 14:28:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23b6e0958b30e94db9d27----------执行
+2022-01-27 14:28:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:28:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23baa0958b30e94db9d2a"
+
+2022-01-27 14:29:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23baa0958b30e94db9d2a----------执行
+2022-01-27 14:29:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:29:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23be60958b30e94db9d2d"
+
+2022-01-27 14:30:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23be60958b30e94db9d2d----------执行
+2022-01-27 14:30:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:30:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23c220958b30e94db9d30"
+
+2022-01-27 14:31:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23c220958b30e94db9d30----------执行
+2022-01-27 14:31:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:31:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23c5e0958b30e94db9d33"
+
+2022-01-27 14:32:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23c5e0958b30e94db9d33----------执行
+2022-01-27 14:32:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:32:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23c9a0958b30e94db9d36"
+
+2022-01-27 14:33:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23c9a0958b30e94db9d36----------执行
+2022-01-27 14:33:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:33:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23cd60958b30e94db9d39"
+
+2022-01-27 14:34:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23cd60958b30e94db9d39----------执行
+2022-01-27 14:34:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:34:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23d120958b30e94db9d3c"
+
+2022-01-27 14:35:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23d120958b30e94db9d3c----------执行
+2022-01-27 14:35:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:35:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23d4e0958b30e94db9d3f"
+
+2022-01-27 14:36:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23d4e0958b30e94db9d3f----------执行
+2022-01-27 14:36:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:36:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23d8a0958b30e94db9d42"
+
+2022-01-27 14:37:03 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23b378561e4161cfb2b35----------执行
+2022-01-27 14:37:03 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:37:03 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23d8f8561e4161cfb2b38"
+
+2022-01-27 14:37:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23d8a0958b30e94db9d42----------执行
+2022-01-27 14:37:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:37:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23dc60958b30e94db9d45"
+
+2022-01-27 14:38:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23dc60958b30e94db9d45----------执行
+2022-01-27 14:38:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:38:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23e020958b30e94db9d48"
+
+2022-01-27 14:39:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23e020958b30e94db9d48----------执行
+2022-01-27 14:39:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:39:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23e3e0958b30e94db9d4b"
+
+2022-01-27 14:40:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23e3e0958b30e94db9d4b----------执行
+2022-01-27 14:40:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:40:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23e7a0958b30e94db9d4e"
+
+2022-01-27 14:41:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23e7a0958b30e94db9d4e----------执行
+2022-01-27 14:41:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:41:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23eb60958b30e94db9d51"
+
+2022-01-27 14:42:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23eb60958b30e94db9d51----------执行
+2022-01-27 14:42:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:42:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23ef20958b30e94db9d54"
+
+2022-01-27 14:43:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23ef20958b30e94db9d54----------执行
+2022-01-27 14:43:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:43:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23f2e0958b30e94db9d57"
+
+2022-01-27 14:44:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23f2e0958b30e94db9d57----------执行
+2022-01-27 14:44:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:44:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23f6a0958b30e94db9d5a"
+
+2022-01-27 14:45:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23f6a0958b30e94db9d5a----------执行
+2022-01-27 14:45:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:45:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23fa60958b30e94db9d5d"
+
+2022-01-27 14:46:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23fa60958b30e94db9d5d----------执行
+2022-01-27 14:46:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:46:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23fe20958b30e94db9d60"
+
+2022-01-27 14:47:03 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23d8f8561e4161cfb2b38----------执行
+2022-01-27 14:47:03 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:47:03 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f23fe78561e4161cfb2b3b"
+
+2022-01-27 14:47:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23fe20958b30e94db9d60----------执行
+2022-01-27 14:47:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:47:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f2401e0958b30e94db9d63"
+
+2022-01-27 14:48:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f2401e0958b30e94db9d63----------执行
+2022-01-27 14:48:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:48:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f2405a0958b30e94db9d66"
+
+2022-01-27 14:49:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f2405a0958b30e94db9d66----------执行
+2022-01-27 14:49:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:49:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f240960958b30e94db9d69"
+
+2022-01-27 14:50:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f240960958b30e94db9d69----------执行
+2022-01-27 14:50:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:50:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f240d20958b30e94db9d6c"
+
+2022-01-27 14:51:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f240d20958b30e94db9d6c----------执行
+2022-01-27 14:51:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:51:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f2410e0958b30e94db9d6f"
+
+2022-01-27 14:52:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f2410e0958b30e94db9d6f----------执行
+2022-01-27 14:52:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:52:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f2414a0958b30e94db9d72"
+
+2022-01-27 14:53:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f2414a0958b30e94db9d72----------执行
+2022-01-27 14:53:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:53:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f241860958b30e94db9d75"
+
+2022-01-27 14:54:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f241860958b30e94db9d75----------执行
+2022-01-27 14:54:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:54:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f241c20958b30e94db9d78"
+
+2022-01-27 14:55:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f241c20958b30e94db9d78----------执行
+2022-01-27 14:55:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:55:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f241fe0958b30e94db9d7b"
+
+2022-01-27 14:56:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f241fe0958b30e94db9d7b----------执行
+2022-01-27 14:56:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:56:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f2423a0958b30e94db9d7e"
+
+2022-01-27 14:57:03 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23fe78561e4161cfb2b3b----------执行
+2022-01-27 14:57:04 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:57:04 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f242408561e4161cfb2b3e"
+
+2022-01-27 14:57:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f2423a0958b30e94db9d7e----------执行
+2022-01-27 14:57:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:57:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f242760958b30e94db9d81"
+
+2022-01-27 14:58:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f242760958b30e94db9d81----------执行
+2022-01-27 14:58:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:58:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f242b20958b30e94db9d84"
+
+2022-01-27 14:59:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f242b20958b30e94db9d84----------执行
+2022-01-27 14:59:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 14:59:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f242ee0958b30e94db9d87"
+
+2022-01-27 15:00:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f242ee0958b30e94db9d87----------执行
+2022-01-27 15:00:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:00:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f2432a0958b30e94db9d8a"
+
+2022-01-27 15:01:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f2432a0958b30e94db9d8a----------执行
+2022-01-27 15:01:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:01:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f243660958b30e94db9d8d"
+
+2022-01-27 15:02:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f243660958b30e94db9d8d----------执行
+2022-01-27 15:02:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:02:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f243a20958b30e94db9d90"
+
+2022-01-27 15:03:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f243a20958b30e94db9d90----------执行
+2022-01-27 15:03:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:03:58 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f243de0958b30e94db9d93"
+
+2022-01-27 15:04:58 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f243de0958b30e94db9d93----------执行
+2022-01-27 15:04:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:04:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f2441b0958b30e94db9d96"
+
+2022-01-27 15:05:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f2441b0958b30e94db9d96----------执行
+2022-01-27 15:05:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:05:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f244570958b30e94db9d99"
+
+2022-01-27 15:06:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f244570958b30e94db9d99----------执行
+2022-01-27 15:06:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:06:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f244930958b30e94db9d9c"
+
+2022-01-27 15:07:04 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f242408561e4161cfb2b3e----------执行
+2022-01-27 15:07:04 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:07:04 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f244988561e4161cfb2b41"
+
+2022-01-27 15:07:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f244930958b30e94db9d9c----------执行
+2022-01-27 15:07:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:07:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f244cf0958b30e94db9d9f"
+
+2022-01-27 15:08:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f244cf0958b30e94db9d9f----------执行
+2022-01-27 15:08:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:08:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f2450b0958b30e94db9da2"
+
+2022-01-27 15:09:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f2450b0958b30e94db9da2----------执行
+2022-01-27 15:09:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:09:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f245470958b30e94db9da5"
+
+2022-01-27 15:10:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f245470958b30e94db9da5----------执行
+2022-01-27 15:10:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:10:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f245830958b30e94db9da8"
+
+2022-01-27 15:11:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f245830958b30e94db9da8----------执行
+2022-01-27 15:11:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:11:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f245bf0958b30e94db9dab"
+
+2022-01-27 15:12:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f245bf0958b30e94db9dab----------执行
+2022-01-27 15:12:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:12:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f245fb0958b30e94db9dae"
+
+2022-01-27 15:13:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f245fb0958b30e94db9dae----------执行
+2022-01-27 15:13:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:13:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f246370958b30e94db9db1"
+
+2022-01-27 15:14:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f246370958b30e94db9db1----------执行
+2022-01-27 15:14:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:14:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f246730958b30e94db9db4"
+
+2022-01-27 15:15:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f246730958b30e94db9db4----------执行
+2022-01-27 15:15:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:15:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f246af0958b30e94db9db7"
+
+2022-01-27 15:16:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f246af0958b30e94db9db7----------执行
+2022-01-27 15:16:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:16:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f246eb0958b30e94db9dba"
+
+2022-01-27 15:17:04 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f244988561e4161cfb2b41----------执行
+2022-01-27 15:17:04 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:17:04 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f246f08561e4161cfb2b44"
+
+2022-01-27 15:17:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f246eb0958b30e94db9dba----------执行
+2022-01-27 15:17:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:17:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f247270958b30e94db9dbd"
+
+2022-01-27 15:18:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f247270958b30e94db9dbd----------执行
+2022-01-27 15:18:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:18:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f247630958b30e94db9dc0"
+
+2022-01-27 15:19:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f247630958b30e94db9dc0----------执行
+2022-01-27 15:19:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:19:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f2479f0958b30e94db9dc3"
+
+2022-01-27 15:20:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f2479f0958b30e94db9dc3----------执行
+2022-01-27 15:20:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:20:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f247db0958b30e94db9dc6"
+
+2022-01-27 15:21:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f247db0958b30e94db9dc6----------执行
+2022-01-27 15:21:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:21:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f248170958b30e94db9dc9"
+
+2022-01-27 15:22:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f248170958b30e94db9dc9----------执行
+2022-01-27 15:22:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:22:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f248530958b30e94db9dcc"
+
+2022-01-27 15:23:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f248530958b30e94db9dcc----------执行
+2022-01-27 15:23:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:23:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f2488f0958b30e94db9dcf"
+
+2022-01-27 15:24:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f2488f0958b30e94db9dcf----------执行
+2022-01-27 15:24:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:24:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f248cb0958b30e94db9dd2"
+
+2022-01-27 15:25:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f248cb0958b30e94db9dd2----------执行
+2022-01-27 15:25:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:25:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f249070958b30e94db9dd5"
+
+2022-01-27 15:26:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f249070958b30e94db9dd5----------执行
+2022-01-27 15:26:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:26:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f249430958b30e94db9dd8"
+
+2022-01-27 15:27:04 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f246f08561e4161cfb2b44----------执行
+2022-01-27 15:27:04 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:27:04 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f249488561e4161cfb2b47"
+
+2022-01-27 15:27:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f249430958b30e94db9dd8----------执行
+2022-01-27 15:27:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:27:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f2497f0958b30e94db9ddb"
+
+2022-01-27 15:28:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f2497f0958b30e94db9ddb----------执行
+2022-01-27 15:28:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:28:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f249bb0958b30e94db9dde"
+
+2022-01-27 15:29:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f249bb0958b30e94db9dde----------执行
+2022-01-27 15:29:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:29:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f249f70958b30e94db9de1"
+
+2022-01-27 15:30:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f249f70958b30e94db9de1----------执行
+2022-01-27 15:30:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:30:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f24a330958b30e94db9de4"
+
+2022-01-27 15:31:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f24a330958b30e94db9de4----------执行
+2022-01-27 15:31:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:31:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f24a6f0958b30e94db9de7"
+
+2022-01-27 15:32:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f24a6f0958b30e94db9de7----------执行
+2022-01-27 15:32:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:32:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f24aab0958b30e94db9dea"
+
+2022-01-27 15:33:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f24aab0958b30e94db9dea----------执行
+2022-01-27 15:33:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:33:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f24ae70958b30e94db9ded"
+
+2022-01-27 15:34:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f24ae70958b30e94db9ded----------执行
+2022-01-27 15:34:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:34:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f24b230958b30e94db9df0"
+
+2022-01-27 15:35:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f24b230958b30e94db9df0----------执行
+2022-01-27 15:35:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:35:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f24b5f0958b30e94db9df3"
+
+2022-01-27 15:36:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f24b5f0958b30e94db9df3----------执行
+2022-01-27 15:36:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:36:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f24b9b0958b30e94db9df6"
+
+2022-01-27 15:37:04 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f249488561e4161cfb2b47----------执行
+2022-01-27 15:37:04 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:37:04 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f24ba08561e4161cfb2b4a"
+
+2022-01-27 15:37:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f24b9b0958b30e94db9df6----------执行
+2022-01-27 15:37:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:37:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f24bd70958b30e94db9df9"
+
+2022-01-27 15:38:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f24bd70958b30e94db9df9----------执行
+2022-01-27 15:38:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:38:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f24c130958b30e94db9dfc"
+
+2022-01-27 15:39:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f24c130958b30e94db9dfc----------执行
+2022-01-27 15:39:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:39:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f24c4f0958b30e94db9dff"
+
+2022-01-27 15:40:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f24c4f0958b30e94db9dff----------执行
+2022-01-27 15:40:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:40:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f24c8b0958b30e94db9e02"
+
+2022-01-27 15:41:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f24c8b0958b30e94db9e02----------执行
+2022-01-27 15:41:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:41:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f24cc70958b30e94db9e05"
+
+2022-01-27 15:42:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f24cc70958b30e94db9e05----------执行
+2022-01-27 15:42:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:42:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f24d030958b30e94db9e08"
+
+2022-01-27 15:43:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f24d030958b30e94db9e08----------执行
+2022-01-27 15:43:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:43:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f24d3f0958b30e94db9e0b"
+
+2022-01-27 15:44:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f24d3f0958b30e94db9e0b----------执行
+2022-01-27 15:44:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:44:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f24d7b0958b30e94db9e0e"
+
+2022-01-27 15:45:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f24d7b0958b30e94db9e0e----------执行
+2022-01-27 15:45:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:45:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f24db70958b30e94db9e11"
+
+2022-01-27 15:46:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f24db70958b30e94db9e11----------执行
+2022-01-27 15:46:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:46:59 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f24df30958b30e94db9e14"
+
+2022-01-27 15:47:04 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f24ba08561e4161cfb2b4a----------执行
+2022-01-27 15:47:04 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:47:04 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f24df88561e4161cfb2b4d"
+
+2022-01-27 15:47:59 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f24df30958b30e94db9e14----------执行
+2022-01-27 15:48:00 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:48:00 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f24e300958b30e94db9e17"
+
+2022-01-27 15:49:00 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f24e300958b30e94db9e17----------执行
+2022-01-27 15:49:00 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:49:00 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f24e6c0958b30e94db9e1a"
+
+2022-01-27 15:50:00 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f24e6c0958b30e94db9e1a----------执行
+2022-01-27 15:50:00 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:50:00 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f24ea80958b30e94db9e1d"
+
+2022-01-27 15:51:00 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f24ea80958b30e94db9e1d----------执行
+2022-01-27 15:51:00 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:51:00 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f24ee40958b30e94db9e20"
+
+2022-01-27 15:52:00 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f24ee40958b30e94db9e20----------执行
+2022-01-27 15:52:00 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:52:00 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f24f200958b30e94db9e23"
+
+2022-01-27 15:53:00 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f24f200958b30e94db9e23----------执行
+2022-01-27 15:53:00 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:53:00 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f24f5c0958b30e94db9e26"
+
+2022-01-27 15:54:00 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f24f5c0958b30e94db9e26----------执行
+2022-01-27 15:54:00 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:54:00 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f24f980958b30e94db9e29"
+
+2022-01-27 15:55:00 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f24f980958b30e94db9e29----------执行
+2022-01-27 15:55:00 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:55:00 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f24fd40958b30e94db9e2c"
+
+2022-01-27 15:56:00 下午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f24fd40958b30e94db9e2c----------执行
+2022-01-27 15:56:00 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-01-27 15:56:00 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "61f250100958b30e94db9e2f"
+
+2022-01-27 15:56:19 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.ConsumerCoordinator >> Method: org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.invokePartitionsRevoked(ConsumerCoordinator.java:292) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Revoke previously assigned partitions QUEUE-0
+2022-01-27 15:56:19 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.AbstractCoordinator >> Method: org.apache.kafka.clients.consumer.internals.AbstractCoordinator.maybeLeaveGroup(AbstractCoordinator.java:979) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Member consumer-queue-consumer-group-1-12a8cc22-792f-4935-8f5c-c7d6c4e68627 sending LeaveGroup request to coordinator 192.168.0.113:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2022-01-27 15:56:19 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.KafkaConsumer >> Method: org.apache.kafka.clients.consumer.KafkaConsumer.unsubscribe(KafkaConsumer.java:1082) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Unsubscribed all topics or patterns and assigned partitions
+2022-01-27 15:56:19 下午 [Thread: SpringContextShutdownHook][ Class:org.apache.kafka.clients.producer.KafkaProducer >> Method: org.apache.kafka.clients.producer.KafkaProducer.close(KafkaProducer.java:1182) ]
+INFO:[Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2022-01-27 15:56:19 下午 [Thread: SpringContextShutdownHook][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Closed connection [connectionId{localValue:2, serverValue:572}] to localhost:27017 because the pool has been closed.
+2022-01-27 15:56:20 下午 [Thread: SpringContextShutdownHook][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:350) ]
+INFO:HikariPool-1 - Shutdown initiated...
+2022-01-27 15:56:20 下午 [Thread: SpringContextShutdownHook][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:352) ]
+INFO:HikariPool-1 - Shutdown completed.

@@ -1,0 +1,8 @@
+2022-02-17 11:15:48 上午 [Thread: nioEventLoopGroup-11-1][ Class:com.donglai.gate.net.WebSocketHandler >> Method: com.donglai.gate.net.WebSocketHandler.userEventTriggered(WebSocketHandler.java:71) ]
+ERROR:关闭这个不会活跃的通道，user id is---->null， channel 00ff84fffe0bfcf6-00001904-00000008-3a9714134b49125a-e0c6da1a  
+2022-02-17 11:16:46 上午 [Thread: nioEventLoopGroup-11-2][ Class:com.donglai.gate.net.WebSocketHandler >> Method: com.donglai.gate.net.WebSocketHandler.userEventTriggered(WebSocketHandler.java:71) ]
+ERROR:关闭这个不会活跃的通道，user id is---->null， channel 00ff84fffe0bfcf6-00001904-00000009-007d0ecfdb49a6ad-4befd640  
+2022-02-17 11:17:43 上午 [Thread: nioEventLoopGroup-11-3][ Class:com.donglai.gate.net.WebSocketHandler >> Method: com.donglai.gate.net.WebSocketHandler.userEventTriggered(WebSocketHandler.java:71) ]
+ERROR:关闭这个不会活跃的通道，user id is---->null， channel 00ff84fffe0bfcf6-00001904-0000000a-2bb0ee725448ad05-b37e069f  
+2022-02-17 11:32:47 上午 [Thread: nioEventLoopGroup-11-4][ Class:com.donglai.gate.net.WebSocketHandler >> Method: com.donglai.gate.net.WebSocketHandler.userEventTriggered(WebSocketHandler.java:71) ]
+ERROR:关闭这个不会活跃的通道，user id is---->10000026， channel 00ff84fffe0bfcf6-00001904-0000000f-3cc5f61cf85427a7-245eab2d  

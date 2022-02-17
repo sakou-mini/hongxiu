@@ -1,0 +1,86 @@
+2022-02-17 10:58:50 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.NetworkClient >> Method: org.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater.handleSuccessfulResponse(NetworkClient.java:1070) ]
+WARN:[Consumer clientId=consumer-gate-consumer-group-1, groupId=gate-consumer-group] Error while fetching metadata with correlation id 2 : {GATE=LEADER_NOT_AVAILABLE}
+2022-02-17 11:15:48 上午 [Thread: nioEventLoopGroup-11-1][ Class:com.donglai.gate.net.WebSocketHandler >> Method: com.donglai.gate.net.WebSocketHandler.userEventTriggered(WebSocketHandler.java:71) ]
+ERROR:关闭这个不会活跃的通道，user id is---->null， channel 00ff84fffe0bfcf6-00001904-00000008-3a9714134b49125a-e0c6da1a  
+2022-02-17 11:16:46 上午 [Thread: nioEventLoopGroup-11-2][ Class:com.donglai.gate.net.WebSocketHandler >> Method: com.donglai.gate.net.WebSocketHandler.userEventTriggered(WebSocketHandler.java:71) ]
+ERROR:关闭这个不会活跃的通道，user id is---->null， channel 00ff84fffe0bfcf6-00001904-00000009-007d0ecfdb49a6ad-4befd640  
+2022-02-17 11:16:57 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:16:58 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:16:59 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:16:59 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:16:59 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:17:00 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:17:00 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:17:01 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:17:01 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:17:43 上午 [Thread: nioEventLoopGroup-11-3][ Class:com.donglai.gate.net.WebSocketHandler >> Method: com.donglai.gate.net.WebSocketHandler.userEventTriggered(WebSocketHandler.java:71) ]
+ERROR:关闭这个不会活跃的通道，user id is---->null， channel 00ff84fffe0bfcf6-00001904-0000000a-2bb0ee725448ad05-b37e069f  
+2022-02-17 11:18:40 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:18:40 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:18:41 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:18:41 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:18:41 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:18:41 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:18:42 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:18:42 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:18:42 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:19:27 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:19:27 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:19:28 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:19:28 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:19:28 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:19:29 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:19:29 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:19:30 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:19:30 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:20:10 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:20:15 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:20:16 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:20:16 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:20:17 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:20:18 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:20:18 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:20:19 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:20:19 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.gate.process.LoginCacheProcess >> Method: com.donglai.gate.process.LoginCacheProcess.loginSuccess(LoginCacheProcess.java:42) ]
+WARN:找不到本次请求的连接
+2022-02-17 11:25:39 上午 [Thread: nioEventLoopGroup-11-4][ Class:com.donglai.gate.net.WebSocketHandler >> Method: com.donglai.gate.net.WebSocketHandler.handleWebSocketFrame(WebSocketHandler.java:110) ]
+WARN:not supported format
+2022-02-17 11:25:42 上午 [Thread: nioEventLoopGroup-11-4][ Class:com.donglai.gate.net.WebSocketHandler >> Method: com.donglai.gate.net.WebSocketHandler.handleWebSocketFrame(WebSocketHandler.java:110) ]
+WARN:not supported format
+2022-02-17 11:32:47 上午 [Thread: nioEventLoopGroup-11-4][ Class:com.donglai.gate.net.WebSocketHandler >> Method: com.donglai.gate.net.WebSocketHandler.userEventTriggered(WebSocketHandler.java:71) ]
+ERROR:关闭这个不会活跃的通道，user id is---->10000026， channel 00ff84fffe0bfcf6-00001904-0000000f-3cc5f61cf85427a7-245eab2d  

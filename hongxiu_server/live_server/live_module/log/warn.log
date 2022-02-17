@@ -1,0 +1,4 @@
+2022-01-27 13:50:14 下午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-01-27 13:50:14 下午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.

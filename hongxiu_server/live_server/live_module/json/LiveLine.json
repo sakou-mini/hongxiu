@@ -1,0 +1,16 @@
+{
+  "lines": [
+    {
+      "id": 1,
+      "handlerClass": "WangsuLiveStream"
+    },
+    {
+      "id": 2,
+      "handlerClass": "TencentLiveStream"
+    },
+    {
+      "id": 3,
+      "handlerClass": "AliYunLiveStream"
+    }
+  ]
+}

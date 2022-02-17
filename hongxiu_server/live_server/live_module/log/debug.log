@@ -1,0 +1,228 @@
+2022-01-27 13:50:11 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-27 13:50:11 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-01-27 13:50:11 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 108ms. Found 37 MongoDB repository interfaces.
+2022-01-27 13:50:11 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-27 13:50:11 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-01-27 13:50:11 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 16ms. Found 0 JPA repository interfaces.
+2022-01-27 13:50:11 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-27 13:50:11 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-01-27 13:50:11 下午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 5ms. Found 0 Redis repository interfaces.
+2022-01-27 13:50:12 下午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:110) ]
+INFO:HikariPool-1 - Starting...
+2022-01-27 13:50:12 下午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:123) ]
+INFO:HikariPool-1 - Start completed.
+2022-01-27 13:50:13 下午 [Thread: main][ Class:org.redisson.Version >> Method: org.redisson.Version.logVersion(Version.java:41) ]
+INFO:Redisson 3.16.1
+2022-01-27 13:50:13 下午 [Thread: redisson-netty-4-6][ Class:org.redisson.connection.pool.MasterPubSubConnectionPool >> Method: org.redisson.connection.pool.ConnectionPool$1.lambda$run$0(ConnectionPool.java:166) ]
+INFO:1 connections initialized for localhost/127.0.0.1:6379
+2022-01-27 13:50:13 下午 [Thread: redisson-netty-4-5][ Class:org.redisson.connection.pool.MasterConnectionPool >> Method: org.redisson.connection.pool.ConnectionPool$1.lambda$run$0(ConnectionPool.java:166) ]
+INFO:1 connections initialized for localhost/127.0.0.1:6379
+2022-01-27 13:50:14 下午 [Thread: main][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='rs0'}
+2022-01-27 13:50:14 下午 [Thread: main][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Adding discovered server localhost:27017 to client view of cluster
+2022-01-27 13:50:14 下午 [Thread: cluster-ClusterId{value='61f23296f0e08f5c260c906f', description='null'}-localhost:27017][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Opened connection [connectionId{localValue:1, serverValue:552}] to localhost:27017
+2022-01-27 13:50:14 下午 [Thread: cluster-ClusterId{value='61f23296f0e08f5c260c906f', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=4042700, setName='rs0', canonicalAddress=localhost:27017, hosts=[localhost:27017], passives=[], arbiters=[], primary='localhost:27017', tagSet=TagSet{[]}, electionId=7fffffff0000000000000014, setVersion=1, lastWriteDate=Thu Jan 27 13:49:59 CST 2022, lastUpdateTimeNanos=593608919691300}
+2022-01-27 13:50:14 下午 [Thread: cluster-ClusterId{value='61f23296f0e08f5c260c906f', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Setting max election id to 7fffffff0000000000000014 from replica set primary localhost:27017
+2022-01-27 13:50:14 下午 [Thread: cluster-ClusterId{value='61f23296f0e08f5c260c906f', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Setting max set version to 1 from replica set primary localhost:27017
+2022-01-27 13:50:14 下午 [Thread: cluster-ClusterId{value='61f23296f0e08f5c260c906f', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Discovered replica set primary localhost:27017
+2022-01-27 13:50:14 下午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-01-27 13:50:14 下午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-01-27 13:50:14 下午 [Thread: main][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Opened connection [connectionId{localValue:2, serverValue:553}] to localhost:27017
+2022-01-27 13:50:15 下午 [Thread: main][ Class:com.donglai.live.entityBuilder.GiftBuilder >> Method: com.donglai.live.entityBuilder.GiftBuilder.<init>(GiftBuilder.java:24) ]
+INFO:read gift config
+2022-01-27 13:50:15 下午 [Thread: main][ Class:org.springframework.data.repository.config.DeferredRepositoryInitializationListener >> Method: org.springframework.data.repository.config.DeferredRepositoryInitializationListener.onApplicationEvent(DeferredRepositoryInitializationListener.java:49) ]
+INFO:Triggering deferred initialization of Spring Data repositories…
+2022-01-27 13:50:15 下午 [Thread: main][ Class:org.springframework.data.repository.config.DeferredRepositoryInitializationListener >> Method: org.springframework.data.repository.config.DeferredRepositoryInitializationListener.onApplicationEvent(DeferredRepositoryInitializationListener.java:53) ]
+INFO:Spring Data repositories initialized!
+2022-01-27 13:50:16 下午 [Thread: main][ Class:com.donglai.live.app.InitServerData >> Method: com.donglai.live.app.InitServerData.initRankQueue(InitServerData.java:34) ]
+INFO:已经初始化了 排行queue 61ef9e1c2851422c8a9daff1
+2022-01-27 13:50:16 下午 [Thread: main][ Class:com.donglai.live.process.LiveDomainProcess >> Method: com.donglai.live.process.LiveDomainProcess.initDomainConfig(LiveDomainProcess.java:25) ]
+INFO:init live line domain :1
+2022-01-27 13:50:16 下午 [Thread: main][ Class:com.donglai.live.process.LiveDomainProcess >> Method: com.donglai.live.process.LiveDomainProcess.initDomainConfig(LiveDomainProcess.java:25) ]
+INFO:init live line domain :2
+2022-01-27 13:50:16 下午 [Thread: main][ Class:com.donglai.live.process.LiveProcess >> Method: com.donglai.live.process.LiveProcess.endLive(LiveProcess.java:78) ]
+INFO:room is closed:Room(id=263476, roomTitle=官方直播间JIAOYOU, liveUserId=263476, userId=10000044, roomImage=/defaultImage/live/img_live_room.png, createTime=1643093535208, pattern=LIVE_VIDEO, liveStartTime=1643093535230, audiences=[], giftRank={}, bulletMessages=[], liveTag=JIAOYOU, liveCode=205397a84f924274a7abcc800f22021d, liveLineCode=1, robotRoom=true, close=false, liveMusic=null, liveDomain=sjzooo.com)
+2022-01-27 13:50:16 下午 [Thread: main][ Class:com.donglai.live.process.LiveProcess >> Method: com.donglai.live.process.LiveProcess.endLive(LiveProcess.java:78) ]
+INFO:room is closed:Room(id=381242, roomTitle=官方直播间MENGCHONG, liveUserId=381242, userId=10000045, roomImage=/defaultImage/live/img_live_room.png, createTime=1643093535523, pattern=LIVE_VIDEO, liveStartTime=1643093535539, audiences=[], giftRank={}, bulletMessages=[], liveTag=MENGCHONG, liveCode=2729beb32de74f4aa9b57d9ecf39a955, liveLineCode=1, robotRoom=true, close=false, liveMusic=null, liveDomain=sjzooo.com)
+2022-01-27 13:50:16 下午 [Thread: main][ Class:com.donglai.live.process.LiveProcess >> Method: com.donglai.live.process.LiveProcess.endLive(LiveProcess.java:78) ]
+INFO:room is closed:Room(id=459655, roomTitle=官方直播间YANZHI, liveUserId=459655, userId=10000046, roomImage=/defaultImage/live/img_live_room.png, createTime=1643093535821, pattern=LIVE_VIDEO, liveStartTime=1643093535829, audiences=[], giftRank={}, bulletMessages=[], liveTag=YANZHI, liveCode=83ad78bbd99c437ca54cd2d1230d83b5, liveLineCode=1, robotRoom=true, close=false, liveMusic=null, liveDomain=sjzooo.com)
+2022-01-27 13:50:16 下午 [Thread: main][ Class:com.donglai.live.process.LiveProcess >> Method: com.donglai.live.process.LiveProcess.endLive(LiveProcess.java:78) ]
+INFO:room is closed:Room(id=547367, roomTitle=官方直播间TIAOWU, liveUserId=547367, userId=10000047, roomImage=/defaultImage/live/img_live_room.png, createTime=1643093536105, pattern=LIVE_VIDEO, liveStartTime=1643093536110, audiences=[], giftRank={}, bulletMessages=[], liveTag=TIAOWU, liveCode=79ffc9820d784ed18082b8fe2b8acdc1, liveLineCode=1, robotRoom=true, close=false, liveMusic=null, liveDomain=sjzooo.com)
+2022-01-27 13:50:16 下午 [Thread: main][ Class:com.donglai.live.process.LiveProcess >> Method: com.donglai.live.process.LiveProcess.endLive(LiveProcess.java:78) ]
+INFO:room is closed:Room(id=695521, roomTitle=官方直播间CHANGGE, liveUserId=695521, userId=10000048, roomImage=/defaultImage/live/img_live_room.png, createTime=1643093536324, pattern=LIVE_VIDEO, liveStartTime=1643093536336, audiences=[], giftRank={}, bulletMessages=[], liveTag=CHANGGE, liveCode=b7893ce61b484fc59cee66e1143e13d7, liveLineCode=1, robotRoom=true, close=false, liveMusic=null, liveDomain=sjzooo.com)
+2022-01-27 13:55:05 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.dispatcher.LiveMessageDispatcher >> Method: com.donglai.live.message.dispatcher.LiveMessageDispatcher.dispatcher(LiveMessageDispatcher.java:29) ]
+INFO:listen message :LIVEOFQUEUEFINISHREQUEST
+2022-01-27 13:55:05 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service >> Method: com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service.Process(LiveOfQueueFinishRequest_Service.java:34) ]
+INFO:队列的结束时间为：1643093552403
+2022-01-27 13:55:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:40) ]
+INFO:update gift contribution rank GiftRank(id=1, totalTime=1643262905938, rankType=CONTRIBUTION_RANK, rankInfos=[])
+2022-01-27 13:55:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:42) ]
+INFO:update gift income rank GiftRank(id=2, totalTime=1643262906275, rankType=INCOME_RANK, rankInfos=[])
+2022-01-27 13:55:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.dispatcher.LiveMessageDispatcher >> Method: com.donglai.live.message.dispatcher.LiveMessageDispatcher.dispatcher(LiveMessageDispatcher.java:29) ]
+INFO:listen message :LIVEOFQUEUEFINISHREQUEST
+2022-01-27 13:55:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service >> Method: com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service.Process(LiveOfQueueFinishRequest_Service.java:34) ]
+INFO:队列的结束时间为：1643262926312
+2022-01-27 13:55:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:40) ]
+INFO:update gift contribution rank GiftRank(id=1, totalTime=1643262926354, rankType=CONTRIBUTION_RANK, rankInfos=[])
+2022-01-27 13:55:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:42) ]
+INFO:update gift income rank GiftRank(id=2, totalTime=1643262926360, rankType=INCOME_RANK, rankInfos=[])
+2022-01-27 13:55:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.dispatcher.LiveMessageDispatcher >> Method: com.donglai.live.message.dispatcher.LiveMessageDispatcher.dispatcher(LiveMessageDispatcher.java:29) ]
+INFO:listen message :LIVEOFQUEUEFINISHREQUEST
+2022-01-27 13:55:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service >> Method: com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service.Process(LiveOfQueueFinishRequest_Service.java:34) ]
+INFO:队列的结束时间为：1643262946379
+2022-01-27 13:55:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:40) ]
+INFO:update gift contribution rank GiftRank(id=1, totalTime=1643262946375, rankType=CONTRIBUTION_RANK, rankInfos=[])
+2022-01-27 13:55:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:42) ]
+INFO:update gift income rank GiftRank(id=2, totalTime=1643262946379, rankType=INCOME_RANK, rankInfos=[])
+2022-01-27 13:56:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.dispatcher.LiveMessageDispatcher >> Method: com.donglai.live.message.dispatcher.LiveMessageDispatcher.dispatcher(LiveMessageDispatcher.java:29) ]
+INFO:listen message :LIVEOFQUEUEFINISHREQUEST
+2022-01-27 13:56:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service >> Method: com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service.Process(LiveOfQueueFinishRequest_Service.java:34) ]
+INFO:队列的结束时间为：1643262966387
+2022-01-27 13:56:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:40) ]
+INFO:update gift contribution rank GiftRank(id=1, totalTime=1643262966390, rankType=CONTRIBUTION_RANK, rankInfos=[])
+2022-01-27 13:56:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:42) ]
+INFO:update gift income rank GiftRank(id=2, totalTime=1643262966394, rankType=INCOME_RANK, rankInfos=[])
+2022-01-27 13:56:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.dispatcher.LiveMessageDispatcher >> Method: com.donglai.live.message.dispatcher.LiveMessageDispatcher.dispatcher(LiveMessageDispatcher.java:29) ]
+INFO:listen message :LIVEOFQUEUEFINISHREQUEST
+2022-01-27 13:56:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service >> Method: com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service.Process(LiveOfQueueFinishRequest_Service.java:34) ]
+INFO:队列的结束时间为：1643262986402
+2022-01-27 13:56:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:40) ]
+INFO:update gift contribution rank GiftRank(id=1, totalTime=1643262986426, rankType=CONTRIBUTION_RANK, rankInfos=[])
+2022-01-27 13:56:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:42) ]
+INFO:update gift income rank GiftRank(id=2, totalTime=1643262986429, rankType=INCOME_RANK, rankInfos=[])
+2022-01-27 13:56:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.dispatcher.LiveMessageDispatcher >> Method: com.donglai.live.message.dispatcher.LiveMessageDispatcher.dispatcher(LiveMessageDispatcher.java:29) ]
+INFO:listen message :LIVEOFQUEUEFINISHREQUEST
+2022-01-27 13:56:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service >> Method: com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service.Process(LiveOfQueueFinishRequest_Service.java:34) ]
+INFO:队列的结束时间为：1643263006436
+2022-01-27 13:56:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:40) ]
+INFO:update gift contribution rank GiftRank(id=1, totalTime=1643263006434, rankType=CONTRIBUTION_RANK, rankInfos=[])
+2022-01-27 13:56:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:42) ]
+INFO:update gift income rank GiftRank(id=2, totalTime=1643263006437, rankType=INCOME_RANK, rankInfos=[])
+2022-01-27 13:57:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.dispatcher.LiveMessageDispatcher >> Method: com.donglai.live.message.dispatcher.LiveMessageDispatcher.dispatcher(LiveMessageDispatcher.java:29) ]
+INFO:listen message :LIVEOFQUEUEFINISHREQUEST
+2022-01-27 13:57:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service >> Method: com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service.Process(LiveOfQueueFinishRequest_Service.java:34) ]
+INFO:队列的结束时间为：1643263026444
+2022-01-27 13:57:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:40) ]
+INFO:update gift contribution rank GiftRank(id=1, totalTime=1643263026453, rankType=CONTRIBUTION_RANK, rankInfos=[])
+2022-01-27 13:57:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:42) ]
+INFO:update gift income rank GiftRank(id=2, totalTime=1643263026457, rankType=INCOME_RANK, rankInfos=[])
+2022-01-27 13:57:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.dispatcher.LiveMessageDispatcher >> Method: com.donglai.live.message.dispatcher.LiveMessageDispatcher.dispatcher(LiveMessageDispatcher.java:29) ]
+INFO:listen message :LIVEOFQUEUEFINISHREQUEST
+2022-01-27 13:57:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service >> Method: com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service.Process(LiveOfQueueFinishRequest_Service.java:34) ]
+INFO:队列的结束时间为：1643263046465
+2022-01-27 13:57:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:40) ]
+INFO:update gift contribution rank GiftRank(id=1, totalTime=1643263046476, rankType=CONTRIBUTION_RANK, rankInfos=[])
+2022-01-27 13:57:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:42) ]
+INFO:update gift income rank GiftRank(id=2, totalTime=1643263046479, rankType=INCOME_RANK, rankInfos=[])
+2022-01-27 13:57:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.dispatcher.LiveMessageDispatcher >> Method: com.donglai.live.message.dispatcher.LiveMessageDispatcher.dispatcher(LiveMessageDispatcher.java:29) ]
+INFO:listen message :LIVEOFQUEUEFINISHREQUEST
+2022-01-27 13:57:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service >> Method: com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service.Process(LiveOfQueueFinishRequest_Service.java:34) ]
+INFO:队列的结束时间为：1643263066486
+2022-01-27 13:57:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:40) ]
+INFO:update gift contribution rank GiftRank(id=1, totalTime=1643263066503, rankType=CONTRIBUTION_RANK, rankInfos=[])
+2022-01-27 13:57:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:42) ]
+INFO:update gift income rank GiftRank(id=2, totalTime=1643263066507, rankType=INCOME_RANK, rankInfos=[])
+2022-01-27 13:58:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.dispatcher.LiveMessageDispatcher >> Method: com.donglai.live.message.dispatcher.LiveMessageDispatcher.dispatcher(LiveMessageDispatcher.java:29) ]
+INFO:listen message :LIVEOFQUEUEFINISHREQUEST
+2022-01-27 13:58:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service >> Method: com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service.Process(LiveOfQueueFinishRequest_Service.java:34) ]
+INFO:队列的结束时间为：1643263086513
+2022-01-27 13:58:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:40) ]
+INFO:update gift contribution rank GiftRank(id=1, totalTime=1643263086514, rankType=CONTRIBUTION_RANK, rankInfos=[])
+2022-01-27 13:58:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:42) ]
+INFO:update gift income rank GiftRank(id=2, totalTime=1643263086518, rankType=INCOME_RANK, rankInfos=[])
+2022-01-27 13:58:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.dispatcher.LiveMessageDispatcher >> Method: com.donglai.live.message.dispatcher.LiveMessageDispatcher.dispatcher(LiveMessageDispatcher.java:29) ]
+INFO:listen message :LIVEOFQUEUEFINISHREQUEST
+2022-01-27 13:58:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service >> Method: com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service.Process(LiveOfQueueFinishRequest_Service.java:34) ]
+INFO:队列的结束时间为：1643263106524
+2022-01-27 13:58:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:40) ]
+INFO:update gift contribution rank GiftRank(id=1, totalTime=1643263106540, rankType=CONTRIBUTION_RANK, rankInfos=[])
+2022-01-27 13:58:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:42) ]
+INFO:update gift income rank GiftRank(id=2, totalTime=1643263106544, rankType=INCOME_RANK, rankInfos=[])
+2022-01-27 13:58:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.dispatcher.LiveMessageDispatcher >> Method: com.donglai.live.message.dispatcher.LiveMessageDispatcher.dispatcher(LiveMessageDispatcher.java:29) ]
+INFO:listen message :LIVEOFQUEUEFINISHREQUEST
+2022-01-27 13:58:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service >> Method: com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service.Process(LiveOfQueueFinishRequest_Service.java:34) ]
+INFO:队列的结束时间为：1643263126550
+2022-01-27 13:58:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:40) ]
+INFO:update gift contribution rank GiftRank(id=1, totalTime=1643263126556, rankType=CONTRIBUTION_RANK, rankInfos=[])
+2022-01-27 13:58:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:42) ]
+INFO:update gift income rank GiftRank(id=2, totalTime=1643263126560, rankType=INCOME_RANK, rankInfos=[])
+2022-01-27 13:59:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.dispatcher.LiveMessageDispatcher >> Method: com.donglai.live.message.dispatcher.LiveMessageDispatcher.dispatcher(LiveMessageDispatcher.java:29) ]
+INFO:listen message :LIVEOFQUEUEFINISHREQUEST
+2022-01-27 13:59:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service >> Method: com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service.Process(LiveOfQueueFinishRequest_Service.java:34) ]
+INFO:队列的结束时间为：1643263146566
+2022-01-27 13:59:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:40) ]
+INFO:update gift contribution rank GiftRank(id=1, totalTime=1643263146585, rankType=CONTRIBUTION_RANK, rankInfos=[])
+2022-01-27 13:59:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:42) ]
+INFO:update gift income rank GiftRank(id=2, totalTime=1643263146589, rankType=INCOME_RANK, rankInfos=[])
+2022-01-27 13:59:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.dispatcher.LiveMessageDispatcher >> Method: com.donglai.live.message.dispatcher.LiveMessageDispatcher.dispatcher(LiveMessageDispatcher.java:29) ]
+INFO:listen message :LIVEOFQUEUEFINISHREQUEST
+2022-01-27 13:59:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service >> Method: com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service.Process(LiveOfQueueFinishRequest_Service.java:34) ]
+INFO:队列的结束时间为：1643263166596
+2022-01-27 13:59:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:40) ]
+INFO:update gift contribution rank GiftRank(id=1, totalTime=1643263166601, rankType=CONTRIBUTION_RANK, rankInfos=[])
+2022-01-27 13:59:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:42) ]
+INFO:update gift income rank GiftRank(id=2, totalTime=1643263166605, rankType=INCOME_RANK, rankInfos=[])
+2022-01-27 13:59:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.dispatcher.LiveMessageDispatcher >> Method: com.donglai.live.message.dispatcher.LiveMessageDispatcher.dispatcher(LiveMessageDispatcher.java:29) ]
+INFO:listen message :LIVEOFQUEUEFINISHREQUEST
+2022-01-27 13:59:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service >> Method: com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service.Process(LiveOfQueueFinishRequest_Service.java:34) ]
+INFO:队列的结束时间为：1643263186610
+2022-01-27 13:59:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:40) ]
+INFO:update gift contribution rank GiftRank(id=1, totalTime=1643263186611, rankType=CONTRIBUTION_RANK, rankInfos=[])
+2022-01-27 13:59:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:42) ]
+INFO:update gift income rank GiftRank(id=2, totalTime=1643263186614, rankType=INCOME_RANK, rankInfos=[])
+2022-01-27 14:00:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.dispatcher.LiveMessageDispatcher >> Method: com.donglai.live.message.dispatcher.LiveMessageDispatcher.dispatcher(LiveMessageDispatcher.java:29) ]
+INFO:listen message :LIVEOFQUEUEFINISHREQUEST
+2022-01-27 14:00:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service >> Method: com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service.Process(LiveOfQueueFinishRequest_Service.java:34) ]
+INFO:队列的结束时间为：1643263206621
+2022-01-27 14:00:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:40) ]
+INFO:update gift contribution rank GiftRank(id=1, totalTime=1643263206637, rankType=CONTRIBUTION_RANK, rankInfos=[])
+2022-01-27 14:00:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:42) ]
+INFO:update gift income rank GiftRank(id=2, totalTime=1643263206643, rankType=INCOME_RANK, rankInfos=[])
+2022-01-27 14:00:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.dispatcher.LiveMessageDispatcher >> Method: com.donglai.live.message.dispatcher.LiveMessageDispatcher.dispatcher(LiveMessageDispatcher.java:29) ]
+INFO:listen message :LIVEOFQUEUEFINISHREQUEST
+2022-01-27 14:00:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service >> Method: com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service.Process(LiveOfQueueFinishRequest_Service.java:34) ]
+INFO:队列的结束时间为：1643263226651
+2022-01-27 14:00:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:40) ]
+INFO:update gift contribution rank GiftRank(id=1, totalTime=1643263226695, rankType=CONTRIBUTION_RANK, rankInfos=[])
+2022-01-27 14:00:26 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:42) ]
+INFO:update gift income rank GiftRank(id=2, totalTime=1643263226703, rankType=INCOME_RANK, rankInfos=[])
+2022-01-27 14:00:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.dispatcher.LiveMessageDispatcher >> Method: com.donglai.live.message.dispatcher.LiveMessageDispatcher.dispatcher(LiveMessageDispatcher.java:29) ]
+INFO:listen message :LIVEOFQUEUEFINISHREQUEST
+2022-01-27 14:00:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service >> Method: com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service.Process(LiveOfQueueFinishRequest_Service.java:34) ]
+INFO:队列的结束时间为：1643263246723
+2022-01-27 14:00:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:40) ]
+INFO:update gift contribution rank GiftRank(id=1, totalTime=1643263246741, rankType=CONTRIBUTION_RANK, rankInfos=[])
+2022-01-27 14:00:46 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:42) ]
+INFO:update gift income rank GiftRank(id=2, totalTime=1643263246744, rankType=INCOME_RANK, rankInfos=[])
+2022-01-27 14:01:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.dispatcher.LiveMessageDispatcher >> Method: com.donglai.live.message.dispatcher.LiveMessageDispatcher.dispatcher(LiveMessageDispatcher.java:29) ]
+INFO:listen message :LIVEOFQUEUEFINISHREQUEST
+2022-01-27 14:01:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service >> Method: com.donglai.live.message.services.queue.LiveOfQueueFinishRequest_Service.Process(LiveOfQueueFinishRequest_Service.java:34) ]
+INFO:队列的结束时间为：1643263266750
+2022-01-27 14:01:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:40) ]
+INFO:update gift contribution rank GiftRank(id=1, totalTime=1643263266755, rankType=CONTRIBUTION_RANK, rankInfos=[])
+2022-01-27 14:01:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler >> Method: com.donglai.live.message.services.queue.handler.UpdateGiftRankHandler.deal(UpdateGiftRankHandler.java:42) ]
+INFO:update gift income rank GiftRank(id=2, totalTime=1643263266759, rankType=INCOME_RANK, rankInfos=[])
+2022-01-27 14:01:15 下午 [Thread: SpringContextShutdownHook][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Closed connection [connectionId{localValue:2, serverValue:553}] to localhost:27017 because the pool has been closed.
+2022-01-27 14:01:15 下午 [Thread: SpringContextShutdownHook][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:350) ]
+INFO:HikariPool-1 - Shutdown initiated...
+2022-01-27 14:01:15 下午 [Thread: SpringContextShutdownHook][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:352) ]
+INFO:HikariPool-1 - Shutdown completed.

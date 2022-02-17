@@ -1,0 +1,244 @@
+{
+  "80002": {
+    "name": "zhishengfeiji"
+  },
+  "80001": {
+    "name": "qianshuiting"
+  },
+  "80000": {
+    "name": "qiche"
+  },
+  "upgrade": "99999",
+  "giftLists": [
+    {
+      "image": "liwu_one",
+      "offset": {
+        "x": 0,
+        "y": -0.4
+      },
+      "priceType": 1,
+      "className": "basic",
+      "giftPriceType": "GIFT_PRICE_GAMECOIN",
+      "animationRequirement": 1,
+      "fullScreen": false,
+      "price": 1,
+      "enable": true,
+      "sortId": 0,
+      "name": "xiaoaixin",
+      "luxury": false,
+      "id": "10008"
+    },
+    {
+      "image": "liwu_one",
+      "offset": {
+        "x": -0.5,
+        "y": -0.5
+      },
+      "priceType": 1,
+      "className": "basic",
+      "giftPriceType": "GIFT_PRICE_GAMECOIN",
+      "animationRequirement": 1,
+      "fullScreen": false,
+      "price": 5,
+      "enable": true,
+      "sortId": 0,
+      "name": "zuanshibao",
+      "luxury": false,
+      "id": "10009"
+    },
+    {
+      "image": "liwu_one",
+      "offset": {
+        "x": -0.38,
+        "y": -0.6
+      },
+      "priceType": 1,
+      "className": "basic",
+      "giftPriceType": "GIFT_PRICE_GAMECOIN",
+      "animationRequirement": 1,
+      "fullScreen": false,
+      "price": 99,
+      "enable": true,
+      "sortId": 0,
+      "name": "xiaozuanjie",
+      "luxury": false,
+      "id": "10010"
+    },
+    {
+      "image": "liwu_one",
+      "offset": {
+        "x": -0.4,
+        "y": -0.5
+      },
+      "priceType": 1,
+      "className": "basic",
+      "giftPriceType": "GIFT_PRICE_GAMECOIN",
+      "animationRequirement": 1,
+      "fullScreen": false,
+      "price": 119,
+      "enable": true,
+      "sortId": 0,
+      "name": "xiangbin",
+      "luxury": false,
+      "id": "10011"
+    },
+    {
+      "image": "liwu_one",
+      "offset": {
+        "x": -0.48,
+        "y": -0.5
+      },
+      "priceType": 1,
+      "className": "basic",
+      "giftPriceType": "GIFT_PRICE_GAMECOIN",
+      "animationRequirement": 1,
+      "fullScreen": true,
+      "price": 299,
+      "enable": true,
+      "sortId": 0,
+      "name": "hongbaoyu",
+      "luxury": false,
+      "id": "10012"
+    },
+    {
+      "image": "liwu_one",
+      "offset": {
+        "x": -0.45,
+        "y": -0.55
+      },
+      "priceType": 1,
+      "className": "basic",
+      "giftPriceType": "GIFT_PRICE_GAMECOIN",
+      "animationRequirement": 1,
+      "fullScreen": true,
+      "price": 520,
+      "enable": true,
+      "sortId": 0,
+      "name": "reqiqiu",
+      "luxury": false,
+      "id": "10013"
+    },
+    {
+      "image": "liwu_one",
+      "offset": {
+        "x": -0.5,
+        "y": -0.5
+      },
+      "priceType": 1,
+      "className": "basic",
+      "giftPriceType": "GIFT_PRICE_GAMECOIN",
+      "animationRequirement": 1,
+      "fullScreen": false,
+      "price": 399,
+      "enable": true,
+      "sortId": 0,
+      "name": "xuyuanping",
+      "luxury": false,
+      "id": "10014"
+    },
+    {
+      "image": "liwu_one",
+      "offset": {
+        "x": -0.2,
+        "y": -0.07
+      },
+      "scale": 2,
+      "priceType": 1,
+      "className": "basic",
+      "giftPriceType": "GIFT_PRICE_GAMECOIN",
+      "animationRequirement": 1,
+      "fullScreen": true,
+      "price": 199,
+      "enable": true,
+      "sortId": 0,
+      "name": "damotuo",
+      "luxury": false,
+      "id": "10015"
+    },
+    {
+      "image": "liwu_one",
+      "offset": {
+        "x": -0.5,
+        "y": -0.9
+      },
+      "priceType": 1,
+      "className": "fancy",
+      "giftPriceType": "GIFT_PRICE_GAMECOIN",
+      "animationRequirement": 1,
+      "fullScreen": false,
+      "price": 999,
+      "enable": true,
+      "sortId": 0,
+      "name": "chengbao",
+      "luxury": true,
+      "id": "20004"
+    },
+    {
+      "image": "liwu_one",
+      "offset": {
+        "x": 0,
+        "y": -0.4
+      },
+      "priceType": 1,
+      "className": "fancy",
+      "giftPriceType": "GIFT_PRICE_GAMECOIN",
+      "animationRequirement": 1,
+      "fullScreen": false,
+      "price": 899,
+      "enable": true,
+      "sortId": 0,
+      "name": "nvhai",
+      "luxury": true,
+      "id": "20005"
+    },
+    {
+      "image": "liwu_one",
+      "offset": {
+        "x": -0.5,
+        "y": -0.7
+      },
+      "priceType": 1,
+      "className": "fancy",
+      "giftPriceType": "GIFT_PRICE_GAMECOIN",
+      "animationRequirement": 1,
+      "fullScreen": false,
+      "price": 777,
+      "enable": true,
+      "sortId": 0,
+      "name": "dachaopiaoqiang",
+      "luxury": true,
+      "id": "20006"
+    }
+  ],
+  "hotGift": "10000",
+  "GiftSelectNums": [
+    {
+      "str": "yixinyiyi",
+      "num": 1
+    },
+    {
+      "str": "shiquanshimei",
+      "num": 10
+    },
+    {
+      "str": "xiangni",
+      "num": 30
+    },
+    {
+      "str": "yiqieshunli",
+      "num": 60
+    },
+    {
+      "str": "yaobaobao",
+      "num": 188
+    },
+    {
+      "str": "woaini",
+      "num": 520
+    },
+    {
+      "str": "yishengyishi",
+      "num": 1314
+    }
+  ]
+}

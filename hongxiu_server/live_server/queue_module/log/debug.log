@@ -1,0 +1,266 @@
+2022-02-17 11:04:05 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-02-17 11:04:05 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-02-17 11:04:05 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 134ms. Found 41 MongoDB repository interfaces.
+2022-02-17 11:04:05 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-02-17 11:04:05 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-02-17 11:04:05 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 18ms. Found 0 JPA repository interfaces.
+2022-02-17 11:04:05 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) ]
+INFO:Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-02-17 11:04:05 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) ]
+INFO:Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-02-17 11:04:05 上午 [Thread: main][ Class:org.springframework.data.repository.config.RepositoryConfigurationDelegate >> Method: org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) ]
+INFO:Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2022-02-17 11:04:06 上午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:110) ]
+INFO:HikariPool-1 - Starting...
+2022-02-17 11:04:06 上午 [Thread: main][ Class:com.zaxxer.hikari.HikariDataSource >> Method: com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:123) ]
+INFO:HikariPool-1 - Start completed.
+2022-02-17 11:04:06 上午 [Thread: main][ Class:org.redisson.Version >> Method: org.redisson.Version.logVersion(Version.java:41) ]
+INFO:Redisson 3.16.1
+2022-02-17 11:04:07 上午 [Thread: redisson-netty-4-6][ Class:org.redisson.connection.pool.MasterPubSubConnectionPool >> Method: org.redisson.connection.pool.ConnectionPool$1.lambda$run$0(ConnectionPool.java:166) ]
+INFO:1 connections initialized for localhost/127.0.0.1:6379
+2022-02-17 11:04:07 上午 [Thread: redisson-netty-4-5][ Class:org.redisson.connection.pool.MasterConnectionPool >> Method: org.redisson.connection.pool.ConnectionPool$1.lambda$run$0(ConnectionPool.java:166) ]
+INFO:1 connections initialized for localhost/127.0.0.1:6379
+2022-02-17 11:04:07 上午 [Thread: main][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='rs0'}
+2022-02-17 11:04:07 上午 [Thread: main][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Adding discovered server localhost:27017 to client view of cluster
+2022-02-17 11:04:07 上午 [Thread: cluster-ClusterId{value='620dbb27305d1d526b090df9', description='null'}-localhost:27017][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Opened connection [connectionId{localValue:1, serverValue:534}] to localhost:27017
+2022-02-17 11:04:07 上午 [Thread: cluster-ClusterId{value='620dbb27305d1d526b090df9', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=5565500, setName='rs0', canonicalAddress=localhost:27017, hosts=[localhost:27017], passives=[], arbiters=[], primary='localhost:27017', tagSet=TagSet{[]}, electionId=7fffffff0000000000000015, setVersion=1, lastWriteDate=Thu Feb 17 11:03:48 CST 2022, lastUpdateTimeNanos=746453021735000}
+2022-02-17 11:04:07 上午 [Thread: cluster-ClusterId{value='620dbb27305d1d526b090df9', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Setting max election id to 7fffffff0000000000000015 from replica set primary localhost:27017
+2022-02-17 11:04:07 上午 [Thread: cluster-ClusterId{value='620dbb27305d1d526b090df9', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Setting max set version to 1 from replica set primary localhost:27017
+2022-02-17 11:04:07 上午 [Thread: cluster-ClusterId{value='620dbb27305d1d526b090df9', description='null'}-localhost:27017][ Class:org.mongodb.driver.cluster >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Discovered replica set primary localhost:27017
+2022-02-17 11:04:07 上午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-02-17 11:04:07 上午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-02-17 11:04:08 上午 [Thread: main][ Class:org.mongodb.driver.connection >> Method: com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71) ]
+INFO:Opened connection [connectionId{localValue:2, serverValue:535}] to localhost:27017
+2022-02-17 11:04:09 上午 [Thread: main][ Class:org.apache.kafka.clients.consumer.ConsumerConfig >> Method: org.apache.kafka.common.config.AbstractConfig.logAll(AbstractConfig.java:347) ]
+INFO:ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 100
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = queue-consumer-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2022-02-17 11:04:09 上午 [Thread: main][ Class:org.apache.kafka.common.utils.AppInfoParser >> Method: org.apache.kafka.common.utils.AppInfoParser$AppInfo.<init>(AppInfoParser.java:117) ]
+INFO:Kafka version: 2.5.0
+2022-02-17 11:04:09 上午 [Thread: main][ Class:org.apache.kafka.common.utils.AppInfoParser >> Method: org.apache.kafka.common.utils.AppInfoParser$AppInfo.<init>(AppInfoParser.java:118) ]
+INFO:Kafka commitId: 66563e712b0b9f84
+2022-02-17 11:04:09 上午 [Thread: main][ Class:org.apache.kafka.common.utils.AppInfoParser >> Method: org.apache.kafka.common.utils.AppInfoParser$AppInfo.<init>(AppInfoParser.java:119) ]
+INFO:Kafka startTimeMs: 1645067049601
+2022-02-17 11:04:09 上午 [Thread: main][ Class:org.apache.kafka.clients.consumer.KafkaConsumer >> Method: org.apache.kafka.clients.consumer.KafkaConsumer.subscribe(KafkaConsumer.java:974) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Subscribed to topic(s): QUEUE
+2022-02-17 11:04:09 上午 [Thread: main][ Class:org.springframework.data.repository.config.DeferredRepositoryInitializationListener >> Method: org.springframework.data.repository.config.DeferredRepositoryInitializationListener.onApplicationEvent(DeferredRepositoryInitializationListener.java:49) ]
+INFO:Triggering deferred initialization of Spring Data repositories…
+2022-02-17 11:04:09 上午 [Thread: main][ Class:org.springframework.data.repository.config.DeferredRepositoryInitializationListener >> Method: org.springframework.data.repository.config.DeferredRepositoryInitializationListener.onApplicationEvent(DeferredRepositoryInitializationListener.java:53) ]
+INFO:Spring Data repositories initialized!
+2022-02-17 11:04:09 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.Metadata >> Method: org.apache.kafka.clients.Metadata.update(Metadata.java:280) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Cluster ID: hjjdjtSZQwO9vzgsj5eZUQ
+2022-02-17 11:04:09 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.AbstractCoordinator >> Method: org.apache.kafka.clients.consumer.internals.AbstractCoordinator$FindCoordinatorResponseHandler.onSuccess(AbstractCoordinator.java:797) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Discovered group coordinator 192.168.0.113:9092 (id: 2147483647 rack: null)
+2022-02-17 11:04:09 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.AbstractCoordinator >> Method: org.apache.kafka.clients.consumer.internals.AbstractCoordinator.sendJoinGroupRequest(AbstractCoordinator.java:552) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] (Re-)joining group
+2022-02-17 11:04:09 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.AbstractCoordinator >> Method: org.apache.kafka.clients.consumer.internals.AbstractCoordinator.joinGroupIfNeeded(AbstractCoordinator.java:455) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Join group failed with org.apache.kafka.common.errors.MemberIdRequiredException: The group member needs to have a valid member id before actually entering a consumer group
+2022-02-17 11:04:09 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.AbstractCoordinator >> Method: org.apache.kafka.clients.consumer.internals.AbstractCoordinator.sendJoinGroupRequest(AbstractCoordinator.java:552) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] (Re-)joining group
+2022-02-17 11:04:09 上午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:61f23522f0e08f5c260c90a8----------执行
+2022-02-17 11:04:10 上午 [Thread: pool-2-thread-1][ Class:org.apache.kafka.clients.producer.ProducerConfig >> Method: org.apache.kafka.common.config.AbstractConfig.logAll(AbstractConfig.java:347) ]
+INFO:ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = default
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2022-02-17 11:04:10 上午 [Thread: pool-2-thread-1][ Class:org.apache.kafka.common.utils.AppInfoParser >> Method: org.apache.kafka.common.utils.AppInfoParser$AppInfo.<init>(AppInfoParser.java:117) ]
+INFO:Kafka version: 2.5.0
+2022-02-17 11:04:10 上午 [Thread: pool-2-thread-1][ Class:org.apache.kafka.common.utils.AppInfoParser >> Method: org.apache.kafka.common.utils.AppInfoParser$AppInfo.<init>(AppInfoParser.java:118) ]
+INFO:Kafka commitId: 66563e712b0b9f84
+2022-02-17 11:04:10 上午 [Thread: pool-2-thread-1][ Class:org.apache.kafka.common.utils.AppInfoParser >> Method: org.apache.kafka.common.utils.AppInfoParser$AppInfo.<init>(AppInfoParser.java:119) ]
+INFO:Kafka startTimeMs: 1645067050145
+2022-02-17 11:04:10 上午 [Thread: kafka-producer-network-thread | producer-1][ Class:org.apache.kafka.clients.NetworkClient >> Method: org.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater.handleSuccessfulResponse(NetworkClient.java:1070) ]
+WARN:[Producer clientId=producer-1] Error while fetching metadata with correlation id 1 : {LIVE=LEADER_NOT_AVAILABLE}
+2022-02-17 11:04:10 上午 [Thread: kafka-producer-network-thread | producer-1][ Class:org.apache.kafka.clients.Metadata >> Method: org.apache.kafka.clients.Metadata.update(Metadata.java:280) ]
+INFO:[Producer clientId=producer-1] Cluster ID: hjjdjtSZQwO9vzgsj5eZUQ
+2022-02-17 11:04:10 上午 [Thread: kafka-producer-network-thread | producer-1][ Class:org.apache.kafka.clients.NetworkClient >> Method: org.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater.handleSuccessfulResponse(NetworkClient.java:1070) ]
+WARN:[Producer clientId=producer-1] Error while fetching metadata with correlation id 3 : {LIVE=LEADER_NOT_AVAILABLE}
+2022-02-17 11:04:10 上午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:620142000958b30e94dc5d78----------执行
+2022-02-17 11:04:10 上午 [Thread: kafka-producer-network-thread | producer-1][ Class:org.apache.kafka.clients.NetworkClient >> Method: org.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater.handleSuccessfulResponse(NetworkClient.java:1070) ]
+WARN:[Producer clientId=producer-1] Error while fetching metadata with correlation id 6 : {STATISTICS=LEADER_NOT_AVAILABLE}
+2022-02-17 11:04:10 上午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:62025558e881e732dd83aa03----------执行
+2022-02-17 11:04:10 上午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:620256ff0958b30e94dc6b52----------执行
+2022-02-17 11:04:12 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.AbstractCoordinator >> Method: org.apache.kafka.clients.consumer.internals.AbstractCoordinator$2.onSuccess(AbstractCoordinator.java:503) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Successfully joined group with generation 32
+2022-02-17 11:04:12 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.ConsumerCoordinator >> Method: org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.invokePartitionsAssigned(ConsumerCoordinator.java:273) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Adding newly assigned partitions: QUEUE-0
+2022-02-17 11:04:12 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.ConsumerCoordinator >> Method: org.apache.kafka.clients.consumer.internals.ConsumerCoordinator$OffsetFetchResponseHandler.handle(ConsumerCoordinator.java:1299) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Found no committed offset for partition QUEUE-0
+2022-02-17 11:04:12 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:org.apache.kafka.clients.consumer.internals.SubscriptionState >> Method: org.apache.kafka.clients.consumer.internals.SubscriptionState.maybeSeekUnvalidated(SubscriptionState.java:383) ]
+INFO:[Consumer clientId=consumer-queue-consumer-group-1, groupId=queue-consumer-group] Resetting offset for partition QUEUE-0 to offset 3.
+2022-02-17 11:04:13 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-02-17 11:04:13 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "620dbb2cf9780831076b8199"
+
+2022-02-17 11:14:12 上午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:620dbb2cf9780831076b8199----------执行
+2022-02-17 11:14:12 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-02-17 11:14:12 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "620dbd84248c1d47af882c63"
+
+2022-02-17 11:24:12 上午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:620dbd84248c1d47af882c63----------执行
+2022-02-17 11:24:12 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-02-17 11:24:12 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "620dbfdc248c1d47af882c94"
+
+2022-02-17 11:34:12 上午 [Thread: pool-2-thread-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.lambda$addTask$0(QueueProcess.java:40) ]
+INFO:620dbfdc248c1d47af882c94----------执行
+2022-02-17 11:34:12 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.listener.QueueMessageListener >> Method: com.donglai.queue.message.listener.QueueMessageListener.listen(QueueMessageListener.java:19) ]
+INFO:收到队列数据
+2022-02-17 11:34:12 上午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.message.service.Queue_AddQueueRequest_Service >> Method: com.donglai.queue.message.service.Queue_AddQueueRequest_Service.Process(Queue_AddQueueRequest_Service.java:18) ]
+INFO:收到游戏服务器数据，开始执行：queueId: "620dc234248c1d47af882cb2"
+

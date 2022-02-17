@@ -1,0 +1,293 @@
+[
+  {
+    "id": "10000",
+    "labelName": "赛事",
+    "type": "0"
+  },
+  {
+    "id": "10001",
+    "labelName": "美食",
+    "type": "0"
+  },
+  {
+    "id": "10002",
+    "labelName": "武术",
+    "type": "0"
+  },
+  {
+    "id": "10003",
+    "labelName": "萌宠",
+    "type": "0"
+  },
+  {
+    "id": "10004",
+    "labelName": "DJ",
+    "type": "0"
+  },
+  {
+    "id": "10005",
+    "labelName": "运动",
+    "type": "0"
+  },
+  {
+    "id": "10006",
+    "labelName": "母婴",
+    "type": "0"
+  },
+  {
+    "id": "10007",
+    "labelName": "帅哥",
+    "type": "0"
+  },
+  {
+    "id": "10008",
+    "labelName": "儿童",
+    "type": "0"
+  },
+  {
+    "id": "10009",
+    "labelName": "护肤",
+    "type": "0"
+  },
+  {
+    "id": "10010",
+    "labelName": "乐器",
+    "type": "0"
+  },
+  {
+    "id": "10011",
+    "labelName": "潜水",
+    "type": "0"
+  },
+  {
+    "id": "10012",
+    "labelName": "球类",
+    "type": "0"
+  },
+  {
+    "id": "10013",
+    "labelName": "厨艺",
+    "type": "0"
+  },
+  {
+    "id": "10014",
+    "labelName": "游戏",
+    "type": "0"
+  },
+  {
+    "id": "10015",
+    "labelName": "跳舞",
+    "type": "0"
+  },
+  {
+    "id": "10016",
+    "labelName": "钓鱼",
+    "type": "0"
+  },
+  {
+    "id": "10017",
+    "labelName": "跑步",
+    "type": "0"
+  },
+  {
+    "id": "10018",
+    "labelName": "美女",
+    "type": "0"
+  },
+  {
+    "id": "10019",
+    "labelName": "其他",
+    "type": "0"
+  },
+  {
+    "id": "10020",
+    "labelName": "健身",
+    "type": "0"
+  },
+  {
+    "id": "10021",
+    "labelName": "帅哥美女",
+    "type": "0"
+  },
+  {
+    "id": "10022",
+    "labelName": "音乐",
+    "type": "0"
+  },
+  {
+    "id": "10023",
+    "labelName": "唱歌",
+    "type": "0"
+  },
+  {
+    "id": "10024",
+    "labelName": "学习",
+    "type": "0"
+  },
+  {
+    "id": "10025",
+    "labelName": "体育",
+    "type": "0"
+  },
+  {
+    "id": "10026",
+    "labelName": "游泳",
+    "type": "0"
+  },
+  {
+    "id": "10027",
+    "labelName": "手工",
+    "type": "0"
+  },
+  {
+    "id": "10028",
+    "labelName": "美妆",
+    "type": "0"
+  },
+  {
+    "id": "20000",
+    "labelName": "旅行",
+    "type": "1"
+  },
+  {
+    "id": "20001",
+    "labelName": "绘画",
+    "type": "1"
+  },
+  {
+    "id": "20002",
+    "labelName": "情感",
+    "type": "1"
+  },
+  {
+    "id": "20003",
+    "labelName": "搞笑",
+    "type": "1"
+  },
+  {
+    "id": "20004",
+    "labelName": "影视综艺",
+    "type": "1"
+  },
+  {
+    "id": "20005",
+    "labelName": "科技",
+    "type": "1"
+  },
+  {
+    "id": "20006",
+    "labelName": "摄影",
+    "type": "1"
+  },
+  {
+    "id": "20007",
+    "labelName": "家居家装",
+    "type": "1"
+  },
+  {
+    "id": "20008",
+    "labelName": "汽车",
+    "type": "1"
+  },
+  {
+    "id": "20009",
+    "labelName": "潮流",
+    "type": "1"
+  },
+  {
+    "id": "20010",
+    "labelName": "发型",
+    "type": "1"
+  },
+  {
+    "id": "20011",
+    "labelName": "明星",
+    "type": "1"
+  },
+  {
+    "id": "20012",
+    "labelName": "萌娃",
+    "type": "1"
+  },
+  {
+    "id": "20013",
+    "labelName": "美甲",
+    "type": "1"
+  },
+  {
+    "id": "20014",
+    "labelName": "风景",
+    "type": "1"
+  },
+  {
+    "id": "20015",
+    "labelName": "生活技巧",
+    "type": "1"
+  },
+  {
+    "id": "20016",
+    "labelName": "数码",
+    "type": "1"
+  },
+  {
+    "id": "20017",
+    "labelName": "才艺",
+    "type": "1"
+  },
+  {
+    "id": "20018",
+    "labelName": "正能量",
+    "type": "1"
+  },
+  {
+    "id": "20019",
+    "labelName": "魔术",
+    "type": "1"
+  },
+  {
+    "id": "20020",
+    "labelName": "街坊",
+    "type": "1"
+  },
+  {
+    "id": "20021",
+    "labelName": "娱乐",
+    "type": "1"
+  },
+  {
+    "id": "20022",
+    "labelName": "资讯",
+    "type": "1"
+  },
+  {
+    "id": "20023",
+    "labelName": "亲子",
+    "type": "1"
+  },
+  {
+    "id": "20024",
+    "labelName": "财经",
+    "type": "1"
+  },
+  {
+    "id": "20025",
+    "labelName": "励志",
+    "type": "1"
+  },
+  {
+    "id": "20026",
+    "labelName": "动漫",
+    "type": "1"
+  },
+  {
+    "id": "20027",
+    "labelName": "健康",
+    "type": "1"
+  },
+  {
+    "id": "20028",
+    "labelName": "故事",
+    "type": "1"
+  }
+
+]

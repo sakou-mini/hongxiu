@@ -1,0 +1,14 @@
+2022-01-27 13:55:02 下午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-01-27 13:55:02 下午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-01-27 13:55:05 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.addTask(QueueProcess.java:52) ]
+ERROR:未找到执行队列 61f133963dc998058a5db0bb ,延后重新查找 ！
+2022-01-27 13:55:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.addTask(QueueProcess.java:52) ]
+ERROR:未找到执行队列 61f133d1e438fa4ef80e8fca ,延后重新查找 ！
+2022-01-27 13:55:06 下午 [Thread: org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1][ Class:com.donglai.queue.process.QueueProcess >> Method: com.donglai.queue.process.QueueProcess.addTask(QueueProcess.java:52) ]
+ERROR:未找到执行队列 61f134cc0ba6be0f26f76360 ,延后重新查找 ！
+2022-01-27 14:06:53 下午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-01-27 14:06:53 下午 [Thread: main][ Class:org.springframework.data.convert.CustomConversions >> Method: org.springframework.data.convert.CustomConversions.register(CustomConversions.java:263) ]
+WARN:Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.

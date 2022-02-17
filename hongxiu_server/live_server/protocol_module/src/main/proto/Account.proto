@@ -1,0 +1,439 @@
+syntax = "proto3";
+option java_multiple_files = false;
+option java_package = "com.donglai.protocol";
+option java_outer_classname = "Account";
+import "Constant.proto";
+import "Common.proto";
+
+message AccountOfRepeatedLoginBroadcastMessage{
+
+}
+
+message AccountOfLoginRequest{
+  LoginType loginType = 1;
+  //游客账号密码登录
+  string accountId = 2;
+  string password = 3;
+  //手机验证码登录
+  string phone = 4;
+  string code = 5;
+  //第三方登录session
+  string token = 6;
+}
+
+message AccountOfLoginReply{
+  UserInfo userInfo = 1;
+}
+
+message AccountOfLogoutRequest{
+
+}
+
+message AccountOfLogoutReply{
+
+}
+
+message AccountOfRegisterRequest{
+  string nickname = 1;
+  string password = 2;
+  string mobileCode = 3;
+}
+
+message AccountOfRegisterReply{
+  string password = 1;
+  string accountId = 2;
+}
+
+
+message AccountOfUpdatePasswordRequest{
+  string oldPassword = 1;
+  string newPassword = 2;
+}
+
+message AccountOfUpdatePasswordReply {
+  UserInfo userInfo = 1;
+}
+
+message AccountOfUpdateUserAvatarRequest{
+  string avatarUrl = 1;
+}
+
+message AccountOfUpdateUserAvatarReply{
+  UserInfo userInfo = 1;
+}
+
+message AccountOfUpdateNicknameRequest{
+  string nickname = 1;
+}
+
+message AccountOfUpdateNicknameReply{
+  UserInfo userInfo = 1;
+}
+
+message AccountOfUpdateGenderRequest {
+  GenderType gender = 1;
+}
+
+message AccountOfUpdateGenderReply {
+  UserInfo userInfo = 1;
+}
+
+message AccountOfUpdateBirthDayRequest {
+  string birthDay = 1 ;
+}
+
+message AccountOfUpdateBirthDayReply {
+  UserInfo userInfo = 1;
+}
+
+message AccountOfUpdateSignatureTextRequest {
+  string context = 1;
+}
+
+message AccountOfUpdateSignatureTextReply {
+  UserInfo userInfo = 1;
+}
+
+message AccountOfUpdateRegionRequest{
+  string region = 1;
+}
+
+message AccountOfUpdateRegionReply {
+  UserInfo userInfo = 1;
+}
+
+message AccountOfUpdateSchoolRequest {
+  string school = 1;
+}
+
+message AccountOfUpdateSchoolReply {
+  UserInfo userInfo = 1;
+}
+
+message AccountOfUpdateHomeTownRequest{
+  string hometown = 1;
+}
+message AccountOfUpdateHomeTownReply{
+  UserInfo userInfo = 1;
+}
+
+message AccountOfQueryUserInfosRequest{
+  repeated string userIds = 1;
+}
+
+message AccountOfQueryUserInfosReply {
+  repeated UserInfo userInfos = 1;
+}
+
+message AccountOfQueryPersonalSettingRequest{
+  string userId = 1;
+}
+
+message AccountOfQueryPersonalSettingReply{
+  PersonalSetting personalSetting = 1;
+}
+
+//获取验证码
+message AccountOfGetAuthCodeRequest{
+  string phoneNumber = 1;
+  AuthCodeType type = 2;
+}
+
+message AccountOfGetAuthCodeReply{
+
+}
+
+//校验账号验证码
+message AccountOfVerifyAccountAuthCodeRequest{
+  string phoneNumber = 1;
+  string code = 2; //验证码
+}
+
+message AccountOfVerifyAccountAuthCodeReply{
+  string accountId = 1;
+  string password = 2;   //登录token
+}
+
+//第三方注册
+message AccountOfThirdPartySignUpRequest{
+  string uuid = 1; //第三方平台返回的用户唯一标识
+  string source = 2; //来源   谷歌：GOOGLE   推特：TWITTER  脸书：FACEBOOK
+  string avatarUrl = 3;//头像地址
+  string nickname = 4; //昵称（第三方）
+}
+
+message AccountOfThirdPartySignUpReply{
+  string accountId = 1;
+  string password = 2;   //登录token
+}
+
+//手机号注册
+message AccountOfPhoneNumberSignUpRequest{
+  string phoneNumber = 1;
+  string birthDay = 2;
+  string signUpCode = 3;
+}
+
+message AccountOfPhoneNumberSignUpReply{
+  string token = 1;//注册成功后，可直接token登录
+}
+
+//首次登录状态变更
+message AccountOfFistLoginRequest{
+
+}
+
+message AccountOfFistLoginReply{
+
+}
+
+message AccountOfSetPersonalSettingRequest{
+  PersonalSetting personalSetting = 1;
+}
+
+message AccountOfSetPersonalSettingReply{
+
+}
+
+//========关注功能===========
+message AccountOfFollowUserRequest{
+  string userId = 1;
+}
+
+message AccountOfFollowUserReply{
+  string leaderUserId = 1;
+}
+
+message AccountOfUnFollowUserRequest{
+  string userId = 1;
+}
+
+message AccountOfUnFollowUserReply{
+  string leaderUserId = 1;
+}
+
+message AccountOfFollowUserBroadcastMessage{
+  FollowInfo followInfo = 1;
+  FollowType followType = 2;
+}
+
+message AccountOfQueryUserLeaderListRequest{
+  string userId = 1;
+  string name = 2;
+}
+
+message AccountOfQueryUserLeaderListReply{
+  string userId = 1;
+  repeated FollowInfo followInfo = 2;
+  string name = 3;
+}
+
+message FollowInfo {
+  UserInfo leaderInfo = 1;
+  UserInfo followerInfo =2 ;
+  bool isNew = 3;
+  string alias = 4;
+  string followTime=5;
+}
+
+message AccountOfQueryUserFollowerListRequest{
+  string userId = 1;
+  string name = 2;
+}
+
+message AccountOfQueryUserFollowerListReply{
+  string userId = 1;
+  repeated FollowInfo followInfo = 2;
+  string name = 3;
+}
+
+message AccountOfIsFollowRequest{
+  string userId = 1;
+}
+
+message AccountOfIsFollowReply{
+  bool isFollow = 1;
+  string leaderUserId = 2;
+}
+
+//修改粉丝或者关注的备注
+message AccountOfUpdateLeadAliasRequest{
+  string name = 1;
+  string leaderId = 2;
+}
+message AccountOfUpdateLeadAliasReply{
+
+}
+
+//==========Private Chat==============
+message PrivateChat {
+  string messageId = 1;
+  string fromUid = 2;
+  string toUid = 3;
+  string message = 4;
+  string time = 5;
+  bool read = 6;
+}
+
+message AccountOfPrivateChatRequest {
+  string toUid = 1;
+  string message = 2;
+}
+
+message AccountOfPrivateChatReply{
+  string sessionId = 1;
+  PrivateChat privateChat = 2;
+}
+
+message AccountOfPrivateChatBroadCastMessage{
+  string sessionId = 1;
+  PrivateChat privateChat = 2;
+}
+message PrivateChatSession{
+  string id = 1;
+  string lastMessage = 2;
+  string lastTime = 3;
+  string fromUid = 4;
+  string toUid = 5;
+  string unread = 6;
+  bool blackMenu = 7;
+  UserInfo userInfo = 8;
+}
+//chatList 会话列表
+message AccountOfPrivateChatListRequest{
+  string name = 1;
+}
+message AccountOfPrivateChatListReply{
+  repeated PrivateChatSession privateChatSession = 1;
+  string name = 2;
+}
+
+//删除会话
+message AccountOfPrivateChatListDelRequest{
+  string sessionId = 1;
+}
+message AccountOfPrivateChatListDelReply{
+  string sessionId = 1;
+}
+//拉黑
+message AccountOfPrivateChatInBlackRequest{
+  string userId = 1;
+}
+message AccountOfPrivateChatInBlackReply{
+  string userId = 1;
+}
+//黑名单删除
+message AccountOfPrivateChatBlackDelRequest{
+  string userId = 1;
+}
+message AccountOfPrivateChatBlackDelReply{
+  string userId = 1;
+}
+//黑名单恢复
+message AccountOfPrivateChatBlackRegainRequest{
+  string userId = 1;
+}
+message AccountOfPrivateChatBlackRegainReply{
+  string userId = 1;
+}
+//聊天记录
+message AccountOfPrivateChatMessageListRequest{
+  string sessionId = 1;
+}
+message AccountOfPrivateChatMessageListReply{
+  string sessionId = 1;
+  repeated PrivateChat privateChat = 2;
+}
+//已读接口
+message AccountOfPrivateChatIsReadRequest{
+  repeated string messageIds = 1;
+}
+message AccountOfPrivateChatIsReadReply{
+
+}
+//会话搜索
+message AccountOfPrivateChatSearchRequest{
+  string keyword = 1;
+}
+message AccountOfPrivateChatSearchReply{
+  repeated PrivateChatSession privateChatSession = 1;
+}
+
+message AccountOfFeedbackRequest{
+  repeated string pictures = 1;
+  string content = 2;
+  string mobileModel = 3;
+  string appVersion = 4;
+}
+
+message AccountOfFeedbackReply{
+
+}
+
+message AccountOfBlackListRequest{
+  string name = 1;
+}
+
+message AccountOfBlackListReply{
+  repeated UserInfo userInfo = 1;
+  string name = 2;
+}
+
+message InteractiveInfo{
+  UserInfo userInfo = 1;
+  string blogsId = 2;
+  string blogsCover = 3;
+  uint64 createdTime = 4;
+}
+
+message AccountOfLikeMessageRequest{
+  string userId = 1;
+}
+
+message AccountOfLikeMessageReply{
+  repeated InteractiveInfo interactiveInfos = 1;
+}
+
+message AccountOfSimpleRecommendUserRequest{
+  uint32 size = 1;
+  repeated string userId = 2;
+
+}
+
+message AccountOfSimpleRecommendUserReply{
+  repeated string userId = 1;
+}
+
+message AccountOfReportUserRequest{
+    string userId = 1;
+    string reason = 2;
+}
+
+message AccountOfReportUserReply{
+
+}
+
+message AccountOfFinishTaskRequest{
+  TaskType type = 1;
+}
+
+message AccountOfFinishTaskReply{
+
+}
+
+message AccountOfFindTaskListRequest{
+
+}
+
+message AccountOfFindTaskListReply{
+  repeated TaskLog taskLog = 1;
+
+}
+message TaskLog{
+  uint32 taskSchedule = 1;
+  uint32 taskCount = 2;
+  TaskType taskEnum = 3;
+  uint32 taskIntegral = 4;
+  uint32 taskGold = 5;
+  bool done = 6;
+}

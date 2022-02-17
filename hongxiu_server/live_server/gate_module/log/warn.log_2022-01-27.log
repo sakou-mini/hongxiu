@@ -1,0 +1,2 @@
+2022-01-27 14:01:15 下午 [Thread: task-1][ Class:com.donglai.netty.http.NettyHttpServer >> Method: com.donglai.netty.http.NettyHttpServer.bind(NettyHttpServer.java:33) ]
+WARN:start server failed on port 7005

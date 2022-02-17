@@ -1,0 +1,332 @@
+syntax = "proto3";
+option java_multiple_files = false;
+option java_package = "com.donglai.protocol";
+option java_outer_classname = "Live";
+import "Constant.proto";
+import "Common.proto";
+
+message LiveOfUserConnectionRequest{
+  string userId = 1;
+}
+
+message LiveOfUserDisconnectionRequest{
+  string userId = 1;
+}
+
+message LiveOfLoginRequest {
+  string accountId = 1;
+  string password = 2;
+  bool isNotTourist = 4;
+  LoginType loginType = 5;
+  string phone = 6;
+  string code = 7;
+  string token = 8;
+}
+
+message LiveOfLoginReply {
+  UserInfo userInfo = 1;
+  RoomInfo reconnectedRoomInfo = 2;
+}
+
+message LiveOfLogoutRequest{
+
+}
+
+message LiveOfLogoutReply{
+
+}
+
+message LiveOfApplyLiveUserRequest{
+  string realName = 1;
+  GenderType gender = 2;
+  string country = 3;
+  string address = 4;
+  string email = 5;
+  string contactWay = 6;
+  string birthDay = 7;
+  string bankName = 8;
+  string bankCard = 9;
+  string phoneNumber = 10;
+  repeated string images = 11;
+}
+
+message LiveOfApplyLiveUserReply{
+}
+
+message LiveOfApplyLiveUserResultBroadcastMessage{
+  bool isPass = 1;
+}
+
+message LiveOfGetLiveRoomListRequest{
+}
+
+message LiveOfGetLiveRoomListReply{
+  repeated string roomIds = 1;
+}
+
+message RoomInfo{
+  string roomId = 1;
+  string liveUserId = 2;
+  string userId = 3;
+  string roomTitle = 4;
+  string roomImage = 5;
+  int32 hotValue = 6;
+  bool live = 7;
+  LiveTag liveTag = 8;
+  repeated string giftRank = 9;
+  int32 liveLineCode = 10;
+  int64 liveStartTime = 11;
+  string livePushStreamUrl = 12;
+  string livePullStreamUrl = 13;
+  string h5PullStreamUrl = 14;
+  LivePattern livePattern = 15;
+  string music = 16;
+}
+
+message LiveOfQueryRoomInfoRequest{
+  repeated string roomIds = 1;
+}
+
+message LiveOfQueryRoomInfoReply{
+  repeated RoomInfo roomInfos = 1;
+}
+
+message LiveOfQueryLiveUserInfosRequest {
+  repeated string userIds = 1;
+}
+
+message LiveUserInfo{
+  string liveUserId = 1;
+  string roomId = 2;
+  LiveUserStatus status = 3;
+  string userId = 4;
+  PlatformType platform = 5;
+  repeated PlatformType slavePlatforms = 6;
+}
+
+message LiveOfQueryLiveUserInfosReply {
+  repeated LiveUserInfo liveUserInfos = 1;
+}
+
+message LiveOfUpdateRoomImageRequest{
+  string roomImage = 1;
+
+}
+message LiveOfUpdateRoomImageReply{
+  RoomInfo roomInfo = 1;
+}
+
+message LiveOfRecoverLiveRoomBroadcastMessage{
+  RoomInfo reconnectedRoomInfo = 2;
+}
+
+
+//===============LiveModel message
+message LiveOfStartLiveRequest{
+  LivePattern pattern = 1;
+  LiveTag liveTag = 2;
+  string roomTitle = 3;
+  int32 liveLineCode = 4;
+  string liveDomain = 5;
+}
+
+message LiveOfStartLiveReply{
+
+}
+
+message LiveOfEnterLiveRoomRequest{
+  string roomId = 1;
+}
+
+message LiveOfEnterLiveRoomReply{
+  RoomInfo roomInfo = 1 ;
+  bool isFollow = 2;
+}
+
+message LiveOfEnterRoomBroadcastMessage{
+  UserInfo userInfo = 1;
+  string roomId = 2;
+  int32 hotValue = 3;
+  string livePullStreamUrl = 4;
+  string h5PullStreamUrl = 5;
+}
+
+message LiveOfAutoQuitRoomRequest {
+  string roomId = 1;
+}
+
+message LiveOfSendBulletMessageRequest {
+  string content = 1;
+
+}
+
+message LiveOfSendBulletMessageReply {
+
+}
+message LiveOfBulletMessageBroadcastMessage {
+  BulletMessage bulletMessage = 1;
+}
+
+message BulletMessage {
+  UserInfo userInfo = 1;
+  string content = 2;
+}
+
+message LiveOfQuitRoomRequest {
+  string roomId = 1;
+}
+
+message LiveOfQuitRoomReply {
+
+}
+
+message LiveOfQuitRoomBroadcastMessage {
+  UserInfo userInfo = 1;
+  string roomId = 2;
+  int32 hotValue = 3;
+}
+
+message LiveOfEndLiveRequest {
+  int64 endDelayTime = 1;
+}
+
+message LiveOfEndLiveReply {
+
+}
+message LiveOfEndLiveReadyBroadcastMessage{
+  int64 timeToEndLive = 1;
+}
+
+message LiveOfEndLiveBroadcastMessage {
+  string roomId = 1;
+}
+
+message LiveOfSendGiftRequest{
+  string giftId = 1;
+  uint32 giftNum = 2;
+  string receiveUserId = 3;
+}
+
+message LiveOfSendGiftReply {
+
+}
+
+message LiveOfSendGiftBroadcastMessage {
+  string giftId = 1;
+  uint32 giftNum = 2;
+  string receiveUserId = 3;
+  string sendUserId = 4;
+  string nickname = 5;
+  VipType sendUserVipId = 6;
+  repeated string liveRank = 7;
+}
+
+message LiveOfSwitchLiveSourceLineRequest {
+  int32 liveLineCode = 1;
+  string liveDomain = 2;
+}
+
+message LiveOfSwitchLiveSourceLineReply {
+
+}
+
+message LiveOfSwitchLiveSourceLineBroadcastMessage {
+  int32 liveLineCode = 1;
+  string liveStreamUrl = 2;
+}
+
+message LiveOfQueryRoomAudienceInfoRequest {
+
+}
+
+message LiveOfQueryRoomAudienceInfoReply {
+
+}
+
+message Audience {
+  UserInfo userInfo = 1;
+}
+
+message LiveOfSetRoomPlayingMusicInfoRequest{
+  string musicOptType = 1;
+  string music = 2;
+}
+
+message LiveOfSetRoomPlayingMusicInfoReply{
+
+}
+
+message LiveOfRoomPlayingMusicChangeBroadcastMessage{
+  string musicOptType = 1;
+  string music = 2;
+}
+
+message LiveOfSwitchLivePatternRequest{
+  LivePattern pattern = 1;
+}
+
+message LiveOfSwitchLivePatternReply{
+}
+
+message LiveOfSwitchLivePatternBroadcastMessage{
+  LivePattern pattern = 1;
+  string livePushStreamUrl = 12;
+  string livePullStreamUrl = 13;
+  string h5PullStreamUrl = 14;
+}
+
+//==================Follow Request================
+
+message LiveOfModifyUserCoinListenerRequest{
+  repeated ModifyUser modifyUser = 1;
+  message ModifyUser {
+    string userId = 1;
+    int32 coin = 2;
+  }
+}
+
+//==========gift rank==============
+
+
+message GiftRankInfo {
+  UserInfo userInfo = 1;
+  int32 amount = 2;
+}
+
+message LiveOfQueryGiftIncomeRankRequest {
+
+}
+message LiveOfQueryGiftIncomeRankReply {
+  repeated GiftRankInfo  giftRanks = 1;
+}
+message LiveOfQueryContributionRankRequest {
+
+}
+message LiveOfQueryContributionRankReply{
+  repeated GiftRankInfo  giftRanks = 1;
+}
+
+message LiveOfQueryFansContributionRankRequest {
+  string userId = 1;
+  QueryTimeType timeType = 2;
+
+}
+message LiveOfQueryFansContributionRankReply {
+  repeated GiftRankInfo  giftRanks = 1;
+}
+
+//MessageList Query
+message LiveOfMessageListQueryUserLeadersRequest{
+
+}
+
+message LiveOfMessageListQueryUserLeadersReply {
+  repeated UserInfo userInfo = 1;
+}
+
+
+
+
+
+
+

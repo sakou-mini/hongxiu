@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/account_module/account_module.iml" filepath="$PROJECT_DIR$/account_module/account_module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog_module/blog_module.iml" filepath="$PROJECT_DIR$/blog_module/blog_module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/client_test/client_test.iml" filepath="$PROJECT_DIR$/client_test/client_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common_module/common_module.iml" filepath="$PROJECT_DIR$/common_module/common_module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gate_module/gate_module.iml" filepath="$PROJECT_DIR$/gate_module/gate_module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/live_module/live_module.iml" filepath="$PROJECT_DIR$/live_module/live_module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/model_module/model_module.iml" filepath="$PROJECT_DIR$/model_module/model_module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netty_module/netty_module.iml" filepath="$PROJECT_DIR$/netty_module/netty_module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/protocol_module/protocol_module.iml" filepath="$PROJECT_DIR$/protocol_module/protocol_module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/queue_module/queue_module.iml" filepath="$PROJECT_DIR$/queue_module/queue_module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/root.iml" filepath="$PROJECT_DIR$/root.iml" />
+      <module fileurl="file://$PROJECT_DIR$/statistics_module/statistics_module.iml" filepath="$PROJECT_DIR$/statistics_module/statistics_module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web_module/web_module.iml" filepath="$PROJECT_DIR$/web_module/web_module.iml" />
+    </modules>
+  </component>
+</project>
