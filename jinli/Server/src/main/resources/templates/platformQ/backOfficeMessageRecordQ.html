@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/config/static/layui/css/layui.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/mainCss.css}" defer="defer">
+    <!--<link rel="stylesheet" th:href="@{/config/static/css/InputAnimation.css}">-->
+    <script type="text/javascript" th:src="@{/config/static/js/jq.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/layui/layui.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/js/config.js}"></script>
+    <style>
+        body{
+            overflow: auto;
+        }
+        /*.FormStyle{*/
+        /*padding:30px 20px;*/
+        /*}*/
+        .tabBox{
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .FormItem{
+            position: relative;
+            float: left;
+            margin-right: 20px;
+            margin-left: 0!important;
+        }
+        .selectDate>div{
+            float: left;
+            color: black;
+            line-height: 39px;
+        }
+        .selectDate{
+            overflow: hidden;
+            float: left;
+        }
+        .titleMsg{
+            margin-bottom: 20px;
+        }
+
+        .selectType>div{
+            float: left;
+            color: #000000;
+            line-height: 39px;
+        }
+        .buttonStyle{
+            float: left;
+            margin-left: 10px;
+        }
+        .buttonStyle>button{
+            margin-left: 10px;
+        }
+        .FormStyle{
+            /*height: 60px;*/
+            padding: 20px 50px;
+        }
+        .FormItem{
+            position: relative;
+            float: left;
+            margin-right: 20px;
+            margin-left: 0!important;
+        }
+        .selectDate>div{
+            float: left;
+            color: black;
+            line-height: 39px;
+        }
+        .selectDate{
+            overflow: hidden;
+            float: left;
+            margin-right: 30px;
+        }
+        .selectStyle{
+            width: 100px!important;
+        }
+        .selectType>div{
+            float: left;
+            color: #000000;
+            line-height: 39px;
+        }
+        .selectType{
+            float: left;
+            margin-right:20px;
+            margin-left: 0;
+        }
+        @media screen and (max-width: 1063px) {
+            .clearfix>div{
+                display: block;
+                margin-top: 10px;
+            }
+            .tabBox{
+                margin-top: 30px;
+            }
+        }
+        .addBtnStyle{
+            margin-right: 30px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div class="bgcSidebar"></div>
+<div class="container app">
+    <header>
+        <!--头部导航-->
+        <ul class="layui-nav overStyle" lay-filter="">
+            <li class="logoOver"><div class="logoBox"><img class="logo" th:src="@{/config/static/img/default_logo.png}"></div><div class="logoText">锦鲤直播</div></li>
+            <!--<li class="layui-nav-item toItemChange" data-path="index"><a href="javascript:void(0);">首页</a></li>-->
+            <!--<li class="layui-nav-item layui-this  toItemChange" data-path="LiveUserExamine"><a href="javascript:void(0);">主播管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="reportList"><a href="javascript:void(0);">举报管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="personDiaryList"><a href="javascript:void(0);">动态审核</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="guessList"><a href="javascript:void(0);">竞猜管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="backOfficeManagement"><a href="javascript:void(0);">后台账号管理</a></li>-->
+            <li class="userMsg">
+                <div>
+                    <span>欢迎您：</span>
+                    <span id="loginName">admin</span>
+                </div>
+                <div>
+                    <a href="/logout"><button class="layui-btn layui-btn-danger" id="logout" >退出</button></a>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <main class="mainStyle">
+        <!--侧边栏-->
+        <div class="sidebar">
+            <div>
+                <ul class="layui-nav layui-nav-tree overStyle leftSide" id="sidebar" lay-filter="test">
+                    <!--<li class="layui-nav-item layui-this"><a  class="toItemChange" data-path="liveUserList" href="javascript:void(0);">主播列表</a></li>-->
+                    <!--<li class="layui-nav-item layui-nav-itemed">-->
+                    <!--<a href="javascript:;">主播审核</a>-->
+                    <!--<dl class="layui-nav-child">-->
+                    <!--<dd><a class="toItemChange" data-path="LiveUserExamine" href="javascript:void(0);">主播待审认证</a></dd>-->
+                    <!--<dd><a class="toItemChange" data-path="rejectLiveUser" href="javascript:void(0);">认证未通过</a></dd>-->
+                    <!--<dd><a class="toItemChange" data-path="approvedLiveUser" href="javascript:void(0);">认证已通过</a></dd>-->
+                    <!--</dl>-->
+                    <!--</li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="liveUserRoom" href="javascript:void(0);">直播间列表</a></li>-->
+                </ul>
+                <div class="mainBox" id="loadHtml">
+                    <div>
+                        <h2 class="headMsg">走马灯消息操作记录</h2>
+                    </div>
+                    <div class="FormStyle">
+                        <div>
+                            <form class="layui-form clearfix">
+
+                                <div class="selectType layui-input-block">
+                                    <div>平台：</div>
+                                    <div>
+                                        <select  name="city" lay-verify="required" class="selectStyle" id="platform">
+                                            <option value="1">锦鲤平台</option>
+                                            <option value="2">T平台</option>
+                                            <option value="3">Q平台</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="buttonStyle">
+                                    <button class="layui-btn" id="searchBtn" type="button">搜索</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="tabBox">
+                        <table id="demo" lay-filter="demo"></table>
+                        <!--<table id="tableEl" class="layui-table" lay-filter="demo">-->
+                        <!--<thead>-->
+                        <!--<tr>-->
+                        <!--<th lay-data="{field:'id', width:250}">游戏ID</th>-->
+                        <!--<th lay-data="{field:'displayName'}">昵称</th>-->
+                        <!--<th lay-data="{field:'phoneNumber'}">手机号</th>-->
+                        <!--<th lay-data="{field:'realName'}">真实姓名</th>-->
+                        <!--<th lay-data="{field:'getGameCoin', width:150, sort: true}">所持金币</th>-->
+                        <!--<th lay-data="{width:400, align:'center', toolbar: '#barDemo'}">操作</th>-->
+                        <!--</tr>-->
+                        <!--</thead>-->
+                        <!--</table>-->
+                        <div id="paging"></div>
+                    </div>
+                    <div class="mtBox"></div>
+                </div>
+                <div class="clearFloat"></div>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+<script type="text/javascript" th:src="@{/config/static/js/mainMethod.js}"></script>
+<script type="text/javascript" th:src="@{/config/static/js/backOfficeMessageRecordQ.js}"></script>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-sm layui-btn-radius layui-btn-normal" lay-event="b">
+        查看
+    </a>
+</script>
+</body>
+</html>

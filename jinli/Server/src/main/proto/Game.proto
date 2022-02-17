@@ -1,0 +1,194 @@
+syntax = "proto3";
+
+import "Constant.proto";
+
+option java_multiple_files = false;
+option java_package = "com.donglaistd.jinli";
+
+message GameRequest{
+  string gameId = 1;
+  oneof request{
+    StartGameRequest startGameRequest = 2;
+    BetRequest betRequest = 3;
+    EndGameRequest endGameRequest = 4;
+    BecomeBankerRequest becomeBankerRequest = 5;
+    QuitBankerRequest quitBankerRequest = 6;
+    PauseGameRequest pauseGameRequest = 7;
+    ResumeGameRequest resumeGameRequest = 8;
+    CancelPauseGameRequest cancelPauseGameRequest = 9;
+    UpdateApplyBankerCoinRequest updateApplyBankerCoinRequest = 10;
+  }
+}
+message GameReply{
+  oneof reply{
+    StartGameReply startGameReply = 1;
+    BetReply betReply = 2;
+    EndGameReply endGameReply = 3;
+    BecomeBankerReply becomeBankerReply = 4;
+    QuitBankerReply quitBankerReply = 5;
+    PauseGameReply pauseGameReply = 6;
+    ResumeGameReply resumeGameReply = 7;
+    CancelPauseGameReply cancelPauseGameReply = 8;
+    UpdateApplyBankerCoinReply updateApplyBankerCoinReply = 9;
+  }
+}
+
+message QuitBankerReply{
+  string roomId = 1;
+}
+
+message QuitBankerRequest{
+}
+
+message BecomeBankerReply{
+}
+
+message BecomeBankerRequest {
+  string roomId = 1;
+  int32 bankerCoin = 2;
+}
+
+message StartGameRequest{
+}
+
+message StartGameReply{
+
+}
+
+message BetRequest{
+  int32 betAmount = 1;
+  BetType betType = 2;
+}
+
+message BetReply{
+
+}
+
+message EndGameRequest{
+
+}
+
+message EndGameReply{
+
+}
+
+message PauseGameRequest{
+
+}
+
+message PauseGameReply{
+
+}
+
+message ResumeGameRequest{
+
+}
+message ResumeGameReply{
+
+}
+
+message CancelPauseGameRequest{
+
+}
+
+message CancelPauseGameReply{
+
+}
+
+enum BetType{
+  NOT_SET = 0;
+  //for longhu game
+  LONG = 1;
+  HU = 2;
+  LONGHU_DRAW = 3;
+
+  //for baccarat game
+  BACCARAT_DEALER = 4;
+  BACCARAT_PLAYER = 5;
+  BACCARAT_DRAW = 6;
+  BACCARAT_DEALER_PAIR = 7;
+  BACCARAT_PLAYER_PAIR = 8;
+
+  //for Bull_Bull game or other,its 4 bet area
+  SPADE_AREA = 10;
+  HEART_AREA = 11;
+  CLUB_AREA = 12;
+  DIAMOND_AREA = 13;
+
+  //for RedBlack
+  RED = 14;
+  BLACK = 15;
+  RED_BLACK_LUCk = 16;
+}
+
+
+message GameDetail{
+  oneof gameDetail{
+    BullBullGameDetail bullBullCardResult = 1;
+  }
+}
+
+message BullBullGameDetail{
+  BullbullCardShow bullbullCardShow = 1;
+}
+
+message BullbullCardShow{
+  repeated Card bankerCards = 1;
+  repeated Card spadeCards = 2;
+  repeated Card heartCards = 3;
+  repeated Card clubCards = 4;
+  repeated Card diamondCards = 5;
+}
+
+message BaccaratCardResult {
+  repeated Card dealerCards = 1;
+  repeated Card playerCards = 2;
+}
+
+message LonghuCardResult {
+  Card longCard = 1;
+  Card huCard = 2;
+}
+
+message BullBullCardResult{
+  BullCardInfo bankerCard = 1;
+  BullCardInfo spadeCard = 2;
+  BullCardInfo heartCard = 3;
+  BullCardInfo clubCard = 4;
+  BullCardInfo diamondCard = 5;
+}
+
+message Card {
+  CardNumber cardValue = 1;
+  CardType cardType = 2;
+}
+
+message BullCardInfo{
+  BullType bullType = 1;
+  repeated Card cards = 2;
+  bool isWin = 3;
+}
+message RedBlackCardResult{
+  repeated Card redCards = 1;
+  repeated Card blackCards = 2;
+  repeated BetType winAreaType = 4;
+}
+
+message GoldenFlowerCardResult{
+  GoldenFlowerInfo bankerCards = 1;
+  repeated GoldenFlowerInfo betCards = 2;
+}
+message GoldenFlowerInfo{
+  BetType betType = 1;
+  GoldenType goldenType = 2;
+  repeated Card cards = 3;
+  bool isWin = 4;
+}
+
+message UpdateApplyBankerCoinRequest{
+  int32 bringCoin = 1;
+}
+
+message UpdateApplyBankerCoinReply{
+
+}

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>NodePlayer.js Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            margin: 8px 0;
+            display: flex;
+        }
+
+        .fl1 {
+            flex: 1;
+        }
+
+        .fl0 {
+            flex: 0;
+        }
+        .danmustage {
+            width: 100%;
+            height: 100%;
+            position:absolute;
+            z-index: 2;
+            color: #fff;
+            overflow: hidden;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="max-width:980px;margin:0 auto">
+        <h3><a href="http://www.nodemedia.cn" target="_blank">NodePlayer.js Demo</a></h3>
+        <div style="width:100%; padding-bottom:56%;position:relative;z-index: 1;">
+            <canvas id="video1" style="width:100%;height:100%;position:absolute;background-color: black;"></canvas>
+            <div class="danmustage"></div>
+        </div>
+        <div>
+            <div class="box">
+                <input id="url" class="fl1" value="http://192.168.0.2:8000/live/bbb.flv" />
+                <button class="fl0" onclick="startFunc()">Play</button>
+                <button class="fl0" onclick="stopFunc()">Stop</button>
+                <button class="fl0" onclick="fullFunc()">Full</button>
+                <button class="fl0" onclick="screenshot()">ScreenShot</button>
+            </div>
+
+            <div class="box">
+                <div class="fl1">
+                    <label>Volume:</label>
+                    <select onchange="volumeChange(event);">
+                        <option>100</option>
+                        <option>75</option>
+                        <option>50</option>
+                        <option>25</option>
+                        <option>0</option>
+                    </select>
+                </div>
+                <div class="fl1">
+                    <label>BufferTime:</label>
+                    <select id="buffertime" onchange="bufferChange(event);">
+                        <option>0</option>
+                        <option>100</option>
+                        <option>300</option>
+                        <option>500</option>
+                        <option selected>1000</option>
+                        <option>2000</option>
+                        <option>3000</option>
+                    </select>
+                </div>
+                <div class="fl1">
+                    <label>ScaleMode:</label>
+                    <select onchange="scaleModeChange(event);">
+                        <option selected>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                    </select>
+                </div>
+                <div class="fl1">
+                    <label>CryptoKey:</label>
+                    <input id="key" class="fl1" value="" />
+                </div>
+            </div>
+            <!-- /input-group -->
+        </div>
+    </div>
+    <!-- <script src="//game.gtimg.cn/images/js/jquery/jquery-1.11.3.min.js"></script> -->
+    <script src="//game.gtimg.cn/images/js/zepto/zepto.min.js"></script>
+    <script src="//game.gtimg.cn/images/js/su/danMu.beta.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vConsole/3.3.4/vconsole.min.js"></script>
+    <script type="text/javascript" src="./NodePlayer.min.js"></script>
+    <script>
+        if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
+            //手机开启vconsole，便于查看控制台调试信息，正式部署时无需使用，包括上面的vconsole.min.js也不用引入
+            var vConsole = new VConsole();
+        }
+
+         //初始的弹幕数据
+         var danmuData = [
+            '哈哈哈哈哈哈哈',
+            '弹幕来袭~',
+            '前面的 你肥皂掉了！！',
+            "前方高能，一大波弹幕来袭！",
+            "不约，叔叔我们不约~",
+            "今天没吃药，感觉自己萌萌哒",
+            "走开，让专业的来",
+            "23333333333~~~~~",
+            "请允许我做一个悲伤的表情",
+            "警察叔叔，就是这个人",
+            "为什么放弃治疗",
+            "放开那个人，让我来",
+            "噗……节操去了哪里啊都！！",
+            "膜拜老司机",
+            "你咋不上天呢",
+            "666",
+            "666666666666666666666666~~~",
+            "放开她，让我来！！！",
+            "德里克。。。。test 。。。",
+            "666~~~~~~~~~！！！！！",
+            "前方高能 非战斗人员紧急撤离",
+            "妈妈问我为什么跪着看电脑_(:_」∠)_",
+            "他说的好有道理 我竟无言以对",
+            '小六 你好靓吖',
+            '我基本是只废猫(≥◇≤)',
+            '这个是真的耶',
+            '弹幕走一波~~~~~~~~~~~~~~~~~~~~~~~~~~',
+            '我似乎听到有人说我帅',
+            '什么？！你刚才说我帅？',
+            '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~我是天空中最亮的星星~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~',
+            '好多人啊',
+            '喂，妖妖灵吗，这里有人在装逼。。',
+            '对方不想和你说话,并向你扔了一条狗。。。',
+            '前面那个说我帅的别走啊啊啊啊',
+            '你们玩，我静静地看着',
+            '我就静静看着你',
+            '超级羞羞',
+            '好想你',
+            '我想你！',
+            '你真帅~',
+            '你肚子好大！！',
+            '最近变胖了，悲伤'
+        ];
+
+        //实例化弹幕
+        var dm = new danMu({
+            device: 'm',//m代表移动端弹幕,不设置或设为pc代表pc端弹幕
+            stage: $(".danmustage"),
+            comments: danmuData,
+            danMuHtml: "<span>{comment}</span>",
+            colors: ["#fff", "#00ccff", "#ff0000", "#00ff00", "#fef500"],
+            flyTime: 7000,
+            timeInterval: 1200,
+            randomSort: true,
+            hSpacing: 0.8
+        });
+        dm.pause();
+
+        var url = document.getElementById("url");
+        var key = document.getElementById("key");
+        var argurl = getQueryVariable("url");
+        if (argurl) {
+            url.value = argurl;
+        }
+        var argkey = getQueryVariable("key");
+        if (argkey) {
+            key.value = argkey;
+        }
+        /**
+         * 是否打印debug信息
+         */
+        // NodePlayer.debug(true);
+
+        var player;
+        // 0.5.28之后, 为了统一asm与wasm版本api差异,现统一采用回调格式加载.
+        NodePlayer.load(() => {
+            player = new NodePlayer();
+            /**
+             * 自动测试浏览器是否支持MSE播放，如不支持，仍然使用软解码。
+             * 紧随 new 后调用
+             * 不调用则只使用软解
+             */
+            // player.useMSE();
+
+            /**
+             * 使用worker线程解码, 适用于多画面直播, 能有效利用多核处理器
+             * 紧随 new 后调用
+             */
+            player.useWorker();
+
+            /**
+             * 开启屏幕常亮
+             * 在手机浏览器上,canvas标签渲染视频并不会像video标签那样保持屏幕常亮
+             * 如果需要该功能, 可以调用此方法
+             * H5目前在chrome\edge 84, android chrome 84及以上有原生亮屏API, 需要是https页面
+             * 其余平台为模拟实现，非全兼容。
+             */
+            player.setKeepScreenOn();
+
+            /**
+             * 传入 canvas视图的id，当使用mse时，自动转换为video标签
+             */
+            player.setView("video1");
+
+            /**
+             * 设置最大缓冲时长，单位毫秒，只在软解时有效
+             */
+            player.setBufferTime(1000);
+
+            /**
+             * 设置超时时长, 单位秒,只在软解时有效
+             * 在连接成功之前和播放中途,如果超过设定时长无数据返回,则回调timeout事件
+             */
+            // player.setTimeout(10);
+
+            player.on("start", () => {
+                console.log("player on start");
+            });
+
+            player.on("stop", () => {
+                console.log("player on stop");
+            });
+
+            player.on("error", (e) => {
+                console.log("player on error", e);
+            });
+
+            player.on("videoInfo", (w, h, codec) => {
+                console.log("player on video info width=" + w + " height=" + h + " codec=" + codec);
+            });
+
+            player.on("audioInfo", (r, c, codec) => {
+                console.log("player on audio info samplerate=" + r + " channels=" + c + " codec=" + codec);
+            });
+
+            // player.on("videoSei", (sei, pts) => {
+            //   console.log("player on video sei=" + sei + " pts=" + pts);
+            // });
+
+            // player.on("videoFrame", (pts) => {
+            //   console.log("player on videoFrame pts=" + pts);
+            // });
+
+            // player.on("timeout", () => {
+            //   console.log("player on timeout");
+            //   player.stop();
+            // });
+
+            // player.on("buffer", (state) => {
+            //   console.log("player on buffer state=" + state);
+            // });
+
+            player.on("stats", (stats) => {
+                console.log("player on stats=", stats);
+            });
+        });
+
+        function startFunc() {
+            /**
+             * 设置解密密码,必须是16字节
+             */
+            player.setCryptoKey(key.value);
+            /**
+             * 开始播放,参数为 http-flv或 websocket-flv 的url
+             */
+            player.start(url.value);
+            dm.play();
+        }
+
+        function stopFunc() {
+            /**
+             * 停止播放
+             */
+            player.stop();
+            //按需清理画布为黑色背景
+            // player.clearView();
+            dm.pause();
+        }
+
+        function fullFunc() {
+            player.fullscreen();
+        }
+
+        function volumeChange(event) {
+            /**
+             * 设置音量
+             * 0.0  ~~ 1.0
+             * 当为0.0时,完全静音, 最大1.0
+             */
+            player.setVolume(event.target.value / 100.0);
+        }
+
+        function bufferChange(event) {
+            player.setBufferTime(event.target.value);
+        }
+
+
+        function scaleModeChange(event) {
+            /**
+             * 视频缩放模式, 当视频分辨率比例与Canvas显示区域比例不同时,缩放效果不同:
+             *  0 视频画面完全填充canvas区域,画面会被拉伸 --- 默认值
+             *  1 视频画面做等比缩放后,对齐Canvas区域,画面不被拉伸,但有黑边
+             *  2 视频画面做等比缩放后,完全填充Canvas区域,画面不被拉伸,没有黑边,但画面显示不全
+             * 软解时有效
+             */
+            player.setScaleMode(event.target.value);
+        }
+
+        function screenshot() {
+            // player.screenshot("np_screenshot.png", "png");
+            player.screenshot("np_screenshot.jpeg", "jpeg", 0.8);
+        }
+
+        function getQueryVariable(variable) {
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split("=");
+                if (pair[0] == variable) { return pair[1]; }
+            }
+            return (false);
+        }
+
+        
+
+    </script>
+</body>
+
+</html>

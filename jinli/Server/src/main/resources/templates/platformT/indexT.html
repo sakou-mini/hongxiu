@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/config/static/layui/css/layui.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/mainCss.css}" defer="defer">
+    <!--<link rel="stylesheet" th:href="@{/config/static/css/InputAnimation.css}">-->
+    <script type="text/javascript" th:src="@{/config/static/js/jq.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/layui/layui.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/js/config.js}"></script>
+    <style>
+        body{
+            overflow: auto;
+        }
+        /*.FormStyle{*/
+        /*padding:30px 20px;*/
+        /*}*/
+        .tabBox{
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .FormItem{
+            position: relative;
+            float: left;
+            margin-right: 20px;
+            margin-left: 0!important;
+        }
+        .selectDate>div{
+            float: left;
+            color: black;
+            line-height: 39px;
+        }
+        .selectDate{
+            overflow: hidden;
+            float: left;
+        }
+        .titleMsg{
+            margin-bottom: 20px;
+        }
+        #loadHtml{
+            background-color: #1f2149;
+        }
+        .selectType>div{
+            float: left;
+            color: #000000;
+            line-height: 39px;
+        }
+        .buttonStyle{
+            float: left;
+            margin-left: 10px;
+        }
+        .buttonStyle>button{
+            margin-left: 10px;
+        }
+        .FormStyle{
+            /*height: 60px;*/
+            padding: 20px 50px;
+        }
+        .FormItem{
+            position: relative;
+            float: left;
+            margin-right: 20px;
+            margin-left: 0!important;
+        }
+        .selectDate>div{
+            float: left;
+            color: black;
+            line-height: 39px;
+        }
+        .selectDate{
+            overflow: hidden;
+            float: left;
+            margin-right: 30px;
+        }
+        .selectStyle{
+            width: 100px!important;
+        }
+        .selectType>div{
+            float: left;
+            color: #000000;
+            line-height: 39px;
+        }
+        .selectType{
+            float: left;
+            margin-right:20px;
+            margin-left: 0;
+        }
+        @media screen and (max-width: 1063px) {
+            .clearfix>div{
+                display: block;
+                margin-top: 10px;
+            }
+            .tabBox{
+                margin-top: 30px;
+            }
+        }
+        .addBtnStyle{
+            margin-right: 30px;
+            float: left;
+        }
+        .the_flexBox{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+        }
+        .the_flexBox>div{
+            padding: 20px 10px;
+            width: 18%;
+            border-radius: 5px;
+        }
+        .the_flexBox>div:nth-child(1){
+            background-image: linear-gradient(#64cce6, #3883f5);
+
+        }
+        .the_flexBox>div:nth-child(2){
+            background-image: linear-gradient(#8764e6, #d638f5);
+
+        }
+        .the_flexBox>div:nth-child(3){
+            background-image: linear-gradient(#e6d768, #f5a938);
+
+        }
+        .the_flexBox>div:nth-child(4){
+            background-image: linear-gradient(#b3e699, #44f53a);
+
+        }
+
+        .the_flexBox>div:nth-child(5){
+            background-image: linear-gradient(#ff898e, #f5635f);
+
+        }
+
+        .the_Item{
+            overflow: hidden;
+            text-overflow:ellipsis; white-space: nowrap;
+
+        }
+        .the_Item>div{
+            float: left;
+            color: white;
+            text-align: center;
+        }
+        .the_Item>div:nth-child(1){
+            margin-left: 10%;
+            margin-right: 15%;
+        }
+        .the_Item>div:nth-child(1)>i{
+            font-size: 50px;
+        }
+        .the_Item>div:nth-child(2)>div:nth-child(1){
+            font-size: 25px;
+            font-weight: 600;
+        }
+        .the_Item>div:nth-child(2)>div:nth-child(2){
+            font-size: 18px;
+            font-weight: 500;
+            overflow: hidden;
+            text-overflow:ellipsis; white-space: nowrap;
+        }
+        .headMsgBox{
+            width: 94%;
+            background-color: #222750;
+            margin: 0 auto 40px auto;
+            padding: 30px 0 30px 0;
+        }
+        .t{
+            color: white;
+            width: 92%;
+            margin: 0 auto;
+            background-color: #222750;
+            padding-left: 2%;
+            padding-top: 1%;
+        }
+        .hd_box{
+            padding: 10px 0;
+            background-color: #222750;
+            width: 94%;
+            margin: 0 auto 60px auto;
+        }
+        .the2_flexBox{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .the2_Item{
+            width: 18%;
+            padding: 20px 30px;
+            overflow: hidden;
+        }
+        .the2_Item>div{
+            color: white;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .the2_Item>div:nth-child(1)>i{
+            font-size: 40px;
+            color: #72ff77;
+        }
+        .the2_Item>div:nth-child(2)>div:nth-child(1){
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .the2_Item>div:nth-child(2)>div:nth-child(2){
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+
+        .the3_flexBox{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            color: white;
+        }
+        .i3l{
+            width: 35%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+        }
+        .i3r{
+            width: 55%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+        }
+
+        .i3{
+            width: 15%;
+            padding: 20px 30px;
+            overflow: hidden;
+            font-size: 14px;
+        }
+        .i3e{
+            width: 40%;
+            padding: 20px 30px;
+            overflow: hidden;
+            font-size: 14px;
+        }
+        .i3e>div:nth-child(1){
+            font-size: 20px;
+            color: #72ff77;
+            font-weight: 600;
+        }
+        .i3>div:nth-child(1){
+            font-size: 20px;
+            color: #72ff77;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+<div class="bgcSidebar"></div>
+<div class="container app">
+    <header>
+        <!--头部导航-->
+        <ul class="layui-nav overStyle" lay-filter="">
+            <li class="logoOver"><div class="logoBox"><img class="logo" th:src="@{/config/static/img/default_logo.png}"></div><div class="logoText">锦鲤直播</div></li>
+            <!--<li class="layui-nav-item toItemChange" data-path="index"><a href="javascript:void(0);">首页</a></li>-->
+            <!--<li class="layui-nav-item layui-this  toItemChange" data-path="LiveUserExamine"><a href="javascript:void(0);">主播管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="reportList"><a href="javascript:void(0);">举报管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="personDiaryList"><a href="javascript:void(0);">动态审核</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="guessList"><a href="javascript:void(0);">竞猜管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="backOfficeManagement"><a href="javascript:void(0);">后台账号管理</a></li>-->
+            <li class="userMsg">
+                <div>
+                    <span>欢迎您：</span>
+                    <span id="loginName">admin</span>
+                </div>
+                <div>
+                    <a href="/logout"><button class="layui-btn layui-btn-danger" id="logout" >退出</button></a>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <main class="mainStyle">
+        <!--侧边栏-->
+        <div class="sidebar">
+            <div>
+                <ul class="layui-nav layui-nav-tree overStyle leftSide" id="sidebar" lay-filter="test">
+                    <!--<li class="layui-nav-item layui-this"><a  class="toItemChange" data-path="liveUserList" href="javascript:void(0);">主播列表</a></li>-->
+                    <!--<li class="layui-nav-item layui-nav-itemed">-->
+                    <!--<a href="javascript:;">主播审核</a>-->
+                    <!--<dl class="layui-nav-child">-->
+                    <!--<dd><a class="toItemChange" data-path="LiveUserExamine" href="javascript:void(0);">主播待审认证</a></dd>-->
+                    <!--<dd><a class="toItemChange" data-path="rejectLiveUser" href="javascript:void(0);">认证未通过</a></dd>-->
+                    <!--<dd><a class="toItemChange" data-path="approvedLiveUser" href="javascript:void(0);">认证已通过</a></dd>-->
+                    <!--</dl>-->
+                    <!--</li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="liveUserRoom" href="javascript:void(0);">直播间列表</a></li>-->
+                </ul>
+                <div class="mainBox" id="loadHtml">
+                    <div style="margin-bottom: 30px">
+                        <h2 class="headMsg" style="color: white;">当日总览</h2>
+                    </div>
+                    <div class="headMsgBox">
+                        <div class="the_flexBox">
+                            <div class="the_Item">
+                                <div>
+                                    <i class="layui-icon layui-icon-user"></i>
+                                </div>
+                                <div>
+                                    <div id="LIVE_NUM">
+
+                                    </div>
+                                    <div>
+                                        当前在播
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="the_Item">
+                                <div>
+                                    <i class="layui-icon layui-icon-group"></i>
+                                </div>
+                                <div>
+                                    <div id="LIVE_WATCH_NUM">
+
+                                    </div>
+                                    <div>
+                                        当前观看人数
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="the_Item">
+                                <div>
+                                    <i class="layui-icon layui-icon-group"></i>
+                                </div>
+                                <div>
+                                    <div id="USER_NUM">
+                                    </div>
+                                    <div>
+                                        用户总人数
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="the_Item">
+                                <div>
+                                    <i class="layui-icon layui-icon-group"></i>
+                                </div>
+                                <div>
+                                    <div id="SPEND_AMOUNT">
+
+                                    </div>
+                                    <div>
+                                        今日收入
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="the_Item">
+                                <div>
+                                    <i class="layui-icon layui-icon-group"></i>
+                                </div>
+                                <div>
+                                    <div id="LIVEUSER_NUM">
+
+                                    </div>
+                                    <div>
+                                        主播人数
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="t">
+                        <i class="layui-icon layui-icon-about" style=" color: #ff9c25;"></i>  今日数据<span></span>
+                    </div>
+                    <div  class="hd_box" >
+                        <div class="the2_flexBox">
+                            <div class="the2_Item toNewUserChart">
+
+                                <div>
+                                    <span id="LOGIN_NUM"></span>
+                                    <br/>
+                                    <span>今日用户总数量</span>
+                                </div>
+                            </div>
+                            <div class="the2_Item toRevenueIndex">
+                                <div>
+                                    <span id="REGISTER_NUM"></span>
+                                    <br/>
+                                    <span>今日新增用户数量</span>
+                                </div>
+                            </div>
+                            <div class="the2_Item toMobileDevicesChart">
+
+                                <div>
+                                    <span id="SPEND_NUM"></span>
+                                    <br/>
+                                    <span>今日消费用户数量</span>
+                                </div>
+                            </div>
+                            <div class="the2_Item toRevenueIndex">
+
+                                <div>
+                                    <span id="IP_NUM"></span>
+                                    <br/>
+                                    <span>今日IP访问数量</span>
+                                </div>
+                            </div>
+
+                            <div class="the2_Item toRevenueIndex">
+                                <div>
+                                    <span id="BULLET_CHAT_NUM"></span>
+                                    <br/>
+                                    <span>用户留言条数</span>
+                                </div>
+                            </div>
+                            <div class="the2_Item toRevenueIndex">
+                                <div>
+                                    <span id="FOLLOW_NUM"></span>
+                                    <br/>
+                                    <span>用户关注</span>
+                                </div>
+                            </div>
+                            <div class="the2_Item toRevenueIndex">
+                                <div>
+                                    <span id="LIVE_WATCH_TIME"></span>
+                                    <br/>
+                                    <span>用户停留总时间</span>
+                                </div>
+                            </div>
+                            <div class="the2_Item toRevenueIndex">
+                                <div>
+                                    <span id="AVG_LIVE_WATCH_TIME"></span>
+                                    <br/>
+                                    <span>用户停留平均时间</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div></div>
+                    <div class="mtBox"></div>
+                </div>
+                <div class="clearFloat"></div>
+            </div>
+        </div>
+    </main>
+</div>
+<script type="text/javascript" th:src="@{/config/static/js/mainMethod.js}"></script>
+
+<script type="text/html" id="imgTemplet">
+    <div style="text-align: center">
+        <img class="layui-circle" width="40px" height="40px" src="{{d.head}}"/>
+    </div>
+</script>
+<script>
+
+
+    $.get({
+        url:window.ioApi.user.platformIndexData,
+        data:{
+            platform:2
+        },
+        success:function(res){
+            var data = res.statisticItems
+            $("#AVG_LIVE_WATCH_TIME").text(formatSeconds(data.AVG_LIVE_WATCH_TIME))
+            $("#BULLET_CHAT_NUM").text(data.BULLET_CHAT_NUM)
+            $("#FOLLOW_NUM").text(data.FOLLOW_NUM)
+            $("#IP_NUM").text(data.IP_NUM)
+            $("#LIVE_NUM").text(data.LIVE_NUM)
+            $("#LIVE_WATCH_NUM").text(data.LIVE_WATCH_NUM)
+            $("#LIVE_WATCH_TIME").text(formatSeconds(data.LIVE_WATCH_TIME))
+            $("#LOGIN_NUM").text(data.LOGIN_NUM)
+            $("#REGISTER_NUM").text(data.REGISTER_NUM)
+            $("#SPEND_AMOUNT").text(data.SPEND_AMOUNT)
+            $("#SPEND_NUM").text(data.SPEND_NUM)
+            $("#USER_NUM").text(data.USER_NUM)
+            $("#LIVEUSER_NUM").text(data.LIVEUSER_NUM)
+        }
+    })
+
+
+</script>
+</body>
+</html>

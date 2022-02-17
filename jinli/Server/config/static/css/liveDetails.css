@@ -1,0 +1,368 @@
+body{
+    overflow: auto;
+}
+/*.FormStyle{*/
+/*padding:30px 20px;*/
+/*}*/
+
+.titleMsg>h2,.titleMsg>div{
+    float: left;
+}
+.titleMsg>div{
+    margin-top: 38px;
+    margin-left: 30px;
+}
+.tabBox{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.FormItem{
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    margin-left: 0!important;
+}
+.selectDate>div{
+    float: left;
+    color: black;
+    line-height: 39px;
+}
+.selectDate{
+    overflow: hidden;
+    float: left;
+}
+.titleMsg{
+    margin-bottom: 20px;
+}
+
+.selectType>div{
+    float: left;
+    color: #000000;
+    line-height: 39px;
+}
+.buttonStyle{
+    float: left;
+    margin-left: 10px;
+}
+.buttonStyle>button{
+    margin-left: 10px;
+}
+.FormStyle{
+    /*height: 60px;*/
+    padding: 20px 50px;
+}
+.FormItem{
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    margin-left: 0!important;
+}
+.selectDate>div{
+    float: left;
+    color: black;
+    line-height: 39px;
+}
+.selectDate{
+    overflow: hidden;
+    float: left;
+    margin-right: 30px;
+}
+.selectStyle{
+    width: 100px!important;
+}
+.selectType>div{
+    float: left;
+    color: #000000;
+    line-height: 39px;
+}
+.selectType{
+    float: left;
+    margin-right:20px;
+    margin-left: 0;
+}
+@media screen and (max-width: 1063px) {
+    .clearfix>div{
+        display: block;
+        margin-top: 10px;
+    }
+    .tabBox{
+        margin-top: 30px;
+    }
+}
+.addBtnStyle{
+    margin-right: 30px;
+    float: left;
+}
+.room_flx_box{
+    overflow: hidden;
+}
+.room_flx_box>div{
+    float: left;
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+.flx_item{
+    width: 17%;
+    height: 230px;
+    background-color: #ffffff;
+    margin-bottom: 30px;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.flx_tag_pos{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    background-color: rgba(0,0,0,.6);
+    color: white;
+    padding: 3px 10px;
+    border-right: 3px;
+    text-align: center;
+    font-size: 16px;
+}
+.textBox{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    font-size: 15px;
+    color: #626262;
+}
+.longLabel{
+    width: 200px;
+}
+.bg_flB>.textBox{
+    display:block;
+    overflow: hidden;
+}
+.bg_flB>.textBox>div{
+    width: 10%;
+    float: left;
+}
+.textBox>div{
+    width: 35%;
+}
+.textBox span{
+    color: #000000;
+}
+.flB{
+    width: 95%;
+    margin: 10px auto 0 auto;
+    padding-bottom: 20px;
+}
+.bg_flB{
+    width: 95%;
+    margin: 10px auto 0 auto;
+    padding-bottom: 20px;
+}
+.h_msg{
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #44484b;
+}
+.bodyBoxT{
+    width: 95%;
+    margin: 0 auto 30px auto;
+    overflow: hidden;
+}
+.bodyBoxT>div{
+    float: left;
+}
+.liveBox{
+    width: 55%;
+}
+.liveBox>div:nth-child(1){
+    color: #ffffff;
+    background: #27c261;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    overflow: hidden;
+}
+.liveBox>div:nth-child(1)>span:nth-child(1){
+    margin-left: 5%;
+}
+.liveBox>div:nth-child(1)>span:nth-child(2){
+    margin-right: 5%;
+}
+.liveBox>div:nth-child(1)>span:nth-child(4){
+    margin-right: 5%;
+}
+
+.liveBox>div:nth-child(2){
+    height: 500px;
+    background-color: #000000;
+    overflow: hidden;
+}
+.videoBox{
+    position: relative;
+}
+.videoBox>span{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    color: white;
+    font-size: 40px;
+    cursor:pointer ;
+    transition: all ease .3s;
+}
+.videoBox>video{
+    height: 100%;
+    width: 100%;
+}
+.msgBox{
+    width: 40%;
+    margin-left: 5%;
+}
+.msgBox>div:nth-child(1){
+    color: #ffffff;
+    background: #3565d1;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.msgBox>div:nth-child(1)>div:nth-child(1)>span{
+    margin-left: 5%;
+}
+.msgBox>div:nth-child(1)>div:nth-child(1){
+    margin-bottom: 10px;
+}
+.msgBox>div:nth-child(1)>div:nth-child(2){
+    width: 95%;
+    margin-left: 10px;
+
+}
+.msgBox>div:nth-child(1)>div:nth-child(2)>span:nth-child(2){
+    margin-left: 7%;
+}
+.msgBox>div:nth-child(1)>div:nth-child(2)>span:nth-child(3){
+    margin-left: 14%;
+}
+.msgBox>div:nth-child(1)>div:nth-child(2)>span:nth-child(4){
+    margin-left: 5%;
+}
+.msgBox>div:nth-child(2){
+    overflow-y: scroll;
+    height: 500px;
+    background-color: #fff;
+}
+.userMsgBox{
+    width: 95%;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-size: 13px;
+    overflow: hidden;
+}
+.userMsgBox>div{
+    width: 45%;
+    float: left;
+}
+.userMsgBox>div:nth-child(2)>span{
+    display: inline-block;
+    line-height: 17px;
+}
+.userMsgBox>div:nth-child(1){
+    width: 55%;
+}
+.userMsgBoxFlex span{
+    display: inline-block;
+    line-height: 17px;
+}
+.userMsgBoxFlex>span:nth-child(1){
+    width: 70px;
+}
+.userMsgBoxFlex>span:nth-child(2){
+    width: 163px;
+}
+.userMsgBoxFlex>span:nth-child(3){
+    width: 78px;
+}
+.giftMsgBox>span:nth-child(1){
+    width: 85px;
+}
+.giftMsgBox>span:nth-child(2){
+    width: 178px;
+}
+.giftMsgBox>span:nth-child(3){
+    width: 90px;
+}
+.giftMsgBox>span:nth-child(4){
+    width: 65px;
+}
+.giftMsgBox>span:nth-child(5){
+    width: 87px;
+}
+.tableBoxInUser{
+    width: 95%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.selectStyle{
+    width: 200px!important;
+}
+
+.selectType{
+    margin-left: 80px;
+}
+
+.giftBox{
+    width: 100%;
+}
+
+.giftBox>div:nth-child(1){
+    color: #ffffff;
+    background: #d13e45;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.giftBox>div:nth-child(1)>div:nth-child(1){
+    margin-bottom: 10px;
+}
+.giftBox>div:nth-child(1)>div:nth-child(1)>span{
+    margin-left: 5%;
+}
+.giftBox>div:nth-child(1)>div:nth-child(2){
+    width: 95%;
+    margin-left: 10px;
+}
+.giftBox>div:nth-child(1)>div:nth-child(2)>span:nth-child(2){
+    margin-left: 9%;
+}
+.giftBox>div:nth-child(1)>div:nth-child(2)>span:nth-child(3){
+    margin-left: 17.5%;
+}
+.giftBox>div:nth-child(1)>div:nth-child(2)>span:nth-child(4){
+    margin-left: 6%;
+}
+.giftBox>div:nth-child(1)>div:nth-child(2)>span:nth-child(5){
+    margin-left: 5%;
+}
+.giftBox>div:nth-child(1)>div:nth-child(2)>span:nth-child(6){
+    margin-left: 5%;
+}
+.giftBox>div:nth-child(2){
+    overflow-y: scroll;
+    height: 500px;
+    background-color: #fff;
+}
+
+.giftMsgBox{
+    width: 95%;
+    display: flex;
+    /*margin-bottom: 10px;*/
+    margin-left: 10px;
+    font-size: 13px;
+    line-height: 30px;
+}
+.giftMsgBox>span:nth-child(1){
+    margin-left: 0;
+}
+.tableBoxInUser>div{
+    float: left;
+}
+.tableBoxInUser>div:nth-child(2){
+    margin-top: 10px;
+    margin-left: 5%;
+}

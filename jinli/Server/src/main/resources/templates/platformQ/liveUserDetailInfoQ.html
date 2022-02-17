@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/config/static/layui/css/layui.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/mainCss.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/InputAnimation.css}">
+    <link rel="stylesheet" th:href="@{/config/static/css/liveUserDetailInfo.css}" defer="defer">
+    <script type="text/javascript" th:src="@{/config/static/js/jq.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/layui/layui.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/js/config.js}"></script>
+    <style type="text/css">
+        .titleMsg>h2,.titleMsg>div{
+            float: left;
+        }
+        .titleMsg>div{
+            margin-top: 38px;
+        }
+        .formStyle{
+            background-color: #fff;
+            padding: 10px 30px;
+            margin-top: 30px;
+        }
+        .formStyle>div>div>div{
+            line-height: 36px;
+        }
+        .firstEle{
+            margin-left: 20px;
+        }
+        .imgBox{
+            overflow: hidden;
+            padding: 20px;
+        }
+        #loadHtml{
+            padding: 0 30px;
+        }
+        .imgBox>div{
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            float: left;
+            margin-left: 30px;
+            margin-bottom: 30px;
+        }
+        .layui-layer-dialog{
+            width:auto!important;
+        }
+        @media screen and (max-width: 1000px) {
+            .firstEle{
+                margin-left: 0;
+            }
+        }
+
+        .addBtnStyle{
+            margin-right: 30px;
+            float: left;
+        }
+        .msgBox{
+            width: 500px;
+            height: 300px;
+            border: 1px solid rgb(182, 182, 182);
+            box-shadow:0px 0px 50px rgba(0,0,0,.5);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #fff;
+        }
+        .msgHead{
+            padding: 8px 0px;
+            background-color: rgb(245, 245, 245);
+            font-size: 18px;
+            color: rgb(48, 48, 48);
+        }
+        .msgSection{
+            margin-top: 30px;
+            font-size: 16px;
+            line-height: 40px;
+        }
+        .msgSection:nth-child(3){
+            margin-top: 60px;
+        }
+        .msgClose{
+            cursor:pointer;
+        }
+        .msgHidden{
+            display: none;
+        }
+        .selectStyle{
+            width: 150px!important;
+        }
+        .selectType{
+            margin-left: 0;
+            margin-bottom: 10px;
+        }
+        .layui-input{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<div class="bgcSidebar"></div>
+<div class="container app">
+    <header>
+        <!--头部导航-->
+        <ul class="layui-nav overStyle" lay-filter="">
+            <li class="logoOver"><div class="logoBox"><img class="logo" th:src="@{/config/static/img/default_logo.png}"></div><div class="logoText">锦鲤直播</div></li>
+            <!--<li class="layui-nav-item toItemChange" data-path="index"><a href="javascript:void(0);" >首页</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="LiveUserExamine"><a href="javascript:void(0);" >主播管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="reportList"><a href="javascript:void(0);" >举报管理</a></li>-->
+            <!--<li class="layui-nav-item layui-this  toItemChange" data-path="personDiaryList"><a href="javascript:void(0);">动态审核</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="guessList"><a href="javascript:void(0);">竞猜管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="backOfficeManagement"><a href="javascript:void(0);">后台账号管理</a></li>-->
+            <li class="userMsg">
+                <div>
+                    <span>欢迎您：</span>
+                    <span id="loginName">admin</span>
+                </div>
+                <div>
+                    <a href="/logout"><button class="layui-btn layui-btn-danger" id="logout" >退出</button></a>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <main class="mainStyle">
+        <!--侧边栏-->
+        <div class="sidebar">
+            <div>
+                <ul class="layui-nav layui-nav-tree overStyle leftSide" id="sidebar" lay-filter="test">
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="personDiaryList" href="javascript:void(0);">动态审核列表</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="personDiaryReject" href="javascript:void(0);">未通过列表</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="personDiaryApproved" href="javascript:void(0);">通过列表</a></li>-->
+                </ul>
+                <div class="mainBox clearfix" id="loadHtml">
+                    <div class="titleMsg clearfix">
+                        <div>
+                            <button type="button" class="layui-btn layui-btn-primary" onclick="window.history.back(-1)">
+                                <i class="layui-icon">&#xe603;</i>
+                            </button>
+                        </div>
+                        <h2 class="headMsg">主播详细信息</h2>
+                    </div>
+                    <div>
+                        <div>
+                            <div class="liveUserHeadBox">
+                                <div class="liveUserInfo">
+                                    <div class="liveUserBasicInformation">
+                                        <div class="BITop">
+                                            <div>
+                                                <div><img width="100px" height="100px" id="avatarUrl" src="/images/avatar/default/img_avatar.png"/></div>
+                                            </div>
+                                            <div>
+                                                <div id="userName"></div>
+                                                <div id="id"></div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            直播平台：<span id="platform"></span>
+                                            <div id="notT">
+                                                当前直播模块：<span id="gameType"></span>
+                                                等级：<span id="level"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="liveUserNum">
+                                        <div>
+                                            <div>粉丝数</div>
+                                            <div id="fansNum"></div>
+                                        </div>
+                                        <div>
+                                            <div>礼物价值</div>
+                                            <div id="totalGiftIncome"></div>
+                                        </div>
+                                        <div>
+                                            <div>月在播总时长</div>
+                                            <div id="monthLiveTime"></div>
+                                        </div>
+                                        <div>
+                                            <div>在播总时长</div>
+                                            <div id="totalLiveTimeHead"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="roomMsgInfo">
+                                    <div class="nowLiveBox">
+                                        <div>
+                                            <div class="roomTitle">
+                                                <h2 id="isLive">正在直播中...</h2>
+                                            </div>
+                                            <div class="roomMsg" id="roomImg">
+                                                <div>
+                                                    <img id="roomImage" src="/config/static/img/default_roomImg.jpg"/>
+                                                </div>
+                                                <div>
+                                                    <p ><span id="roomTitle"></span><button type="button" id="liveDetail" class="layui-btn layui-btn-normal">前往直播</button></p>
+                                                    <p><span id="liveStartTime"></span>开播，当前在线<span id="audienceNum"></span>人</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="hosRoomBox">
+                                            <h2>权限设置</h2>
+                                        </div>
+                                        <div>
+                                            <form class="layui-form checkBox" action="" id="role">
+                                                <input type="checkbox" lay-filter="liveRole" name="jurisdiction[PERMISSION_GIFT]" value="PERMISSION_GIFT" title="礼物" checked>
+                                                <input type="checkbox" lay-filter="liveRole" name="jurisdiction[PERMISSION_CHAT]" value="PERMISSION_CHAT" title="公聊" checked>
+                                                <input type="checkbox" lay-filter="liveRole" name="jurisdiction[PERMISSION_EDIT_QUICK_CHAT]" value="PERMISSION_EDIT_QUICK_CHAT" title="自定义短语" checked>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <form class="layui-form layui-form-pane formStyle" style="box-shadow: 0 0 10px #888888;" action="">
+
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">基础信息</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">手机号：<span id="phoneNumber"></span></div>
+                                        <div class="layui-col-md3">直播间ID：<span id="roomId"></span></div>
+                                        <div class="layui-col-md3">贵族等级：<span id="vipType"></span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">流水信息</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">礼物总流水：<span id="giftFlow"></span></div>
+                                        <div class="layui-col-md3">游戏总流水：<span id="totalGameFlow"></span></div>
+                                        <div class="layui-col-md3">直播间人次：<span id="totalAudienceNum"></span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">最近数据</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">上次开播时间：<span id="latestLiveStartTime"></span></div>
+                                        <div class="layui-col-md3">上次开播时长：<span id="latestLiveTime"></span></div>
+                                        <div class="layui-col-md3">上次礼物流水：<span id="latestGiftIncome"></span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">直播数据</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">直播总时长：<span id="totalLiveTime"></span></div>
+                                        <div class="layui-col-md3">开播次数：<span id="liveCount"></span></div>
+                                        <div class="layui-col-md3">签约时间：<span id="auditTime"></span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">金币信息</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">余额：<span id="gameCoin"></span></div>
+                                        <div class="layui-col-md3">总流水：<span id="totalFlow"></span></div>
+
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">充值信息</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">累计充值：<span id="recharge">0</span></div>
+                                        <div class="layui-col-md3">累计消费：<span id="not2">0</span></div>
+                                        <div class="layui-col-md3">累计提现：<span id="not3">0</span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">登录信息</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">上次登录时间：<span id="lastLoginTime"></span></div>
+                                        <div class="layui-col-md3">上次登录设备：<span id="lastMobileModel"></span></div>
+                                        <div class="layui-col-md3">上次登录IP：<span id="lastIp"></span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">用户状态</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">注册时间：<span id="createDate"></span></div>
+                                        <div class="layui-col-md3">当前状态：<span id="online"></span></div>
+                                        <div class="layui-col-md3">邀请码：<span id="inviteCode"></span></div>
+                                    </div>
+                                </div>
+                                <div id="confirmBtnBox">
+
+                                    <button type="button" id="back" class="layui-btn">返回列表</button>
+                                    <button type="button" id="banLiveUser" class="layui-btn layui-btn-danger">封禁主播</button>
+                                    <button type="button" id="unLockLiveUser" class="layui-btn layui-btn-danger">解封主播</button>
+                                    <button class="layui-btn layui-btn-normal" type="button" id="changePassword">修改密码</button>
+                                    <button type="button" id="updatePlatform" class="layui-btn">修改平台</button>
+                                </div>
+                            </form>
+
+                            <div class="layui-container timeTop">
+                                <div class="layui-row">
+                                    <input class="theT_timeInput" id="theT_open"  style="width: 300px;" value="" readonly/>
+                                </div>
+                                <div class="layui-row theT_boxHidden theT_hidden" id="theT_boxHidden">
+                                    <div class="layui-row theT_boxHead">
+                                        <div class="theT_timeCheckbox"><span id="theT_t">今日</span></div>
+                                        <div class="theT_interval">|</div>
+                                        <div class="theT_timeCheckbox"><span id="theT_y">昨日</span></div>
+                                        <div class="theT_interval">|</div>
+                                        <div class="theT_timeCheckbox"><span id="theT_w">近1周</span></div>
+                                        <div class="theT_interval">|</div>
+                                        <div class="theT_timeCheckbox"><span id="theT_m">近1月</span></div>
+                                    </div>
+                                    <div class="layui-row theT_boxInput">
+                                        <div>自定</div>
+                                        <div>
+                                            <input type="text" class="layui-input theT_timeCheckInput" id="theT_openTime" readonly/>
+                                        </div>
+                                        <div>到</div>
+                                        <div>
+                                            <input type="text" class="layui-input theT_timeCheckInput" id="theT_endTime" readonly/>
+                                        </div>
+                                    </div>
+                                    <div class="layui-row">
+                                        <div><span id="theT_tips"></span></div>
+                                    </div>
+                                    <div class="layui-row theT_end">
+                                        <div class="layui-col-md3 layui-col-md-offset6">
+                                            <button type="button" id="theT_confirm">确认</button>
+                                        </div>
+                                        <div class="layui-col-md3">
+                                            <button type="button" id="theT_cancel">取消</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="titleBox" style="width: 100%;">
+                        <ul class="layui-tab-title">
+                            <li class="layui-this pc_titleClick" data-value="live">直播记录</li>
+                            <li class="pc_titleClick" data-value="attendance">考勤记录</li>
+                        </ul>
+                    </div>
+                    <div class="tabBox" id="pc" style="width: 100%;">
+                        <div class="nav-icon">
+                        </div>
+                        <div id="pc_chart" style="width: 100%;margin-left: auto;margin-right: auto;height: 500px;background-color: #fff;padding: 30px 20px"></div>
+                    </div>
+                    <div class="mtBox"></div>
+                </div>
+                <div class="clearFloat"></div>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+<script type="text/javascript" th:src="@{/config/static/js/echarts.js}"></script>
+<script type="text/javascript" th:src="@{/config/static/js/mainMethod.js}"></script>
+<script type="text/javascript" th:src="@{/config/static/js/liveRecord.js}"></script>
+<script th:inline="javascript">
+    $("#back").on("click",function () {
+        history.back(-1)
+    })
+    var layuiForm
+
+    var user = [[${data}]];
+    layui.use('form', function(){
+        var form = layui.form;
+        layuiForm = form
+        for(var i =0;i<user.disablePermissions.length;i++){
+            console.log($("input[name='jurisdiction[" + user.disablePermissions[i] + "]']"));
+            $("input[name='jurisdiction["+user.disablePermissions[i]+"]']").prop("checked",false)
+
+        }
+
+        form.render();
+        form.on('checkbox(liveRole)', function (data) {
+            console.log( data );　　//打印当前选择的信息
+            var valEl = $("input[lay-filter='liveRole']").not("input:checked")
+            var upArr = []
+            for(var i = 0;i<valEl.length;i++){
+                upArr.push(valEl.get(i).value)
+            }
+            console.log(upArr);
+
+            $.post({
+                url:ioApi.liveUser.updateBanLivePermission,
+                data:{
+                    liveUserId:user.liveUserId,
+                    permissions:JSON.stringify(upArr)
+                },
+                success:function (res) {
+                    console.log(res);
+                }
+            })
+            form.render();
+        });
+    });
+
+
+    displayRoleElement(["QUPDATELIVEUSERSHAREDPLATFORM"],"updatePlatform")
+    displayRoleElement(["LIVEUSERDETAILINFOQ_LIVEUSERROLE","LIVEUSERRECORDQ_LIVEUSERROLE"],"role")
+    displayRoleElement(["LIVEUSERDETAILINFOQBANLIVEUSER","LIVEUSERRECORDQBANLIVEUSER"],"banLiveUser")
+    displayRoleElement(["LIVEUSERDETAILINFOQBANLIVEUSER","LIVEUSERRECORDQBANLIVEUSER"],"unLockLiveUser")
+    displayRoleElement(["LIVEUSERDETAILINFOQCANGEPASSWORD","LIVEUSERRECORDQCANGEPASSWORD"],"changePassword")
+
+
+
+    console.log(user);
+    if(user.status==="LIVE_BAN"){
+        $("#banLiveUser").attr("style","display:none")
+    }else {
+        $("#unLockLiveUser").attr("style","display:none")
+    }
+    $("#unLockLiveUser").on("click",function () {
+        layer.open({
+            title: '提示'
+            ,content: '是否解封这个用户的主播？',
+            btn:["确定","取消"],
+            btn1:function (index,layero) {
+                $.get({
+                    url:window.ioApi.liveUser.unLockLiveUser,
+                    data:{
+                        liveUserId:user.liveUserId
+                    },
+                    success:function (res) {
+                        console.log(res);
+                        if(res.msg === "SUCCESS"){
+                            layer.open({
+                                title: '提示'
+                                ,content: '解封成功',
+                                btn:["确定"],
+                                btn1:function (index,layero) {
+                                    layer.closeAll();
+                                    location.reload()
+                                }
+                            });
+                        }
+                    }
+                })
+            },
+            btn2:function () {
+                layer.closeAll();
+            }
+        });
+    })
+
+
+    $("#banLiveUser").on("click",function () {
+        layer.open({
+            title: '提示'
+            ,content: '是否封禁这个用户的主播？',
+            btn:["确定","取消"],
+            btn1:function (index,layero) {
+                $.get({
+                    url:window.ioApi.liveUser.banLiveUser,
+                    data:{
+                        liveUserId:user.liveUserId
+                    },
+                    success:function (res) {
+                        console.log(res);
+                        if(res.msg === "SUCCESS"){
+                            layer.open({
+                                title: '提示'
+                                ,content: '封禁成功',
+                                btn:["确定"],
+                                btn1:function (index,layero) {
+                                    layer.closeAll();
+                                    location.reload()
+                                }
+                            });
+                        }
+                    }
+                })
+            },
+            btn2:function () {
+                layer.closeAll();
+            }
+        });
+    })
+
+
+
+    $("#avatarUrl").attr("src",window.config.imgUrl+user.userSummary.avatarUrl);
+    $("#id").text(user.userSummary.userId);
+    $("#userDetails").on("click",function () {
+        jumpDetailsUrl("userDetails","userId",user.userSummary.userId)
+    })
+    if(user.platform === "PLATFORM_JINLI"){
+        user.platform = "锦鲤平台"
+    }else if(user.platform === "PLATFORM_T"){
+        user.platform ="T平台";
+        $("#notT").attr("style","display:none")
+    }else {
+        user.platform ="Q平台";
+        $("#notT").attr("style","display:none")
+    }
+    $("#platform").text(user.platform);
+    $("#level").text(user.userSummary.level);
+    $("#fansNum").text(user.fansNum);
+    $("#totalGiftIncome").text(user.totalGiftIncome+"金币");
+    $("#toRMB").text((user.totalGiftIncome/10)+"元");
+    $("#userName").text(user.userSummary.disPlayName);
+    $("#gameType").text(gameTypeFormat(user.latestLiveSummary.gameType));
+    $("#roomId").text(user.roomDisplayId);
+    $("#auditTime").text(dateFormat("YYYY-mm-dd HH:MM:SS",user.auditTime))
+    if(user.latestLiveSummary.roomId != null){
+        $("#isLive").text("正在直播中...");
+        $("#roomTitle").text(user.latestLiveSummary.roomTitle);
+        $("#liveStartTime").text(dateFormat("HH:MM:SS",user.latestLiveSummary.liveStartTime));
+        $("#audienceNum").text(user.latestLiveSummary.audienceNum);
+        // /config/static/img/default_roomImg.jpg
+        if(user.latestLiveSummary.roomImage === "" ||user.latestLiveSummary.roomImage === undefined||user.latestLiveSummary.roomImage === null){
+            $("#roomImage").attr("src","/config/static/img/default_roomImg.jpg")
+        }else {
+            $("#roomImage").attr("src",user.latestLiveSummary.roomImage)
+        }
+    }else {
+        $("#isLive").text("未开始直播...");
+        $("#roomImg").attr("style","display:none")
+    }
+    $("#phoneNumber").text(user.phoneNumber);
+    $("#vipType").text(vipTypeFormat(user.userSummary.vipType));
+    $("#giftFlow").text(user.totalGiftIncome);
+    $("#totalGameFlow").text(user.totalGameFlow);
+    $("#totalLiveTime").text(formatSeconds(user.totalLiveTime));
+    $("#latestLiveStartTime").text(dateFormat(user.latestLiveSummary.latestLiveStartTime===0?0:"YYYY-mm-dd HH:MM:SS",user.latestLiveSummary.latestLiveStartTime));
+    $("#latestLiveTime").text(formatSeconds(user.latestLiveSummary.latestLiveTime));
+    $("#liveCount").text(user.liveCount+"次");
+    $("#gameCoin").text(user.userSummary.gameCoin);
+    $("#totalFlow").text(user.userSummary.totalFlow);
+    $("#totalLiveTimeHead") .text(formatSeconds(user.totalLiveTime))
+    $("#monthLiveTime") .text(formatSeconds(user.monthLiveTime))
+    $("#lastLoginTime").text(dateFormat("YYYY-mm-dd HH:MM:SS",user.userSummary.lastLoginTime));
+    $("#lastMobileModel").text(user.userSummary.lastMobileModel);
+    $("#lastIp").text(user.userSummary.lastIp);
+    $("#createDate").text(dateFormat("YYYY-mm-dd HH:MM:SS",user.userSummary.createDate));
+    $("#totalAudienceNum").text(user.totalAudienceNum);
+    $("#latestGiftIncome").text(user.latestLiveSummary.latestGiftIncome);
+    if(user.userSummary.online){
+        user.userSummary.online="在线"
+    }else {
+        user.userSummary.online="离线"
+    }
+    $("#online").text(user.userSummary.online);
+    $("#inviteCode").text(user.userSummary.inviteCode);
+
+
+    $("#updatePlatform").on("click",function () {
+
+
+        $("#UPLiveUserName").val(user.userSummary.disPlayName)
+        $("#UPUserId").val(user.userSummary.userId)
+        $("#UPLiveUserId").val(user.liveUserId)
+        $("#UPPlatform").val(user.platform)
+        $("#radioBox").get(0).innerHTML = getRadio(user.sharedPlatform,getPlatFormId(user.platform))
+        layuiForm.render()
+
+        layer.open({
+            type:1,
+            area:['500px','600px'],
+            title: '修改直播平台'
+            ,content: $("#gag"),
+            shade: 0,
+            btn: ['提交']
+            ,btn1: function(index, layero){
+                var che = $('input[name="sharedPlatform"]:checked')
+                var sharedPlatform =""
+                for(let i=0;i<che.length;i++){
+                    sharedPlatform += che[i].value
+                    sharedPlatform += ","
+                }
+
+                console.log(sharedPlatform);
+                $.post({
+                    url:window.ioApi.liveUser.updateLiveUserSharedPlatform,
+                    data:{
+                        liveUserId:user.liveUserId,
+                        sharedPlatform:sharedPlatform.slice(0,sharedPlatform.length-1)
+                    },
+                    success:(res)=>{
+                        console.log(res);
+                        if(res.code = "200"){
+                            layer.open({
+                                title: '提示'
+                                ,content: '提交成功',
+                                btn: ['确定']
+                                ,btn1: function(index, layero){
+                                    location.reload()
+                                },
+                                cancel: function(layero,index){
+                                    location.reload()
+                                }
+                            });
+                        }
+                    }
+                })
+            },
+            cancel: function(layero,index){
+                layer.closeAll();
+            }
+
+        });
+    })
+
+
+    $("#r").on("click",function () {
+        layer.open({
+            type:1,
+            area:['500px','400px'],
+            title: '修改直播板块'
+            ,content: $("#rar"),
+            shade: 0,
+            btn: ['提交']
+            ,btn1: function(index, layero){
+                layer.closeAll();
+            },
+            cancel: function(layero,index){
+                layer.closeAll();
+            }
+
+        });
+    })
+    $("#liveDetail").on("click",function () {
+        jumpDetailsUrl("liveDetailsQ","roomId",user.latestLiveSummary.roomId)
+    })
+
+    // var uF = [];
+    // uF.push(user);
+    // user = userFilter(uF)[0];
+    // if(user.avatarUrl === null){
+    //     user.avatarUrl =window.config.imgUrl+"/images/avatar/default/img_avatar.png"
+    // }else {
+    //     user.avatarUrl = window.config.imgUrl+user.avatarUrl
+    // }
+    // $("#displayName").text(user.displayName);
+    // $("#id").text(user.id);
+    // $("#level").text(user.level);
+    // $("#phoneNumber").text(user.phoneNumber);
+    // $("#vipType").text(user.vipType);
+    // $("#gameCoin").text(user.gameCoin);
+    // $("#coinFlow").text(user.coinFlow);
+    // $("#recharge").text(user.recharge);
+    // $("#lastLoginTime").text(user.lastLoginTime);
+    // $("#lastMobileModel").text(user.lastMobileModel);
+    // $("#lastIp").text(user.lastIp);
+    // $("#createDate").text(user.createDate);
+    // $("#online").text(user.online);
+    // $("#liveUserId").text(user.liveUserId);
+    // $("#roomId").text(user.roomId);
+    // $("#avatarUrl").get(0).innerHTML = "<img id='userHeadImg' style='width: 40px;height: 40px;' src='"+user.avatarUrl+"'>";
+    //
+    // $("#userHeadImg").on("click",function () {
+    //     var imgSrc = this.src;
+    //     layer.open({
+    //         title: '查看图片详情'
+    //         ,content: "<img src='"+imgSrc+"' style='height: 80vh'>",
+    //         offset: '30px'
+    //     });
+    // })
+    //
+    // $("#clickCoin").on("click",function () {
+    //     $("#userName").text(user.displayName);
+    //     $("#nowGameCoin").text(user.gameCoin);
+    //     var grant=$("#grant");
+    //     grant.attr("data-id",user.id);
+    //     grant.attr("data-gameCoin",user.gameCoin);
+    //     var deduction=$("#deduction");
+    //     deduction.attr("data-id",user.id);
+    //     deduction.attr("data-gameCoin",user.gameCoin);
+    //     openMsg();
+    // })
+    //
+    // function openMsg() {
+    //     $("#msgBox").attr("class","msgBox");
+    // }
+    // function closeMsg() {
+    //     $("#msgBox").attr("class","msgBox msgHidden");
+    // }
+    //
+    // $(".msgClose").on("click",function () {
+    //     closeMsg();
+    // });
+    // $("#grant").on("click",function () {
+    //     var userId = this.getAttribute("data-id");
+    //     var userCoin = this.getAttribute("data-gameCoin");
+    //     var gameCoin = $("#coin").val();
+    //     operationCoin(userId,parseInt(userCoin),parseInt(gameCoin),1);
+    // })
+    // $("#deduction").on("click",function () {
+    //     var userId = this.getAttribute("data-id");
+    //     var userCoin = this.getAttribute("data-gameCoin");
+    //     var gameCoin = $("#coin").val();
+    //     operationCoin(userId,parseInt(userCoin),parseInt(gameCoin),2);
+    // })
+    //
+    // function operationCoin(userId,userCoin,gameCoin,operationType) {
+    //     if(userCoin<gameCoin && operationType===2){
+    //         console.log(userCoin);
+    //         console.log(gameCoin);
+    //         layer.msg('扣除金额不得大于玩家持有金额');
+    //     }
+    //     else {
+    //         $.get({
+    //             url:window.ioApi.user.operationUserCoin,
+    //             data:{
+    //                 userId:userId,
+    //                 gameCoin:parseInt(gameCoin),
+    //                 operationType:operationType
+    //             },
+    //             success:function (res) {
+    //                 console.log(res);
+    //                 $("#coin").val("");
+    //                 if(res==="beyond"){
+    //                     layer.msg('扣除金额不得大于玩家持有金额');
+    //                 }else {
+    //                     layer.msg('操作成功');
+    //                     closeMsg();
+    //                     history.go(0)
+    //                 }
+    //             }
+    //         })
+    //     }
+    // }
+    $("#moreRecord").on("click",function () {
+        jumpUrl("liveRecord")
+    })
+
+    $("#changePassword").on("click",function () {
+        var pwdFlag = false;
+        var qpwdFlag = false;
+        $("#pwd").on("keyup",function () {
+            if($("#pwd").val() === $("#qpwd").val()){
+                $("#qpwd").attr("style","width: 200px;");
+                $("#qpwdErrMsg").text("");
+                qpwdFlag = true
+            }
+            if($("#qpwd").val() !== "" && ($("#pwd").val() !== $("#qpwd").val())){
+                $("#qpwd").attr("style","box-shadow: 0 0 10px #ff0000;width: 200px;");
+                $("#qpwdErrMsg").text("两次密码不一致");
+                qpwdFlag = false
+            }
+            if($("#pwd").val().length < 6){
+                $("#pwd").attr("style","box-shadow: 0 0 10px #ff0000;width: 200px;");
+                $("#pwdErrMsg").text("密码长度大于6");
+                pwdFlag = false
+            }else {
+                $("#pwd").attr("style",";width: 200px;");
+                $("#pwdErrMsg").text("");
+                pwdFlag = true
+            }
+        });
+
+        $("#qpwd").focus(function(){
+            document.onkeyup = function () {
+                if(($("#pwd").val() !== $("#qpwd").val())&&$("#pwd").val() !==""){
+                    $("#qpwd").attr("style","box-shadow: 0 0 10px #ff0000;width: 200px;");
+                    $("#qpwdErrMsg").text("两次密码不一致");
+                    qpwdFlag = false
+                }else {
+                    $("#qpwd").attr("style","width: 200px;");
+                    $("#qpwdErrMsg").text("");
+                    qpwdFlag = true
+                }
+
+            }
+        });
+        $("#qpwd").blur(function () {
+            document.onkeyup = null
+        });
+        layer.open({
+            type:1,
+            area:['500px'],
+            title: '修改密码'
+            ,content: $("#password"),
+            shade: 0,
+            btn: ['提交']
+            ,btn1: function(index, layero){
+                if(pwdFlag && qpwdFlag){
+                    var pwd = $("#pwd").val();
+                    $.post({
+                        url:window.ioApi.user.changePassword,
+                        data:{
+                            userId:user.userSummary.userId,
+                            newPassword:pwd,
+                        },
+                        success:function (res) {
+                            layer.closeAll();
+                            layer.open({
+                                title: '提示'
+                                ,content: '提交成功',
+                                btn: ['确定']
+                                ,btn1: function(index, layero){
+                                    location.reload()
+                                },
+                                cancel: function(layero,index){
+                                    layer.closeAll();
+                                }
+                            });
+                        }
+                    })
+                }
+            },
+            cancel: function(layero,index){
+                layer.closeAll();
+            }
+
+        });
+    })
+
+</script>
+<form class="layui-form" id="password" style="display:none">
+    <div class="layui-form-item">
+
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label longLabel">输入修改密码：</label>
+        <div class="layui-input-block">
+            <input type="password" name="title" required  lay-verify="required" placeholder="输入修改密码" autocomplete="on" class="layui-input" id="pwd" style="width:200px">
+            <span id="pwdErrMsg" style="color:red;"></span>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label longLabel">再次确认密码：</label>
+        <div class="layui-input-block">
+            <input type="password" name="title" required  lay-verify="required" placeholder="再次确认密码" autocomplete="on" class="layui-input" id="qpwd" style="width:200px">
+            <span id="qpwdErrMsg" style="color:red;"></span>
+        </div>
+    </div>
+</form>
+</body>
+
+<form class="layui-form" id="gag" style="display:none">
+    <div class="layui-form-item">
+
+    </div>
+    <div class="selectType layui-input-block">
+        <div>主播昵称：</div>
+        <div>
+            <input type="text" name="title" required  lay-verify="required" placeholder="输入修改密码" autocomplete="on" class="layui-input" id="UPLiveUserName" style="width:200px" readonly>
+        </div>
+    </div>
+    <div class="selectType layui-input-block">
+        <div>玩家ID：</div>
+        <div>
+            <input type="text" name="title" required  lay-verify="required" placeholder="输入修改密码" autocomplete="on" class="layui-input" id="UPUserId" style="width:200px" readonly>
+        </div>
+    </div>
+    <div class="selectType layui-input-block">
+        <div>主播ID：</div>
+        <div>
+            <input type="text" name="title" required  lay-verify="required" placeholder="输入修改密码" autocomplete="on" class="layui-input" id="UPLiveUserId" style="width:200px" readonly>
+        </div>
+    </div>
+    <div class="selectType layui-input-block">
+        <div>主平台：</div>
+        <div>
+            <input type="text" name="title" required  lay-verify="required" placeholder="输入修改密码" autocomplete="on" class="layui-input" id="UPPlatform" style="width:200px" readonly>
+        </div>
+    </div>
+
+    <div class="selectType layui-input-block">
+        <div>副平台：</div>
+        <div style="width: 400px" id="radioBox">
+
+        </div>
+    </div>
+</form>
+</html>

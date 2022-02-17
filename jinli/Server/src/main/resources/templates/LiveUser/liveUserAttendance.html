@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/config/static/layui/css/layui.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/mainCss.css}" defer="defer">
+    <!--<link rel="stylesheet" th:href="@{/config/static/css/InputAnimation.css}">-->
+    <script type="text/javascript" th:src="@{/config/static/js/jq.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/layui/layui.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/js/config.js}"></script>
+    <style>
+        body{
+            overflow: auto;
+        }
+        /*.FormStyle{*/
+        /*padding:30px 20px;*/
+        /*}*/
+        .tabBox{
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .FormItem{
+            position: relative;
+            float: left;
+            margin-right: 20px;
+            margin-left: 0!important;
+        }
+        .selectDate>div{
+            float: left;
+            color: black;
+            line-height: 39px;
+        }
+        .selectDate{
+            overflow: hidden;
+            float: left;
+        }
+        .titleMsg{
+            margin-bottom: 20px;
+        }
+
+        .selectType>div{
+            float: left;
+            color: #000000;
+            line-height: 39px;
+        }
+        .buttonStyle{
+            float: left;
+            margin-left: 10px;
+        }
+        .buttonStyle>button{
+            margin-left: 10px;
+        }
+        .FormStyle{
+            /*height: 60px;*/
+            padding: 20px 50px;
+        }
+        .FormItem{
+            position: relative;
+            float: left;
+            margin-right: 20px;
+            margin-left: 0!important;
+        }
+        .selectDate>div{
+            float: left;
+            color: black;
+            line-height: 39px;
+        }
+        .selectDate{
+            overflow: hidden;
+            float: left;
+            margin-right: 30px;
+        }
+        .selectStyle{
+            width: 100px!important;
+        }
+        .selectType>div{
+            float: left;
+            color: #000000;
+            line-height: 39px;
+        }
+        .selectType{
+            float: left;
+            margin-right:20px;
+            margin-left: 0;
+        }
+        @media screen and (max-width: 1063px) {
+            .clearfix>div{
+                display: block;
+                margin-top: 10px;
+            }
+            .tabBox{
+                margin-top: 30px;
+            }
+        }
+        .addBtnStyle{
+            margin-right: 30px;
+            float: left;
+        }
+        .msgBox{
+            width: 500px;
+            height: 300px;
+            border: 1px solid rgb(182, 182, 182);
+            box-shadow:0px 0px 50px rgba(0,0,0,.5);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #fff;
+        }
+        .msgHead{
+            padding: 8px 0px;
+            background-color: rgb(245, 245, 245);
+            font-size: 18px;
+            color: rgb(48, 48, 48);
+        }
+        .msgSection{
+            margin-top: 30px;
+            font-size: 16px;
+            line-height: 40px;
+        }
+        .msgSection:nth-child(3){
+            margin-top: 60px;
+        }
+        .msgClose{
+            cursor:pointer;
+        }
+        .msgHidden{
+            display: none;
+        }
+        .selectType>div{
+            float: left;
+            color: #000000;
+            line-height: 39px;
+        }
+        .selectType{
+            float: left;
+            margin-right:20px;
+            margin-left: 0;
+        }
+        .openLive:after{
+            content: "";
+            clear: left;
+            display: block;
+        }
+        .openLive>div{
+            width: 100px;
+            float: left;
+        }
+        .openLive>div:nth-child(2){
+            width: 30px;
+            text-align: center;
+            line-height: 38px;
+        }
+    </style>
+</head>
+<body>
+<div class="bgcSidebar"></div>
+<div class="container app">
+    <header>
+        <!--头部导航-->
+        <ul class="layui-nav overStyle" lay-filter="">
+            <li class="logoOver"><div class="logoBox"><img class="logo" th:src="@{/config/static/img/default_logo.png}"></div><div class="logoText">锦鲤直播</div></li>
+            <!--<li class="layui-nav-item toItemChange" data-path="index"><a href="javascript:void(0);">首页</a></li>-->
+            <!--<li class="layui-nav-item layui-this  toItemChange" data-path="LiveUserExamine"><a href="javascript:void(0);">主播管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="reportList"><a href="javascript:void(0);">举报管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="personDiaryList"><a href="javascript:void(0);">动态审核</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="guessList"><a href="javascript:void(0);">竞猜管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="backOfficeManagement"><a href="javascript:void(0);">后台账号管理</a></li>-->
+            <li class="userMsg">
+                <div>
+                    <span>欢迎您：</span>
+                    <span id="loginName">admin</span>
+                </div>
+                <div>
+                    <a href="/logout"><button class="layui-btn layui-btn-danger" id="logout" >退出</button></a>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <main class="mainStyle">
+        <!--侧边栏-->
+        <div class="sidebar">
+            <div>
+                <ul class="layui-nav layui-nav-tree overStyle leftSide" id="sidebar" lay-filter="test">
+                    <!--<li class="layui-nav-item layui-this"><a  class="toItemChange" data-path="liveUserList" href="javascript:void(0);">主播列表</a></li>-->
+                    <!--<li class="layui-nav-item layui-nav-itemed">-->
+                    <!--<a href="javascript:;">主播审核</a>-->
+                    <!--<dl class="layui-nav-child">-->
+                    <!--<dd><a class="toItemChange" data-path="LiveUserExamine" href="javascript:void(0);">主播待审认证</a></dd>-->
+                    <!--<dd><a class="toItemChange" data-path="rejectLiveUser" href="javascript:void(0);">认证未通过</a></dd>-->
+                    <!--<dd><a class="toItemChange" data-path="approvedLiveUser" href="javascript:void(0);">认证已通过</a></dd>-->
+                    <!--</dl>-->
+                    <!--</li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="liveUserRoom" href="javascript:void(0);">直播间列表</a></li>-->
+                </ul>
+                <div class="mainBox" id="loadHtml">
+                    <div>
+                        <h2 class="headMsg">直播考勤</h2>
+                    </div>
+                    <div style="margin-top: 20px;margin-left: 30px;margin-bottom: 30px;">
+                        <button class="layui-btn" id="add" type="button">录入开播限制</button>
+                        <button class="layui-btn" id="upload" type="button">上传开播限制表</button>
+                    </div>
+
+                    <div class="FormStyle">
+                        <div>
+                            <form class="layui-form clearfix">
+
+                                <div class="FormItem">
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">开播日期：</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" class="layui-input" id="test1" readonly style="width: 150px">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" style="clear:none;float: left;">
+                                    <label class="layui-form-label">开播时间：</label>
+                                    <div class="layui-input-block">
+                                        <select name="city" lay-verify="required" id="startHour">
+                                            <option value="noData">-请选择-</option>
+                                            <option value="0">00:00</option>
+                                            <option value="1">01:00</option>
+                                            <option value="2">02:00</option>
+                                            <option value="3">03:00</option>
+                                            <option value="4">04:00</option>
+                                            <option value="5">05:00</option>
+                                            <option value="6">06:00</option>
+                                            <option value="7">07:00</option>
+                                            <option value="8">08:00</option>
+                                            <option value="9">09:00</option>
+                                            <option value="10">10:00</option>
+                                            <option value="11">11:00</option>
+                                            <option value="12">12:00</option>
+                                            <option value="13">13:00</option>
+                                            <option value="14">14:00</option>
+                                            <option value="15">15:00</option>
+                                            <option value="16">16:00</option>
+                                            <option value="17">17:00</option>
+                                            <option value="18">18:00</option>
+                                            <option value="19">19:00</option>
+                                            <option value="20">20:00</option>
+                                            <option value="21">21:00</option>
+                                            <option value="22">22:00</option>
+                                            <option value="23">23:00</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                                <div class="FormItem">
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">主播ID：</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" id="searchLiveUserId" class="layui-input"  style="width: 150px">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" style="clear:none;float: left;">
+                                    <label class="layui-form-label">平台：</label>
+                                    <div class="layui-input-block">
+                                        <select name="city" lay-verify="required" id="platform">
+                                            <option value="1">锦鲤平台</option>
+                                            <option value="2">T平台</option>
+                                            <option value="3">Q平台</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="FormItem">
+                                    <div class="buttonStyle">
+                                        <button class="layui-btn" id="searchBtn" type="button">搜索</button>
+                                        <button class="layui-btn layui-btn-normal" type="button" id="excel">导出excel</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="tabBox">
+                        <table id="demo" lay-filter="demo"></table>
+                        <div id="paging"></div>
+                    </div>
+                    <div class="mtBox"></div>
+                    <div>
+                        <form class="layui-form clearfix">
+
+                            <div class="FormItem">
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">开播日期：</label>
+                                    <div class="layui-input-block">
+                                        <input type="text" class="layui-input" id="test2" readonly style="width: 150px">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-form-item" style="clear:none;float: left;">
+                                <label class="layui-form-label">平台：</label>
+                                <div class="layui-input-block">
+                                    <select name="city" lay-verify="required" id="searchPlatform">
+                                        <option value="1">锦鲤平台</option>
+                                        <option value="2">T平台</option>
+                                        <option value="3">Q平台</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="FormItem">
+                                <div class="buttonStyle">
+                                    <button class="layui-btn" id="search" type="button">搜索</button>
+                                    <button class="layui-btn layui-btn-normal" type="button" id="liveUserExcel">导出excel</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tabBox">
+                        <table id="clockOn" lay-filter="demo"></table>
+                    </div>
+                </div>
+                <div class="clearFloat"></div>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+<form class="layui-form" id="whiteListExcl" style="display:none">
+    <div class="layui-form-item">
+
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">上传表格</label>
+        <div class="layui-input-block"  style="width: 200px">
+            <button type="button" class="layui-btn layui-btn-normal" id="test8">选择文件</button>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">上传平台</label>
+        <div class="layui-input-block"  style="width: 200px">
+            <select name="interest" lay-filter="aihao" id="uploadPlatform">
+                <option value="1">锦鲤平台</option>
+                <option value="2">T平台</option>
+                <option value="3">Q平台</option>
+            </select>
+        </div>
+    </div>
+</form>
+
+
+<form class="layui-form" id="whiteList" style="display:none">
+    <div class="layui-form-item">
+
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">主播ID</label>
+        <div class="layui-input-block">
+            <input type="text" name="title" lay-verify="title" autocomplete="off" id="liveUserId" class="layui-input"  style="width: 200px">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">开播日期</label>
+        <div class="layui-input-block">
+            <input type="text" name="title" readonly id="openLiveDate" lay-verify="title" autocomplete="off" class="layui-input"  style="width: 200px">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">开播时间</label>
+        <div class="layui-input-block openLive"  >
+          <div>
+              <select name="interest" lay-filter="aihao" id="liveStartHour" style="width: 100px">
+                  <option value="0">00:00</option>
+                  <option value="1">01:00</option>
+                  <option value="2">02:00</option>
+                  <option value="3">03:00</option>
+                  <option value="4">04:00</option>
+                  <option value="5">05:00</option>
+                  <option value="6">06:00</option>
+                  <option value="7">07:00</option>
+                  <option value="8">08:00</option>
+                  <option value="9">09:00</option>
+                  <option value="10">10:00</option>
+                  <option value="11">11:00</option>
+                  <option value="12">12:00</option>
+                  <option value="13">13:00</option>
+                  <option value="14">14:00</option>
+                  <option value="15">15:00</option>
+                  <option value="16">16:00</option>
+                  <option value="17">17:00</option>
+                  <option value="18">18:00</option>
+                  <option value="19">19:00</option>
+                  <option value="20">20:00</option>
+                  <option value="21">21:00</option>
+                  <option value="22">22:00</option>
+                  <option value="23">23:00</option>
+              </select>
+          </div>
+           <div> - </div>
+           <div>
+               <select name="interest" lay-filter="aihao" id="liveEndHour"  style="width: 100px">
+                   <option value="0">00:00</option>
+                   <option value="1">01:00</option>
+                   <option value="2">02:00</option>
+                   <option value="3">03:00</option>
+                   <option value="4">04:00</option>
+                   <option value="5">05:00</option>
+                   <option value="6">06:00</option>
+                   <option value="7">07:00</option>
+                   <option value="8">08:00</option>
+                   <option value="9">09:00</option>
+                   <option value="10">10:00</option>
+                   <option value="11">11:00</option>
+                   <option value="12">12:00</option>
+                   <option value="13">13:00</option>
+                   <option value="14">14:00</option>
+                   <option value="15">15:00</option>
+                   <option value="16">16:00</option>
+                   <option value="17">17:00</option>
+                   <option value="18">18:00</option>
+                   <option value="19">19:00</option>
+                   <option value="20">20:00</option>
+                   <option value="21">21:00</option>
+                   <option value="22">22:00</option>
+                   <option value="23">23:00</option>
+                   <option value="24">24:00</option>
+               </select>
+           </div>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">录入平台</label>
+        <div class="layui-input-block"  style="width: 200px">
+            <select name="interest" lay-filter="aihao" id="infoPlatform">
+                <option value="1">锦鲤平台</option>
+                <option value="2">T平台</option>
+                <option value="3">Q平台</option>
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">加白</label>
+        <div class="layui-input-block"  style="width: 200px">
+            <input type="checkbox" id="addWhiteList" lay-skin="switch">
+            <!--<select name="interest" lay-filter="aihao" id="addWhiteList">-->
+                <!--<option value="0">否</option>-->
+                <!--<option value="1">是</option>-->
+            <!--</select>-->
+        </div>
+    </div>
+</form>
+
+
+
+
+<script type="text/javascript" th:src="@{/config/static/js/mainMethod.js}"></script>
+<script type="text/javascript" th:src="@{/config/static/js/xlsx.core.min.js}"></script>
+<script type="text/javascript" th:inline="javascript" th:src="@{/config/static/js/liveUserAttendance.js}"></script>
+<script type="text/html" id="imgTemplet">
+    <div style="text-align: center;float: left;">
+        <img class="layui-circle" width="46px" height="46px" src="{{d.head}}"/>
+    </div>
+    <div style="float: left;margin-left: 10px">
+        <div style="font-size: 12px;color: #131313;height: 23px">
+            <span>{{d.displayName}}</span>
+        </div>
+        <div style="font-size: 10px;color: #6d6d6d;height: 23px">
+            <span>{{d.id}}</span>
+        </div>
+    </div>
+</script>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-sm layui-btn-radius layui-btn-normal" lay-event="detail">
+        主播详情
+    </a>
+</script>
+</body>
+</html>

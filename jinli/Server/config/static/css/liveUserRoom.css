@@ -1,0 +1,211 @@
+body{
+    overflow: auto;
+}
+/*.FormStyle{*/
+/*padding:30px 20px;*/
+/*}*/
+.tabBox{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.FormItem{
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    margin-left: 0!important;
+}
+.selectDate>div{
+    float: left;
+    color: black;
+    line-height: 39px;
+}
+.selectDate{
+    overflow: hidden;
+    float: left;
+}
+.titleMsg{
+    margin-bottom: 20px;
+}
+
+.selectType>div{
+    float: left;
+    color: #000000;
+    line-height: 39px;
+}
+.buttonStyle{
+    float: left;
+    margin-left: 10px;
+}
+.buttonStyle>button{
+    margin-left: 10px;
+}
+.FormStyle{
+    /*height: 60px;*/
+    padding: 20px 50px;
+}
+.FormItem{
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    margin-left: 0!important;
+}
+.selectDate>div{
+    float: left;
+    color: black;
+    line-height: 39px;
+}
+.selectDate{
+    overflow: hidden;
+    float: left;
+    margin-right: 30px;
+}
+.selectStyle{
+    width: 100px!important;
+}
+.selectType>div{
+    float: left;
+    color: #000000;
+    line-height: 39px;
+}
+.selectType{
+    float: left;
+    margin-right:20px;
+    margin-left: 0;
+}
+@media screen and (max-width: 1063px) {
+    .clearfix>div{
+        display: block;
+        margin-top: 10px;
+    }
+    .tabBox{
+        margin-top: 30px;
+    }
+}
+.addBtnStyle{
+    margin-right: 30px;
+    float: left;
+}
+.room_flx_box{
+    overflow: hidden;
+}
+.room_flx_box>div{
+    float: left;
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+.flx_item{
+    width: 258px;
+    height: 230px;
+    background-color: #ffffff;
+    margin-bottom: 30px;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.flx_tag_pos{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    background-color: rgba(0,0,0,.6);
+    color: white;
+    padding: 3px 10px;
+    border-right: 3px;
+    text-align: center;
+    font-size: 16px;
+}
+.flx_title_pos{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    padding: 3px 10px;
+    text-align: center;
+    font-size: 16px;
+    background-color: rgba(255,255,255,.6);
+    color: black;
+}
+.flx_platform_pos{
+    position: absolute;
+    bottom: 27%;
+    left: 2%;
+    padding: 3px 10px;
+    text-align: center;
+    font-size: 16px;
+    background-color: rgba(255,255,255,.6);
+    color: black;
+}
+.flx_livePattern_pos{
+    position: absolute;
+    bottom: 27%;
+    right: 2%;
+    padding: 3px 10px;
+    text-align: center;
+    font-size: 16px;
+    background-color: rgba(0,0,0,.6);
+    color: #ffffff;
+}
+.layui-badge{
+    margin-left: 10px;
+}
+.liveRecommendBtn{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+}
+
+.liveRecommendBtn>div{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.51);
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    position: absolute;
+    transition: all ease 300ms;
+    font-size: 20px;
+}
+.liveRecommendBtn>div:nth-child(1){
+    left: -60px;
+    top:45%;
+}
+.liveRecommendBtn>div:nth-child(2){
+    right: -60px;
+    top: 45%;
+}
+
+.liveRecommendBtn:hover>div:nth-child(1){
+    left: 10px;
+}
+
+.liveRecommendBtn:hover>div:nth-child(2){
+    right: 10px;
+}
+.rml{
+    font-size: 18px;
+    color: #23aaff;
+    margin-left: 20px;
+}
+.room_flx_box>div:nth-child(1) .rml{
+    font-size: 25px;
+    color: gold;
+}
+.room_flx_box>div:nth-child(2) .rml{
+    font-size: 23px;
+    color: #a4a4a4;
+}
+.room_flx_box>div:nth-child(3) .rml{
+    font-size: 21px;
+    color: #f0ad4e;
+}
+.noDataBox{
+    background-color: #fff;
+    text-align: center;
+    padding: 30px;
+}

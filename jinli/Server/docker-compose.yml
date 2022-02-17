@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  jinli_game:
+    image: jinli-image
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jinli_game
+    restart: always
+    ports:
+      - 7001:7001
+      - 8080:8080
+    environment:
+      - "TZ=Asia/Shanghai"
+      - "spring.profiles.active=prod"
+    env_file:
+      - env_prod.env
+    volumes:
+      - ${PWD}/config:/usr/src/app/config
+      - ${PWD}/logs:/var/log/jinli
+    working_dir: /usr/src/app
+    networks:
+      net_jinli:
+networks:
+  net_jinli:
+    name: net_jinli
+    driver: bridge

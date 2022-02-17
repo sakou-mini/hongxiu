@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/config/static/layui/css/layui.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/mainCss.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/InputAnimation.css}">
+    <script type="text/javascript" th:src="@{/config/static/js/jq.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/layui/layui.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/js/config.js}"></script>
+    <style type="text/css">
+        .titleMsg>h2,.titleMsg>div{
+            float: left;
+        }
+        .titleMsg>div{
+            margin-top: 38px;
+        }
+        .formStyle{
+            background-color: #fff;
+            padding: 10px 30px;
+            margin-top: 30px;
+        }
+        .formStyle>div>div>div{
+            line-height: 36px;
+        }
+        .firstEle{
+            margin-left: 20px;
+        }
+        .imgBox{
+            overflow: hidden;
+            padding: 20px;
+        }
+        #loadHtml{
+            padding: 0 30px;
+        }
+        .imgBox>div{
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            float: left;
+            margin-left: 30px;
+        }
+        .layui-layer-dialog{
+            width:auto!important;
+        }
+        @media screen and (max-width: 1000px) {
+            .firstEle{
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="bgcSidebar"></div>
+<div class="container app">
+    <header>
+        <!--头部导航-->
+        <ul class="layui-nav overStyle" lay-filter="">
+            <li class="logoOver"><div class="logoBox"><img class="logo" th:src="@{/config/static/img/default_logo.png}"></div><div class="logoText">锦鲤直播</div></li>
+            <!--<li class="layui-nav-item toItemChange" data-path="index"><a href="javascript:void(0);">首页</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="LiveUserExamine"><a href="javascript:void(0);">主播管理</a></li>-->
+            <!--<li class="layui-nav-item layui-this  toItemChange" data-path="reportList"><a href="javascript:void(0);">举报管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="personDiaryList"><a href="javascript:void(0);">动态审核</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="guessList"><a href="javascript:void(0);">竞猜管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="backOfficeManagement"><a href="javascript:void(0);">后台账号管理</a></li>-->
+            <li class="userMsg">
+                <div>
+                    <span>欢迎您：</span>
+                    <span id="loginName">admin</span>
+                </div>
+                <div>
+                    <a href="/logout"><button class="layui-btn layui-btn-danger" id="logout" >退出</button></a>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <main class="mainStyle">
+        <!--侧边栏-->
+        <div class="sidebar">
+            <div>
+                <ul class="layui-nav layui-nav-tree overStyle leftSide" id="sidebar" lay-filter="test">
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="reportList" href="javascript:void(0);">举报管理</a></li>-->
+                </ul>
+                <div class="mainBox clearfix" id="loadHtml">
+                    <div class="titleMsg clearfix">
+                        <div>
+                            <button type="button" class="layui-btn layui-btn-primary backBtn">
+                                <i class="layui-icon">&#xe603;</i>
+                            </button>
+                        </div>
+                        <h2 class="headMsg">举报详情</h2>
+                    </div>
+                    <div>
+                        <div>
+                            <form class="layui-form layui-form-pane formStyle" action="">
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">举报人信息</label>
+                                    <div class="layui-input-block layui-row">
+                                        <div class="layui-col-md3 firstEle">举报人用户名：<span id="informantNickName"></span></div>
+                                        <div class="layui-col-md3">举报人ID：<span id="informantId"></span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">主播信息</label>
+                                    <div class="layui-input-block">
+                                        <div class="layui-col-md3 firstEle">主播用户名：<span id="reportedNickName"></span></div>
+                                        <div class="layui-col-md3">主播ID：<span id="reportedId"></span></div>
+                                        <div class="layui-col-md3">房间号：<span id="reportedRoomId"></span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">举报时间</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="firstEle">时间：<span id="createDate"></span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">举报类型</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="firstEle"><span id="violationType">诈骗</span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">状态</label>
+                                    <div class="layui-input-block" id="radioBox">
+
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">举报内容</label>
+                                    <div class="layui-input-block">
+                                        <div>
+                                            <textarea readonly="readonly" name="desc" rows="10" placeholder="请输入内容" class="layui-textarea" id="textAreaValue"></textarea>
+                                        </div>
+                                        <div class="imgBox" id="imgBox">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="confirmBtnBox">
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="mtBox"></div>
+                </div>
+                <div class="clearFloat"></div>
+            </div>
+        </div>
+    </main>
+</div>
+<script type="text/javascript" th:src="@{/config/static/js/mainMethod.js}"></script>
+<script type="text/javascript" th:inline="javascript">
+    layui.use('element', function(){
+        var element = layui.element;
+    });
+    var reportDetails = [[${reportDetails}]];
+    getViolationType(reportDetails);
+    $("#informantNickName").html(reportDetails.informantNickName);
+    $("#informantId").html(reportDetails.informantId);
+    $("#reportedNickName").html(reportDetails.reportedNickName);
+    $("#reportedRoomId").html(reportDetails.reportedRoomId);
+    $("#reportedId").html(reportDetails.reportedId);
+    $("#createDate").html(formatDate(reportDetails.createDate));
+    $("#violationType").html(reportDetails.violationType);
+    $("#textAreaValue").val(reportDetails.content);
+    var radioBox = $("#radioBox").get(0);
+    var confirmBtnBox = $("#confirmBtnBox").get(0);
+    var imgBox = $("#imgBox").get(0);
+        for(var i = 0;i<reportDetails.imageUrlList.length;i++){
+            imgBox.innerHTML += '<div>'+
+                '<img width="100" class="imgSelect" src="'+window.config.imgUrl+reportDetails.imageUrlList[i]+'">'+
+                '</div>'
+        }
+    if(!reportDetails.isHandle){
+        radioBox.innerHTML="";
+        radioBox.innerHTML='<input type="radio" name="state" value="0" title="未处理" checked><input type="radio" name="state" value="1" title="已处理">';
+        confirmBtnBox.innerHTML="";
+        confirmBtnBox.innerHTML='<button type="button" class="layui-btn" id="confirm">确认</button><button type="button" class="layui-btn layui-btn-normal"  id="backBtn">返回列表</button>';
+    }
+    else {
+        radioBox.innerHTML="";
+        radioBox.innerHTML='<input type="radio" name="state" value="0" title="未处理" disabled><input type="radio" name="state" value="1" title="已处理" checked disabled>';
+        confirmBtnBox.innerHTML="";
+        confirmBtnBox.innerHTML='<button type="button" class="layui-btn layui-btn-normal backBtn">返回列表</button>';
+    }
+    var reportId = [[${id}]];
+    layui.use('form', function() {
+        var form = layui.form;
+    });
+    $(".imgSelect").on("click",function () {
+        var imgSrc = this.src;
+        layer.open({
+            title: '查看图片详情'
+            ,content: "<img src='"+imgSrc+"' width='500'>",
+            offset: '30px'
+        });
+    });
+    function imgWHAdaptation() {
+        var imgList = $(".imgSelect");
+        for(var i = 0;i<imgList.length;i++){
+            var imgW = imgList.get(i).naturalWidth;
+            var imgH = imgList.get(i).naturalHeight;
+            if(imgW<imgH){
+                imgList.get(i).width = 100;
+            }
+            else {
+                imgList.get(i).height = 100;
+            }
+        }
+    }
+    imgWHAdaptation();
+    $("#confirm").on("click",function () {
+        var stateValue = $('input[name="state"]:checked').val();
+        if(parseInt(stateValue) === 0){
+            layer.msg('请勾选已处理后提交');
+        }
+        else {
+            $.get({
+                url:window.ioApi.report.handleReport,
+                data:{
+                    id:reportId
+                },
+                success:function(res){
+                    layer.confirm('上传成功',{
+                        btn: ['确认'] ,
+                        area: ['500px']
+                    },function (index) {
+                        location.reload();
+                    });
+                },
+                error:function () {
+                    layer.open({
+                        title: '错误信息'
+                        ,content: '服务器错误，请联系管理员'
+                    });
+                }
+            })
+
+        }
+    });
+    $("#backBtn").on("click",function () {
+        backReportList();
+    });
+    function backReportList() {
+        for(var i = 0 ; i<window.pathUrl.length;i++){
+            if(window.pathUrl[i].name === "reportList"){
+                window.location.href = window.pathUrl[i].url;
+            }
+        }
+    }
+    function getViolationType(reportDetails) {
+        if(reportDetails.violationType == "VULGAR"){
+            reportDetails.violationType = "色情低俗";
+        }
+        else if(reportDetails.violationType == "ILLEGAL"){
+            reportDetails.violationType = "非法行为";
+        }
+        else if(reportDetails.violationType == "CHEAT"){
+            reportDetails.violationType = "诈骗";
+        }
+        else if(reportDetails.violationType == "REACTIONARY"){
+            reportDetails.violationType = "反动";
+        }
+        else if(reportDetails.violationType == "OTHERS"){
+            reportDetails.violationType = "其他";
+        }
+    }
+    $(".backBtn").on("click",function () {
+        jumpUrl("reportList");
+    })
+</script>
+</body>
+</html>

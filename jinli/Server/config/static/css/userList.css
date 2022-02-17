@@ -1,0 +1,173 @@
+body{
+    overflow: auto;
+}
+/*.FormStyle{*/
+/*padding:30px 20px;*/
+/*}*/
+.tabBox{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.FormItem{
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    margin-left: 0!important;
+}
+.selectDate>div{
+    float: left;
+    color: black;
+    line-height: 39px;
+}
+.selectDate{
+    overflow: hidden;
+    float: left;
+}
+.titleMsg{
+    margin-bottom: 20px;
+}
+
+.selectType>div{
+    float: left;
+    color: #000000;
+    line-height: 39px;
+}
+.buttonStyle{
+    float: left;
+    margin-left: 10px;
+}
+.buttonStyle>button{
+    margin-left: 10px;
+}
+.FormStyle{
+    /*height: 60px;*/
+    padding: 20px 50px;
+}
+.FormItem{
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    margin-left: 0!important;
+}
+.selectDate>div{
+    float: left;
+    color: black;
+    line-height: 39px;
+}
+.selectDate{
+    overflow: hidden;
+    float: left;
+    margin-right: 30px;
+}
+.selectStyle{
+    width: 100px!important;
+}
+.selectType>div{
+    float: left;
+    color: #000000;
+    line-height: 39px;
+}
+.selectType{
+    float: left;
+    margin-right:20px;
+    margin-left: 0;
+}
+@media screen and (max-width: 1063px) {
+    .clearfix>div{
+        display: block;
+        margin-top: 10px;
+    }
+    .tabBox{
+        margin-top: 30px;
+    }
+}
+.addBtnStyle{
+    margin-right: 30px;
+    float: left;
+}
+.msgBox{
+    width: 500px;
+    height: 300px;
+    border: 1px solid rgb(182, 182, 182);
+    box-shadow:0px 0px 50px rgba(0,0,0,.5);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+}
+.msgHead{
+    padding: 8px 0px;
+    background-color: rgb(245, 245, 245);
+    font-size: 18px;
+    color: rgb(48, 48, 48);
+}
+.msgSection{
+    margin-top: 30px;
+    font-size: 16px;
+    line-height: 40px;
+}
+.msgSection:nth-child(3){
+    margin-top: 60px;
+}
+.msgClose{
+    cursor:pointer;
+}
+.msgHidden{
+    display: none;
+
+}
+.headDataBox{
+    margin-top: 30px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.headDataBox>div{
+    float: left;
+    padding-left: 10px;
+}
+.headBoxL{
+    width: 40%;
+    overflow: hidden;
+}
+.headBoxL>div{
+    width: 40%;
+    float: left;
+    overflow: hidden;
+    margin-left: 30px;
+    /*border: 1px solid #e9e9e9;*/
+    background-color: #fff;
+    /*border-radius:50px;*/
+}
+.headBoxL>div>div{
+    float: left;
+}
+.headBoxL>div>div:nth-child(1){
+    font-size: 1.5rem;
+    border: 1px solid #e6bd3f;
+    background-color: #e6bd3f;
+    color: #FFFFFF;
+    padding: 10px;
+}
+.headBoxL>div>div:nth-child(2){
+    font-size: 1.2rem;
+    margin-left: 60px;
+    line-height: 53px;
+}
+
+#staH,#staM,#staS,#etaH,#etaM,#etaS{
+    padding-left: 5px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type="number"]{
+    -moz-appearance: textfield;
+}

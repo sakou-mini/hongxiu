@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE 10+ */
+
+        }
+        ::-webkit-scrollbar {
+            display: none; /* Chrome Safari */
+        }
+        #video1{
+            width: 100vw;
+            height: 100vh;
+        }
+        #loading{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+            margin-top: 0px;
+            top: 0px;
+        }
+        #loading-center{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        #loading-center-absolute {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            height: 60px;
+            width: 60px;
+            margin-top: -30px;
+            margin-left: -30px;
+            -webkit-animation: loading-center-absolute 1s infinite;
+            animation: loading-center-absolute 1s infinite;
+
+        }
+        .object{
+            width: 20px;
+            height: 20px;
+            background-color: #ff6f00;
+            float: left;
+            -moz-border-radius: 50% 50% 50% 50%;
+            -webkit-border-radius: 50% 50% 50% 50%;
+            border-radius: 50% 50% 50% 50%;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+        .object:nth-child(2n+0) {
+            margin-right: 0px;
+        }
+        #object_one{
+            -webkit-animation: object_one 1s infinite;
+            animation: object_one 1s infinite;
+        }
+        #object_two{
+            -webkit-animation: object_two 1s infinite;
+            animation: object_two 1s infinite;
+        }
+        #object_three{
+            -webkit-animation: object_three 1s infinite;
+            animation: object_three 1s infinite;
+        }
+        #object_four{
+            -webkit-animation: object_four 1s infinite;
+            animation: object_four 1s infinite;
+        }
+
+        @-webkit-keyframes loading-center-absolute{
+            100% {
+                -ms-transform: rotate(360deg);
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+
+        }
+        @keyframes loading-center-absolute{
+            100% {
+                -ms-transform: rotate(360deg);
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        @-webkit-keyframes object_one{
+            50% {
+                -ms-transform: translate(20px,20px);
+                -webkit-transform: translate(20px,20px);
+                transform: translate(20px,20px);
+            }
+        }
+        @keyframes object_one{
+            50% {
+                -ms-transform: translate(20px,20px);
+                -webkit-transform: translate(20px,20px);
+                transform: translate(20px,20px);
+            }
+        }
+        @-webkit-keyframes object_two{
+            50% {
+                -ms-transform: translate(-20px,20px);
+                -webkit-transform: translate(-20px,20px);
+                transform: translate(-20px,20px);
+            }
+        }
+        @keyframes object_two{
+            50% {
+                -ms-transform: translate(-20px,20px);
+                -webkit-transform: translate(-20px,20px);
+                transform: translate(-20px,20px);
+            }
+        }
+        @-webkit-keyframes object_three{
+            50% {
+                -ms-transform: translate(20px,-20px);
+                -webkit-transform: translate(20px,-20px);
+                transform: translate(20px,-20px);
+            }
+        }
+        @keyframes object_three{
+            50% {
+                -ms-transform: translate(20px,-20px);
+                -webkit-transform: translate(20px,-20px);
+                transform: translate(20px,-20px);
+            }
+        }
+        @-webkit-keyframes object_four{
+            50% {
+                -ms-transform: translate(-20px,-20px);
+                -webkit-transform: translate(-20px,-20px);
+                transform: translate(-20px,-20px);
+            }
+        }
+        @keyframes object_four{
+            50% {
+                -ms-transform: translate(-20px,-20px);
+                -webkit-transform: translate(-20px,-20px);
+                transform: translate(-20px,-20px);
+            }
+        }
+    </style>
+</head>
+<body>
+<div>
+    <canvas id="video1"></canvas>
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="object" id="object_one"></div>
+                <div class="object" id="object_two"></div>
+                <div class="object" id="object_three"></div>
+                <div class="object" id="object_four"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../../../../config/static/webSrc/jq.js"></script>
+<script type="text/javascript" src="/config/static/nodePlayer/NodePlayer.min.js"></script>
+<script>
+    var openTime;
+
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);  //获取url中"?"符后的字符串并正则匹配
+        var context = "";
+        if (r != null)
+            context = r[2];
+        reg = null;
+        r = null;
+        return context == null || context == "" || context == "undefined" ? "" : context;
+    }
+    var url
+    getUrl()
+    var player;
+    function getUrl() {
+        $.get({
+            url:"/share/getLiveUrl",
+            data:{
+                userId:GetQueryString("userId")
+            },
+            success:function (res) {
+                url = res.flv;
+                startLoad().then(
+                    v =>{
+                        console.log(GetQueryString("isPlaying") === "true");
+                        if(GetQueryString("isPlaying") === "true"){
+                            startPlay()
+                        }else {
+                            toMessage()
+                        }
+                    }
+                )
+            }
+        })
+    }
+
+    function toMessage(){
+        console.log("发送消息加载完成");
+        window.parent.postMessage({
+            player:true,
+            msg:"player ready"
+        },'*')
+    }
+
+    async function startLoad(){
+        await NodePlayer.load(()=>{
+                player = new NodePlayer();
+                player.setView("video1");
+                player.setBufferTime(1000);
+                player.setScaleMode(1);
+                player.on("start", () => {
+                    loadingOver()
+                    console.log("发送消息开始播放");
+                    clearInterval(openTime)
+                    window.parent.postMessage({
+                        playing:true,
+                        msg:"live start"
+                    },'*');
+                });
+                player.on("stop", () => {
+                    console.log("player on stop");
+                });
+                player.on("error", (e) => {
+                    console.log("↓↓↓↓↓↓↓↓↓暂停消息↓↓↓↓↓↓↓↓↓");
+                    console.log("player on error", e);
+                    console.log(typeof e);
+                    console.log(e);
+                    console.log("↑↑↑↑↑↑↑↑↑暂停消息↑↑↑↑↑↑↑↑↑");
+                    if(e === "input data error, -1003"){
+                        console.log("监听到停止");
+                        window.parent.postMessage({
+                            stop:true,
+                            msg:"live over ,is't stop"
+                        },'*');
+                    }
+                });
+                player.on("videoInfo", (w, h, codec) => {
+                    console.log("player on video info width=" + w + " height=" + h + " codec=" + codec);
+                });
+                player.on("audioInfo", (r, c, codec) => {
+                    console.log("player on audio info samplerate=" + r + " channels=" + c + " codec=" + codec);
+                });
+                player.on("stats", (stats) => {
+                    console.log("player on stats=", stats);
+                    if(stats.fps === 0){
+                        loadingShow()
+                    }else {
+                        loadingOver()
+                    }
+                });
+                player.onResize(0)
+            });
+    }
+
+
+
+    window.onresize = function () {
+        player.onResize()
+    };
+
+    window.addEventListener('message',function(event){
+        console.log(event);
+        if(event.data.play){
+            window.parent.postMessage({
+                playing:false,
+                msg:"Start rendering video components"
+            },'*');
+            startPlay()
+        }
+    });
+
+    function startPlay() {
+        openTime = setInterval(function () {
+            player.start(url);
+        },100)
+
+    }
+
+    function loadingShow() {
+        $("#loading").attr("style","")
+    }
+
+    function loadingOver() {
+        $("#loading").attr("style","display: none;")
+    }
+
+
+
+
+
+</script>
+</html>

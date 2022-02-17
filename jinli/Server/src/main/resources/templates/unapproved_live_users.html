@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>未审批直播申请</title>
+    <meta content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet"/>
+</head>
+<body>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">未审批直播申请</h3>
+    </div>
+    <div class="panel-body">
+        <span th:if="${unapprovedLiveUsers.size()==0}">没有找到用户</span>
+    </div>
+    <div>
+        <tbody>
+        <tr th:each="user : ${unapprovedLiveUsers}">
+            <td><span th:text="${user.id}"> id </span></td>
+        </tr>
+        </tbody>
+    </div>
+</div>
+<script th:src="@{/jquery/jquery-3.2.1.min.js}"></script>
+<script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+</body>
+</html>

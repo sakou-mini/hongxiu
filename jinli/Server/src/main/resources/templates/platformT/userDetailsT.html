@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/config/static/layui/css/layui.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/mainCss.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/userDetails.css}">
+    <script type="text/javascript" th:src="@{/config/static/js/jq.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/layui/layui.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/js/config.js}"></script>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<div class="bgcSidebar"></div>
+<div class="container app">
+    <header>
+        <!--头部导航-->
+        <ul class="layui-nav overStyle" lay-filter="">
+            <li class="logoOver"><div class="logoBox"><img class="logo" th:src="@{/config/static/img/default_logo.png}"></div><div class="logoText">锦鲤直播</div></li>
+            <!--<li class="layui-nav-item toItemChange" data-path="index"><a href="javascript:void(0);" >首页</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="LiveUserExamine"><a href="javascript:void(0);" >主播管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="reportList"><a href="javascript:void(0);" >举报管理</a></li>-->
+            <!--<li class="layui-nav-item layui-this  toItemChange" data-path="personDiaryList"><a href="javascript:void(0);">动态审核</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="guessList"><a href="javascript:void(0);">竞猜管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="backOfficeManagement"><a href="javascript:void(0);">后台账号管理</a></li>-->
+            <li class="userMsg">
+                <div>
+                    <span>欢迎您：</span>
+                    <span id="loginName">admin</span>
+                </div>
+                <div>
+                    <a href="/logout"><button class="layui-btn layui-btn-danger" id="logout" >退出</button></a>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <main class="mainStyle">
+        <!--侧边栏-->
+        <div class="sidebar">
+            <div>
+                <ul class="layui-nav layui-nav-tree overStyle leftSide" id="sidebar" lay-filter="test">
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="personDiaryList" href="javascript:void(0);">动态审核列表</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="personDiaryReject" href="javascript:void(0);">未通过列表</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="personDiaryApproved" href="javascript:void(0);">通过列表</a></li>-->
+                </ul>
+                <div class="mainBox clearfix" id="loadHtml">
+                    <div class="titleMsg clearfix">
+                        <div>
+                            <button type="button" class="layui-btn layui-btn-primary" onclick="window.history.back(-1)">
+                                <i class="layui-icon">&#xe603;</i>
+                            </button>
+                        </div>
+                        <h2 class="headMsg">用户详细信息</h2>
+                    </div>
+                    <div>
+                        <div>
+                            <form class="layui-form layui-form-pane formStyle" action="">
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">账户信息</label>
+                                    <div class="layui-input-block layui-row">
+                                        <div class="layui-col-md3 firstEle">用户头像：<span id="avatarUrl" style="line-height: 60px"></span></div>
+                                        <div class="layui-col-md3">用户ID：<span style="line-height: 60px"  id="id"></span></div>
+                                        <div class="layui-col-md3">用户昵称：<span style="line-height: 60px" id="displayName"></span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">基础信息</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">等级：<span id="level"></span></div>
+                                        <div class="layui-col-md3">手机号：<span id="phoneNumber"></span></div>
+                                        <div class="layui-col-md3">贵族等级：<span id="vipType"></span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">金币信息</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">余额：<span id="gameCoin"></span></div>
+                                        <div class="layui-col-md3">总流水：<span id="coinFlow"></span></div>
+                                        <div class="layui-col-md3">礼物消费金额：<span id="giftSpendAmount"></span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">主播信息</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">是否主播：<span id="isLiveUser"></span></div>
+                                        <div class="layui-col-md3">直播平台：<span id="platform"></span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">充值信息</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">累计充值：<span id="recharge"></span></div>
+                                        <div class="layui-col-md3">累计消费：<span id="not2">0</span></div>
+                                        <div class="layui-col-md3">累计提现：<span id="not3">0</span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">登录信息</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">上次登录时间：<span id="lastLoginTime"></span></div>
+                                        <div class="layui-col-md3">上次登录设备：<span id="lastMobileModel"></span></div>
+                                        <div class="layui-col-md3">上次登录IP：<span id="lastIp"></span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">用户状态</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">注册时间：<span id="createDate"></span></div>
+                                        <div class="layui-col-md3">当前状态：<span id="online"></span></div>
+                                        <div class="layui-col-md3">邀请码：<span id="inviteCode"></span></div>
+                                    </div>
+                                </div>
+                                <div id="confirmBtnBox">
+                                    <button type="button" id="back" class="layui-btn layui-btn-primary">返回列表</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="mtBox"></div>
+
+                    <!--用户观看记录列表-->
+                    <div>
+                        <div>
+                            <form class="layui-form clearfix">
+                                <div class="selectDate" style="margin-left: 30px;">
+                                    <div>起始日期：</div>
+                                    <div><input type="text" class="layui-input" id="test1" readonly style="width: 150px"></div>
+                                    <div>&nbsp;&nbsp;-&nbsp;&nbsp;</div>
+                                    <div><input type="text" class="layui-input" id="test2" readonly style="width: 150px"></div>
+                                </div>
+                                <div  class="FormItem">
+                                    <button class="layui-btn" id="searchBtn" type="button">搜索</button>
+                                    <button class="layui-btn layui-btn-primary" type="button" id="resetBtn">重置</button>
+                                    <button class="layui-btn layui-btn-normal" type="button" id="excel">导出excel</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tabBox">
+                            <table id="demo" lay-filter="demo"></table>
+                            <div id="paging"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearFloat"></div>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+
+<script type="text/javascript" th:src="@{/config/static/js/xlsx.core.min.js}"></script>
+<script type="text/javascript" th:src="@{/config/static/js/mainMethod.js}"></script>
+<script th:inline="javascript">
+    $("#back").on("click",function () {
+        history.back(-1)
+    });
+    var user = [[${data}]];
+    roleGet();
+    function roleGet(){
+        var role = JSON.parse(localStorage.getItem("loginMsg")).role;
+        for(var i=0;i<role.length;i++){
+            console.log(role[i]);
+            if(role[i] === "ADMIN" ){
+                $("#banUser").attr("style","");
+                $("#changePassword").attr("style","")
+                $("#toLiveUser").attr("style","")
+                $("#clickCoin").attr("style","")
+            }
+            if(role[i] === "BANUSER" && user.accountStatue === "ACCOUNT_NORMAL"){
+                $("#banUser").attr("style","");
+            }
+            if(role[i] === "BANLIVEUSERLISTQ" && user.accountStatue !== "ACCOUNT_NORMAL"){
+                $("#banUser").attr("style","");
+            }
+            if(role[i] === "CHANGEPASSWORD"){
+                $("#changePassword").attr("style","")
+            }
+            if(role[i] === "BECOMELIVEUSER"){
+                $("#toLiveUser").attr("style","")
+            }
+            if(role[i] === "OPERATIONUSERCOIN"){
+                $("#clickCoin").attr("style","")
+            }
+        }
+
+    }
+    layui.use('form', function(){
+        var form = layui.form;
+        form.on('submit(formDemo)', function(data){
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+        form.on('select(handle)', function(data){
+            handle = data.value;
+            console.log(handle);
+            if(handle === "0"){
+                isHandle = false
+            }
+            else {
+                isHandle = true
+            }
+        });
+    });
+
+
+    if(user.LiveUser){
+        $("#toLiveUser").attr("style","display:none");
+    }else {
+        $("#liveUserDetailInfo").attr("style","display:none")
+    }
+    $("#liveUserDetailInfo").on("click",function () {
+        jumpDetailsUrl("liveUserDetailInfo","liveUserId",user.liveUserId)
+    });
+    var uF = [];
+    console.log(user);
+    uF.push(user);
+
+    user = userFilter(uF)[0];
+
+    if(user.avatarUrl === null){
+        user.avatarUrl =window.config.imgUrl+"/images/avatar/default/img_avatar.png"
+    }else {
+        user.avatarUrl = window.config.imgUrl+user.avatarUrl
+    }
+    $("#displayName").text(user.displayName);
+    $("#id").text(user.id);
+    $("#level").text(user.level);
+    $("#phoneNumber").text(user.phoneNumber);
+    $("#vipType").text(user.vipType);
+    $("#gameCoin").text(user.gameCoin);
+    $("#coinFlow").text(user.coinFlow);
+    $("#recharge").text(user.recharge);
+    $("#lastLoginTime").text(user.lastLoginTime);
+    $("#lastMobileModel").text(user.lastMobileModel);
+    $("#lastIp").text(user.lastIp);
+    $("#createDate").text(user.createDate);
+    $("#online").text(user.online);
+    $("#avatarUrl").get(0).innerHTML = "<img id='userHeadImg' style='width: 40px;height: 40px;' src='"+user.avatarUrl+"'>";
+    $("#isLiveUser").text(user.LiveUser);
+    $("#giftSpendAmount").text(user.giftSpendAmount)
+
+    if(!user.LiveUser){
+        if(user.platform==="PLATFORM_JINLI"){
+            $("#platform").text("锦鲤平台");
+        }else {
+            $("#platform").text("T平台");
+        }
+    }else {
+        $("#platform").text("锦鲤平台");
+    }
+
+    $("#inviteCode").text(user.inviteCode);
+
+    $("#userHeadImg").on("click",function () {
+        var imgSrc = this.src;
+        layer.open({
+            title: '查看图片详情'
+            ,content: "<img src='"+imgSrc+"' style='height: 80vh'>",
+            offset: '30px'
+        });
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+<script type="text/javascript" th:src="@{/config/static/js/userDetailsT.js}"></script>
+
+
+
+
+</body>
+</html>

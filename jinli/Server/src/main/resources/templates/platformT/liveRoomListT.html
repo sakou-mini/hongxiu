@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/config/static/layui/css/layui.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/mainCss.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/liveUserRoom.css}" defer="defer">
+    <script type="text/javascript" th:src="@{/config/static/js/jq.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/layui/layui.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/js/config.js}"></script>
+</head>
+<body>
+<div class="bgcSidebar"></div>
+<div class="container app">
+    <header>
+        <!--头部导航-->
+        <ul class="layui-nav overStyle" lay-filter="">
+            <li class="logoOver"><div class="logoBox"><img class="logo" th:src="@{/config/static/img/default_logo.png}"></div><div class="logoText">锦鲤直播</div></li>
+            <!--<li class="layui-nav-item toItemChange" data-path="index"><a href="javascript:void(0);">首页</a></li>-->
+            <!--<li class="layui-nav-item layui-this  toItemChange" data-path="LiveUserExamine"><a href="javascript:void(0);">主播管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="reportList"><a href="javascript:void(0);">举报管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="personDiaryList"><a href="javascript:void(0);">动态审核</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="guessList"><a href="javascript:void(0);">竞猜管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="backOfficeManagement"><a href="javascript:void(0);">后台账号管理</a></li>-->
+            <li class="userMsg">
+                <div>
+                    <span>欢迎您：</span>
+                    <span id="loginName">admin</span>
+                </div>
+                <div>
+                    <a href="/logout"><button class="layui-btn layui-btn-danger" id="logout" >退出</button></a>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <main class="mainStyle">
+        <!--侧边栏-->
+        <div class="sidebar">
+            <div>
+                <ul class="layui-nav layui-nav-tree overStyle leftSide" id="sidebar" lay-filter="test">
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="liveUserList" href="javascript:void(0);">主播列表</a></li>-->
+                    <!--<li class="layui-nav-item layui-nav-itemed">-->
+                    <!--<a href="javascript:;">主播审核</a>-->
+                    <!--<dl class="layui-nav-child">-->
+                    <!--<dd><a class="toItemChange" data-path="LiveUserExamine" href="javascript:void(0);">主播待审认证</a></dd>-->
+                    <!--<dd><a class="toItemChange" data-path="rejectLiveUser" href="javascript:void(0);">认证未通过</a></dd>-->
+                    <!--<dd><a class="toItemChange" data-path="approvedLiveUser" href="javascript:void(0);">认证已通过</a></dd>-->
+                    <!--</dl>-->
+                    <!--</li>-->
+                    <!--<li class="layui-nav-item layui-this"><a  class="toItemChange" data-path="liveUserRoom" href="javascript:void(0);">直播间列表</a></li>-->
+                </ul>
+                <div class="mainBox" id="loadHtml">
+                    <div style="margin-bottom: 30px">
+                        <h2 class="headMsg">T平台直播监控</h2>
+                    </div>
+                    <div style="margin-bottom: 50px;">
+                        <form class="layui-form clearfix">
+                            <div class="FormItem">
+                                <label class="layui-form-label">主播ID：</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="title" id="liveUserId"  lay-verify="title" autocomplete="off" placeholder="请输入主播ID" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="FormItem">
+                                <label class="layui-form-label">主播昵称：</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="title"lay-verify="title" id="displayName" autocomplete="off" placeholder="请输入主播昵称" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="FormItem">
+                                <label class="layui-form-label">房间ID：</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="title" lay-verify="title" id="roomId" autocomplete="off" placeholder="请输入房间ID" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="buttonStyle">
+                                <button class="layui-btn" id="searchBtn" type="button">搜索</button>
+                                <button class="layui-btn layui-btn-primary" type="button" id="resetBtn">重置</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="jl" class="tabBox">
+                        <div class="room_flx_box" id="liveBox">
+
+                        </div>
+                    </div>
+                    <div class="mtBox"></div>
+                </div>
+                <div class="clearFloat"></div>
+            </div>
+        </div>
+    </main>
+</div>
+<script type="text/javascript" th:src="@{/config/static/js/mainMethod.js}"></script>
+<script type="text/javascript" th:src="@{/config/static/js/liveRoomListT.js}"></script>
+</body>
+</html>

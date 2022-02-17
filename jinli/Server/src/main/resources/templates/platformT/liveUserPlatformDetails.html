@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/config/static/layui/css/layui.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/mainCss.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/InputAnimation.css}">
+    <link rel="stylesheet" th:href="@{/config/static/css/liveDetails.css}" defer="defer">
+    <script type="text/javascript" th:src="@{/config/static/js/jq.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/layui/layui.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/js/config.js}"></script>
+    <style type="text/css">
+        .titleMsg>h2,.titleMsg>div{
+            float: left;
+        }
+        .titleMsg>div{
+            margin-top: 38px;
+        }
+        .formStyle{
+            background-color: #fff;
+            padding: 10px 30px;
+            margin-top: 30px;
+        }
+        .formStyle>div>div>div{
+            line-height: 36px;
+        }
+        .firstEle{
+            margin-left: 20px;
+        }
+        .imgBox{
+            overflow: hidden;
+            padding: 20px;
+        }
+        #loadHtml{
+            padding: 0 30px;
+        }
+        .imgBox>div{
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            float: left;
+            margin-left: 30px;
+            margin-bottom: 30px;
+        }
+        .layui-layer-dialog{
+            width:auto!important;
+        }
+        @media screen and (max-width: 1000px) {
+            .firstEle{
+                margin-left: 0;
+            }
+        }
+
+        .addBtnStyle{
+            margin-right: 30px;
+            float: left;
+        }
+        .msgBox{
+            width: 500px;
+            height: 300px;
+            border: 1px solid rgb(182, 182, 182);
+            box-shadow:0px 0px 50px rgba(0,0,0,.5);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #fff;
+        }
+        .msgHead{
+            padding: 8px 0px;
+            background-color: rgb(245, 245, 245);
+            font-size: 18px;
+            color: rgb(48, 48, 48);
+        }
+        .msgSection{
+            margin-top: 30px;
+            font-size: 16px;
+            line-height: 40px;
+        }
+        .msgSection:nth-child(3){
+            margin-top: 60px;
+        }
+        .msgClose{
+            cursor:pointer;
+        }
+        .msgHidden{
+            display: none;
+        }
+        .selectStyle{
+            width: 150px!important;
+        }
+
+        .selectType{
+            margin-left: 0;
+            margin-bottom: 10px;
+        }
+        .layui-form-label{
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+<div class="bgcSidebar"></div>
+<div class="container app">
+    <header>
+        <!--头部导航-->
+        <ul class="layui-nav overStyle" lay-filter="">
+            <li class="logoOver"><div class="logoBox"><img class="logo" th:src="@{/config/static/img/default_logo.png}"></div><div class="logoText">锦鲤直播</div></li>
+            <!--<li class="layui-nav-item toItemChange" data-path="index"><a href="javascript:void(0);" >首页</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="LiveUserExamine"><a href="javascript:void(0);" >主播管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="reportList"><a href="javascript:void(0);" >举报管理</a></li>-->
+            <!--<li class="layui-nav-item layui-this  toItemChange" data-path="personDiaryList"><a href="javascript:void(0);">动态审核</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="guessList"><a href="javascript:void(0);">竞猜管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="backOfficeManagement"><a href="javascript:void(0);">后台账号管理</a></li>-->
+            <li class="userMsg">
+                <div>
+                    <span>欢迎您：</span>
+                    <span id="loginName">admin</span>
+                </div>
+                <div>
+                    <a href="/logout"><button class="layui-btn layui-btn-danger" id="logout" >退出</button></a>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <main class="mainStyle">
+        <!--侧边栏-->
+        <div class="sidebar">
+            <div>
+                <ul class="layui-nav layui-nav-tree overStyle leftSide" id="sidebar" lay-filter="test">
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="personDiaryList" href="javascript:void(0);">动态审核列表</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="personDiaryReject" href="javascript:void(0);">未通过列表</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="personDiaryApproved" href="javascript:void(0);">通过列表</a></li>-->
+                </ul>
+                <div class="mainBox clearfix" id="loadHtml">
+                    <div class="titleMsg clearfix">
+                        <div>
+                            <button type="button" class="layui-btn layui-btn-primary" onclick="window.history.back(-1)">
+                                <i class="layui-icon">&#xe603;</i>
+                            </button>
+                        </div>
+                        <h2 class="headMsg">T平台主播详细信息</h2>
+                    </div>
+                    <div>
+                        <div>
+                            <form class="layui-form layui-form-pane formStyle" action="">
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">账户信息</label>
+                                    <div class="layui-input-block layui-row">
+                                        <div class="layui-col-md3 firstEle">头像：<span id="avatarUrl" style="line-height: 60px"><img id='userHeadImg' style='width: 40px;height: 40px;' src='/images/avatar/default/img_avatar.png'></span></div>
+                                        <div class="layui-col-md3">用户ID：<span style="line-height: 60px"  id="id">1245783</span></div>
+                                        <div class="layui-col-md3">主播ID：<span style="line-height: 60px" id="liveUserId">124578</span></div>
+                                        <div class="layui-col-md2">昵称：<span style="line-height: 60px" id="displayName">T平台直播主播</span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">主播信息</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">直播间ID：<span id="roomId">123456</span></div>
+                                        <div class="layui-col-md3">当前直播平台：<span id="platform">锦鲤直播平台*</span></div>
+                                        <div class="layui-col-md3">当前直播板块：<span id="m">捕鱼*</span></div>
+                                        <div class="layui-col-md2">
+                                            <button class="layui-btn layui-btn-danger layui-btn-xs" type="button" id="p">修改直播平台</button>
+                                            <button class="layui-btn  layui-btn-warm layui-btn-xs" type="button" id="r">修改直播板块</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">基础信息</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">等级：<span id="level">11</span></div>
+                                        <div class="layui-col-md3">手机号：<span id="phoneNumber">18989898989</span></div>
+                                        <div class="layui-col-md3">贵族等级：<span id="vipType">VIP3</span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">流水信息</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">礼物总流水：<span id="giftFlow">102121*</span></div>
+                                        <div class="layui-col-md3">游戏总流水：<span id="gameFlow">2101455*</span></div>
+                                        <div class="layui-col-md3">直播间人次：<span id="userNum">454154*</span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">最近数据</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">上次开播时间：<span id="lastLiveTime">2021-03-04 18:11:32*</span></div>
+                                        <div class="layui-col-md3">上次开播时长：<span id="lastLiveDuration">3小时6分钟32秒*</span></div>
+                                        <div class="layui-col-md3">上次礼物流水：<span id="lastLiveFlow">5646542*</span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">直播数据</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">直播总时长：<span id="liveTime">106小时44分32秒*</span></div>
+                                        <div class="layui-col-md3">开播次数：<span id="liveDuration">32次*</span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">金币信息</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">余额：<span id="gameCoin">0</span></div>
+                                        <div class="layui-col-md3">总流水：<span id="coinFlow">0</span></div>
+
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">充值信息</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">累计充值：<span id="recharge">0</span></div>
+                                        <div class="layui-col-md3">累计消费：<span id="not2">0</span></div>
+                                        <div class="layui-col-md3">累计提现：<span id="not3">0</span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">登录信息</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">上次登录时间：<span id="lastLoginTime">1970-01-01 08:00:00</span></div>
+                                        <div class="layui-col-md3">上次登录设备：<span id="lastMobileModel">Xiaomi 10*</span></div>
+                                        <div class="layui-col-md3">上次登录IP：<span id="lastIp">192.168.0.144</span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">用户状态</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">注册时间：<span id="createDate">1970-01-01 08:00:00</span></div>
+                                        <div class="layui-col-md3">当前状态：<span id="online">离线</span></div>
+                                        <div class="layui-col-md3">邀请码：<span id="not">542354*</span></div>
+                                    </div>
+                                </div>
+                                <div id="confirmBtnBox">
+
+                                    <button type="button" id="back" class="layui-btn">返回列表</button>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="mtBox"></div>
+                </div>
+                <div class="clearFloat"></div>
+            </div>
+        </div>
+    </main>
+</div>
+<form class="layui-form" id="gag" style="display:none">
+    <div class="layui-form-item">
+
+    </div>
+    <div class=" ayui-input-block">
+        <div class="selectType">
+            <div>直播平台：</div>
+            <div>
+                <select  name="city" lay-verify="required" class="selectStyle" id="violationType">
+                    <option value="">锦鲤直播平台</option>
+                    <option value="0">T平台</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</form>
+
+<form class="layui-form" id="rar" style="display:none">
+    <div class="layui-form-item">
+
+    </div>
+    <div class="layui-input-block">
+        <div class="selectType">
+            <div>直播板块：</div>
+            <div>
+                <select  name="city" lay-verify="required" class="selectStyle" id="rara">
+                    <option value="">百家乐</option>
+                    <option value="0">百人牛牛</option>
+                    <option value="">炸金花</option>
+                    <option value="0">红黑大战</option>
+                    <option value="">龙虎斗</option>
+                    <option value="0">捕鱼</option>
+                </select>
+            </div>
+        </div>
+        <div class="selectType">
+            <div>直播场次：</div>
+            <div>
+                <select  name="city" lay-verify="required" class="selectStyle" id="">
+                    <option value="">初级场</option>
+                    <option value="0">中级场</option>
+                    <option value="">高级场</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script type="text/javascript" th:src="@{/config/static/js/mainMethod.js}"></script>
+<script th:inline="javascript">
+    $("#back").on("click",function () {
+        history.back(-1)
+    })
+    layui.use('form', function(){
+        var form = layui.form;
+        form.on('select(itemSelect)', function(data){
+
+        });
+    });
+        $("#platform").text("T平台")
+        $("#userNum").text("0");
+        $("#gameFlow").text("0")
+        $("#r").attr("style","")
+    $("#p").on("click",function () {
+        layer.open({
+            type:1,
+            area:['500px','350px'],
+            title: '修改直播平台'
+            ,content: $("#gag"),
+            shade: 0,
+            btn: ['提交']
+            ,btn1: function(index, layero){
+                layer.closeAll();
+            },
+            cancel: function(layero,index){
+                layer.closeAll();
+            }
+
+        });
+    })
+
+
+    $("#r").on("click",function () {
+        layer.open({
+            type:1,
+            area:['500px','400px'],
+            title: '修改直播板块'
+            ,content: $("#rar"),
+            shade: 0,
+            btn: ['提交']
+            ,btn1: function(index, layero){
+                layer.closeAll();
+            },
+            cancel: function(layero,index){
+                layer.closeAll();
+            }
+
+        });
+    })
+
+</script>
+<form class="layui-form" id="password" style="display:none">
+    <div class="layui-form-item">
+
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label longLabel">输入修改密码：</label>
+        <div class="layui-input-block">
+            <input type="password" name="title" required  lay-verify="required" placeholder="输入修改密码" autocomplete="on" class="layui-input" id="pwd" style="width:200px">
+            <span id="pwdErrMsg" style="color:red;"></span>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label longLabel">再次确认密码：</label>
+        <div class="layui-input-block">
+            <input type="password" name="title" required  lay-verify="required" placeholder="再次确认密码" autocomplete="on" class="layui-input" id="qpwd" style="width:200px">
+            <span id="qpwdErrMsg" style="color:red;"></span>
+        </div>
+    </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,349 @@
+{
+  "dailyTaskConfigs": [
+    {
+      "taskId": 1,
+      "description": "dailyTask-1;直播间内发布1条公聊",
+      "condition": {
+        "conditionType": "publicChat",
+        "amount": 1
+      },
+      "reward": [
+        {
+          "rewardType": 1,
+          "amount": 2
+        }
+      ],
+      "jumpTarget": 1
+    },
+    {
+      "taskId": 2,
+      "description": "dailyTask-2;累计观看10min",
+      "condition": {
+        "conditionType": "watchLive",
+        "amount": 10
+      },
+      "reward": [
+        {
+          "rewardType": 1,
+          "amount": 3
+        }
+      ],
+      "jumpTarget": 1
+    },
+    {
+      "taskId": 3,
+      "description": "dailyTask-3;点赞3条动态",
+      "condition": {
+        "conditionType": "like",
+        "amount": 3
+      },
+      "reward": [
+        {
+          "rewardType": 1,
+          "amount": 5
+        }
+      ],
+      "jumpTarget": 2
+    },
+    {
+      "taskId": 4,
+      "description": "dailyTask-4;观看直播时成功打赏喜欢的主播",
+      "condition": {
+        "conditionType": "tip",
+        "amount": 1
+      },
+      "reward": [
+        {
+          "rewardType": 1,
+          "amount": 10
+        }
+      ],
+      "jumpTarget": 1
+    },
+    {
+      "taskId": 5,
+      "description": "dailyTask-5;私信主播",
+      "condition": {
+        "conditionType": "privateChatLive",
+        "amount": 1
+      },
+      "reward": [
+        {
+          "rewardType": 1,
+          "amount": 1
+        }
+      ],
+      "jumpTarget": 1
+    }
+  ],
+  "signInTaskConfigs": [
+    {
+      "taskId": 1,
+      "reward": [
+        {
+          "rewardType": 1,
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "taskId": 2,
+      "reward": [
+        {
+          "rewardType": 1,
+          "amount": 2
+        }
+      ]
+    },
+    {
+      "taskId": 3,
+      "reward": [
+        {
+          "rewardType": 1,
+          "amount": 2
+        }
+      ]
+    },
+    {
+      "taskId": 4,
+      "reward": [
+        {
+          "rewardType": 1,
+          "amount": 2
+        }
+      ]
+    },
+    {
+      "taskId": 5,
+      "reward": [
+        {
+          "rewardType": 1,
+          "amount": 3
+        }
+      ]
+    },
+    {
+      "taskId": 6,
+      "reward": [
+        {
+          "rewardType": 1,
+          "amount": 3
+        }
+      ]
+    },
+    {
+      "taskId": 7,
+      "reward": [
+        {
+          "rewardType": 1,
+          "amount": 4
+        }
+      ]
+    }
+  ],
+  "permanentTaskConfigs": [
+    {
+      "taskId": 1,
+      "description": "perTask-1;绑定手机账号",
+      "condition": {
+        "conditionType": "bindPhone",
+        "amount": 1
+      },
+      "reward": [
+        {
+          "rewardType": 1,
+          "amount": 2
+        },
+        {
+          "rewardType": 2,
+          "amount": 2
+        }
+      ],
+      "jumpTarget": 3
+    },
+    {
+      "taskId": 2,
+      "description": "perTask-2;关注1位你喜欢的主播并观看1min",
+      "condition": {
+        "conditionType": "followAndWatchLive",
+        "amount": 10
+      },
+      "reward": [
+        {
+          "rewardType": 1,
+          "amount": 3
+        },
+        {
+          "rewardType": 2,
+          "amount": 10
+        }
+      ],
+      "jumpTarget": 1
+    },
+    {
+      "taskId": 3,
+      "description": "perTask-3;完善资料上传用户头像",
+      "condition": {
+        "conditionType": "uploadAvatar",
+        "amount": 1
+      },
+      "reward": [
+        {
+          "rewardType": 1,
+          "amount": 1
+        },
+        {
+          "rewardType": 2,
+          "amount": 10
+        }
+      ],
+      "jumpTarget": 7
+    },
+    {
+      "taskId": 4,
+      "description": "perTask-4;完善资料填写用户姓名",
+      "condition": {
+        "conditionType": "changeName",
+        "amount": 1
+      },
+      "reward": [
+        {
+          "rewardType": 1,
+          "amount": 2
+        },
+        {
+          "rewardType": 2,
+          "amount": 15
+        }
+      ],
+      "jumpTarget": 8
+    },
+    {
+      "taskId": 5,
+      "description": "perTask-5;完成首充",
+      "condition": {
+        "conditionType": "charge",
+        "amount": 1
+      },
+      "reward": [
+        {
+          "rewardType": 1,
+          "amount": 10
+        }
+      ],
+      "jumpTarget": 5
+    },
+    {
+      "taskId": 6,
+      "description": "perTask-6;实名认证，申请主播提交资料",
+      "condition": {
+        "conditionType": "submitLiveUserRequest",
+        "amount": 1
+      },
+      "reward": [
+        {
+          "rewardType": 1,
+          "amount": 10
+        }
+      ],
+      "jumpTarget": 6
+    },
+    {
+      "taskId": 7,
+      "description": "perTask-7;成为主播",
+      "condition": {
+        "conditionType": "becomeLiveUser",
+        "amount": 1
+      },
+      "reward": [
+        {
+          "rewardType": 1,
+          "amount": 20
+        }
+      ],
+      "jumpTarget": 6
+    },
+    {
+      "taskId": 8,
+      "description": "perTask-8;与主播成功进行连麦",
+      "condition": {
+        "conditionType": "coopLive",
+        "amount": 1
+      },
+      "reward": [
+        {
+          "rewardType": 1,
+          "amount": 5
+        }
+      ],
+      "jumpTarget": 1
+    },
+    {
+      "taskId": 9,
+      "description": "perTask-9;开播10min",
+      "condition": {
+        "conditionType": "onLive",
+        "amount": 10
+      },
+      "reward": [
+        {
+          "rewardType": 3,
+          "amount": 1
+        }
+      ],
+      "jumpTarget": 6
+    },
+    {
+      "taskId": 10,
+      "description": "perTask-10;投注100金币",
+      "condition": {
+        "conditionType": "bet",
+        "amount": 100
+      },
+      "reward": [
+        {
+          "rewardType": 1,
+          "amount": 5
+        }
+      ],
+      "jumpTarget": 1
+    },
+    {
+      "taskId": 11,
+      "description": "perTask-11;赠送礼物总价值2000金",
+      "condition": {
+        "conditionType": "sendGift",
+        "amount": 2000
+      },
+      "reward": [
+        {
+          "rewardType": 3,
+          "amount": 5
+        }
+      ],
+      "jumpTarget": 1
+    },
+    {
+      "taskId": 12,
+      "description": "perTask-12;完成所有新手任务",
+      "condition": {
+        "conditionType": "finishPermanentTask",
+        "amount": 11
+      },
+      "reward": [
+        {
+          "rewardType": 1,
+          "amount": 20
+        },
+        {
+          "rewardType": 2,
+          "amount": 500
+        },
+        {
+          "rewardType": 3,
+          "amount": 10
+        }
+      ]
+    }
+  ]
+}

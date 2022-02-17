@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/config/static/layui/css/layui.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/mainCss.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/InputAnimation.css}">
+    <script type="text/javascript" th:src="@{/config/static/js/jq.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/layui/layui.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/js/config.js}"></script>
+    <style type="text/css">
+        .titleMsg>h2,.titleMsg>div{
+            float: left;
+        }
+        .titleMsg>div{
+            margin-top: 38px;
+        }
+        .formStyle{
+            background-color: #fff;
+            padding: 10px 30px;
+            margin-top: 30px!important;
+        }
+        .formStyle>div>div>div{
+            line-height: 36px;
+        }
+        .firstEle{
+            margin-left: 20px;
+        }
+        .imgBox{
+            overflow: hidden;
+            padding: 20px;
+        }
+        #loadHtml{
+            padding: 0 30px;
+        }
+        .imgBox>div{
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            float: left;
+            margin-left: 30px;
+            margin-bottom: 30px;
+        }
+        .layui-layer-dialog{
+            width:auto!important;
+        }
+        @media screen and (max-width: 1000px) {
+            .firstEle{
+                margin-left: 0;
+            }
+        }
+        .layui-form-pane .layui-form-radio,.layui-form-pane{
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="bgcSidebar"></div>
+<div class="container app">
+    <header>
+        <!--头部导航-->
+        <ul class="layui-nav overStyle" lay-filter="">
+            <li class="logoOver"><div class="logoBox"><img class="logo" th:src="@{/config/static/img/default_logo.png}"></div><div class="logoText">锦鲤直播</div></li>
+            <!--<li class="layui-nav-item toItemChange" data-path="index"><a href="javascript:void(0);" >首页</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="LiveUserExamine"><a href="javascript:void(0);" >主播管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="reportList"><a href="javascript:void(0);" >举报管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="personDiaryList"><a href="javascript:void(0);">动态审核</a></li>-->
+            <!--<li class="layui-nav-item layui-this toItemChange" data-path="guessList"><a href="javascript:void(0);">竞猜管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="backOfficeManagement"><a href="javascript:void(0);">后台账号管理</a></li>-->
+            <li class="userMsg">
+                <div>
+                    <span>欢迎您：</span>
+                    <span id="loginName">admin</span>
+                </div>
+                <div>
+                    <a href="/logout"><button class="layui-btn layui-btn-danger" id="logout" >退出</button></a>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <main class="mainStyle">
+        <!--侧边栏-->
+        <div class="sidebar">
+            <div>
+                <ul class="layui-nav layui-nav-tree overStyle leftSide" id="sidebar" lay-filter="test">
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="guessList" href="javascript:void(0);">竞猜展示列表</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="guessNotStart" href="javascript:void(0);">尚未开始</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="guessShowOver" href="javascript:void(0);">展示已结束</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="guessWagerOver" href="javascript:void(0);">投注已结束</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="guessWaitPrize" href="javascript:void(0);">待开奖</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="guessStatistics" href="javascript:void(0);">数据统计</a></li>-->
+                </ul>
+                <div class="mainBox clearfix" id="loadHtml">
+                    <div class="titleMsg clearfix">
+                        <div>
+                            <button type="button" class="layui-btn layui-btn-primary" onclick="window.history.back(-1)">
+                                <i class="layui-icon">&#xe603;</i>
+                            </button>
+                        </div>
+                        <h2 class="headMsg">竞猜开奖</h2>
+                    </div>
+                    <div>
+                        <div>
+                            <form class="layui-form layui-form-pane formStyle" action="">
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">竞猜标题</label>
+                                    <div class="layui-input-block layui-row">
+                                        <div class="layui-col-md3 firstEle" id="title"></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">投注统计</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="firstEle">投注总订单数：<span id="total"></span>单，总金额：<span id="totalCoin"></span>金币<button class="layui-btn layui-btn-normal layui-btn-sm" type="button" style="margin-left: 30px;" id="details">查看投注详情</button></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">竞猜状态</label>
+                                    <div class="layui-input-block layui-row" >
+                                        <div class="layui-col-md3 firstEle">客户端是否展示：<span id="isShow">展示已经结束</span></div>
+                                        <div class="layui-col-md3 firstEle">下注是否结束：<span id="state">下注已经结束</span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">当前收益</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="firstEle"><span id="profit">191919</span>金币</div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">选项下单</label>
+                                    <div class="layui-input-block" id="radioBox">
+                                        <div>
+                                            <span>选项一：</span><span>包含选项订单：</span><span>121</span><span>个，</span><span>选项下注金额：</span><span>54454545</span><span>金币</span>
+                                        </div>
+                                        <div>
+                                            <span>选项一：</span><span>包含选项订单：</span><span>121</span><span>个，</span><span>选项下注金额：</span><span>54454545</span><span>金币</span>
+                                        </div>
+                                        <div>
+                                            <span>选项一：</span><span>包含选项订单：</span><span>121</span><span>个，</span><span>选项下注金额：</span><span>54454545</span><span>金币</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="confirmBtnBox">
+
+                                </div>
+                                <button class="layui-btn layui-btn-normal" type="button" onclick="window.history.back(-1)">返回</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="mtBox"></div>
+                </div>
+                <div class="clearFloat"></div>
+            </div>
+        </div>
+    </main>
+</div>
+<script type="text/javascript" th:src="@{/config/static/js/mainMethod.js}"></script>
+<script th:inline="javascript">
+
+    layui.use('element', function(){
+        var element = layui.element;
+    });
+    layui.use('form', function() {
+        var form = layui.form;
+    });
+    var data = [[${guessMsg}]];
+    console.log(data);
+    initData(data);
+    function initData(data) {
+        $("#title").html(data.title);
+        $("#total").html(data.total);
+        $("#totalCoin").html(data.totalCoin);
+        switch (data.isShow) {
+            case "SHOW":
+                data.isShow = "展示中";
+                break;
+            case "INVISIBLE":
+                data.isShow = "未展示";
+                break
+        }
+        switch (data.state) {
+            case "WAGER":
+                data.state = "下注中";
+                break;
+            case "WAGER_OVER":
+                data.state = "停止下注";
+                break;
+            case "LOTTERY":
+                data.state = "已开奖";
+                break
+        }
+        $("#state").html(data.state);
+        $("#isShow").html(data.isShow);
+        $("#profit").html(Math.floor(data.totalCoin*0.1));
+        $("#radioBox").get(0).innerHTML = "";
+        for(var i =0;i<data.itemList.length;i++){
+                $("#radioBox").get(0).innerHTML += '<div>' +
+                    '<span style="margin-left: 30px">'+data.itemList[i].optionContent+'：</span><span>包含选项订单：</span><span>'+data.itemList[i].totalPeople+'</span><span>个，</span><span>选项下注金额：</span><span>'+data.itemList[i].totalCoin+'</span><span>金币</span>' +
+                    '</div>'
+        }
+    }
+    //
+    // $("#upData").on("click",function () {
+    //     layer.confirm('确认开奖吗？',{
+    //         btn: ['确认', '取消'] ,
+    //         area: ['500px']
+    //     },function (index) {
+    //         var RejectionReasons = $("#rejectValue").val();
+    //         $.get({
+    //             url:"/bo/admin/guess/drawPrize",
+    //             data:{
+    //                 guessId:data.id,
+    //                 win:win
+    //             },
+    //             success:function(res){
+    //                 window.history.back(-1)
+    //             }
+    //         })
+    //     });
+    // })
+    $("#details").on("click",function () {
+        jumpDetailsUrl("guessWagerDetailsList","id",data.id)
+    })
+</script>
+</body>
+</html>

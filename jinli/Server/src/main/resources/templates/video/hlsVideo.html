@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://imgcache.qq.com/open/qcloud/video/vcplayer/TcPlayer-2.3.3.js" charset="utf-8"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="id_test_video" style="width:100%; height:auto;"></div>
+    <script src="../../../../../config/static/webSrc/jq.js"></script>
+    <script>
+        var player
+        var msg
+        var isLive = false
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);  //获取url中"?"符后的字符串并正则匹配
+            var context = "";
+            if (r != null)
+                context = r[2];
+            reg = null;
+            r = null;
+            return context == null || context == "" || context == "undefined" ? "" : context;
+        }
+        openLive()
+
+        window.onresize = function () {
+            reAdaptation()
+        };
+
+        function reAdaptation() {
+            if(isLive){
+                if(typeof player !== "undefined"){
+                    player.destroy();
+                }
+                createLive(getWaH().h,getWaH().w)
+            }
+        }
+
+
+        function openLive() {
+            $.get({
+                url:"/share/getLiveUrl",
+                data:{
+                    userId:GetQueryString("userId")
+                },
+                success:function (res) {
+                    msg = res
+                }
+            })
+        }
+        var isPlaybackRate = true;
+        function createLive(h,w){
+            player = new TcPlayer('id_test_video', {
+                "m3u8": msg.m3u8,
+                "live":true,
+                "controls":"none",
+                // "poster" : "http://www.test.com/myimage.jpg",
+                "width" :  w,//视频的显示宽度，请尽量使用视频分辨率宽度
+                "height" : h,//视频的显示高度，请尽量使用视频分辨率高度,
+                "listener":function (msg) {
+                    var vid = document.getElementsByTagName("video")[0];
+                    try{
+                        var bf = document.getElementsByTagName("video")[0].buffered.end(0)-document.getElementsByTagName("video")[0].currentTime;
+                        if(bf  > 3){
+                            console.log("缓冲区富裕");
+                            vid.playbackRate = 1.25;
+                            isPlaybackRate=false
+                        }
+                        if(bf <=1.5){
+                            vid.playbackRate = 1;
+                            isPlaybackRate=true
+                        }
+                    }catch (e) {
+                    }
+                    vid.onwaiting = function()
+                    {
+                        console.log("监听到缓冲");
+                        if(isPlaybackRate){
+                            vid.playbackRate = 1.25;
+                            isPlaybackRate=false
+                        }
+                    };
+                    try{
+                        player.play()
+                    }catch (e) {
+                        
+                    }
+                }
+            });
+            addEvent()
+        }
+        function addEvent() {
+            document.getElementsByTagName("video")[0].addEventListener('play',    () => {
+                console.log("开始播放");
+                top.postMessage({
+                    playing:true,
+                    msg:"It's playing",
+                },'*');
+            })
+            try {
+                player.play()
+            }catch (e) {
+
+            }
+        }
+
+        function getWaH() {
+            var Width = window.innerWidth//浏览器窗口的内部宽度（包括滚动条）
+
+                || document.documentElement.clientWidth
+
+                || document.body.clientWidth;
+
+            var Height = window.innerHeight//浏览器窗口的内部高度（包括滚动条）
+
+                || document.documentElement.clientWidth
+
+                || document.body.clientHeight;
+            return{
+                w : Width,
+                h : Height
+            }
+        }
+
+        document.onmousedown=function(event) {
+            console.log("点击");
+            isLive = true
+            reAdaptation()
+        }
+
+        window.addEventListener('message',function(event){
+            console.log(event);
+            if(event.data.play){
+                top.postMessage({
+                    playing:false,
+                    msg:"Start rendering video components"
+                },'*');
+                isLive = true;
+                reAdaptation()
+            }
+        })
+    </script>
+</body>
+</html>

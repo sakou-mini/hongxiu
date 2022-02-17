@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #bfbfbf;
+    height: 100%;
+}
+.overStyle{
+    border-radius: 0;
+}
+.userMsg{
+    height: 60px;
+    float: right;
+    display:flex!important;
+
+}
+.layui-nav{
+    padding: 0;
+}
+
+.mainStyle{
+    width: 100%;
+}
+.logoOver{
+    width: 200px;
+    float: left;
+    text-align: center;
+    line-height: 60px;
+    overflow: hidden;
+}
+.logoOver>div{
+    float: left;
+    text-align: center;
+    line-height: 60px;
+}
+.logoOver>a{
+    color: #dadada;
+    font-size: 24px;
+    overflow: hidden;
+}
+
+@media screen and (min-width:0\0) and (min-resolution: .001dpcm) {
+    .userMsg>div:nth-child(1){
+        display: none;
+    }
+    .userMsg>div:nth-child(2){
+        margin-top: 10px;
+    }
+}
+.mainBox{
+    margin-left: calc(100% / 8.3);
+    margin-top: 50px;
+}
+.clearFloat{
+    clear: both;
+}
+.layui-table-view{
+    background-color: #fff;
+}
+#sidebar{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 999999;
+    width: calc(100% / 9.6);
+}
+#loadHtml{
+    width: 85%;
+    height: 100%;
+    background-color: #e2e2e2;
+}
+.headMsg{
+    color: black;
+}
+.bgcSidebar{
+    width: calc(100% / 9.6);
+    height: 100vh;
+    background-color: #393D49;
+    position: fixed;
+    left: 0;
+    z-index: -10;
+}
+tbody .layui-table-cell{
+    height: auto;
+}
+.leftSide{
+    position: absolute;
+}
+.mtBox{
+    height: 50px;
+}
+@media screen and (max-width: 1350px) {
+    .userMsg>div:nth-child(1){
+        display: none;
+    }
+}
+@media screen and (max-width: 1220px) {
+    .userMsg>div:nth-child(2){
+        display: none;
+    }
+}
+@media screen and (max-width: 1080px) {
+    .logoOver{
+        display: none;
+    }
+
+    .leftSide{
+        position: absolute!important;
+        left: -200px!important;
+    }
+    .bgcSidebar{
+        position: absolute;
+        left: -200px;
+    }
+    .mainBox{
+        margin-left: 50px;
+        margin-top: 30px;
+    }
+}
+@media screen and (min-width:0\0) and (min-resolution: .001dpcm) {
+    .userMsg>div{
+        width: 150px;
+        float: left;
+    }
+    .userMsg{
+        width: 250px;
+    }
+}
+.userMsg>div{
+    color: #dadada;
+    font-size: 24px;
+    font-weight: 700;
+    margin-right: 30px;
+    align-self: center;
+    line-height: 28px;
+}
+.userMsg>div:nth-child(2){
+    margin-right: 100px;
+}
+
+.clearfix:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear:both;
+    visibility: hidden;
+}
+.clearfix{
+    *zoom: 1;
+}
+.headMsg{
+    padding-top: 40px;
+    margin-left: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+.tabBox{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.headMsg{
+    padding-top: 40px;
+    margin-left: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+.errInput{
+    border-color:rgba(255, 0, 0, 0);
+    box-shadow:0px 0px 5px rgba(255, 0, 0, 0.51);
+}
+
+.logo{
+    height: 2.5rem;
+}
+.logoText{
+    margin-left: 10px;
+    font-size: 1rem;
+}
+.logoBox{
+    margin-left: 5px;
+}
+
+.sidebarChildStyle{
+    padding: 0 40px!important;
+}
+
+.layui-laypage-count{
+    background-color: rgba(255, 255, 255, 0)!important;
+}
+.layui-laypage-skip{
+    background-color: rgba(255, 255, 255, 0)!important;
+}

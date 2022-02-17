@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/config/static/layui/css/layui.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/mainCss.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/userDetails.css}">
+    <script type="text/javascript" th:src="@{/config/static/js/jq.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/layui/layui.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/js/config.js}"></script>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<div class="bgcSidebar"></div>
+<div class="container app">
+    <header>
+        <!--头部导航-->
+        <ul class="layui-nav overStyle" lay-filter="">
+            <li class="logoOver"><div class="logoBox"><img class="logo" th:src="@{/config/static/img/default_logo.png}"></div><div class="logoText">锦鲤直播</div></li>
+            <!--<li class="layui-nav-item toItemChange" data-path="index"><a href="javascript:void(0);" >首页</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="LiveUserExamine"><a href="javascript:void(0);" >主播管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="reportList"><a href="javascript:void(0);" >举报管理</a></li>-->
+            <!--<li class="layui-nav-item layui-this  toItemChange" data-path="personDiaryList"><a href="javascript:void(0);">动态审核</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="guessList"><a href="javascript:void(0);">竞猜管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="backOfficeManagement"><a href="javascript:void(0);">后台账号管理</a></li>-->
+            <li class="userMsg">
+                <div>
+                    <span>欢迎您：</span>
+                    <span id="loginName">admin</span>
+                </div>
+                <div>
+                    <a href="/logout"><button class="layui-btn layui-btn-danger" id="logout" >退出</button></a>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <main class="mainStyle">
+        <!--侧边栏-->
+        <div class="sidebar">
+            <div>
+                <ul class="layui-nav layui-nav-tree overStyle leftSide" id="sidebar" lay-filter="test">
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="personDiaryList" href="javascript:void(0);">动态审核列表</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="personDiaryReject" href="javascript:void(0);">未通过列表</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="personDiaryApproved" href="javascript:void(0);">通过列表</a></li>-->
+                </ul>
+                <div class="mainBox clearfix" id="loadHtml">
+                    <div class="titleMsg clearfix">
+                        <div>
+                            <button type="button" class="layui-btn layui-btn-primary" onclick="window.history.back(-1)">
+                                <i class="layui-icon">&#xe603;</i>
+                            </button>
+                        </div>
+                        <h2 class="headMsg">用户详细信息</h2>
+                    </div>
+                    <div>
+                        <div>
+                            <form class="layui-form layui-form-pane formStyle" action="">
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">账户信息</label>
+                                    <div class="layui-input-block layui-row">
+                                        <div class="layui-col-md3 firstEle">用户头像：<span id="avatarUrl" style="line-height: 60px"></span></div>
+                                        <div class="layui-col-md3">用户ID：<span style="line-height: 60px"  id="id"></span></div>
+                                        <div class="layui-col-md3">用户昵称：<span style="line-height: 60px" id="displayName"></span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">基础信息</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">等级：<span id="level"></span></div>
+                                        <div class="layui-col-md3">手机号：<span id="phoneNumber"></span></div>
+                                        <div class="layui-col-md3">贵族等级：<span id="vipType"></span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">金币信息</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">余额：<span id="gameCoin"></span></div>
+                                        <div class="layui-col-md3">总流水：<span id="coinFlow"></span></div>
+                                        <div class="layui-col-md3">礼物消费金额：<span id="giftSpendAmount"></span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">主播信息</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">是否主播：<span id="isLiveUser"></span></div>
+                                        <div class="layui-col-md3">直播平台：<span id="platform"></span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">充值信息</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">累计充值：<span id="recharge"></span></div>
+                                        <div class="layui-col-md3">累计消费：<span id="not2">0</span></div>
+                                        <div class="layui-col-md3">累计提现：<span id="not3">0</span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">登录信息</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">上次登录时间：<span id="lastLoginTime"></span></div>
+                                        <div class="layui-col-md3">上次登录设备：<span id="lastMobileModel"></span></div>
+                                        <div class="layui-col-md3">上次登录IP：<span id="lastIp"></span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">用户状态</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">注册时间：<span id="createDate"></span></div>
+                                        <div class="layui-col-md3">当前状态：<span id="online"></span></div>
+                                        <div class="layui-col-md3">邀请码：<span id="inviteCode"></span></div>
+                                    </div>
+                                </div>
+                                <div id="confirmBtnBox">
+                                    <button class="layui-btn layui-btn-normal" type="button" id="liveUserDetailInfo">主播详情</button>
+                                    <button type="button" id="clickCoin" class="layui-btn">修改金币</button>
+                                    <button class="layui-btn layui-btn-danger" type="button" id="banUser"></button>
+                                    <button class="layui-btn layui-btn-normal" type="button" id="toLiveUser">成为主播</button>
+                                    <button class="layui-btn layui-btn-normal" type="button" id="changePassword">修改密码</button>
+                                    <button type="button" id="back" class="layui-btn layui-btn-primary">返回列表</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="mtBox"></div>
+
+                    <!--用户观看记录列表-->
+                    <div>
+                        <div>
+                            <form class="layui-form clearfix">
+                                <div class="selectDate" style="margin-left: 30px;">
+                                    <div>起始日期：</div>
+                                    <div><input type="text" class="layui-input" id="test1" readonly style="width: 150px"></div>
+                                    <div>&nbsp;&nbsp;-&nbsp;&nbsp;</div>
+                                    <div><input type="text" class="layui-input" id="test2" readonly style="width: 150px"></div>
+                                </div>
+                                <div  class="FormItem">
+                                    <button class="layui-btn" id="searchBtn" type="button">搜索</button>
+                                    <button class="layui-btn layui-btn-primary" type="button" id="resetBtn">重置</button>
+                                    <button class="layui-btn layui-btn-normal" type="button" id="excel">导出excel</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tabBox">
+                            <table id="demo" lay-filter="demo"></table>
+                            <div id="paging"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearFloat"></div>
+            </div>
+        </div>
+    </main>
+</div>
+<div class="msgBox msgHidden" id="msgBox">
+    <div class="layui-row msgHead">
+        <div class="layui-col-md10  layui-col-md-offset1">正在修改：<span id="userName"></span>的金币</div>
+        <div class="layui-col-md1">
+            <i class="layui-icon layui-icon-close msgClose" style=" font-size: 20px;"></i>
+        </div>
+    </div>
+    <div class="layui-row msgBody">
+        <div class="layui-col-md10 layui-col-md-offset1 msgSection">
+            <div class="layui-row">
+                <div class="layui-col-md3">
+                    持有金币：
+                </div>
+                <div class="layui-col-md9">
+                    <span id="nowGameCoin"></span>金币
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md10 layui-col-md-offset1 msgSection">
+            <div class="layui-row">
+                <div class="layui-col-md3">
+                    操作金额：
+                </div>
+                <div class="layui-col-md9">
+                    <input type="text" name="" id="coin" placeholder="输入金额" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md10 layui-col-md-offset1 msgSection">
+            <div class="layui-row layui-col-space10">
+                <div class="layui-col-md2 layui-col-md-offset6">
+                    <button class="layui-btn" id="grant" data-id="" data-gameCoin="">添加</button>
+                </div>
+                <div class="layui-col-md2">
+                    <button class="layui-btn layui-btn-warm" id="deduction">扣除</button>
+                </div>
+                <div class="layui-col-md2">
+                    <button class="layui-btn layui-btn-normal msgClose">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form class="layui-form" id="gag" style="display:none;padding-left:100px;" >
+    <div class="layui-form-item">
+
+    </div>
+    <div class="selectType layui-input-block">
+        <div>直播平台：</div>
+        <div>
+            <select style="width: 200px"  name="city" lay-verify="required" class="selectStyle" id="violationType">
+                <option value="1">锦鲤平台</option>
+                <option value="2">T平台</option>
+                <option value="3">Q平台</option>
+            </select>
+        </div>
+    </div>
+    <div class="selectType layui-input-block">
+        <div>联系方式：</div>
+        <div>
+            <input style="width: 210px;" type="text" name="title" id="phone" lay-verify="title" autocomplete="off" placeholder="请输入用户联系方式" class="layui-input">
+        </div>
+    </div>
+</form>
+<script type="text/javascript" th:src="@{/config/static/js/xlsx.core.min.js}"></script>
+<script type="text/javascript" th:src="@{/config/static/js/mainMethod.js}"></script>
+<script th:inline="javascript">
+    $("#back").on("click",function () {
+        history.back(-1)
+    });
+    var user = [[${data}]];
+    displayRoleElement(["OPERATIONUSERCOIN","BANUSERLISTOPERATIONUSERCOIN"],"clickCoin")
+    displayRoleElement(["BANUSER","BANUSERLISTBANUSER"],"banUser")
+    displayRoleElement(["BECOMELIVEUSER","BANUSERLISTBECOMELIVEUSER"],"toLiveUser")
+    displayRoleElement(["CHANGEPASSWORD","BANUSERLISTCHANGEPASSWORD"],"changePassword")
+
+
+
+
+    layui.use('form', function(){
+        var form = layui.form;
+        form.on('submit(formDemo)', function(data){
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+        form.on('select(handle)', function(data){
+            handle = data.value;
+            console.log(handle);
+            if(handle === "0"){
+                isHandle = false
+            }
+            else {
+                isHandle = true
+            }
+        });
+    });
+
+
+    if(user.LiveUser){
+        $("#toLiveUser").attr("style","display:none");
+    }else {
+        $("#liveUserDetailInfo").attr("style","display:none")
+    }
+    $("#liveUserDetailInfo").on("click",function () {
+        jumpDetailsUrl("liveUserDetailInfo","liveUserId",user.liveUserId)
+    });
+    var uF = [];
+    console.log(user);
+    uF.push(user);
+
+    user = userFilter(uF)[0];
+    var userBanControl;
+    if(user.accountStatue === "ACCOUNT_NORMAL"){
+        $("#banUser").text("拉黑用户");
+        userBanControl = 0
+    }else {
+        $("#banUser").text("解封用户");
+        $("#banUser").attr("class","layui-btn");
+        userBanControl = 1;
+    }
+    if(user.avatarUrl === null){
+        user.avatarUrl =window.config.imgUrl+"/images/avatar/default/img_avatar.png"
+    }else {
+        user.avatarUrl = window.config.imgUrl+user.avatarUrl
+    }
+    $("#displayName").text(user.displayName);
+    $("#id").text(user.id);
+    $("#level").text(user.level);
+    $("#phoneNumber").text(user.phoneNumber);
+    $("#vipType").text(user.vipType);
+    $("#gameCoin").text(user.gameCoin);
+    $("#coinFlow").text(user.coinFlow);
+    $("#recharge").text(user.recharge);
+    $("#lastLoginTime").text(user.lastLoginTime);
+    $("#lastMobileModel").text(user.lastMobileModel);
+    $("#lastIp").text(user.lastIp);
+    $("#createDate").text(user.createDate);
+    $("#online").text(user.online);
+    $("#avatarUrl").get(0).innerHTML = "<img id='userHeadImg' style='width: 40px;height: 40px;' src='"+user.avatarUrl+"'>";
+    $("#isLiveUser").text(user.LiveUser);
+    $("#giftSpendAmount").text(user.giftSpendAmount)
+
+    if(!user.LiveUser){
+        if(user.platform==="PLATFORM_JINLI"){
+            $("#platform").text("锦鲤平台");
+        }else {
+            $("#platform").text("T平台");
+        }
+    }else {
+        $("#platform").text("锦鲤平台");
+    }
+
+    $("#inviteCode").text(user.inviteCode);
+
+$("#userHeadImg").on("click",function () {
+    var imgSrc = this.src;
+    layer.open({
+        title: '查看图片详情'
+        ,content: "<img src='"+imgSrc+"' style='height: 80vh'>",
+        offset: '30px'
+    });
+});
+
+$("#clickCoin").on("click",function (){
+    $("#userName").text(user.displayName);
+    $("#nowGameCoin").text(user.gameCoin);
+    var grant=$("#grant");
+    grant.attr("data-id",user.id);
+    grant.attr("data-gameCoin",user.gameCoin);
+    var deduction=$("#deduction");
+    deduction.attr("data-id",user.id);
+    deduction.attr("data-gameCoin",user.gameCoin);
+    openMsg();
+});
+
+    function openMsg() {
+        $("#msgBox").attr("class","msgBox");
+    }
+    function closeMsg() {
+        $("#msgBox").attr("class","msgBox msgHidden");
+    }
+
+    $(".msgClose").on("click",function () {
+        closeMsg();
+    });
+    $("#grant").on("click",function () {
+        var userId = this.getAttribute("data-id");
+        var userCoin = this.getAttribute("data-gameCoin");
+        var gameCoin = $("#coin").val();
+        operationCoin(userId,parseInt(userCoin),parseInt(gameCoin),1);
+    });
+    $("#deduction").on("click",function () {
+        var userId = this.getAttribute("data-id");
+        var userCoin = this.getAttribute("data-gameCoin");
+        var gameCoin = $("#coin").val();
+        operationCoin(userId,parseInt(userCoin),parseInt(gameCoin),2);
+    });
+
+    var phoneReg = /^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}$/
+    $("#phone").on("input",function () {
+        if($("#phone").val().length>=11){
+            if(!phoneReg.test($("#phone").val())){
+                $("#phone").attr("style","width: 210px;box-shadow: 0 0 10px red;")
+            }else {
+                $("#phone").attr("style","width: 210px;")
+            }
+        }
+    })
+
+    function operationCoin(userId,userCoin,gameCoin,operationType) {
+        if(userCoin<gameCoin && operationType===2){
+            layer.msg('扣除金额不得大于玩家持有金额');
+        }
+        else {
+            $.get({
+                url:window.ioApi.user.operationUserCoin,
+                data:{
+                    userId:userId,
+                    gameCoin:parseInt(gameCoin),
+                    operationType:operationType
+                },
+                success:function (res) {
+                    console.log(res);
+                    $("#coin").val("");
+                    if(res==="beyond"){
+                        layer.msg('扣除金额不得大于玩家持有金额');
+                    }else {
+                        layer.msg('操作成功');
+                        closeMsg();
+                        history.go(0)
+                    }
+                }
+            })
+        }
+    }
+    $("#toLiveUser").on("click",function () {
+        layer.open({
+            type:1,
+            area:['600px',"300px"],
+            title: '成为主播'
+            ,content: $("#gag"),
+            shade: 0,
+            btn: ['提交']
+            ,btn1: function(index, layero){
+                $.get({
+                    url:window.ioApi.liveUser.becomeLiveUser,
+                    data:{
+                        id:user.id,
+                        phone:$("#phone").val(),
+                        platform:parseInt($("#violationType").val())
+                    },
+                    success:function (res) {
+                        console.log(res);
+                        layer.closeAll();
+                        layer.open({
+                            title: '提示'
+                            ,content: '提交成功',
+                            btn: ['确定']
+                            ,btn1: function(index, layero){
+                                location.reload()
+                                $("#phone").attr("style","width: 210px;")
+                            },
+                            cancel: function(layero,index){
+                                layer.closeAll();
+                                $("#phone").attr("style","width: 210px;")
+                            }
+                        });
+                    }
+                })
+            },
+            cancel: function(layero,index){
+                layer.closeAll();
+            }
+
+        });
+
+    })
+    $("#banUser").on("click",function () {
+        var arr = [];
+        arr.push(user.id);
+        var tips
+        if(userBanControl === 0){
+            tips = "确认拉黑用户吗？"
+        }else {
+            tips = "确认解封用户吗？"
+        }
+        layer.open({
+            content: tips
+            ,btn: ['确认', '取消']
+            ,yes: function(index, layero){
+                if(userBanControl === 0){
+                    $.post({
+                        url:window.ioApi.user.banUser,
+                        data:JSON.stringify(arr),//传的是json数据
+                        contentType: "application/json; charset=utf-8",//告知接收spring，接收json数据并转换
+                        dataType:'json',
+                        success:function (res) {
+                            console.log(res);
+                            layer.closeAll();
+                            layer.open({
+                                title: '提示'
+                                ,content: '提交成功',
+                                btn: ['确定']
+                                ,btn1: function(index, layero){
+                                    location.reload()
+                                },
+                                cancel: function(layero,index){
+                                    layer.closeAll();
+                                }
+                            });
+                        }
+                    })
+                }
+                else {
+                    $.post({
+                        url:window.ioApi.user.unsealedUser,
+                        data:JSON.stringify(arr),//传的是json数据
+                        contentType: "application/json; charset=utf-8",//告知接收spring，接收json数据并转换
+                        dataType:'json',
+                        success:function (res) {
+                            console.log(res);
+                            layer.closeAll();
+                            layer.open({
+                                title: '提示'
+                                ,content: '提交成功',
+                                btn: ['确定']
+                                ,btn1: function(index, layero){
+                                    location.reload()
+                                },
+                                cancel: function(layero,index){
+                                    layer.closeAll();
+                                }
+                            });
+                        }
+                    })
+                }
+            }
+            ,btn3: function(index, layero){
+
+            }
+            ,cancel: function(){
+
+            }
+        });
+    });
+    
+    $("#changePassword").on("click",function () {
+        var pwdFlag = false;
+        var qpwdFlag = false;
+        $("#pwd").on("keyup",function () {
+            if($("#pwd").val() === $("#qpwd").val()){
+                $("#qpwd").attr("style","width: 200px;");
+                $("#qpwdErrMsg").text("");
+                qpwdFlag = true
+            }
+            if($("#qpwd").val() !== "" && ($("#pwd").val() !== $("#qpwd").val())){
+                $("#qpwd").attr("style","box-shadow: 0 0 10px #ff0000;width: 200px;");
+                $("#qpwdErrMsg").text("两次密码不一致");
+                qpwdFlag = false
+            }
+            if($("#pwd").val().length < 6){
+                $("#pwd").attr("style","box-shadow: 0 0 10px #ff0000;width: 200px;");
+                $("#pwdErrMsg").text("密码长度大于6");
+                pwdFlag = false
+            }else {
+                $("#pwd").attr("style",";width: 200px;");
+                $("#pwdErrMsg").text("");
+                pwdFlag = true
+            }
+        });
+
+        $("#qpwd").focus(function(){
+            document.onkeyup = function () {
+                if(($("#pwd").val() !== $("#qpwd").val())&&$("#pwd").val() !==""){
+                    $("#qpwd").attr("style","box-shadow: 0 0 10px #ff0000;width: 200px;");
+                    $("#qpwdErrMsg").text("两次密码不一致");
+                    qpwdFlag = false
+                }else {
+                    $("#qpwd").attr("style","width: 200px;");
+                    $("#qpwdErrMsg").text("");
+                    qpwdFlag = true
+                }
+
+            }
+        });
+        $("#qpwd").blur(function () {
+            document.onkeyup = null
+        });
+        layer.open({
+            type:1,
+            area:['500px'],
+            title: '修改密码'
+            ,content: $("#password"),
+            shade: 0,
+            btn: ['提交']
+            ,btn1: function(index, layero){
+                if(pwdFlag && qpwdFlag){
+                    var pwd = $("#pwd").val();
+                    $.post({
+                        url:window.ioApi.user.changePassword,
+                        data:{
+                            userId:user.id,
+                            newPassword:pwd,
+                        },
+                        success:function (res) {
+                            layer.closeAll();
+                            layer.open({
+                                title: '提示'
+                                ,content: '提交成功',
+                                btn: ['确定']
+                                ,btn1: function(index, layero){
+                                    location.reload()
+                                },
+                                cancel: function(layero,index){
+                                    layer.closeAll();
+                                }
+                            });
+                        }
+                    })
+                }
+            },
+            cancel: function(layero,index){
+                layer.closeAll();
+            }
+
+        });
+    })
+
+
+</script>
+<script type="text/javascript" th:src="@{/config/static/js/userDetails.js}"></script>
+
+
+<form class="layui-form" id="password" style="display:none">
+    <div class="layui-form-item">
+
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label longLabel">输入修改密码：</label>
+        <div class="layui-input-block">
+            <input type="password" name="title" required  lay-verify="required" placeholder="输入修改密码" autocomplete="on" class="layui-input" id="pwd" style="width:200px">
+            <span id="pwdErrMsg" style="color:red;"></span>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label longLabel">再次确认密码：</label>
+        <div class="layui-input-block">
+            <input type="password" name="title" required  lay-verify="required" placeholder="再次确认密码" autocomplete="on" class="layui-input" id="qpwd" style="width:200px">
+            <span id="qpwdErrMsg" style="color:red;"></span>
+        </div>
+    </div>
+</form>
+
+</body>
+</html>

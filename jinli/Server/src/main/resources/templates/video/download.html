@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>看直播、玩棋牌、就来锦鲤直播</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        width: 100%;
+        height: 100%;
+    }
+    .bgcG{
+        background-image: linear-gradient(rgb(255, 160, 18), rgb(255, 255, 13));
+    }
+    .bgcL{
+        width: 100vw;
+        height: 100vh;
+        background-image: linear-gradient(rgb(255, 160, 18), rgb(255, 255, 13));
+    }
+    .titleBox{
+        padding: 3% 0 0 0;
+        margin-bottom: 8%;
+    }
+    .logoBox{
+        height: 13%;
+        position: relative;
+        margin-bottom: 10%;
+    }
+    .logoBox div div:nth-child(1){
+        height: 10%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .logoBox div img{
+        height: 10%;
+    }
+    .logoBox div{
+        text-align: center;
+        color: white;
+        font-size: 3.5rem;
+    }
+    .pageBox{
+        width: 100%;
+        margin-bottom: 8%;
+    }
+    .pageBox img{
+        width: 100%;
+    }
+    .pageBox>div:nth-child(1){
+        text-align: center;
+    }
+    .pageBox>div:nth-child(1) span{
+        font-size: 3rem;
+        color: white;
+    }
+    .invitationBox{
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 8%;
+    }
+    .invitationBox div:nth-child(1){
+        margin-left: 7%;
+    }
+    .invitationBox div{
+        height: 5%;
+        float: left;
+        font-weight: 600;
+        color: #ff6810;
+        font-size: 3.9rem;
+        line-height: 5vh;
+    }
+    .invitationBox div span{
+        width: 43%;
+        height: 5%;
+        font-size: 3.9rem;
+        font-weight: 600;
+        color: #ff6810;
+        padding-left: 9vw;
+    }
+    .downloadBox{
+        text-align: center;
+    }
+    .downloadBox button{
+        font-size: 3.5rem;
+        border-radius: 3%;
+        background-color: rgb(255, 160, 18);
+        color: white;
+        border: 0;
+    }
+    #download{
+        width: 85%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+    .download{
+        margin-bottom: 8%;
+    }
+    .footerBox{
+        padding: 1%;
+    }
+</style>
+<body>
+<div id="bgc">
+    <div class="titleBox">
+    </div>
+    <div class="logoBox">
+        <div>
+            <div>
+                <img th:src="@{/config/static/img/default_logo.png}">
+            </div>
+            <div>
+                <span>锦鲤直播</span>
+            </div>
+        </div>
+    </div>
+    <div class="pageBox">
+        <div>
+            <span>技术驱动娱乐-弹幕式互动直播平台</span>
+        </div>
+        <div>
+            <img th:src="@{/config/static/img/jinli_page.png}">
+        </div>
+    </div>
+    <div class="invitationBox">
+        <div>邀请码：</div>
+        <div><span id="inviteCode"></span></div>
+    </div>
+    <div class="download">
+        <div class="downloadBox">
+            <button id="download">下载锦鲤直播</button>
+        </div>
+    </div>
+    <div class="footerBox">
+
+    </div>
+</div>
+<script src="/config/static/webSrc/video/js/jq.js"></script>
+<script type="text/javascript">
+    var vh =document.documentElement.clientHeight;
+    var boxH = $("#bgc").height();
+    if(boxH < vh){
+        $("#bgc").get(0).className="bgcL"
+    }else {
+        $("#bgc").get(0).className="bgcG"
+    }
+    var inviteCode = [[${inviteCode}]];
+    document.getElementById("inviteCode").innerText = inviteCode;
+
+    document.getElementById("download").onclick = function () {
+        //下载地址
+        window.location.href="/"
+    }
+</script>
+</body>
+</html>

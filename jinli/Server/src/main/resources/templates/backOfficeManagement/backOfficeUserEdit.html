@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/config/static/layui/css/layui.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/mainCss.css}" defer="defer">
+    <!--<link rel="stylesheet" th:href="@{/config/static/css/InputAnimation.css}">-->
+    <script type="text/javascript" th:src="@{/config/static/js/jq.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/layui/layui.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/js/config.js}"></script>
+    <style type="text/css">
+        .titleMsg>h2,.titleMsg>div{
+            float: left;
+        }
+        .titleMsg>div{
+            margin-top: 38px;
+        }
+        .formStyle{
+            background-color: #fff;
+            padding: 10px 30px;
+            margin-top: 30px!important;
+        }
+        .formStyle>div>div>div{
+            line-height: 36px;
+        }
+        .firstEle{
+            margin-left: 20px;
+        }
+        .imgBox{
+            overflow: hidden;
+            padding: 20px;
+        }
+        #loadHtml{
+            padding: 0 20px;
+        }
+        .imgBox>div{
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            float: left;
+            margin-left: 30px;
+            margin-bottom: 30px;
+        }
+        .layui-layer-dialog{
+            width:auto!important;
+        }
+        @media screen and (max-width: 1000px) {
+            .firstEle{
+                margin-left: 0;
+            }
+        }
+        .layui-form-pane .layui-form-radio,.layui-form-pane{
+            margin-top: 0;
+        }
+        #checkboxBox{
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="bgcSidebar"></div>
+<div class="container app">
+    <header>
+        <!--头部导航-->
+        <ul class="layui-nav overStyle" lay-filter="">
+            <li class="logoOver"><div class="logoBox"><img class="logo" th:src="@{/config/static/img/default_logo.png}"></div><div class="logoText">锦鲤直播</div></li>
+            <!--<li class="layui-nav-item toItemChange" data-path="index"><a href="javascript:void(0);" >首页</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="LiveUserExamine"><a href="javascript:void(0);" >主播管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="reportList"><a href="javascript:void(0);" >举报管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="personDiaryList"><a href="javascript:void(0);">动态审核</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="guessList"><a href="javascript:void(0);">竞猜管理</a></li>-->
+            <!--<li class="layui-nav-item layui-this toItemChange" data-path="backOfficeManagement"><a href="javascript:void(0);">后台账号管理</a></li>-->
+            <li class="userMsg">
+                <div>
+                    <span>欢迎您：</span>
+                    <span id="loginName">admin</span>
+                </div>
+                <div>
+                    <a href="/logout"><button class="layui-btn layui-btn-danger" id="logout" >退出</button></a>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <main class="mainStyle">
+        <!--侧边栏-->
+        <div class="sidebar">
+            <div>
+                <ul class="layui-nav layui-nav-tree overStyle leftSide" id="sidebar" lay-filter="test">
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="guessList" href="javascript:void(0);">竞猜列表</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="guessNotStart" href="javascript:void(0);">尚未开始</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="guessShowOver" href="javascript:void(0);">展示已结束</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="guessWagerOver" href="javascript:void(0);">投注已结束</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="guessWaitPrize" href="javascript:void(0);">待开奖</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="guessStatistics" href="javascript:void(0);">数据统计</a></li>-->
+                </ul>
+                <div class="mainBox clearfix" id="loadHtml">
+                    <div class="titleMsg clearfix">
+                        <div>
+                            <button type="button" class="layui-btn layui-btn-primary" onclick="window.history.back(-1)">
+                                <i class="layui-icon">&#xe603;</i>
+                            </button>
+                        </div>
+                        <h2 class="headMsg">设置管理员权限</h2>
+                    </div>
+                    <div>
+                        <div>
+                            <form class="layui-form layui-form-pane formStyle" action="">
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">设置管理员权限</label>
+                                    <div class="layui-input-block layui-row">
+                                        <div class="layui-col-md3 firstEle" >
+                                            <input type="text" name="title" required  lay-verify="required" placeholder="请输入管理员账号" autocomplete="off" id="accountName" class="layui-input" style="width: 350px;margin-top: 10px;margin-bottom: 10px" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane id="loginRole">
+                                    <label class="layui-form-label">冻结账号</label>
+                                    <div class="layui-input-block" id="banBox">
+                                        <input type="checkbox" name="role" lay-skin="switch" value="LOGIN" id="login">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane id="role">
+                                    <label class="layui-form-label">菜单权限</label>
+                                    <div class="layui-input-block" id="checkboxBox">
+
+                                    </div>
+                                </div>
+                                <div id="confirmBtnBox"></div>
+                                <button class="layui-btn layui-btn-normal" type="button"  uploadRole="getChecked">修改</button>
+                                <button class="layui-btn layui-btn-normal" type="button" onclick="window.history.back(-1)">返回</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="mtBox"></div>
+                </div>
+                <div class="clearFloat"></div>
+            </div>
+        </div>
+    </main>
+</div>
+<script type="text/javascript" th:src="@{/config/static/js/mainMethod.js}"></script>
+<script th:inline="javascript">
+    var data = [[${backOfficeUser}]];
+
+    displayRoleElement(["BANBACKOFFICE"],"loginRole")
+    displayRoleElement(["BACKOIFFICEROLE"],"role")
+
+    var uploadRole = []
+    layui.use('element', function(){
+        var element = layui.element;
+    });
+    layui.use('form', function() {
+        var form = layui.form;
+        form.on('radio(testRadio)', function(data){
+            win = data.value;
+        });
+    });
+
+    initData();
+    function initData(){
+        console.log(data);
+        $("#accountName").val(data.accountName);
+        layui.use(['tree', 'util'], function(){
+            var tree = layui.tree,util = layui.util
+
+            //渲染
+        tree.render({
+                elem: '#checkboxBox'  //绑定元素
+                ,id:"role"
+                ,showCheckbox:true
+                ,checkChild:false
+                ,data: data.menuRoles
+            });
+
+            util.event('uploadRole', {
+                getChecked: function(othis){
+                    var checkedData = tree.getChecked('role');
+                    console.log(checkedData);
+                    layer.confirm('确认修改吗？',{
+                        btn: ['确认', '取消'],
+                        area: ['500px']
+                    },function (index) {
+                      //获取选中节点的数据
+                        var roleArr = getCheckedData(checkedData)
+
+                        var loginRole = true
+                        $("input:checkbox[name='role']:checked").each(function() { // 遍历name=standard的多选框
+                            if($(this).val() === "LOGIN"){
+                                loginRole = false
+                            }
+                        });
+                        if(loginRole){
+                            if(roleArr.length === 0){
+                                layer.open({
+                                    title: '提示'
+                                    ,content: '未冻结账号的管理员必须拥有至少一个权限'
+                                });
+                                return
+                            }else {
+                                roleArr.push("LOGIN")
+                            }
+                        }
+                        uploadBackOffice(roleArr)
+                    })
+                }
+            });
+        });
+
+        var overLogin = true
+        for(var i=0;i<data.role.length;i++){
+            try {
+                if(data.role[i] === "LOGIN"){
+                    overLogin = false
+                }
+                else {
+                    $("input[value="+data.role[i]+"]").get(0).checked = "checked";
+                }
+            }catch (e) {
+                
+            }
+        }
+        if(overLogin){
+            $("#login").prop('checked','checked');
+        }
+    }
+    $("#upData").on("click",function () {
+
+    });
+
+    function uploadBackOffice(roleArr) {
+        $.post({
+            url:window.ioApi.backOffice.editBackOffice,
+            data:{
+                id:data.id,
+                accountName:data.accountName,
+                role:JSON.stringify(roleArrFormat(roleArr))
+            },
+            success:function (res) {
+                console.log(res);
+                if(data.id === JSON.parse(localStorage.getItem("loginMsg")).id){
+                    window.location.href="/logout"
+                }
+                else {
+                    window.history.back(-1);
+                }
+            },
+            error:function () {
+                layer.open({
+                    title: '错误信息'
+                    ,content: '服务器错误，请联系管理员'
+                });
+            }
+        })
+    }
+</script>
+</body>
+</html>

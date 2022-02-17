@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/config/static/layui/css/layui.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/mainCss.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/livePlatformDetails.css}" defer="defer">
+    <link rel="stylesheet" href="/config/static/icon/iconfont.css">
+    <script type="text/javascript" th:src="@{/config/static/js/jq.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/layui/layui.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/js/config.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/flv/flv.js}"></script>
+</head>
+<body>
+<div class="bgcSidebar"></div>
+<div class="container app">
+    <header>
+        <!--头部导航-->
+        <ul class="layui-nav overStyle" lay-filter="">
+            <li class="logoOver"><div class="logoBox"><img class="logo" th:src="@{/config/static/img/default_logo.png}"></div><div class="logoText">锦鲤直播</div></li>
+            <!--<li class="layui-nav-item toItemChange" data-path="index"><a href="javascript:void(0);">首页</a></li>-->
+            <!--<li class="layui-nav-item layui-this  toItemChange" data-path="LiveUserExamine"><a href="javascript:void(0);">主播管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="reportList"><a href="javascript:void(0);">举报管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="personDiaryList"><a href="javascript:void(0);">动态审核</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="guessList"><a href="javascript:void(0);">竞猜管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="backOfficeManagement"><a href="javascript:void(0);">后台账号管理</a></li>-->
+            <li class="userMsg">
+                <div>
+                    <span>欢迎您：</span>
+                    <span id="loginName">admin</span>
+                </div>
+                <div>
+                    <a href="/logout"><button class="layui-btn layui-btn-danger" id="logout" >退出</button></a>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <main class="mainStyle">
+        <!--侧边栏-->
+        <div class="sidebar">
+            <div>
+                <ul class="layui-nav layui-nav-tree overStyle leftSide" id="sidebar" lay-filter="test">
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="liveUserList" href="javascript:void(0);">主播列表</a></li>-->
+                    <!--<li class="layui-nav-item layui-nav-itemed">-->
+                    <!--<a href="javascript:;">主播审核</a>-->
+                    <!--<dl class="layui-nav-child">-->
+                    <!--<dd><a class="toItemChange" data-path="LiveUserExamine" href="javascript:void(0);">主播待审认证</a></dd>-->
+                    <!--<dd><a class="toItemChange" data-path="rejectLiveUser" href="javascript:void(0);">认证未通过</a></dd>-->
+                    <!--<dd><a class="toItemChange" data-path="approvedLiveUser" href="javascript:void(0);">认证已通过</a></dd>-->
+                    <!--</dl>-->
+                    <!--</li>-->
+                    <!--<li class="layui-nav-item layui-this"><a  class="toItemChange" data-path="liveUserRoom" href="javascript:void(0);">直播间列表</a></li>-->
+                </ul>
+                <div class="mainBox" id="loadHtml">
+                    <div class="titleMsg clearfix" style="margin-bottom: 40px">
+                        <div>
+                            <button type="button" class="layui-btn layui-btn-primary" onclick="window.history.back(-1)">
+                                <i class="layui-icon">&#xe603;</i>
+                            </button>
+                        </div>
+                        <h2 class="headMsg">直播监控</h2>
+                    </div>
+                    <div>
+                        <div>
+                            <!--头部-->
+                            <div class="flB">
+                                <div class="h_msg">
+                                    直播信息
+                                </div>
+                                <div class="textBox">
+                                    <div>主播：<span id="displayName"></span></div>
+                                    <div>主播ID：<span id="liveUserId"></span></div>
+                                    <div>房间ID：<span id="roomDisplayId"></span></div>
+                                </div>
+                                <div class="textBox">
+                                    <div>直播间人次：<span id="audienceCount"></span></div>
+                                    <div>当前直播间总人数：<span id="audienceNum"></span></div>
+                                    <div>直播间机器人数：<span id="robotNum"></span></div>
+                                </div>
+                                <div class="textBox">
+                                    <div>当前直播间标签：<span id="gameType">颜值</span></div>
+                                    <div>直播间游戏收入：<span><span id="gameIncome"></span>金币，折合：<span id="gameIncomeToRMB"></span>元</span></div>
+                                    <div>直播间礼物收入：<span><span id="giftIncome"></span>金币，折合：<span id="giftIncomeToRMB"></span>元</span></div>
+                                </div>
+                                <div class="textBox">
+                                    <div>直播间标题：<span id="roomTitle"></span></div>
+                                    <div>互动人数：<span id="activeNum"></span></div>
+                                    <div>弹幕条数：<span id="chatNum"></span></div>
+                                </div>
+                                <div class="textBox">
+                                    <div>开播平台：<span id="sharedPlatform"></span></div>
+                                    <div>直播类型：<span id="livePattern"></span></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div  class="bg_flB">
+                                <div class="h_msg">
+                                    直播间操作
+                                </div>
+                                <div class="textBox">
+                                    <div><button type="button" id="closeRoom" class="layui-btn layui-btn-danger">关闭直播间</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bodyBoxT">
+                            <div class="liveBox">
+                                <!--直播模块-->
+                                <div>
+                                    <span>开播时间：</span><span id="liveStartTime"></span>
+                                    <span>连续开播：</span><span id="duration"></span>
+                                    <span>标题：</span><span id="headRoomTitle"></span>
+                                </div>
+                                <div class="videoBox">
+                                    <video name="videoElement" muted>
+                                        Your browser is too old which doesn't support HTML5 video.
+                                    </video>
+                                    <span class="iconfont icon-jingyin" id="voice"></span>
+                                </div>
+                            </div>
+                            <div class="msgBox">
+                                <!--玩家消息-->
+                                <div>
+                                    <div>
+                                        <span>弹幕消息</span>
+                                    </div>
+                                    <div>
+                                        <span>时间</span>
+                                        <span>昵称（ID）</span>
+                                        <span>VIP等级</span>
+                                        <span>消息</span>
+                                    </div>
+                                </div>
+                                <div id="userMsg">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <form class="layui-form clearfix">
+                                <div class="FormItem" id="userIdSearch">
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">用户ID：</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" name="title" id="userId" lay-verify="title" autocomplete="off" placeholder="请输入用户ID" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <!--<input class="gate" id="element" type="text" placeholder="" /><label for="class">用户ID</label>-->
+                                </div>
+                                <div class="FormItem">
+                                    <label class="layui-form-label">IP：</label>
+                                    <div class="layui-input-block">
+                                        <input type="text" name="title" id="userIp" lay-verify="title" autocomplete="off" placeholder="请输入用户IP" class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="buttonStyle">
+                                    <button class="layui-btn" id="searchBtn" type="button">搜索</button>
+                                    <button class="layui-btn layui-btn-primary" type="button" id="resetBtn">重置</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="tableBoxInUser">
+                        <div style="width: 55%;">
+                            <table id="demo" lay-filter="demo"></table>
+                            <div id="paging"></div>
+                        </div>
+                        <div style="width: 40%;">
+                            <div class="giftBox">
+                                <!--玩家消息-->
+                                <div>
+                                    <div>
+                                        <span>礼物消息</span>
+                                    </div>
+                                    <div>
+                                        <span>时间</span>
+                                        <span>昵称（ID）</span>
+                                        <span>VIP等级</span>
+                                        <span>礼物</span>
+                                        <span>礼物类型</span>
+                                        <span>数量</span>
+                                    </div>
+                                </div>
+                                <div id="giftMsg">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mtBox"></div>
+                <div class="clearFloat"></div>
+            </div>
+        </div>
+    </main>
+</div>
+<form class="layui-form" id="gag" style="display:none">
+    <div class="layui-form-item">
+
+    </div>
+    <div class="selectType layui-input-block">
+        <div>禁言区域：</div>
+        <div>
+            <select  name="city" lay-verify="required" class="selectStyle" id="violationType">
+                <option value="LOCAL_ROOM">当前直播间</option>
+                <option value="ALL_ROOM">所有直播间</option>
+            </select>
+        </div>
+    </div>
+    <div class="selectType layui-input-block">
+        <div>禁言时间：</div>
+        <div>
+            <select  name="city" lay-verify="required" class="selectStyle" id="muteTimeType">
+                <option value="MUTE_FIVE_MINUTE">5分钟</option>
+                <option value="MUTE_HALF_HOUR">30分钟</option>
+                <option value="MUTE_ONE_DAY">1天</option>
+                <option value="MUTE_THREE_DAY">3天</option>
+                <option value="MUTE_ONE_WEEK">1周</option>
+                <option value="MUTE_ONE_MONTH">一月</option>
+                <option value="MUTE_ONE_YEAR">一年</option>
+                <option value="MUTE_FOREVER">永久</option>
+            </select>
+        </div>
+    </div>
+    <div class="selectType layui-input-block">
+        <div>禁言原因：</div>
+        <div style="width: 400px">
+            <input type="radio" name="reason" value="MUTE_REACTIONARY" title="辱骂他人" checked>
+            <input type="radio" name="reason" value="MUTE_PORNOGRAPHIC" title="发布广告">
+            <input type="radio" name="reason" value="MUTE_ADVERTISING_FRAUD" title="低俗色情">
+            <input type="radio" name="reason" value="MUTE_HARASSMENT_ABUSE" title="违法行为">
+            <input type="radio" name="reason" value="MUTE_OTHER" title="其他行为">
+        </div>
+    </div>
+    <div class="selectType layui-input-block">
+        <div>禁言详情：</div>
+        <div>
+            <textarea name="desc" id="desc" placeholder="请输入详情" class="layui-textarea" style="width:200px"></textarea>
+        </div>
+    </div>
+</form>
+
+<script type="text/javascript" th:src="@{/config/static/js/mainMethod.js}"></script>
+<script type="text/javascript" th:src="@{/config/static/js/liveDetailsT.js}"></script>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-sm layui-btn-radius layui-btn-normal" lay-event="detail">
+        详情
+    </a>
+</script>
+<script type="text/html" id="imgTemplet">
+    <div style="text-align: center;float: left;">
+        <img class="layui-circle" width="46px" height="46px" src="{{d.avatarUrl}}"/>
+    </div>
+    <div style="float: left;margin-left: 10px">
+        <div style="font-size: 12px;color: #131313;height: 23px;">
+            <span>{{d.displayName}}</span>
+            {{#  if(d.isLiveUser == true){  console.log("is live user") }}
+            <span style="color: red;margin-left: 5px;font-weight: 600">主播</span>
+            {{#  } }}
+            {{#  if(d.isAdministrator == true){  console.log("is administrator") }}
+            <span style="color: #ff9103;margin-left: 5px;font-weight: 600">管理员</span>
+            {{#  } }}
+        </div>
+        <div style="font-size: 10px;color: #6d6d6d;height: 23px">
+            <span>{{d.id}}</span>
+        </div>
+    </div>
+</script>
+</body>
+</html>

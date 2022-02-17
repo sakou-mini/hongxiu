@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/config/static/layui/css/layui.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/mainCss.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/InputAnimation.css}">
+    <script type="text/javascript" th:src="@{/config/static/js/jq.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/layui/layui.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/js/config.js}"></script>
+    <style type="text/css">
+        body{
+            overflow: auto;
+        }
+        .FormStyle{
+            padding:30px 20px;
+        }
+        .tabBox{
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .FormItem{
+            position: relative;
+            float: left;
+            margin-right: 20px;
+            margin-left: 0!important;
+        }
+        .theT_timeCheckbox{
+            width: 23%;
+            text-align: center;
+            padding: 0;
+
+        }
+        .theT_timeCheckbox>span{
+            cursor: pointer;
+        }
+        .theT_timeInput{
+            width: 300px;
+            height: 30px;
+            text-align: center;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 3px;
+            box-shadow: 0 0 5px 1px #888888;
+
+        }
+
+        .theT_boxHidden{
+            border-radius: 3px;
+            width: 300px;
+            box-shadow: 0 0 5px 1px #888888;
+            margin-top: 3px;
+            /*font-size: 5px;*/
+            background-color: white;
+            position: absolute;
+            z-index: 999;
+        }
+        .theT_boxHead{
+            height: 30px;
+            line-height: 30px;
+            border-radius: 3px 3px 0 0;
+            color: rgb(245, 245, 245);
+            background-color: rgb(130, 188, 255);
+        }
+        .theT_boxHead>div{
+            float: left;
+            -moz-user-select: none; /*火狐*/
+            -webkit-user-select: none; /*webkit浏览器*/
+            -ms-user-select: none; /*IE10*/
+            -khtml-user-select: none; /*早期浏览器*/
+            user-select: none;
+        }
+        .theT_boxInput>div{
+            float: left;
+            margin-left: 5%;
+            line-height:20px ;
+        }
+        .theT_boxInput>div:nth-child(1){
+            margin-left: 8%;
+        }
+        .theT_timeCheckInput{
+            width: 80px;
+            height: 20px;
+            font-size: 10px;
+        }
+        #theT_tips{
+            margin-left: 10%;
+            font-size: 2px;
+            color: rgb(240, 106, 106);
+        }
+        .theT_boxHidden>div{
+            margin-top: 10px;
+        }
+        .theT_boxHidden>div:nth-child(1){
+            margin-top: 0;
+        }
+        .theT_interval{
+            width: 5px;
+        }
+        #theT_confirm{
+            width: 80%;
+            height: 25px;
+            border: none;
+            background-color: #40af00;
+            color: rgb(247, 247, 247);
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        #theT_cancel{
+            width: 80%;
+            height: 25px;
+            border: none;
+            background-color: #f76f00;
+            color: rgb(247, 247, 247);
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        #theT_confirm:hover{
+            transition: all 300ms ease;
+            background-color: #3a9e00;
+        }
+        #theT_cancel:hover{
+            transition: all 300ms ease;
+            background-color: #d15e00;
+        }
+        .theT_end{
+            margin-bottom: 10px;
+        }
+        .theT_boxInput{
+            color: black !important;
+        }
+        .theT_hidden{
+            display: none;
+        }
+
+        @media screen and (max-width: 1063px) {
+            .clearfix>div{
+                display: block;
+                margin-top: 10px;
+            }
+            .tabBox{
+                margin-top: 30px;
+            }
+        }
+        .nav-icon{
+            width: 100%;
+            height: 40px;
+            background-color: #5fb878;
+            position: relative;
+        }
+        .nav-icon>div:nth-child(2){
+            float: right;
+            width: 30px;
+            height: 30px;
+            margin-top: 5px;
+            margin-right: 10px;
+            line-height: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            color: #4c4c4c;
+        }
+        .nav-icon>div:nth-child(1){
+            float: right;
+            width: 30px;
+            height: 30px;
+            margin-top: 5px;
+            margin-right: 10px;
+            line-height: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            color: #4c4c4c;
+           font-weight: 600;
+        }
+        .head{
+            height: 30px;
+            background-color: #248eff;
+            border-radius: 5px 5px 0 0;
+        }
+        .helpTypeModality{
+            /*font-size: 5px;*/
+            width: 400px;
+            background-color: #ffffff;
+            position: absolute;
+            right: 0;
+            z-index:999;
+            top: 40px;
+            color: #b4b4b4;
+            border-radius: 5px;
+            border: 1px solid #b1b1b1;
+            border-top: none;
+        }
+        .helpTypeModality>div>div:nth-child(1){
+            font-size: 18px;
+            font-weight: 600;
+            color: #0C0C0C;
+        }
+        .helpTypeModality>div{
+            padding: 0 10px;
+        }
+        .helpTypeModality>div:last-child{
+            padding: 0 10px 10px 10px;
+        }
+        .titleBox{
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .titleBox>ul{
+            background-color: rgb(255, 255, 255);
+            color: #535353;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<div class="bgcSidebar"></div>
+<div class="container app">
+    <header>
+        <!--头部导航-->
+        <ul class="layui-nav overStyle" lay-filter="">
+            <li class="logoOver"><div class="logoBox"><img class="logo" th:src="@{/config/static/img/default_logo.png}"></div><div class="logoText">锦鲤直播</div></li>
+            <!--<li class="layui-nav-item toItemChange" data-path="index"><a href="javascript:void(0);">首页</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="LiveUserExamine"><a href="javascript:void(0);">主播管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="reportList"><a href="javascript:void(0);">举报管理</a></li>-->
+            <!--<li class="layui-nav-item layui-this  toItemChange" data-path="personDiaryList"><a href="javascript:void(0);">动态审核</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="guessList"><a href="javascript:void(0);">竞猜管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="backOfficeManagement"><a href="javascript:void(0);">后台账号管理</a></li>-->
+            <li class="userMsg">
+                <div>
+                    <span>欢迎您：</span>
+                    <span id="loginName">admin</span>
+                </div>
+                <div>
+                    <a href="/logout"><button class="layui-btn layui-btn-danger" id="logout" >退出</button></a>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <main class="mainStyle">
+        <!--侧边栏-->
+        <div class="sidebar">
+            <div>
+                <ul class="layui-nav layui-nav-tree overStyle leftSide" id="sidebar" lay-filter="test">
+                    <!--<li class="layui-nav-item layui-this"><a  class="toItemChange" data-path="personDiaryList" href="javascript:void(0);">动态审核列表</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="personDiaryReject" href="javascript:void(0);">未通过列表</a></li>-->
+                    <!--<li class="layui-nav-item "><a  class="toItemChange" data-path="personDiaryApproved" href="javascript:void(0);">通过列表</a></li>-->
+                </ul>
+                <div class="mainBox clearfix" id="loadHtml">
+                    <div class="FormStyle">
+                        <div>
+                            <form class="layui-form clearfix">
+                                <div class="FormItem">
+                                    <div class="layui-container">
+                                        <div class="layui-row">
+                                            <input class="theT_timeInput" id="theT_open"  style="width: 300px;" value="" readonly/>
+                                        </div>
+                                        <div class="layui-row theT_boxHidden theT_hidden" id="theT_boxHidden">
+                                            <div class="layui-row theT_boxHead">
+                                                <div class="theT_timeCheckbox"><span id="theT_t">今日</span></div>
+                                                <div class="theT_interval">|</div>
+                                                <div class="theT_timeCheckbox"><span id="theT_y">昨日</span></div>
+                                                <div class="theT_interval">|</div>
+                                                <div class="theT_timeCheckbox"><span id="theT_w">近1周</span></div>
+                                                <div class="theT_interval">|</div>
+                                                <div class="theT_timeCheckbox"><span id="theT_m">近1月</span></div>
+                                            </div>
+                                            <div class="layui-row theT_boxInput">
+                                                <div>自定</div>
+                                                <div>
+                                                    <input type="text" class="layui-input theT_timeCheckInput" id="theT_openTime" readonly/>
+                                                </div>
+                                                <div>到</div>
+                                                <div>
+                                                    <input type="text" class="layui-input theT_timeCheckInput" id="theT_endTime" readonly/>
+                                                </div>
+                                            </div>
+                                            <div class="layui-row">
+                                                <div><span id="theT_tips"></span></div>
+                                            </div>
+                                            <div class="layui-row theT_end">
+                                                <div class="layui-col-md3 layui-col-md-offset6">
+                                                    <button type="button" id="theT_confirm">确认</button>
+                                                </div>
+                                                <div class="layui-col-md3">
+                                                    <button type="button" id="theT_cancel">取消</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="titleBox">
+                        <ul class="layui-tab-title">
+                            <li class="layui-this titleClick" data-value="newlyAdded">新增激活和账户</li>
+                            <li class="titleClick" data-value="conversionRate">用户转化</li>
+                        </ul>
+                    </div>
+                    <div class="tabBox">
+                        <div class="nav-icon">
+                            <div>
+                                <i id="download" class="layui-icon layui-icon-download-circle"></i>
+                            </div>
+                            <div>
+                                <i id="help" class="layui-icon layui-icon-help"></i>
+                            </div>
+                            <div class="helpTypeModality theT_hidden" id="helpTypeModality">
+                                <div class="head"></div>
+                                <div>
+                                    <div>设备激活</div>
+                                    <div>设备激活为当日新增加的激活设备</div>
+                                </div>
+                                <hr class="layui-bg-blue">
+                                <div>
+                                    <div>新增用户</div>
+                                    <div>新增用户为当日新增加的用户账户数量</div>
+                                </div>
+                                <hr class="layui-bg-blue">
+                                <div>
+                                    <div>用户转化</div>
+                                    <div>安装游戏的用户中（即激活设备）有注册账户用户比例，1人多次注册，只记1次有效转化。例如：共5台激活设备，其中3台每人1次注册，1台没有注册，1台注册了3次账户，共注册了6个不同账户；注册转化率=(3+1)/5=80%，而不是用6次注册/5台设备</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="chart" style="width: 100%;margin-left: auto;margin-right: auto;height: 500px;background-color: #fff;padding: 30px 20px"></div>
+                    </div>
+                    <div class="mtBox"></div>
+                </div>
+                <div class="clearFloat"></div>
+            </div>
+        </div>
+    </main>
+</div>
+<script type="text/javascript" th:src="@{/config/static/js/mainMethod.js}"></script>
+<script type="text/javascript" th:src="@{/config/static/js/echarts.js}"></script>
+<script type="text/javascript" th:src="@{/config/static/js/xlsx.core.min.js}"></script>
+<script type="text/javascript">
+    // 时间选择器初始化
+    function timeUpdate(){
+        layui.use('laydate', function(){
+            var laydate = layui.laydate;
+            laydate.render({
+                elem: '#theT_openTime',
+                value:fun_date(-6),
+                max:0
+            });
+            laydate.render({
+                elem: '#theT_endTime',
+                value:fun_date(0),
+                max:0
+            });
+        });
+
+    }
+    var time1=new Date(fun_date(-6)).getTime();
+    var time2=new Date(fun_date(0)).getTime();
+    getInfoData()
+   function getInfoData() {
+       $.get({
+           url:window.ioApi.user.getNewUserChartData,
+           data:{
+               startTime:time1,
+               endTime:time2
+           },
+           success:function (res) {
+               if(res.data.length === 0){
+                   dataRendering()
+                   return
+                   // layer.open({
+                   //     title: '提示'
+                   //     ,content: '这个时间段内没有数据'
+                   // });
+               }
+               var data = [];
+               console.log(res);
+               for(var i = 0;i<res.data.length;i++ ){
+                   var dataObj = {};
+                   dataObj.date = dateFormat("YYYY-mm-dd",res.data[i].date);
+                   dataObj.newUsers = res.data[i].newUsers;
+                   dataObj.downloads = res.data[i].downloads;
+                   data.push(dataObj);
+               }
+               console.log(data);
+               if(data.length<2){
+                   data = timeAscendingOrder(data,"date");
+               }else {
+                   data = dateDataInsert(timeAscendingOrder(data,"date"));
+               }
+               var dArr=[];
+               var nArr =[];
+               var lArr =[];
+               for(var x = 0;x<data.length;x++){
+                   dArr.push(data[x].date);
+                   nArr.push(data[x].newUsers);
+                   lArr.push(data[x].downloads)
+               }
+               chartData.date = dArr;
+               chartData.newUsers = nArr;
+               chartData.downloads = lArr;
+               dataRendering()
+           }
+       })
+   }
+
+    var chartData = {
+        date:["2021-1-1","2021-1-2","2021-1-3","2021-1-4","2021-1-5","2021-1-6","2021-1-7"],
+        newUsers:[453,453,465,168,143,415,483],
+        downloads:[651,846,488,456,785,845,499]
+    }
+
+   function dateDataInsert(data) {
+       var dateArr = [];
+       for(var x=0;x<data.length;x++){
+           dateArr.push(data[x].date)
+       }
+       var rt = dateMakeUp(dateArr);
+       if(rt === "success"){
+           return data
+       }else {
+           for(var i=0;i<data.length;i++){
+               if(data[i].date === rt){
+                   data.splice(i,0,{date:getNowFormatDate(data[i].date,1,"-"),newUsers:0,downloads:0});
+                   dateDataInsert(data)
+               }
+           }
+       }
+   }
+
+
+    var exportData;
+    //定义下载内容
+    function download(){
+        if(pageControl === "newlyAdded"){
+            var aoa = [
+                ['日期', '设备激活（台）', '新增用户（账户）'],
+            ];
+            for(var i = 0;i<exportData.xAxis.data.length;i++){
+                var newDataArr = [];
+                newDataArr.push(exportData.xAxis.data[i]);
+                newDataArr.push(exportData.series[0].data[i]);
+                newDataArr.push(exportData.series[1].data[i]);
+                aoa.push(newDataArr)
+            }
+            var sheet = XLSX.utils.aoa_to_sheet(aoa);
+            openDownloadDialog(sheet2blob(sheet), '新增激活和账户.xlsx');
+        }
+        else {
+            var aoa = [
+                ['日期', '转换率' ],
+            ];
+            for(var i = 0;i<exportData.xAxis.data.length;i++){
+                var newDataArr = [];
+                newDataArr.push(exportData.xAxis.data[i]);
+                newDataArr.push((exportData.series[0].data[i]*100).toFixed(2)+'%');
+                aoa.push(newDataArr)
+            }
+            var sheet = XLSX.utils.aoa_to_sheet(aoa);
+            openDownloadDialog(sheet2blob(sheet), '用户转化.xlsx');
+        }
+    }
+
+
+    timeUpdate();
+    //点击时间选择器控件
+    $("#theT_open").on("click",function () {
+        theTshow()
+    });
+
+    //时间选择器点击确定按钮事件
+    $("#theT_confirm").on("click",function () {
+        if(verificationTheTTime() === "ok"){
+            if(isIE()){
+                time1 = new Date(($("#theT_openTime").val()+" 00:00:00").replace(/-/g, '/')).getTime();
+                time2 = new Date(($("#theT_endTime").val()+" 00:00:00").replace(/-/g, '/')).getTime();
+            }else {
+                time1 = new Date(($("#theT_openTime").val()+" 00:00:00")).getTime();
+                time2 = new Date(($("#theT_endTime").val()+" 00:00:00")).getTime();
+            }
+            theTclose();
+            innerTime();
+            getInfoData();
+        }
+    });
+
+    $("#theT_t").on("click",function () {
+        $("#theT_openTime").val(fun_date(0));
+        $("#theT_endTime").val(fun_date(0));
+        if(isIE()){
+            time1 = new Date(( $("#theT_openTime").val()+" 00:00:00").replace(/-/g, '/')).getTime();
+            time2 = new Date(($("#theT_endTime").val()+" 00:00:00").replace(/-/g, '/')).getTime();
+        }else {
+            time1 = new Date(($("#theT_openTime").val()+" 00:00:00")).getTime();
+            time2 = new Date(($("#theT_endTime").val()+" 00:00:00")).getTime();
+        }
+        theTclose();
+        innerTime();
+        getInfoData()
+    })
+    $("#theT_y").on("click",function () {
+        $("#theT_openTime").val(fun_date(-1));
+        $("#theT_endTime").val(fun_date(0));
+        if(isIE()){
+            time1 = new Date(( $("#theT_openTime").val()+" 00:00:00").replace(/-/g, '/')).getTime();
+            time2 = new Date(($("#theT_endTime").val()+" 00:00:00").replace(/-/g, '/')).getTime();
+        }else {
+            time1 = new Date(($("#theT_openTime").val()+" 00:00:00")).getTime();
+            time2 = new Date(($("#theT_endTime").val()+" 00:00:00")).getTime();
+        }
+        theTclose();
+        innerTime();
+        getInfoData()
+    })
+    $("#theT_w").on("click",function () {
+        $("#theT_openTime").val(fun_date(-6));
+        $("#theT_endTime").val(fun_date(0));
+        if(isIE()){
+            time1 = new Date(( $("#theT_openTime").val()+" 00:00:00").replace(/-/g, '/')).getTime();
+            time2 = new Date(($("#theT_endTime").val()+" 00:00:00").replace(/-/g, '/')).getTime();
+        }else {
+            time1 = new Date(($("#theT_openTime").val()+" 00:00:00")).getTime();
+            time2 = new Date(($("#theT_endTime").val()+" 00:00:00")).getTime();
+        }
+        theTclose();
+        innerTime();
+        getInfoData()
+    })
+    $("#theT_m").on("click",function () {
+        $("#theT_openTime").val(fun_date(-30));
+        $("#theT_endTime").val(fun_date(0));
+        if(isIE()){
+            time1 = new Date(( $("#theT_openTime").val()+" 00:00:00").replace(/-/g, '/')).getTime();
+            time2 = new Date(($("#theT_endTime").val()+" 00:00:00").replace(/-/g, '/')).getTime();
+        }else {
+            time1 = new Date(($("#theT_openTime").val()+" 00:00:00")).getTime();
+            time2 = new Date(($("#theT_endTime").val()+" 00:00:00")).getTime();
+        }
+        theTclose();
+        innerTime();
+        getInfoData()
+    })
+
+    // 刷新时间选择器显示时间
+    function innerTime(){
+        var day1 = formatSpecificDate(new Date($("#theT_openTime").val()));
+        var day2 = formatSpecificDate(new Date($("#theT_endTime").val()));
+        $("#theT_open").val(day1+" ~ "+day2);
+    }
+
+    //初始化时间选择器时间
+    $("#theT_open").val(fun_date(-6)+" ~ "+fun_date(0));
+
+    //时间控制器取消按钮
+    $("#theT_cancel").on("click",function () {
+        theTclose();
+    })
+
+    //时间选择器显示方法
+    function theTshow() {
+        $("#theT_boxHidden").attr("class","layui-row theT_boxHidden")
+    }
+
+    //时间选择器隐藏方法
+    function theTclose(){
+        $("#theT_boxHidden").attr("class","layui-row theT_boxHidden theT_hidden")
+    }
+
+    var option;
+    //帮助弹框控件
+    var helpControl = "hidden";
+    //页面控件
+    var pageControl = "newlyAdded";
+    var myChart;
+    //图表配置
+    option = {
+        title: {
+            text: ''
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                label:{
+                    formatter: null
+                }
+            }
+        },
+        legend: {
+            data: []
+        },
+        grid: {
+            left: '5%',
+            right: '6%',
+            bottom: '5%',
+            containLabel: true
+        },
+        xAxis: {
+            type: 'category',
+            data: []
+        },
+        yAxis: {
+            type: 'value',
+            axisLabel: {
+                formatter:null
+            }
+        },
+        series: []
+    };
+
+    //渲染图标
+    function dataRendering(){
+        if(pageControl === "newlyAdded"){
+            //    请求事件
+            var o = JSON.parse(JSON.stringify(option));
+            o.title.text = "新增激活和账户";
+            o.xAxis.data=chartData.date;
+            o.legend.data = ["下载总量","新增用户"];
+            o.series = [{
+                name: '下载总量',
+                type: 'line',
+                data:chartData.downloads
+            },{
+                name: '新增用户',
+                type: 'line',
+                data:chartData.newUsers
+            }];
+            exportData = JSON.parse(JSON.stringify(o));
+            heavyLoad(o)
+
+        }else {
+
+            var o = JSON.parse(JSON.stringify(option));
+            //切换操作
+            o.title.text = "用户转化";
+            o.tooltip.axisPointer.label.formatter = function (value) {
+                return (value.seriesData[0].data*100).toFixed(2)+'%'
+            };
+            o.yAxis.axisLabel.formatter = function (value) {
+                return (value*100).toFixed(2)+'%'
+            };
+            o.xAxis.data=chartData.date;
+            o.legend.data = ["用户转化"];
+            var conversionRateList = [];
+            for(var i =0;i<chartData.date.length;i++){
+                conversionRateList.push(parseFloat((chartData.newUsers[i]/chartData.downloads[i]).toFixed(2)))
+            }
+            o.series=[{
+                name:"用户转化",
+                type:'line',
+                data:conversionRateList
+            }]
+            exportData = JSON.parse(JSON.stringify(o));
+            heavyLoad(o)
+        }
+        $("#help").on("click",function () {
+            if(helpControl === "show"){
+                $("#helpTypeModality").attr("class","helpTypeModality theT_hidden");
+                helpControl = "hidden";
+            }
+            else {
+                $("#helpTypeModality").attr("class","helpTypeModality");
+                helpControl = "show";
+            }
+        })
+        $("#download").on("click",function () {
+            download()
+        })
+
+    }
+
+    //定义点击标签事件
+    $(".titleClick").on("click",function () {
+        pageControl = this.getAttribute("data-value");
+        getInfoData()
+
+    })
+    //图表自适应
+    window.addEventListener("resize", function () {
+        myChart.resize();
+    })
+
+
+    function heavyLoad(o) {
+        var chartDom = document.getElementById('chart');
+        chartDom.remove();
+        $(".tabBox").get(0).innerHTML += '<div id="chart" style="width: 100%;margin-left: auto;margin-right: auto;height: 500px;background-color: #fff;padding: 30px 20px"></div>'
+        var nchartDom = document.getElementById('chart');
+        myChart = echarts.init(nchartDom);
+        myChart.setOption(o);
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/config/static/layui/css/layui.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/mainCss.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/liveDetails.css}" defer="defer">
+    <script type="text/javascript" th:src="@{/config/static/js/jq.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/layui/layui.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/js/config.js}"></script>
+
+</head>
+<body>
+<div class="bgcSidebar"></div>
+<div class="container app">
+    <header>
+        <!--头部导航-->
+        <ul class="layui-nav overStyle" lay-filter="">
+            <li class="logoOver"><div class="logoBox"><img class="logo" th:src="@{/config/static/img/default_logo.png}"></div><div class="logoText">锦鲤直播</div></li>
+            <!--<li class="layui-nav-item toItemChange" data-path="index"><a href="javascript:void(0);">首页</a></li>-->
+            <!--<li class="layui-nav-item layui-this  toItemChange" data-path="LiveUserExamine"><a href="javascript:void(0);">主播管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="reportList"><a href="javascript:void(0);">举报管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="personDiaryList"><a href="javascript:void(0);">动态审核</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="guessList"><a href="javascript:void(0);">竞猜管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="backOfficeManagement"><a href="javascript:void(0);">后台账号管理</a></li>-->
+            <li class="userMsg">
+                <div>
+                    <span>欢迎您：</span>
+                    <span id="loginName">admin</span>
+                </div>
+                <div>
+                    <a href="/logout"><button class="layui-btn layui-btn-danger" id="logout" >退出</button></a>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <main class="mainStyle">
+        <!--侧边栏-->
+        <div class="sidebar">
+            <div>
+                <ul class="layui-nav layui-nav-tree overStyle leftSide" id="sidebar" lay-filter="test">
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="liveUserList" href="javascript:void(0);">主播列表</a></li>-->
+                    <!--<li class="layui-nav-item layui-nav-itemed">-->
+                    <!--<a href="javascript:;">主播审核</a>-->
+                    <!--<dl class="layui-nav-child">-->
+                    <!--<dd><a class="toItemChange" data-path="LiveUserExamine" href="javascript:void(0);">主播待审认证</a></dd>-->
+                    <!--<dd><a class="toItemChange" data-path="rejectLiveUser" href="javascript:void(0);">认证未通过</a></dd>-->
+                    <!--<dd><a class="toItemChange" data-path="approvedLiveUser" href="javascript:void(0);">认证已通过</a></dd>-->
+                    <!--</dl>-->
+                    <!--</li>-->
+                    <!--<li class="layui-nav-item layui-this"><a  class="toItemChange" data-path="liveUserRoom" href="javascript:void(0);">直播间列表</a></li>-->
+                </ul>
+                <div class="mainBox" id="loadHtml">
+                    <div class="titleMsg clearfix" style="margin-bottom: 40px">
+                        <div>
+                            <button type="button" class="layui-btn layui-btn-primary" onclick="window.history.back(-1)">
+                                <i class="layui-icon">&#xe603;</i>
+                            </button>
+                        </div>
+                        <h2 class="headMsg">直播监控</h2>
+                    </div>
+                    <div>
+                        <div>
+                            <!--头部-->
+                            <div class="flB">
+                                <div class="h_msg">
+                                    直播信息
+                                </div>
+                                <div class="textBox">
+                                    <div>主播：<span>罗德岛的博士</span></div>
+                                    <div>主播ID：<span>178654</span></div>
+                                </div>
+                                <div class="textBox">
+                                    <div>房间ID：<span>16548</span></div>
+                                    <div>直播间标题：<span>Nothing can stop me,i'm all the way up</span></div>
+                                </div>
+                                <div class="textBox">
+                                    <div>当前直播间玩法：<span>颜值</span></div>
+                                    <div>直播间礼物流水：<span>114514</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bodyBoxT">
+                            <div class="liveBox">
+                                <!--直播模块-->
+                                <div>
+                                    <span>开播时间：</span><span>2021-04-02 16:18:54</span>
+                                    <span>连续开播：</span><span>1小时33分钟25秒</span>
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                            <div class="msgBox">
+                                <!--玩家消息-->
+                                <div>
+                                    <span>玩家弹幕</span>
+                                </div>
+                                <div>
+                                    <div class="userMsgBox">
+                                        <div>
+                                            <span>16:41:03</span><span>提瓦特的旅行者:</span>
+                                        </div>
+                                        <div>
+                                            <span>nice这波很溜！！！</span>
+                                        </div>
+                                    </div>
+                                    <div class="userMsgBox">
+                                        <div>
+                                            <span>16:41:15</span><span>镇守府的提督:</span>
+                                        </div>
+                                        <div>
+                                            <span>单走一个六</span>
+                                        </div>
+                                    </div>
+                                    <div class="userMsgBox">
+                                        <div>
+                                            <span>16:41:35</span><span>兰德索尔的骑士:</span>
+                                        </div>
+                                        <div>
+                                            <span> 阿姨，你快点阿姨</span>
+                                        </div>
+                                    </div>
+                                    <div class="userMsgBox">
+                                        <div>
+                                            <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                        </div>
+                                        <div>
+                                            <span>给阿姨倒一杯卡布奇诺！！！！！！！！！</span>
+                                        </div>
+                                    </div>
+                                    <div class="userMsgBox">
+                                        <div>
+                                            <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                        </div>
+                                        <div>
+                                            <span>给阿姨倒一杯卡布奇诺！！！！！！！！！</span>
+                                        </div>
+                                    </div>
+                                    <div class="userMsgBox">
+                                        <div>
+                                            <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                        </div>
+                                        <div>
+                                            <span>给阿姨倒一杯卡布奇诺！！！！！！！！！</span>
+                                        </div>
+                                    </div>
+                                    <div class="userMsgBox">
+                                        <div>
+                                            <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                        </div>
+                                        <div>
+                                            <span>给阿姨倒一杯卡布奇诺！！！！！！！！！</span>
+                                        </div>
+                                    </div>
+                                    <div class="userMsgBox">
+                                        <div>
+                                            <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                        </div>
+                                        <div>
+                                            <span>给阿姨倒一杯卡布奇诺！！！！！！！！！</span>
+                                        </div>
+                                    </div>
+                                    <div class="userMsgBox">
+                                        <div>
+                                            <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                        </div>
+                                        <div>
+                                            <span>给阿姨倒一杯卡布奇诺！！！！！！！！！</span>
+                                        </div>
+                                    </div>
+                                    <div class="userMsgBox">
+                                        <div>
+                                            <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                        </div>
+                                        <div>
+                                            <span>给阿姨倒一杯卡布奇诺！！！！！！！！！</span>
+                                        </div>
+                                    </div>
+                                    <div class="userMsgBox">
+                                        <div>
+                                            <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                        </div>
+                                        <div>
+                                            <span>给阿姨倒一杯卡布奇诺！！！！！！！！！</span>
+                                        </div>
+                                    </div>
+                                    <div class="userMsgBox">
+                                        <div>
+                                            <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                        </div>
+                                        <div>
+                                            <span>给阿姨倒一杯卡布奇诺！！！！！！！！！</span>
+                                        </div>
+                                    </div>
+                                    <div class="userMsgBox">
+                                        <div>
+                                            <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                        </div>
+                                        <div>
+                                            <span>给阿姨倒一杯卡布奇诺！！！！！！！！！</span>
+                                        </div>
+                                    </div>
+                                    <div class="userMsgBox">
+                                        <div>
+                                            <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                        </div>
+                                        <div>
+                                            <span>给阿姨倒一杯卡布奇诺！！！！！！！！！</span>
+                                        </div>
+                                    </div>
+                                    <div class="userMsgBox">
+                                        <div>
+                                            <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                        </div>
+                                        <div>
+                                            <span>这是一条很长很长很长很长很长很长的消息</span>
+                                        </div>
+                                    </div>
+                                    <div class="userMsgBox">
+                                        <div>
+                                            <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                        </div>
+                                        <div>
+                                            <span>这是一条很长很长很长很长很长很长的消息</span>
+                                        </div>
+                                    </div><div class="userMsgBox">
+                                    <div>
+                                        <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                    </div>
+                                    <div>
+                                        <span>这是一条很长很长很长很长很长很长的消息</span>
+                                    </div>
+                                </div><div class="userMsgBox">
+                                    <div>
+                                        <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                    </div>
+                                    <div>
+                                        <span>这是一条很长很长很长很长很长很长的消息</span>
+                                    </div>
+                                </div><div class="userMsgBox">
+                                    <div>
+                                        <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                    </div>
+                                    <div>
+                                        <span>这是一条很长很长很长很长很长很长的消息</span>
+                                    </div>
+                                </div><div class="userMsgBox">
+                                    <div>
+                                        <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                    </div>
+                                    <div>
+                                        <span>这是一条很长很长很长很长很长很长的消息</span>
+                                    </div>
+                                </div><div class="userMsgBox">
+                                    <div>
+                                        <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                    </div>
+                                    <div>
+                                        <span>这是一条很长很长很长很长很长很长的消息</span>
+                                    </div>
+                                </div><div class="userMsgBox">
+                                    <div>
+                                        <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                    </div>
+                                    <div>
+                                        <span>这是一条很长很长很长很长很长很长的消息</span>
+                                    </div>
+                                </div><div class="userMsgBox">
+                                    <div>
+                                        <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                    </div>
+                                    <div>
+                                        <span>这是一条很长很长很长很长很长很长的消息</span>
+                                    </div>
+                                </div><div class="userMsgBox">
+                                    <div>
+                                        <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                    </div>
+                                    <div>
+                                        <span>这是一条很长很长很长很长很长很长的消息</span>
+                                    </div>
+                                </div><div class="userMsgBox">
+                                    <div>
+                                        <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                    </div>
+                                    <div>
+                                        <span>这是一条很长很长很长很长很长很长的消息</span>
+                                    </div>
+                                </div><div class="userMsgBox">
+                                    <div>
+                                        <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                    </div>
+                                    <div>
+                                        <span>这是一条很长很长很长很长很长很长的消息</span>
+                                    </div>
+                                </div><div class="userMsgBox">
+                                    <div>
+                                        <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                    </div>
+                                    <div>
+                                        <span>这是一条很长很长很长很长很长很长的消息</span>
+                                    </div>
+                                </div><div class="userMsgBox">
+                                    <div>
+                                        <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                    </div>
+                                    <div>
+                                        <span>这是一条很长很长很长很长很长很长的消息</span>
+                                    </div>
+                                </div><div class="userMsgBox">
+                                    <div>
+                                        <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                    </div>
+                                    <div>
+                                        <span>这是一条很长很长很长很长很长很长的消息</span>
+                                    </div>
+                                </div><div class="userMsgBox">
+                                    <div>
+                                        <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                    </div>
+                                    <div>
+                                        <span>这是一条很长很长很长很长很长很长的消息</span>
+                                    </div>
+                                </div><div class="userMsgBox">
+                                    <div>
+                                        <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                    </div>
+                                    <div>
+                                        <span>这是一条很长很长很长很长很长很长的消息</span>
+                                    </div>
+                                </div><div class="userMsgBox">
+                                    <div>
+                                        <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                    </div>
+                                    <div>
+                                        <span>这是一条很长很长很长很长很长很长的消息</span>
+                                    </div>
+                                </div><div class="userMsgBox">
+                                    <div>
+                                        <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                    </div>
+                                    <div>
+                                        <span>这是一条很长很长很长很长很长很长的消息</span>
+                                    </div>
+                                </div><div class="userMsgBox">
+                                    <div>
+                                        <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                    </div>
+                                    <div>
+                                        <span>这是一条很长很长很长很长很长很长的消息</span>
+                                    </div>
+                                </div><div class="userMsgBox">
+                                    <div>
+                                        <span>16:41:55</span><span>格里芬的指挥官:</span>
+                                    </div>
+                                    <div>
+                                        <span>这是一条很长很长很长很长很长很长的消息</span>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tableBoxInUser">
+                        <div class="giftBox">
+                            <!--玩家消息-->
+                            <div>
+                                <span>礼物消息</span>
+                            </div>
+                            <div>
+                                <div class="giftMsgBox">
+                                    <div>
+                                        <span>2021-04-20  16:41:15</span><span>镇守府的提督</span>
+                                    </div>
+                                    <div>
+                                        <span>赠送了：</span> <span>火箭</span> <span>*10086</span>
+                                    </div>
+                                </div>
+                                <div class="giftMsgBox">
+                                    <div>
+                                        <span>2021-04-20  16:41:15</span><span>镇守府的提督</span>
+                                    </div>
+                                    <div>
+                                        <span>赠送了：</span> <span>火箭</span> <span>*10086</span>
+                                    </div>
+                                </div>
+                                <div class="giftMsgBox">
+                                    <div>
+                                        <span>2021-04-20  16:41:15</span><span>镇守府的提督</span>
+                                    </div>
+                                    <div>
+                                        <span>赠送了：</span> <span>火箭</span> <span>*10086</span>
+                                    </div>
+                                </div>
+                                <div class="giftMsgBox">
+                                    <div>
+                                        <span>2021-04-20  16:41:15</span><span>镇守府的提督</span>
+                                    </div>
+                                    <div>
+                                        <span>赠送了：</span> <span>火箭</span> <span>*10086</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="mtBox"></div>
+                <div class="clearFloat"></div>
+            </div>
+    </main>
+</div>
+
+
+<script type="text/javascript" th:src="@{/config/static/js/mainMethod.js}"></script>
+<script type="text/javascript" th:src="@{/config/static/js/liveDetails.js}"></script>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-sm layui-btn-radius layui-btn-normal" lay-event="detail">
+        详情
+    </a>
+    <a class="layui-btn layui-btn-sm layui-btn-radius layui-btn-danger" lay-event="b">
+        禁言
+    </a>
+</script>
+<script type="text/html" id="imgTemplet">
+    <div style="text-align: center">
+        <img class="layui-circle" width="40px" height="40px" src="{{d.avatarUrl}}"/>
+    </div>
+</script>
+</body>
+</html>

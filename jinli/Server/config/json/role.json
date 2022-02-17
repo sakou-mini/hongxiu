@@ -1,0 +1,1210 @@
+[
+  {
+    "id": "INDEX",
+    "title": "首页",
+    "path": [
+      "/backOffice/home/index"
+    ]
+  },
+  {
+    "id": "USER",
+    "title": "用户管理",
+    "path": [
+    ],
+    "children": [
+      {
+        "id": "USERLIST",
+        "title": "用户列表",
+        "path": [
+          "/backOffice/user/userList"
+        ],
+        "children": [
+          {
+            "id": "SEARCHUSERID",
+            "title": "搜索用户ID",
+            "path": [
+
+            ]
+          },
+          {
+            "id": "USERDETAILS",
+            "title": "用户详情",
+            "path": [
+              "/backOffice/user/userDetails"
+            ],
+            "children": [
+              {
+                "id": "OPERATIONUSERCOIN",
+                "title": "修改金币",
+                "path": [
+                  "/backOffice/user/operationUserCoin"
+                ]
+              },
+              {
+                "id": "BANUSER",
+                "title": "拉黑用户",
+                "path": [
+                  "/backOffice/user/banUser"
+                ]
+              },
+              {
+                "id": "BECOMELIVEUSER",
+                "title": "成为主播",
+                "path": [
+                  "/backOffice/liveUser/becomeLiveUser"
+                ]
+              },
+              {
+                "id": "CHANGEPASSWORD",
+                "title": "修改密码",
+                "path": [
+                  "/backOffice/user/changePassword"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "USERBETRECORD",
+            "title": "投注记录",
+            "path": [
+              "/backOffice/user/userBetRecord"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "BANUSERLIST",
+        "title": "封禁用户列表",
+        "path": [
+          "/backOffice/user/banUserList"
+        ],
+        "children":[
+          {
+            "id": "BANUSERLISTUSERDETAILS",
+            "title": "用户详情",
+            "path": [
+              "/backOffice/user/userDetails"
+            ],
+            "children": [
+              {
+                "id": "BANUSERLISTOPERATIONUSERCOIN",
+                "title": "修改金币",
+                "path": [
+                  "/backOffice/user/operationUserCoin"
+                ]
+              },
+              {
+                "id": "BANUSERLISTBANUSER",
+                "title": "解封用户",
+                "path": [
+                  "/backOffice/user/banUser"
+                ]
+              },
+              {
+                "id": "BANUSERLISTBECOMELIVEUSER",
+                "title": "成为主播",
+                "path": [
+                  "/backOffice/liveUser/becomeLiveUser"
+                ]
+              },
+              {
+                "id": "BANUSERLISTCHANGEPASSWORD",
+                "title": "修改密码",
+                "path": [
+                  "/backOffice/user/changePassword"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "BANUSERUSERBETRECORD",
+            "title": "投注记录",
+            "path": [
+              "/backOffice/user/userBetRecord"
+            ]
+          },{
+            "id": "UNSEALEDUSER",
+            "title": "解封用户",
+            "path": [
+              "/backOffice/user/unsealedUser"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "NEWUSERCHART",
+        "title": "新增用户",
+        "path": [
+          "/backOffice/user/newUserChart"
+        ]
+      },
+      {
+        "id": "ACTIVEUSERCHART",
+        "title": "活跃用户",
+        "path": [
+          "/backOffice/user/activeUserChart"
+        ]
+      },
+      {
+        "id": "RETAINEDUSERCHART",
+        "title": "用户留存",
+        "path": [
+          "/backOffice/user/retainedUserChart"
+        ]
+      },
+      {
+        "id": "CONVERSIONRATESCHART",
+        "title": "付费转换",
+        "path": [
+          "/backOffice/user/conversionRatesChart"
+        ]
+      },
+      {
+        "id": "MOBILEDEVICESCHART",
+        "title": "相关设备",
+        "path": [
+          "/backOffice/user/mobileDevicesChart"
+        ]
+      },
+      {
+        "id": "COINOPERATIONRECORD",
+        "title": "金币修改记录",
+        "path": [
+          "/backOffice/user/coinOperationRecord"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "REVENUEANALYSIS",
+    "title": "收入分析",
+    "path": [],
+    "children": [
+      {
+        "id": "REVENUEINDEX",
+        "title": "收入分析",
+        "path": [
+          "/backOffice/revenueAnalysis/revenueIndex"
+        ]
+      },    {
+        "id": "BETSRECORDLIST",
+        "title": "投注记录",
+        "path": [
+          "/backOffice/revenueAnalysis/betsRecordList"
+        ]
+      },  {
+        "id": "REVENUEDATA",
+        "title": "收入数据",
+        "path": [
+          "/backOffice/revenueAnalysis/revenueData"
+        ]
+      },  {
+        "id": "PAYMENTPENETRATION",
+        "title": "付费渗透",
+        "path": [
+          "/backOffice/revenueAnalysis/paymentPenetration"
+        ]
+      },  {
+        "id": "NEWPLAYERVALUE",
+        "title": "新玩家价值",
+        "path": [
+          "/backOffice/revenueAnalysis/newPlayerValue"
+        ]
+      },  {
+        "id": "PAYMENTHABIT",
+        "title": "付费习惯",
+        "path": [
+          "/backOffice/revenueAnalysis/paymentHabit"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "LIVEUSER",
+    "title": "主播管理",
+    "path": [],
+    "children": [
+      {
+        "id": "LIVEUSERROOM",
+        "title": "直播监控",
+        "path": [
+          "/backOffice/liveUser/liveUserRoom"
+        ],
+        "children": [
+          {
+            "id": "CLOSELIVE",
+            "title": "关闭直播间",
+            "path": [
+              "/backOffice/liveMonitoring/closeLive"
+            ]
+          },
+          {
+            "id": "SEARCHROOMUSERID",
+            "title": "搜索用户ID",
+            "path": []
+          }
+        ]
+      },
+      {
+        "id": "LIVEUSERLIST",
+        "title": "主播列表",
+        "path": [
+          "/backOffice/liveUser/liveUserList"
+        ],
+        "children": [
+          {
+            "id": "LIVEUSERDETAILINFO",
+            "title": "主播详情",
+            "path": [
+              "/backOffice/liveUser/liveUserDetailInfo"
+            ],
+            "children": [
+              {
+                "id": "LIVEUSER_LIVEUSERROLE",
+                "title": "主播权限",
+                "path": []
+              }, {
+                "id": "BANLIVEUSER",
+                "title": "封禁主播",
+                "path": [
+                  "/backOffice/liveUser/banLiveUser"
+                ]
+              },{
+                "id": "LIVEUSERDETAILINFOCHANGEPASSWORD",
+                "title": "修改密码",
+                "path": [
+                  "/backOffice/user/changePassword"
+                ]
+              },{
+                "id": "UPDATELIVEUSERSHAREDPLATFORM",
+                "title": "修改平台",
+                "path": [
+                  "/backOffice/liveUser/updateLiveUserSharedPlatform"
+                ]
+              }
+            ]
+          },{
+            "id": "SEARCHLIVEUSERID",
+            "title": "搜索主播ID",
+            "path": []
+          }
+        ]
+      },
+      {
+        "id": "BANLIVEUSERLIST",
+        "title": "封禁主播列表",
+        "path": [
+          "/backOffice/liveUser/banLiveUserList"
+        ],
+        "children": [
+          {
+            "id": "SEARCHBANLIVEUSERID",
+            "title": "搜索主播ID",
+            "path": []
+          },  {
+            "id": "UNLOCKLIVELIST",
+            "title": "批量解封",
+            "path": [
+              "/backOffice/liveUser/unLockLiveList"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "LIVEUSEREXAMINE",
+        "title": "主播审核待认证",
+        "path": [
+          "/backOffice/liveUser/LiveUserExamine"
+        ]
+      },
+      {
+        "id": "APPROVEDLIVEUSER",
+        "title": "审核记录",
+        "path": [
+          "/backOffice/liveUser/approvedLiveUser"
+        ]
+      },
+      {
+        "id": "LIVEUSERRECORD",
+        "title": "直播记录",
+        "path": [
+          "/backOffice/liveUser/liveUserRecord"
+        ],
+        "children": [
+          {
+            "id": "LIVEUSERRECORDSEARCHLIVEUSERID",
+            "title": "搜索主播ID",
+            "path": []
+          },{
+            "id": "LIVEUSERRECORDEXCEL",
+            "title": "导出excel",
+            "path": []
+          }
+        ]
+      },
+      {
+        "id": "LIVEUSERATTENDANCE",
+        "title": "直播考勤",
+        "path": [
+          "/backOffice/liveUser/liveUserAttendance"
+        ]
+      },
+      {
+        "id": "LIVESOURCELINE",
+        "title": "CDN管理",
+        "path": [
+          "/backOffice/liveUser/liveSourceLine"
+        ],
+        "children": [
+          {
+            "id": "OPENORCLOSELIVESOURCELINE",
+            "title": "开启关闭",
+            "path": [
+              "/backOffice/liveUser/openOrCloseLiveSourceLine"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "REPORTLIST",
+        "title": "举报列表",
+        "path": [
+          "/backOffice/liveUser/reportList"
+        ]
+      },
+      {
+        "id": "PERSONDIARYAPPROVED",
+        "title": "动态列表",
+        "path": [
+          "/backOffice/liveUser/personDiaryApproved"
+        ]
+      },
+      {
+        "id": "PERSONDIARYLIST",
+        "title": "动态审核列表",
+        "path": [
+          "/backOffice/liveUser/personDiaryList"
+        ]
+      },
+      {
+        "id": "PERSONDIARYREJECT",
+        "title": "动态驳回列表",
+        "path": [
+          "/backOffice/liveUser/personDiaryReject"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "JINLI",
+    "title": "锦鲤直播",
+    "path": [],
+    "children": [
+      {
+        "id": "INDEXJINLI",
+        "title": "今日总览",
+        "path": [
+          "/backOffice/guess/indexJinli"
+        ]
+      },
+      {
+        "id": "LIVEUSERLISTJINLI",
+        "title": "主播列表",
+        "path": [
+          "/backOffice/guess/liveUserListJinLi"
+        ],
+        "children":[
+          {
+            "id": "LIVEUSERJINLIDETAILINFO",
+            "title": "主播详情",
+            "path": [
+              "/backOffice/guess/liveUserJinLiDetailInfo"
+            ],
+            "children": [
+              {
+                "id": "JINLI_LIVEUSERROLE",
+                "title": "主播权限",
+                "path": []
+              },{
+                "id": "JINLIBANLIVEUSER",
+                "title": "封禁主播",
+                "path": [
+                  "/backOffice/liveUser/banLiveUser"
+                ]
+              },{
+                "id": "JINLILIVEUSERDETAILINFOCHANGEPASSWORD",
+                "title": "修改密码",
+                "path": [
+                  "/backOffice/user/changePassword"
+                ]
+              },{
+                "id": "JINLIUPDATELIVEUSERSHAREDPLATFORM",
+                "title": "修改平台",
+                "path": [
+                  "/backOffice/liveUser/updateLiveUserSharedPlatform"
+                ]
+              }
+            ]
+          }
+        ]
+      },  {
+        "id": "GIFTCONSUMPTIONLIST",
+        "title": "礼物消费记录",
+        "path": [
+          "/backOffice/guess/giftConsumptionList"
+        ]
+      }, {
+        "id": "LIVEUSERRECEIVEDGIFTLIST",
+        "title": "主播收礼记录",
+        "path": [
+          "/backOffice/guess/liveUserReceivedGiftList"
+        ]
+      },{
+        "id": "SENDBACKOFFICEMESSAGE",
+        "title": "系统管理",
+        "path": [],
+        "children":[
+          {
+            "id": "SENDBACKOFFICEMESSAGE",
+            "title": "走马灯消息",
+            "path": [
+              "/backOffice/guess/sendBackOfficeMessage"
+            ]
+          },
+          {
+            "id": "MESSAGESETTINGS",
+            "title": "直播公告",
+            "path": [
+              "/backOffice/guess/messageSettings"
+            ]
+          },{
+            "id": "SENDBACKOFFICEMESSAGERECORD",
+            "title": "走马灯消息操作记录",
+            "path": [
+              "/backOffice/guess/sendBackOfficeMessageRecord"
+            ]
+          },
+          {
+            "id": "MESSAGESETTINGSRECORD",
+            "title": "直播公告操作记录",
+            "path": [
+              "/backOffice/guess/messageSettingsRecord"
+            ]
+          },
+          {
+            "id": "FEEDBACK",
+            "title": "反馈信息",
+            "path": [
+              "/backOffice/guess/feedback"
+            ]
+          },
+          {
+            "id": "CAROUSEL",
+            "title": "轮播图设置",
+            "path": [],
+            "children":[
+              {
+                "id": "MATCHCAROUSEL",
+                "title": "赛事轮播图设置",
+                "path": [
+                  "/backOffice/guess/matchCarousel"
+                ]
+              },
+              {
+                "id": "LIVECAROUSEL",
+                "title": "直播轮播图设置",
+                "path": [
+                  "/backOffice/guess/liveCarousel"
+                ]
+              },
+              {
+                "id": "GUESSCAROUSEL",
+                "title": "竞猜轮播图设置",
+                "path": [
+                  "/backOffice/guess/guessCarousel"
+                ]
+              }
+            ]
+          }
+        ]
+      },  {
+        "id": "GIFT",
+        "title": "礼物管理",
+        "path": [
+          "/backOffice/guess/guessNotStart"
+        ],
+        "children": [
+          {
+            "id": "GIFTLIST",
+            "title": "礼物列表",
+            "path": [
+              "/backOffice/guess/giftList"
+            ],
+            "children": [
+              {
+                "id": "OPENORCLOSEGIFT",
+                "title": "开关礼物",
+                "path": [
+                  "/backOffice/gift/openOrCloseGift"
+                ]
+              }, {
+                "id": "CHANGEPRICE",
+                "title": "编辑礼物",
+                "path": [
+                  "/backOffice/gift/changePrice"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GUESS",
+        "title": "官方游戏",
+        "path": [],
+        "children": [
+          {
+            "id": "GUESSLISTBOX",
+            "title": "竞猜列表",
+            "path": [],
+            "children": [
+              {
+                "id": "GUESSNOTSTART",
+                "title": "尚未开始",
+                "path": [
+                  "/backOffice/guess/guessNotStart"
+                ],
+                "children": [
+                  {
+                    "id": "GUESSADD",
+                    "title": "新增",
+                    "path": []
+                  },{
+                    "id": "GUESSEDIT",
+                    "title": "编辑",
+                    "path": []
+                  }
+                ]
+              },    {
+                "id": "GUESSLIST",
+                "title": "竞猜列表",
+                "path": [
+                  "/backOffice/guess/guessList"
+                ]
+              },    {
+                "id": "GUESSWAITPRIZE",
+                "title": "尚未开奖",
+                "path": [
+                  "/backOffice/guess/lottery/guessWaitPrize"
+                ]
+              }, {
+                "id": "GUESSSHOWOVER",
+                "title": "已开奖",
+                "path": [
+                  "/backOffice/guess/guessShowOver"
+                ]
+              }
+            ]
+          },    {
+            "id": "GUESSSTATISTICS",
+            "title": "已开奖统计",
+            "path": [
+              "/backOffice/guess/lottery/guessStatistics"
+            ]
+          },    {
+            "id": "OFFICIALLIVELIST",
+            "title": "当前官方直播间列表",
+            "path": [
+                "/backOffice/guess/officialLiveList"
+            ],
+            "children": [
+              {
+                "id": "OFFICIALLIVEADD",
+                "title": "新增直播间",
+                "path": []
+              },  {
+                "id": "OFFICIALLIVECOLSE",
+                "title": "关闭直播间",
+                "path": []
+              }
+            ]
+          },    {
+            "id": "OFFICIALLIVERECORDS",
+            "title": "历史官方直播间列表",
+            "path": [
+              "/backOffice/guess/officialLiveRecords"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "BACKOFFICE_T",
+    "title": "T平台",
+    "path": [],
+    "children": [
+      {
+        "id": "INDEXT",
+        "title": "今日总览",
+        "path": [
+          "/backOffice/platformT/indexT"
+        ]
+      },
+      {
+        "id": "LIVEROOMLISTT",
+        "title": "直播监控",
+        "path": [
+          "/backOffice/platformT/liveRoomListT"
+        ],
+        "children": [
+          {
+            "id": "CLOSTLIVET",
+            "title": "关闭直播间",
+            "path": []
+          },{
+            "id": "SEARCHUSERIDLIVEROOMLISTT",
+            "title": "搜索用户ID",
+            "path": []
+          }
+        ]
+      },
+      {
+        "id": "LIVEUSERLISTT",
+        "title": "主播列表",
+        "path": [
+          "/backOffice/platformT/liveUserListT"
+        ],
+        "children":[
+          {
+            "id": "LIVEUSERDETAILINFOT",
+            "title": "主播详情",
+            "path": [
+              "/backOffice/platformT/liveUserDetailInfoT"
+            ],
+            "children":[
+              {
+                "id": "LIVEUSERDETAILINFOT_LIVEUSERROLE",
+                "title": "主播权限",
+                "path": []
+              },{
+                "id": "LIVEUSERDETAILINFOTBANLIVEUSER",
+                "title": "封禁主播",
+                "path": []
+              },{
+                "id": "LIVEUSERDETAILINFOTCANGEPASSWORD",
+                "title": "修改密码",
+                "path": []
+              },{
+                "id": "TUPDATELIVEUSERSHAREDPLATFORM",
+                "title": "修改平台",
+                "path": [
+                  "/backOffice/liveUser/updateLiveUserSharedPlatform"
+                ]
+              }
+            ]
+          },{
+            "id": "SEARCHLIVEUSERIDLIVEUSERLISTT",
+            "title": "搜索主播ID",
+            "path": []
+          }
+        ]
+      },
+      {
+        "id": "BANLIVEUSERLISTT",
+        "title": "封禁主播列表",
+        "path": [
+          "/backOffice/platformT/banLiveUserListT"
+        ],
+        "children":[
+          {
+            "id": "BANLIVEUSERLISTTUNLOCKLIVELIST",
+            "title": "解除封禁",
+            "path": [
+              "/backOffice/liveUser/unLockLiveList"
+            ]
+          }, {
+            "id": "ALLBANLIVEUSERLISTTUNLOCKLIVELIST",
+            "title": "批量解除封禁",
+            "path": [
+                "/backOffice/liveUser/unLockLiveList"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "LIVEUSERAPPLYTBOX",
+        "title": "主播审核",
+        "path": [],
+        "children":[
+          {
+            "id": "LIVEUSERAPPLYT",
+            "title": "主播申请列表",
+            "path": [
+              "/backOffice/platformT/liveUserApplyT"
+            ]
+          },{
+            "id": "LIVEUSERAUDITRECORDST",
+            "title": "审核记录",
+            "path": [
+              "/backOffice/platformT/liveUserAuditRecordsT"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "USERLISTT",
+        "title": "用户列表",
+        "path": [
+          "/backOffice/platformT/userListT"
+        ]
+      },
+      {
+        "id": "LIVEUSERRECORDT",
+        "title": "直播记录",
+        "path": [
+          "/backOffice/platformT/liveUserRecordT"
+        ],
+        "children":[
+          {
+            "id": "LIVEUSERRECORDTSEARCHLIVEUSERID",
+            "title": "搜索主播ID",
+            "path": []
+          },  {
+            "id": "LIVEUSERRECORDTEXCEL",
+            "title": "导出excel",
+            "path": []
+          }
+        ]
+      }, {
+        "id": "RECHARGERECORDT",
+        "title": "充值记录",
+        "path": [
+          "/backOffice/platformT/rechargeRecordT"
+        ]
+      },
+      {
+        "id": "GIFTCONSUMPTIONT",
+        "title": "礼物记录",
+        "path": [],
+        "children":[
+          {
+            "id": "GIFTCONSUMPTIONLISTT",
+            "title": "礼物消费记录",
+            "path": [
+              "/backOffice/platformT/giftConsumptionListT"
+            ]
+          },{
+            "id": "RECEIVEDGIFTLISTT",
+            "title": "主播收礼详情",
+            "path": [
+              "/backOffice/platformT/receivedGiftListT"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GIFTLISTT",
+        "title": "礼物管理",
+        "path": [
+          "/backOffice/platformT/giftListT"
+        ],
+        "children":[
+          {
+            "id": "GIFTLISTTOPENORCLOSEGIFT",
+            "title": "开关礼物",
+            "path": [
+              "/backOffice/gift/openOrCloseGift"
+            ]
+          }, {
+            "id": "GIFTLISTTCHANGEPRICE",
+            "title": "编辑礼物",
+            "path": [
+              "/backOffice/gift/changePrice"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MESSAGESETTINGSTBOX",
+        "title": "消息设置",
+        "path": [],
+        "children":[
+          {
+            "id": "MESSAGESETTINGST",
+            "title": "直播公告",
+            "path": [
+              "/backOffice/platformT/messageSettingsT"
+            ]
+          },     {
+            "id": "BACKOFFICEMESSAGET",
+            "title": "走马灯消息",
+            "path": [
+              "/backOffice/platformT/backOfficeMessageT"
+            ]
+          },     {
+            "id": "MESSAGESETTINGSRECORDT",
+            "title": "直播公告操作记录",
+            "path": [
+              "/backOffice/platformT/messageSettingsRecordT"
+            ]
+          },{
+            "id": "BACKOFFICEMESSAGERECORDT",
+            "title": "走马灯消息操作记录",
+            "path": [
+              "/backOffice/platformT/backOfficeMessageRecordT"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DOMAINNAMESETT",
+        "title": "T平台域名设置",
+        "path": [
+          "/backOffice/platformT/domainNameSetT"
+        ],
+        "children":[
+          {
+            "id": "UPDATEDOMAINNAMET",
+            "title": "修改",
+            "path": [
+              "/backOffice/backOfficeUser/updateDomainName"
+            ]
+          },{
+            "id": "TESTDOMAINNAMET",
+            "title": "测试",
+            "path": []
+          },{
+            "id": "REMOVEDOMAINT",
+            "title": "删除",
+            "path": [
+              "/backOffice/backOfficeUser/removeDomain"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DOMAINNAMESETRECORDT",
+        "title": "T平台域名操作记录",
+        "path": [
+          "/backOffice/platformT/domainNameSetRecordT"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Q平台",
+    "id": "BACKOFFICE_Q",
+    "path": [
+
+    ],
+    "children": [
+      {
+        "id": "INDEXQ",
+        "title": "今日总览",
+        "path": [
+          "/backOffice/platformQ/indexQ"
+        ]
+      },
+      {
+        "id": "LIVEROOMLISTQ",
+        "title": "直播监控",
+        "path": [
+          "/backOffice/platformQ/liveRoomListQ"
+        ],
+        "children":[
+          {
+            "id": "CLOSTLIVEQ",
+            "title": "关闭直播间",
+            "path": []
+          },{
+            "id": "SEARCHUSERIDLIVEROOMLISTQ",
+            "title": "搜索用户ID",
+            "path": []
+          }
+        ]
+      },
+      {
+        "id": "LIVEUSERLISTQ",
+        "title": "主播列表",
+        "path": [
+          "/backOffice/platformQ/liveUserListQ"
+        ],
+        "children":[
+          {
+            "id": "LIVEUSERDETAILINFOQ",
+            "title": "主播详情",
+            "path": [
+              "/backOffice/platformQ/liveUserDetailInfoQ"
+            ],
+            "children":[
+            {
+              "id": "LIVEUSERDETAILINFOQ_LIVEUSERROLE",
+              "title": "主播权限",
+              "path": []
+            },{
+              "id": "LIVEUSERDETAILINFOQBANLIVEUSER",
+              "title": "封禁主播",
+              "path": []
+            },{
+              "id": "LIVEUSERDETAILINFOQCANGEPASSWORD",
+              "title": "修改密码",
+              "path": []
+            },{
+                "id": "QUPDATELIVEUSERSHAREDPLATFORM",
+                "title": "修改平台",
+                "path": [
+                  "/backOffice/liveUser/updateLiveUserSharedPlatform"
+                ]
+              }
+          ]
+          },{
+            "id": "SEARCHLIVEUSERIDLIVEUSERLISTQ",
+            "title": "搜索主播ID",
+            "path": []
+          }
+        ]
+      },
+      {
+        "id": "BANLIVEUSERLISTQ",
+        "title": "封禁主播列表",
+        "path": [
+          "/backOffice/platformQ/banLiveUserListQ"
+        ],
+        "children":[
+          {
+            "id": "BANLIVEUSERLISTTUNLOCKLIVELISQ",
+            "title": "解除封禁",
+            "path": [
+              "/backOffice/liveUser/unLockLiveList"
+            ]
+          }, {
+            "id": "ALLBANLIVEUSERLISTTUNLOCKLIVELISQ",
+            "title": "批量解除封禁",
+            "path": [
+              "/backOffice/liveUser/unLockLiveList"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "LIVEUSERAPPLYQBOX",
+        "title": "主播审核",
+        "path": [
+
+        ],
+        "children":[
+          {
+            "id": "LIVEUSERAPPLYQ",
+            "title": "主播申请列表",
+            "path": [
+              "/backOffice/platformQ/liveUserApplyQ"
+            ]
+          },{
+            "id": "LIVEUSERAUDITRECORDSQ",
+            "title": "审核记录",
+            "path": [
+              "/backOffice/platformQ/liveUserAuditRecordsQ"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "USERLISTQ",
+        "title": "用户列表",
+        "path": [
+          "/backOffice/platformQ/userListQ"
+        ]
+      },
+      {
+        "id": "LIVEUSERRECORDQ",
+        "title": "直播记录",
+        "path": [
+          "/backOffice/platformQ/liveUserRecordQ"
+        ],
+        "children":[
+          {
+            "id": "LIVEUSERRECORDQSEARCHLIVEUSERID",
+            "title": "搜索主播ID",
+            "path": []
+          },  {
+            "id": "LIVEUSERRECORDQEXCEL",
+            "title": "导出excel",
+            "path": []
+          }
+        ]
+      },
+      {
+        "id": "GIFTCONSUMPTIONLISTQBOX",
+        "title": "礼物记录",
+        "path": [
+
+        ],
+        "children":[
+          {
+            "id": "GIFTCONSUMPTIONLISTQ",
+            "title": "礼物消费记录",
+            "path": [
+              "/backOffice/platformQ/giftConsumptionListQ"
+            ]
+          },{
+            "id": "RECEIVEDGIFTLISTQ",
+            "title": "主播收礼详情",
+            "path": [
+              "/backOffice/platformQ/receivedGiftListQ"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GIFTLISTQ",
+        "title": "礼物管理",
+        "path": [
+          "/backOffice/platformQ/giftListQ"
+        ],
+        "children":[
+          {
+            "id": "GIFTLISTQOPENORCLOSEGIFT",
+            "title": "开关礼物",
+            "path": [
+              "/backOffice/gift/openOrCloseGift"
+            ]
+          }, {
+            "id": "GIFTLISTQCHANGEPRICE",
+            "title": "编辑礼物",
+            "path": [
+              "/backOffice/gift/changePrice"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MESSAGESETTINGSQBOX",
+        "title": "消息设置",
+        "path": [],
+        "children":[
+          {
+            "id": "MESSAGESETTINGSQ",
+            "title": "直播公告",
+            "path": [
+              "/backOffice/platformQ/messageSettingsQ"
+            ]
+          },     {
+            "id": "BACKOFFICEMESSAGEQ",
+            "title": "走马灯消息",
+            "path": [
+              "/backOffice/platformQ/backOfficeMessageQ"
+            ]
+          },     {
+            "id": "MESSAGESETTINGSRECORDQ",
+            "title": "直播公告操作记录",
+            "path": [
+              "/backOffice/platformQ/messageSettingsRecordQ"
+            ]
+          },{
+            "id": "BACKOFFICEMESSAGERECORDQ",
+            "title": "走马灯消息操作记录",
+            "path": [
+              "/backOffice/platformQ/backOfficeMessageRecordQ"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DOMAINNAMESETQ",
+        "title": "Q平台域名设置",
+        "path": [
+          "/backOffice/platformQ/domainNameSetQ"
+        ],
+        "children":[
+          {
+            "id": "UPDATEDOMAINNAMEQ",
+            "title": "修改",
+            "path": [
+              "/backOffice/backOfficeUser/updateDomainName"
+            ]
+          },{
+            "id": "TESTDOMAINNAMEQ",
+            "title": "测试",
+            "path": []
+          },{
+            "id": "REMOVEDOMAINQ",
+            "title": "删除",
+            "path": [
+              "/backOffice/backOfficeUser/removeDomain"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DOMAINNAMESETRECORDQ",
+        "title": "Q平台域名操作记录",
+        "path": [
+          "/backOffice/platformQ/domainNameSetRecordQ"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "后台账号管理",
+    "id": "BACKOFFICE",
+    "path": [
+    ],
+    "children": [
+      {
+        "id": "BACKOFFICEMANAGEMENT",
+        "title": "账号管理",
+        "path": [
+          "/backOffice/backOfficeUser/admin/backOfficeManagement"
+        ],
+        "children": [
+          {
+            "id": "ADDNEWBACKOFFICE",
+            "title": "新增管理员",
+            "path": []
+          },{
+            "id": "EDITROLE",
+            "title": "编辑权限",
+            "path": [],
+            "children": [
+              {
+                "id": "BANBACKOFFICE",
+                "title": "冻结、解冻管理员",
+                "path": []
+              }, {
+                "id": "BACKOIFFICEROLE",
+                "title": "授权权限",
+                "path": []
+              }
+            ]
+          },{
+            "id": "CHANGEBACKOFFICEPASSWORD",
+            "title": "修改密码",
+            "path": []
+          }
+        ]
+      }, {
+        "id": "THESERVER",
+        "title": "服务器管理",
+        "path": [
+          "/backOffice/backOfficeUser/admin/theServer"
+        ],
+        "children": [
+          {
+            "id": "OPENCLOSESERVER",
+            "title": "开关服务器",
+            "path": [
+
+            ]
+          }
+        ]
+      }, {
+        "id": "CHANGEPASSWORDRECORD",
+        "title": "后台密码操作记录",
+        "path": [
+          "/backOffice/backOfficeUser/admin/changePasswordRecord"
+        ]
+      }
+    ]
+  }
+]

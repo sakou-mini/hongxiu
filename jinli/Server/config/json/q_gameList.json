@@ -1,0 +1,64 @@
+{
+  "gameList": [
+    {
+      "gameName": "龙虎斗",
+      "gameCode": "lhd",
+      "roomName": "至尊厅01",
+      "roomCode": "01"
+    },
+    {
+      "gameName": "龙虎斗",
+      "gameCode": "lhd",
+      "roomName": "至尊厅02",
+      "roomCode": "02"
+    },
+    {
+      "gameName": "龙虎斗",
+      "gameCode": "lhd",
+      "roomName": "至尊厅03",
+      "roomCode": "03"
+    },
+    {
+      "gameName": "龙虎斗",
+      "gameCode": "lhd",
+      "roomName": "至尊厅04",
+      "roomCode": "04"
+    },
+    {
+      "gameName": "彩源龙虎斗",
+      "gameCode": "cylhd",
+      "roomName": "河内分分彩",
+      "roomCode": "01"
+    },
+    {
+      "gameName": "彩源龙虎斗",
+      "gameCode": "cylhd",
+      "roomName": "奇趣分分彩",
+      "roomCode": "02"
+    },
+    {
+      "gameName": "彩源龙虎斗",
+      "gameCode": "cylhd",
+      "roomName": "加拿大30秒",
+      "roomCode": "03"
+    },
+    {
+      "gameName": "彩源龙虎斗",
+      "gameCode": "cylhd",
+      "roomName": "河内五分彩",
+      "roomCode": "04"
+    },
+    {
+      "gameName": "彩源猜大小",
+      "gameCode": "cdx",
+      "roomName": "河内分分彩",
+      "roomCode": "1"
+    },
+    {
+      "gameName": "彩源猜大小",
+      "gameCode": "cdx",
+      "roomName": "奇趣分分彩",
+      "roomCode": "2"
+    }
+  ]
+}

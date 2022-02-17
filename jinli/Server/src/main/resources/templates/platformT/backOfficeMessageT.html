@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/config/static/layui/css/layui.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/mainCss.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/InputAnimation.css}">
+    <script type="text/javascript" th:src="@{/config/static/js/jq.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/layui/layui.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/js/config.js}"></script>
+    <style type="text/css">
+        .titleMsg>h2,.titleMsg>div{
+            float: left;
+        }
+        .titleMsg>div{
+            margin-top: 38px;
+        }
+        .formStyle{
+            background-color: #fff;
+            padding: 10px 30px;
+            margin-top: 30px;
+        }
+        .formStyle>div>div>div{
+            line-height: 36px;
+        }
+        .firstEle{
+            margin-left: 20px;
+        }
+        .imgBox{
+            overflow: hidden;
+            padding: 20px;
+        }
+        #loadHtml{
+            padding: 0 30px;
+        }
+        .imgBox>div{
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            float: left;
+            margin-left: 30px;
+            margin-bottom: 30px;
+        }
+        .layui-layer-dialog{
+            width:auto!important;
+        }
+        @media screen and (max-width: 1000px) {
+            .firstEle{
+                margin-left: 0;
+            }
+        }
+        .selectDate>div{
+            float: left;
+            color: black;
+            line-height: 39px;
+            margin-left: 20px;
+        }
+        .selectDate{
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div class="bgcSidebar"></div>
+<div class="container app">
+    <header>
+        <!--头部导航-->
+        <ul class="layui-nav overStyle" lay-filter="">
+            <li class="logoOver"><div class="logoBox"><img class="logo" th:src="@{/config/static/img/default_logo.png}"></div><div class="logoText">锦鲤直播</div></li>
+            <!--<li class="layui-nav-item toItemChange" data-path="index"><a href="javascript:void(0);" >首页</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="LiveUserExamine"><a href="javascript:void(0);" >主播管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="reportList"><a href="javascript:void(0);" >举报管理</a></li>-->
+            <!--<li class="layui-nav-item layui-this  toItemChange" data-path="personDiaryList"><a href="javascript:void(0);">动态审核</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="guessList"><a href="javascript:void(0);">竞猜管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="backOfficeManagement"><a href="javascript:void(0);">后台账号管理</a></li>-->
+            <li class="userMsg">
+                <div>
+                    <span>欢迎您：</span>
+                    <span id="loginName">admin</span>
+                </div>
+                <div>
+                    <a href="/logout"><button class="layui-btn layui-btn-danger" id="logout" >退出</button></a>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <main class="mainStyle">
+        <!--侧边栏-->
+        <div class="sidebar">
+            <div>
+                <ul class="layui-nav layui-nav-tree overStyle leftSide" id="sidebar" lay-filter="test">
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="personDiaryList" href="javascript:void(0);">动态审核列表</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="personDiaryReject" href="javascript:void(0);">未通过列表</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="personDiaryApproved" href="javascript:void(0);">通过列表</a></li>-->
+                </ul>
+                <div class="mainBox clearfix" id="loadHtml">
+                    <div class="titleMsg clearfix" style="margin-bottom: 40px">
+                        <div>
+                            <button type="button" class="layui-btn layui-btn-primary" onclick="window.history.back(-1)">
+                                <i class="layui-icon">&#xe603;</i>
+                            </button>
+                        </div>
+                        <h2 class="headMsg">走马灯消息</h2>
+                    </div>
+                    <div>
+                        <div>
+                            <form class="layui-form layui-form-pane formStyle" style="margin-bottom: 30px" action="">
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">当前信息</label>
+                                    <div class="layui-input-block layui-row">
+                                        <div style="padding: 5px 10px;" id="nowMsg">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">滚动条消息</label>
+                                    <div class="layui-input-block layui-row">
+                                        <div>
+                                            <textarea name="desc" rows="5" id="message" placeholder="请输入滚动条显示内容" class="layui-textarea" onkeyup="value.length > 30?value = value.slice(0, 30):value"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">间隔时间</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <input type="number" name="title" id="intervalTime" required  lay-verify="required" placeholder="请输入间隔时间（分）" autocomplete="off" class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">时间范围</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="selectDate">
+                                            <div><input type="text" class="layui-input" id="test1" readonly style="width: 250px"></div>
+                                            <div>&nbsp;&nbsp;-&nbsp;&nbsp;</div>
+                                            <div><input type="text" class="layui-input" id="test2" readonly style="width: 250px"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="layui-btn layui-btn-normal" type="button" id="upData">发送</button>
+                                <button class="layui-btn" type="button" id="clear">清空消息</button>
+                            </form>
+
+                        </div>
+                    </div>
+                    <div class="mtBox"></div>
+                </div>
+                <div class="clearFloat"></div>
+            </div>
+        </div>
+    </main>
+</div>
+<script type="text/javascript" th:src="@{/config/static/js/mainMethod.js}"></script>
+<script th:inline="javascript">
+
+    var hasId = GetQueryString("id")
+
+    if(hasId !== ""){
+        var has =  parseURL(location.href)
+        $("#test1").val(dateFormat("YYYY-mm-dd HH:MM:SS",parseInt(has.rollDisPlayStartTime)))
+        $("#test2").val(dateFormat("YYYY-mm-dd HH:MM:SS",parseInt(has.rollDisPlayEndTime)))
+        $("#message").val(has.newMessage)
+        $("#intervalTime").val(parseInt(has.rollIntervalTime)/1000/60)
+        $("#upData").text("修改")
+    }
+
+
+
+
+    let lock = false
+    const input = document.getElementById("message")
+    input.addEventListener('compositionstart', () => {
+        // 开启了中文输入法
+        lock = true
+    })
+    input.addEventListener('comositionend', () => {
+        // 关闭了中文输入法
+        lock = false
+    })
+    input.addEventListener('input', (e)=> {
+        //  忽略非直接输入
+        if(!lock) console.log(e.target.value)
+    })
+
+
+    var msg = [[${message}]];
+    $("#nowMsg").text(msg)
+    $("#message").on("input",function () {
+        if($("#message").val().length > 30){
+            $("#message").attr("style","box-shadow: 0 0 10px red;")
+        }else {
+            $("#message").attr("style","")
+        }
+    })
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#test1'
+            ,type: 'datetime'
+        });
+        laydate.render({
+            elem: '#test2'
+            ,type: 'datetime'
+        });
+    });
+
+    $("#upData").on("click",function () {
+        var message = $("#message").val();
+        if(message.length > 30){
+            layer.msg("走马灯消息长度不得超过30");
+            return;
+        }
+        var intervalTime = parseFloat($("#intervalTime").val())*60*1000;
+        var startTime = new Date($("#test1").val()).getTime();
+        var endTime = new Date($("#test2").val()).getTime();
+        if(endTime<=startTime){
+            layer.open({
+                title: '错误信息'
+                ,content: "结束时间应该大于开始时间"
+            });
+            return;
+        }
+        if(endTime-startTime<=intervalTime){
+            layer.open({
+                title: '错误信息'
+                ,content: "结束时间和开始时间的时间差应该大于间隔时间"
+            });
+            return
+        }
+        if(endTime<=new Date().getTime()){
+            layer.open({
+                title: '错误信息'
+                ,content: "结束时间不能小于当前时间"
+            });
+            return
+        }
+        $.get({
+            url:window.ioApi.backOfficeMessage.sendRollMessage,
+            data:{
+                message,
+                intervalTime,
+                startTime,
+                endTime,
+                platform:2
+            },
+            success:function (res) {
+                if(res === "success"){
+                    layer.open({
+                        title: '提示'
+                        ,content:"发送成功",
+                        btn: ['确认']
+                        ,btn1: function(index, layero){
+                            layer.closeAll();
+                            location.reload()
+                        },
+                        cancel: function(layero,index){
+                            layer.closeAll();
+                            location.reload()
+                        }
+                    });
+                }
+            }
+        })
+    })
+    $("#clear").on("click",function () {
+        layer.open({
+            title: '提示'
+            ,content: "确定当前走马灯消息吗？",
+            btn:["确定","取消"],
+            btn1:function (index,layero) {
+                $.post({
+                    url:window.ioApi.backOfficeMessage.cleanRollMessage,
+                    data:{
+                        platform:2
+                    },
+                    success:function (res) {
+                        location.reload()
+                    }
+                })
+            },
+            btn2:function (index,layero) {
+                layer.closeAll();
+            }
+        })
+    })
+</script>
+</body>
+</html>

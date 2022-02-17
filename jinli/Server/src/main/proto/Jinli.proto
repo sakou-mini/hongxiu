@@ -1,0 +1,2368 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_package = "com.donglaistd.jinli";
+
+import "Game.proto";
+import "Constant.proto";
+import "RoomManagement.proto";
+
+message JinliMessageRequest {
+  oneof request{
+    LoginRequest loginRequest = 1;
+    RegisterRequest registerRequest = 2;
+    FindAllFolloweesRequest findAllFolloweesRequest = 3;
+    FollowLiveUserRequest followLiveUserRequest = 4;
+    UpdateUserInfoRequest updateUserInfoRequest = 5;
+    UserInfoRequest userInfoRequest = 6;
+    BecomeLiveUserRequest becomeLiveUserRequest = 7;
+    LiveUserInfoRequest liveUserInfoRequest = 9;
+    QueryLiveUserFansListRequest queryLiveUserFansListRequest = 10;
+    GetRoomListRequest getRoomListRequest = 21;
+    EnterRoomRequest enterRoomRequest = 22;
+    QuitRoomRequest quitRoomRequest = 23;
+    GameRequest gameRequest = 24;
+    CreateGameRequest createGameRequest = 25;
+    StartLiveRequest startLiveRequest = 26; // start or end this live
+    GameInfoRequest gameInfoRequest = 27;
+    ChatMessageRequest chatMessageRequest = 28;
+    GetDailyIncomeRankRequest getDailyIncomeRankRequest = 29;
+    GetGradeRankRequest getGradeRankRequest = 30;
+    GetLiveUserRankRequest getLiveUserRankRequest = 31;
+    UpdateRoomImageRequest updateRoomImageRequest = 32;
+    UpdateRoomDescriptionRequest updateRoomDescriptionRequest = 33;
+    SwitchGameRequest switchGameRequest = 34;
+    GetLiveStatisticRequest getLiveStatisticRequest = 35;
+    UnFollowLiveUserRequest unFollowLiveUserRequest = 36;
+    QueryFlowRecordRequest queryFlowRecordRequest = 37;
+    SwitchPatternRequest switchPatternRequest = 38;
+    QueryLiveUserEndLiveRequest  queryLiveUserEndLiveRequest = 39;
+    SendPrivateMessageRequest sendPrivateMessageRequest = 40;
+    EndLiveRequest endLiveRequest = 41;
+    QueryRoomChatHistoryRequest queryRoomChatHistoryRequest = 42;
+    SendGiftRequest sendGiftRequest = 44;
+    RecommendRequest recommendRequest = 46;
+    CreateRedPacketRequest createRedPacketRequest = 47;
+    GrabRedPacketRequest grabRedPacketRequest = 48;
+    QueryRedPacketRecordRequest queryRedPacketRecordRequest = 49;
+    QueryRedPacketInfoRequest queryRedPacketInfoRequest = 50;
+    QueryRoomRedPacketSummaryRequest queryRoomRedPacketSummaryRequest = 51;
+    UpdateLiveNoticeRequest updateLiveNoticeRequest = 52;
+    QueryLiveStatusRequest queryLiveStatusRequest = 61;
+    RoomManagementRequest roomManagementRequest = 62;
+
+    CreatePersonDiaryRequest createPersonDiaryRequest = 63;
+    UpdateZoneTextRequest updateZoneTextRequest = 64;
+    QueryZoneInfoRequest  queryZoneInfoRequest = 65;
+    QueryDiaryDetailRequest  queryDiaryDetailRequest = 66;
+    StarDiaryRequest  starDiaryRequest = 67;
+    ReplyDiaryRequest replyDiaryRequest = 68;
+    QueryDiaryReplyRequest  queryDiaryReplyRequest = 69;
+    DeleteDiaryRequest deleteDiaryRequest = 70;
+    LoadDiaryListRequest loadDiaryListRequest = 71;
+    FansContributionRequest fansContributionRequest = 72;
+    QueryGiftRankRequest queryGiftRankRequest = 73;
+    QueryContributionRankRequest queryContributionRankRequest = 74;
+    ChangePasswordRequest changePasswordRequest = 75;
+    QueryGiftIncomeDetailRequest queryGiftIncomeDetailRequest = 76;
+    QueryCoinRechargeRecordRequest queryCoinRechargeRecordRequest = 77;
+
+    //landlord
+    GrabLandlordRequest grabLandlordRequest = 83;
+    ChooseRateForLandlordRequest  chooseRateForLandlordRequest = 84;
+    PlayCardsForLandlordRequest  playCardsForLandlordRequest = 85;
+
+
+    TexasCheckRequest texasCheckRequest = 101;
+    TexasFoldRequest texasFoldRequest = 102;
+    TexasBetChipsRequest texasBetChipsRequest = 103;
+
+    // GoldenFlower
+    FlowerFoldRequest flowerFoldRequest = 104;
+    FlowerBetChipsRequest flowerBetChipsRequest = 105;
+    FlowerLookCardsRequest flowerLookCardsRequest = 106;
+    FlowerCompareCardsRequest flowerCompareCardsRequest = 107;
+    //Race
+    QueryRaceListRequest queryRaceListRequest = 110;
+    QuitRaceRequest quitRaceRequest = 111;
+    JoinRaceRequest joinRaceRequest = 112;
+    QueryJoinedRaceRequest queryJoinedRaceRequest = 113;
+    QueryJoinedRaceGameInfoRequest queryJoinedRaceGameInfoRequest = 114;
+    QueryGuessListRequest queryGuessListRequest = 130;
+    GuessWagerRequest guessWagerRequest = 131;
+    GuessDetailsRequest guessDetailsRequest = 132;
+    GuessWagerInformationRequest guessWagerInformationRequest = 133;
+    GuessWagerDetailsRequest guessWagerDetailsRequest = 134;
+
+    BecomeLiveUserCheckRequest becomeLiveUserCheckRequest = 136;
+    ModifyBindPhoneNumberRequest modifyBindPhoneNumberRequest = 137;
+
+    QueryUserPromotionInfoRequest queryUserPromotionInfoRequest = 140;
+    QueryDayGroupContributionRequest queryDayGroupContributionRequest = 141;
+    QuerySubordinatesFlowRequest querySubordinatesFlowRequest = 142;
+    QueryCashWithdrawalRecordRequest queryCashWithdrawalRecordRequest = 143;
+    BindInviteUserCodeRequest bindInviteUserCodeRequest = 144;
+    WithdrawalCoinRequest withdrawalCoinRequest = 145;
+    SetPasswordRequest setPasswordRequest = 146;
+
+    GetTaskInfoListRequest getTaskInfoListRequest = 150;
+    CollectTaskRewardRequest collectTaskRewardRequest = 151;
+    SignWeekTaskRequest signWeekTaskRequest = 152;
+
+    QueryRoomMusicRequest queryRoomMusicRequest = 160;
+    RemoveMusicFromMusicListRequest removeMusicFromMusicListRequest = 161;
+    OperationRoomMusicRequest operationRoomMusicRequest = 162;
+    AdjustBackgroundMusicVolumeRequest adjustBackgroundMusicVolumeRequest = 163;
+    SetRoomPlayingMusicInfoRequest setRoomPlayingMusicInfoRequest = 165;
+
+    QueryResourceServerURLRequest  queryResourceServerURLRequest = 170;
+    CreateFeedbackRequest createFeedbackRequest = 171;
+    SendCommonBroadcastMessageRequest sendCommonBroadcastMessageRequest =164;
+
+    //switch liveLine
+    QueryLiveSourceLineRequest queryLiveSourceLineRequest = 173;
+    SwitchLiveSourceLineRequest switchLiveSourceLineRequest = 174;
+    QuerySendGiftRecordRequest querySendGiftRecordRequest = 175;
+
+    QueryCarouselRequest queryCarouselRequest = 180;
+    JoinRaceByRaceFeeRequest joinRaceByRaceFeeRequest = 181;
+
+    QueryUnReadMessageRequest queryUnReadMessageRequest = 185;
+    ModifyQuickChatRequest modifyQuickChatRequest = 186;
+
+    HeartConnectedRequest heartConnectedRequest = 200;
+    SessionConnRequest sessionConnRequest = 210;
+  }
+}
+
+
+message JinliMessageReply {
+  ResultCode resultCode = 1;
+  oneof reply{
+    LoginReply loginReply = 2;
+    RegisterReply registerReply = 3;
+    FindAllFolloweesReply findAllFolloweesReply = 4;
+    FollowLiveUserReply followLiveUserReply = 5;
+    UpdateUserInfoReply updateUserInfoReply = 6;
+    UserInfoReply userInfoReply = 7;
+    BecomeLiveUserReply becomeLiveUserReply = 8;
+    LiveUserInfoReply liveUserInfoReply = 9;
+    QueryLiveUserFansListReply queryLiveUserFansListReply = 10;
+    GetRoomListReply getRoomListReply = 21;
+    EnterRoomReply enterRoomReply = 22;
+    QuitRoomReply quitRoomReply = 23;
+    GameReply gameReply = 24;
+    FollowLiveUserBroadcastMessage followLiveUserBroadcastMessage = 25;
+    StartLiveReply startLiveReply = 26;
+    EnterRoomBroadcastMessage enterRoomBroadcastMessage = 27;
+    StartGameBroadcastMessage startGameBroadcastMessage = 28;
+    BetBroadcastMessage betBroadcastMessage = 29;
+    GameResultBroadcastMessage gameResultBroadcastMessage = 30;
+    GameInfoReply gameInfoReply = 31;
+    EndGameBroadcastMessage endGameBroadcastMessage = 32;
+    ChatBroadcastMessage chatBroadcastMessage = 33;
+    ChatMessageReply chatMessageReply = 34;
+    GetDailyIncomeRankReply getDailyIncomeRankReply = 35;
+    GetGradeRankReply getGradeRankReply = 36;
+    GetLiveUserRankReply getLiveUserRankReply = 37;
+    EndLiveBroadcastMessage endLiveBroadcastMessage = 38;
+    CreateGameReply createGameReply = 39;
+    UpdateRoomImageReply updateRoomImageReply = 40;
+    BankerBroadcastMessage bankerBroadcastMessage = 41;
+    UpdateRoomDescriptionReply updateRoomDescriptionReply = 42;
+    UpdateLiveNoticeReply updateLiveNoticeReply = 43;
+
+    SwitchGameBroadcast switchGameBroadcast = 44;
+    SwitchGameReply switchGameReply = 45;
+    CardShowBroadcastMessage cardShowBroadcastMessage = 46;
+    QuitRoomBroadcastMessage quitRoomBroadcastMessage = 47;
+    GetLiveStatisticReply getLiveStatisticReply = 48;
+    PauseGameBroadcastMessage pauseGameBroadcastMessage = 49;
+    ResumeGameBroadcastMessage resumeGameBroadcastMessage = 50;
+    EndLiveReply endLiveReply = 51;
+    DealtCardsBroadcastMessage dealtCardsBroadcastMessage = 52;
+    UnFollowLiveUserReply UnFollowLiveUserReply = 53;
+    QueryFlowRecordReply queryFlowRecordReply = 54;
+    SwitchPatternReply switchPatternReply = 55;
+    SwitchPatternBroadcastMessage switchPatternBroadcastMessage = 56;
+
+    QueryLiveUserEndLiveReply queryLiveUserEndLiveReply = 58;
+    SendPrivateMessageReply sendPrivateMessageReply = 59;
+    PrivateMsgBroadCasteMessage privateMsgBroadCasteMessage = 60;
+    SendGiftReply sendGiftReply = 65;
+    SendGiftBroadcast sendGiftBroadcast = 66;
+    BuyGiftReply buyGiftReply = 67;
+    RecommendReply recommendReply = 68;
+
+    CreateRedPacketReply createRedPacketReply = 69;
+    RedPacketBroadCasteMessage redPacketBroadCasteMessage = 70;
+    GrabRedPacketReply grabRedPacketReply = 71;
+    QueryRedPacketRecordReply queryRedPacketRecordReply = 72;
+    QueryRedPacketInfoReply queryRedPacketInfoReply = 73;
+    QueryRoomRedPacketSummaryReply queryRoomRedPacketSummaryReply = 74;
+
+    ConnectLiveBroadcastMessage connectLiveBroadcastMessage = 79;
+    AddConnectLiveBroadcastMessage addConnectLiveBroadcastMessage = 84;
+    RemoveConnectLiveBroadcastMessage removeConnectLiveBroadcastMessage = 85;
+    UnMuteAllConnectLiveReply unMuteAllConnectLiveReply = 86;
+    StartConnectBroadcastMessage startConnectBroadcastMessage = 88;
+    GiveBackBroadcastMessage giveBackBroadcastMessage = 89;
+    MuteAllBroadcastMessage muteAllBroadcastMessage = 90;
+    QueryLiveStatusReply queryLiveStatusReply = 91;
+    RoomManagementReply roomManagementReply = 92;
+
+    CreatePersonDiaryReply createPersonDiaryReply = 93;
+    UploadDiaryResultBroadcastMessage uploadResultBroadcastMessage = 94;
+    UpdateZoneTextReply updateZoneTextReply = 95;
+    QueryZoneInfoReply queryZoneInfoReply = 96;
+    QueryDiaryDetailReply queryDiaryDetailReply = 97;
+    StarDiaryRequestReply  starDiaryRequestReply = 98;
+    ReplyDiaryReply replyDiaryReply = 99;
+    QueryDiaryReplyReply queryDiaryReplyReply = 100;
+    DeleteDiaryReply deleteDiaryReply = 101;
+    LoadDiaryListReply loadDiaryListReply = 102;
+
+    MuteChatBroadcastMessage muteChatBroadcastMessage = 110;
+    MuteConnectLiveBroadcastMessage muteConnectLiveBroadcastMessage = 111;
+    AdministratorBroadcastMessage administratorBroadcastMessage = 112;
+    FansContributionReply fansContributionReply = 113;
+    QueryGiftRankReply queryGiftRankReply = 114;
+    UpgradeBroadcastMessage upgradeBroadcastMessage = 115;
+    QueryContributionRankReply queryContributionRankReply = 116;
+    ChangePasswordReply ChangePasswordReply = 117;
+    QueryGiftIncomeDetailReply queryGiftIncomeDetailReply = 118;
+    QueryCoinRechargeRecordReply queryCoinRechargeRecordReply=119;
+
+    LandlordRaceBeginBroadcastMessage landlordRaceBeginBroadcastMessage = 120;
+    LandlordUserCardsBroadcastMessage landlordUserCardsBroadcastMessage = 121;
+    GrabLandlordBroadcastMessage grabLandlordBroadcastMessage = 122;
+    GrabLandlordResultBroadcastMessage grabLandlordResultBroadcastMessage = 123;
+    GrabLandlordOverInfoBroadcastMessage grabLandlordOverInfoBroadcastMessage = 124;
+    LandlordChooseRateBroadcastMessage landlordChooseRateBroadcastMessage = 125;
+    LandlordChooseRateResultBroadcastMessage landlordChooseRateResultBroadcastMessage = 126;
+    LandlordChooseRateOverBroadcastMessage landlordChooseRateOverBroadcastMessage = 127;
+    LandlordUserRateUpdateBroadcastMessage landlordUserRateUpdateBroadcastMessage = 128;
+    PlayLandlordBroadcastMessage playLandlordBroadcastMessage = 129;
+    PlayLandlordResultBroadcastMessage playLandlordResultBroadcastMessage = 130;
+    LandlordGameResultBroadcastMessage  landlordGameResultBroadcastMessage = 131;
+
+    GrabLandLordReply  grabLandLordReply = 133;
+    ChooseRateForLandlordReply chooseRateForLandlordReply = 134;
+    PlayCardsForLandlordReply playCardsForLandlordReply = 135;
+
+    LandlordRaceRiseOrWeekOutBroadcastMessage landlordRaceRiseOrWeekOutBroadcastMessage = 140;
+    LandlordRaceBroadcastMessage  landlordRaceBroadcastMessage = 141;
+    LandlordRaceFinalRaceBroadcastMessage landlordRaceFinalRaceBroadcastMessage = 142;
+    LandlordRaceOverResultBroadcastMessage landlordRaceOverResultBroadcastMessage = 143;
+
+    TaskFinishBroadcast taskFinishBroadcast = 150;
+    CollectTaskRewardReply collectTaskRewardReply = 151;
+    GetTaskInfoListReply getTaskInfoListReply = 152;
+    SignWeekTaskReply signWeekTaskReply = 153;
+
+    TexasCheckReply texasCheckReply = 201;
+    TexasFoldReply texasFoldReply = 202;
+    TexasBetChipsReply texasBetChipsReply = 203;
+    StartTexasBroadcastMessage startTexasBroadcastMessage = 204;
+    BetChipsBroadcastMessage betChipsBroadcastMessage = 205;
+    FoldBroadcastMessage foldBroadcastMessage = 207;
+    CheckBroadcastMessage CheckBroadcastMessage = 208;
+    NextTurnBroadcastMessage nextTurnBroadcastMessage = 209;
+    CommonCardBroadcastMessage commonCardBroadcastMessage = 210;
+    EndTexasBroadcastMessage endTexasBroadcastMessage = 211;
+    ReadyStartBroadcastMessage readyStartBroadcastMessage = 212;
+    RoundStartBroadcastMessage roundStartBroadcastMessage = 213;
+    JoinRaceReply joinRaceReply = 215;
+    RewardAmountBroadcastMessage rewardAmountBroadcastMessage = 217;
+    TexasRaceOverResultBroadcastMessage texasRaceOverResultBroadcastMessage = 219;
+
+    QueryRaceListReply  QueryRaceListReply = 220;
+    QuitRaceReply quitRaceReply = 221;
+    QueryJoinedRaceReply queryJoinedRaceReply = 222;
+    QueryJoinedRaceGameInfoReply queryJoinedRaceGameInfoReply = 223;
+    QueryGuessListReply queryGuessListReply = 250;
+    GuessWagerReply guessWagerReply = 251;
+    GuessDetailsReply guessDetailsReply = 252;
+    GuessWagerInformationReply guessWagerInformationReply = 253;
+    GuessWagerDetailsReply guessWagerDetailsReply = 254;
+
+    LookCardsBroadcastMessage lookCardsBroadcastMessage = 255;
+    FlowerFoldReply flowerFoldReply = 256;
+    FlowerCompareCardsReply flowerCompareCardsReply = 257;
+    FlowerBetChipsReply flowerBetChipsReply = 258;
+    FlowerLookCardsReply flowerLookCardsReply = 259;
+    StartFlowerBroadcastMessage startFlowerBroadcastMessage = 261;
+    EndFlowerBroadcastMessage endFlowerBroadcastMessage = 262;
+    CompareCardsBroadcastMessage compareCardsBroadcastMessage = 263;
+    GoldenFlowerRaceOverResultBroadcastMessage goldenFlowerRaceOverResultBroadcastMessage = 264;
+    RaceCountdownBroadcastMessage raceCountdownBroadcastMessage = 265;
+
+    BecomeLiveUserCheckReply becomeLiveUserCheckReply = 268;
+    ModifyBindPhoneNumberReply modifyBindPhoneNumberReply = 137;
+    QueryRoomChatHistoryReply queryRoomChatHistoryReply = 138;
+
+    QueryUserPromotionInfoReply queryUserPromotionInfoReply = 280;
+    QueryDayGroupContributionReply queryDayGroupContributionReply = 281;
+    QuerySubordinatesFlowReply querySubordinatesFlowReply = 282;
+    QueryCashWithdrawalRecordReply  queryCashWithdrawalRecordReply = 283;
+    BindInviteUserCodeReply bindInviteUserCodeReply = 284;
+    WithdrawalCoinReply withdrawalCoinReply = 285;
+    SetPasswordReply setPasswordReply = 286;
+
+    QueryRoomMusicReply queryRoomMusicReply = 290;
+    BackgroundMusicChangeBroadcastMessage backgroundMusicChangeBroadcastMessage = 291;
+    RemoveMusicFromMusicListReply removeMusicFromMusicListReply = 292;
+    OperationRoomMusicReply operationRoomMusicReply = 293;
+    AdjustBackgroundMusicVolumeReply adjustBackgroundMusicVolumeReply = 294;
+    BackgroundMusicVolumeBroadcastMessage backgroundMusicVolumeBroadcastMessage = 295;
+    SetRoomPlayingMusicInfoReply setRoomPlayingMusicInfoReply = 296;
+    RoomPlayingMusicChangeBroadcastMessage roomPlayingMusicChangeBroadcastMessage = 297;
+
+    QueryResourceServerURLReply queryResourceServerURLReply = 300;
+    ResourceServerChangeURLBroadcastMessage resourceServerChangeURLBroadcastMessage = 301;
+    SystemRollMessageBroadcastMessage systemRollMessageBroadcastMessage = 302;
+
+    CreateFeedbackReply createFeedbackReply = 303;
+    TimeToEndLiveBroadcastMessage timeToEndLiveBroadcastMessage = 304;
+    SendCommonBroadcastMessageReply sendCommonBroadcastMessageReply = 305;
+    CommonBroadcastMessage commonBroadcastMessage = 306;
+    PlatformRechargeBroadcastMessage platformRechargeBroadcastMessage = 307;
+
+    RepeatLoginBroadcastMessage repeatLoginBroadcastMessage = 310;
+
+    BankerQuitBroadcastMessage bankerQuitBroadcastMessage = 311;
+    UserBanBroadcastMessage  userBanBroadcastMessage = 312;
+    LiveUserBanBroadcastMessage liveUserBanBroadcastMessage = 313;
+    GiftConfigChangeBroadcastMessage giftConfigChangeBroadcastMessage = 314;
+    //switch liveLine
+    QueryLiveSourceLineReply queryLiveSourceLineReply = 316;
+    SwitchLiveSourceLineReply switchLiveSourceLineReply = 317;
+    SwitchLiveSourceLineBroadcastMessage switchLiveSourceLineBroadcastMessage = 318;
+    LiveSourceChangeBroadcastMessage liveSourceChangeBroadcastMessage = 319;
+    QuerySendGiftRecordReply querySendGiftRecordReply = 320;
+
+    QueryCarouselReply queryCarouselReply = 321;
+    JoinRaceByRaceFeeReply joinRaceByRaceFeeReply = 322;
+
+    QueryUnReadMessageReply queryUnReadMessageReply = 325;
+
+    SharedPlatformChangeBroadcastMessage sharedPlatformChangeBroadcastMessage = 326;
+
+    ModifyQuickChatReply modifyQuickChatReply = 328;
+    ModifyQuickChatBroadcastMessage modifyQuickChatBroadcastMessage = 329;
+
+    SessionConnReply sessionConnReply = 330;
+
+    LiveUserPermissionBroadcastMessage liveUserPermissionBroadcastMessage = 331;
+  }
+}
+
+message TaskReward{
+  TaskRewardType rewardType = 1;
+  uint64 amount = 2;
+}
+
+message TaskRecord{
+  int64 targetAmount = 1;
+  int64 progressAmount = 2;
+}
+
+message TaskInfo {
+  string id = 1;
+  int64 taskId = 2;
+  TaskType taskType = 3;
+  TaskStatus taskStatus = 4;
+  bool isCollected = 5;
+  int64 progress = 6;
+  string finishTime = 7;
+}
+
+message TaskFinishBroadcast{
+  repeated TaskInfo taskInfo = 1;
+}
+
+message GetTaskInfoListRequest{
+  bool isUpdate = 1;
+}
+
+message GetTaskInfoListReply{
+  repeated TaskInfo taskInfo = 1;
+  bool hasUpdate = 2;
+}
+
+message CollectTaskRewardRequest{
+  repeated string id = 1;
+}
+
+message CollectTaskRewardReply{
+  repeated TaskInfo taskInfo = 1;
+}
+message SignWeekTaskRequest{
+}
+
+message SignWeekTaskReply{
+  repeated TaskReward reward = 1;
+}
+
+message SetPasswordRequest{
+  string password = 1;
+}
+message SetPasswordReply{
+
+}
+message ChangePasswordRequest{
+  string existingPassword = 1;
+  string newPassword = 2;
+}
+
+message ChangePasswordReply{
+
+}
+
+message SendGiftRequest {
+  string giftId = 1;
+  uint32 sendAmount = 2;
+  string receiveUserId = 3;
+  int64 price = 4;
+}
+
+message  SendGiftReply {
+}
+
+message SendGiftBroadcast{
+  string giftId = 1;
+  uint32 sendAmount = 2;
+  string receiveUserId = 3;
+  string sendUserId = 4;
+  string displayName = 5;
+  VipType sendUserVipId = 6;
+  repeated string liveRank = 7;
+}
+
+message  BuyGiftRequest {
+  string giftId = 1;
+  uint32 buyAmount = 2;
+}
+
+message  BuyGiftReply {
+  string giftId = 1;
+  uint32 buyAmount = 2;
+}
+
+message UnFollowLiveUserRequest{
+  string userId = 1;
+}
+message UnFollowLiveUserReply{
+  string userId = 1;
+}
+message QuitRoomBroadcastMessage{
+  string roomId = 1;
+  string userId = 2;
+  int64 totalCount = 3;
+  int32 hotValue = 4;
+  repeated string liveRank = 5;
+}
+
+message CardShowBroadcastMessage{
+  string roomId = 1;
+  oneof cardShow{
+    BullbullCardShow bullPartCards = 102;
+  }
+}
+
+message SwitchGameReply{
+}
+message SwitchGameBroadcast{
+  string gameId = 1;
+  GameType gameType = 2;
+}
+message SwitchGameRequest{
+  GameType gameType = 1;
+  bool isBankerGame = 2;
+}
+
+message BankerBroadcastMessage{
+  BankerInfo currentBanker = 1;
+  repeated BankerInfo waitingBankers = 2;
+}
+
+message BankerInfo{
+  string userId = 1;
+  int64 coinAmount = 2;
+}
+
+message ChatBroadcastMessage{
+  string displayName = 1;
+  string content = 2;
+  VipType vipId = 3;
+  int32 level = 4;
+  string userId = 5;
+}
+
+message GameInfoReply{
+  string roomId = 1;
+  GameStatus gameStatus = 2;
+  int64 timeToEnd = 3;
+  repeated BetInfo betInfo = 4;
+  string gameId = 6;
+  int32 leftCardCount = 7;
+  int32 dealtCardCount = 8;
+  GameType gameType = 9;
+  int64 bankerMinimalCoin = 10;
+  int64 bankerContinueCoin = 11;
+  int32 bankerKeepCount = 12;
+  int32 bankerWinAmount = 13;
+  BankerBroadcastMessage bankerBroadcastMessage = 14;
+  repeated GameResult gameResult = 15;
+  DealtCardsBroadcastMessage dealtCardsBroadcastMessage = 16;
+  GameDetail gameDetail = 17;
+  GameStatus nextGameStatus = 18;
+  bool isBankerGame = 19;
+}
+
+message GameResult{
+  oneof cardResult{
+    LonghuCardResult longhuCardResult = 2;
+    BullBullCardResult bullbullCardResult = 3;
+    BaccaratCardResult baccaratCardResult = 4;
+    RedBlackCardResult redBlackCardResult = 5;
+    GoldenFlowerCardResult goldenFlowerCardResult = 6;
+  }
+}
+
+message BetInfo{
+  string userId = 1;
+  int64 betAmount = 2;
+  BetType betType = 3;
+}
+
+message GameInfoRequest{
+  string roomId = 1;
+}
+
+message GameResultBroadcastMessage{
+  string roomId = 1;
+  repeated WinnerAndAmount winnerAndAmount = 2;
+  int32 bankerWinAmount = 3;
+  oneof cardResult{
+    LonghuCardResult longhuCardResult = 100;
+    BaccaratCardResult baccaratCardResult = 101;
+    BullBullCardResult bullbullCardResult = 102;
+    RedBlackCardResult redBlackCardResult = 103;
+    GoldenFlowerCardResult goldenFlowerCardResult = 104;
+  }
+}
+
+
+
+message WinnerAndAmount{
+  string userId = 1;
+  int64 winAmount = 2;
+  int64 userCoin = 3;
+  string avatarUrl = 4;
+  string accountName = 5;
+  string disPlayName = 6;
+}
+
+message LiveUserInfoRequest{
+  string userId = 1;
+}
+
+message LiveUserInfoReply{
+  LiveUserInfo liveUserInfo = 1;
+}
+
+message QueryLiveUserFansListRequest{
+  string userId = 1;
+}
+
+message QueryLiveUserFansListReply{
+  repeated UserInfo fansInfo = 1;
+}
+
+message BetBroadcastMessage{
+  string roomId = 1;
+  string userId = 2;
+  int32 betAmount = 3;
+  BetType betType = 4;
+  int64 userCoin = 5;
+  int64 totalBetNum = 6;
+}
+
+message EnterRoomBroadcastMessage{
+  string roomId = 1;
+  string userId = 2;
+  int64 totalCount = 3;
+  int32 hotValue = 4;
+  VipType vipId = 5;
+  string displayName = 6;
+  int32 userLevel = 7;
+}
+
+message StartGameBroadcastMessage{
+  string roomId = 1;
+  GameType gameType = 2;
+  int64 timeToEnd = 3;
+  int32 leftCardCount = 4;
+  int32 dealtCardCount = 5;
+}
+
+message EndGameBroadcastMessage{
+  string roomId = 1;
+}
+
+message PauseGameBroadcastMessage{
+  string roomId = 1;
+}
+
+message ResumeGameBroadcastMessage{
+  string roomId = 1;
+}
+
+message CreateGameRequest{
+  GameType gameType = 1;
+  bool isBankerGame = 2;
+}
+
+message CreateGameReply{
+  string gameId = 1;
+}
+
+message ChatMessageRequest{
+  string content = 1;
+}
+
+message ChatMessageReply{
+}
+
+
+message LoginRequest {
+  string account = 1;
+  string password = 2;
+  string mobileModel = 3;
+  MobilePhoneBrand brand = 4;
+  MobilePhoneResolution resolution = 5;
+  MobilePhoneOS os = 6;
+  string appVersion = 7;
+  string domainName = 8;
+}
+
+message RegisterRequest {
+  string accountName = 1;
+  string displayName = 2;
+  string password = 3;
+  string mobileCode = 4;
+  string mobileModel = 5;
+  MobilePhoneBrand brand = 6;
+  MobilePhoneResolution resolution = 7;
+  MobilePhoneOS os = 8;
+  string appVersion = 9;
+}
+
+message RegisterReply {
+  string token = 1;
+}
+
+message UserRace{
+  string joinedRaceId = 1;
+  RaceType raceType = 2;
+}
+message LoginReply {
+  UserInfo userInfo = 1;
+  UserRace userRace = 2;
+  ReconnectLiveMessage liveUserReconnect = 3;
+  ReconnectLiveMessage bankerReconnect = 4;
+  ReconnectLiveMessage userReconnect = 5;
+  string clientSession = 6;
+}
+
+message ReconnectLiveMessage{
+  string roomId = 1;
+  Pattern pattern = 2;
+  string currentLiveUserId = 3;
+  GameType gameType = 4;
+  string rtmpCode = 5;
+}
+
+message FindAllFolloweesRequest {
+
+}
+
+message FindAllFolloweesReply {
+  repeated RoomInfo roomList = 1;
+  repeated LiveUserInfo liveUserInfo = 2;
+  repeated RoomInfo recommended = 3;
+}
+
+message UserInfoRequest{
+  repeated string userId = 1;
+}
+
+message UserInfoReply{
+  repeated UserInfo userInfo = 2;
+}
+
+message UserInfo {
+  string userId = 1;
+  string phoneNumber = 2;
+  sint32 level = 3;
+  string avatarUrl = 4;
+  string displayName = 5;
+  UserType userType = 6;
+  int64 gameCoin = 7;
+  VipType vipId = 8;
+  bool isTourist = 9;
+  string accountName = 10;
+  string goldBean = 11;
+  PlatformType platformType = 12;
+  int64 giftIncome = 13;
+}
+
+message LiveUserInfo{
+  string userId = 1;
+  string roomId = 2; //use live URL + this id to fetch broadcast stream
+  string avatarUrl = 3;
+  int32 hotValue = 4;
+  LiveStatus status = 5;
+  string displayName = 6;
+  int32 level = 7;
+  string description = 8;
+  string liveUrl = 9;
+  int32 fanCount = 10;
+  int64 curExp = 11;
+  int64 needExp = 12;
+  GenderType gender = 13;
+  string roomDisplayId = 14;
+  string roomImage = 15;
+  string liveUserId = 16;
+  PlatformType platformType = 17;
+  string liveNotice = 18;
+  repeated LiveUserPermission disablePermissions = 19;
+  repeated PlatformType sharedPlatform = 20;
+  string quickChat = 21;
+}
+
+message BecomeLiveUserRequest{
+  string realName = 3;
+  GenderType gender = 4;
+  string country = 5;
+  string address = 6;
+  string phoneNumber = 7;
+  string email = 8;
+  string contactWay = 9;
+  string birthDay = 10;
+  string bankName = 11;
+  string bankCard = 12;
+  PlatformType platformType = 13;
+}
+
+message BecomeLiveUserReply{
+
+}
+
+message UpdateUserInfoRequest{
+  bytes avatarData = 1;
+  string displayName = 2;
+}
+
+message UpdateUserInfoReply{
+
+}
+
+message FollowLiveUserRequest{
+  string userId = 1;
+}
+
+message FollowLiveUserReply{
+  string userId = 1;
+}
+
+message FollowLiveUserBroadcastMessage{
+  string followerUserId = 1;
+  string liveUserUserId = 2;
+  FollowType followType =3;
+}
+
+
+message GetRoomListRequest{
+  int32 maxCount = 1;
+}
+
+message RoomInfo{
+  string id = 1;
+  string roomTitle = 2;
+  LiveUserInfo liveUserInfo = 3;    // liver information
+  string description = 4;
+  string roomImage = 5;
+  GameType gameType = 6;
+  int32 hotValue = 7;
+  int64 totalAmount = 8;
+  Pattern pattern = 9;
+  string userId = 10;
+}
+
+message GetRoomListReply{
+  repeated RoomInfo RoomList = 1;
+}
+
+message EnterRoomRequest {
+  string roomId = 1;
+}
+
+message EnterRoomReply{
+  LiveUserInfo liveUserInfo = 1;
+  int32 hotValue = 2;
+  int64 totalAmount = 3;
+  GameType gameType = 4;
+  bool isFollow = 5;
+  string description = 6;
+  string roomId = 7;
+  int64 roomStartTime = 8;
+  bool isOfficialLiveUser = 9;
+  string roomDisplayId = 10;
+  string pushUrl = 11;
+  string systemTipMessage = 12;
+  int64 timeToEndLive = 13; //only used by empty game,default value 0 means not ready endLive
+  string liveMusic = 14;
+  LiveSourceLine liveSourceLine = 15;
+  Pattern pattern =  16;
+  repeated string liveRank = 17;
+  repeated string liveVideos = 18;
+  repeated string pullUrl = 19;
+}
+
+message DealtCardsBroadcastMessage{
+  int32 cardsAmount = 1;
+  int32 dealtsAmount = 2;
+  repeated DealtCard dealtCards = 3;
+}
+
+message DealtCard{
+  CardNumber card = 1;
+  int32 amount = 2;
+}
+
+message QuitRoomRequest{
+  string roomId = 2;
+}
+
+message QuitRoomReply{
+}
+
+message StartLiveRequest{
+  Pattern pattern = 1;
+  int64 roomStartTime = 2;
+  string roomTitle = 3;
+  LiveSourceLine liveSourceLine = 4;
+  string platformQGameCode = 5;
+  string platformQRoomCode = 6;
+  string liveDomain = 7;
+  repeated LivePlatformParam livePlatformParams = 8;
+}
+
+message LivePlatformParam{
+  PlatformType platform = 1;
+  string platformGameCode = 2; // optional  QPlatform param
+  string platformRoomCode = 3; // optional  QPlatform param
+}
+
+message StartLiveReply{
+  string rtmpCode = 1;
+}
+message EndLiveRequest{
+  int64 endLiveCountDownTime = 1;
+}
+
+message EndLiveReply{
+  string rtmpCode = 1;
+}
+message LiveRank {
+  string userId = 1;
+  int32 level = 2;
+  string displayName = 3;
+  string avatarUrl = 4;
+  int32 value = 5;
+}
+message GetDailyIncomeRankRequest {
+
+}
+message GetDailyIncomeRankReply {
+  repeated DailyIncome dailyIncome = 1;
+}
+message GetGradeRankRequest{
+
+}
+message GetGradeRankReply{
+  repeated Grade grade = 1;
+}
+message GetLiveUserRankRequest{
+}
+
+message GetLiveUserRankReply{
+  repeated LiveUserRankInfo liveUserRankInfo = 1;
+}
+
+message LiveUserRankInfo{
+  string userId = 1;
+  int32 hotValue = 2;
+  string displayName = 3;
+  string avatarUrl = 4;
+  bool isFollow = 5;
+  Arrow arrow = 6;
+  LiveStatus status = 7;
+}
+message DailyIncome {
+  string userId = 1;
+  int32 amount = 2;
+  string displayName = 3;
+  string avatarUrl = 4;
+  Arrow arrow = 5;
+}
+message Grade{
+  string userId = 1;
+  int32 level = 2;
+  string displayName = 3;
+  string avatarUrl = 4;
+  Arrow arrow = 5;
+}
+message EndLiveBroadcastMessage{
+  EndType endType = 1;
+}
+message UpdateRoomImageRequest{
+  bytes coverData = 1;
+}
+message UpdateRoomImageReply{
+
+}
+message UpdateRoomDescriptionRequest{
+  string content = 1;
+}
+message UpdateRoomDescriptionReply{
+
+}
+
+//  statistic
+message StatisticCurve{
+  int64 time = 1;
+  int64 value = 2;
+}
+
+message GetLiveStatisticRequest{
+}
+
+message GetLiveStatisticReply{
+  repeated StatisticSummary summary = 1;
+  repeated StatisticCurve rewardCurve = 2; //打赏折线图
+  repeated StatisticCurve betCurve = 3; //下注折线图
+  repeated StatisticCurve livePopulationCurve = 4; //直播间玩家数量折线图
+  repeated StatisticCurve liveTimeCurve = 5; //直播时长折线图
+}
+message StatisticSummary{
+  StatisticType type = 1;
+  int32 number = 2;
+  int32 increase = 3;
+  Arrow arrow = 4;
+}
+message BetSummary{
+  string roomId = 1;
+  GameType gameType = 2;
+  int32 bet = 3;
+  int64 win = 4;
+  int64 time = 5;
+}
+
+message QueryFlowRecordRequest {
+  QueryTimeType type = 1;
+}
+
+message QueryFlowRecordReply {
+  repeated BetSummary betSummary = 1;
+}
+message SwitchPatternRequest{
+  Pattern pattern = 1;
+}
+message SwitchPatternReply{
+  Pattern pattern = 1;
+}
+message SwitchPatternBroadcastMessage{
+  Pattern pattern = 1;
+  string pushUrl = 2;
+  repeated string pullUrl = 3;
+}
+
+message QueryLiveUserEndLiveRequest{
+}
+
+message QueryLiveUserEndLiveReply{
+  int64 startDate = 1;
+  int64 totalBetAmount = 2;
+  string avatarUrl = 3;
+  repeated LiveRank liveRanks = 4;
+  int64 totalIncome = 5;
+  int64 giftTotalCoin = 6;
+}
+
+message ConnectLiveBroadcastMessage{
+  string audioCode = 1;
+}
+
+message MuteAllBroadcastMessage{
+  bool muteAll = 1;
+}
+message AddConnectLiveBroadcastMessage{
+  string userId = 1;
+  string displayName = 2;
+  string avatarUrl = 3;
+  int32 level = 4;
+}
+message RemoveConnectLiveBroadcastMessage{
+  string userId = 1;
+  bool hasOtherConnectLive = 2;
+}
+
+message QueryLiveStatusRequest {
+
+}
+message QueryLiveStatusReply{
+  LiveStatus liveStatus = 1;
+}
+
+message StartConnectBroadcastMessage{
+  string userId = 1;
+}
+message GiveBackBroadcastMessage{
+  int64 totalCoin = 1;
+}
+//private message ======================
+message SendPrivateMessageRequest{
+  string receiverId = 1;
+  string content = 2;
+}
+
+message SendPrivateMessageReply{
+  MessageRecord message = 1;
+}
+
+message MessageRecord{
+  string messageId = 1;
+  string fromUid = 2;
+  string toUid = 3;
+  string content = 4;
+  int64 sendTime = 5;
+}
+
+message PrivateMsgBroadCasteMessage{
+  MessageRecord message = 1;
+}
+
+message Gift{
+  string id = 1;
+  string name = 2;
+  string url = 3;
+  int32 gold = 4;
+}
+message GiftListRequest{
+}
+message GiftListReply{
+  repeated Gift gifts = 1;
+}
+message GiftGivingRequest{
+  string id = 1;
+}
+message GiftGivingReply{
+  bool success = 1;
+}
+
+message RecommendRequest{
+
+}
+message RecommendReply{
+  repeated RoomInfo RoomList = 1;
+}
+
+message RecommendGame{
+  string name = 1;
+  GameType type = 2;
+  string roomImage = 3;
+  string roomId = 4;
+  int32 heat = 5;
+  string roomDisplayId = 6;
+}
+//RedPacket
+message CreateRedPacketRequest{
+  int32 coinAmount = 1;
+  int32 num = 2;
+  RedPacketConfig config = 3;
+}
+
+message CreateRedPacketReply{
+  int64 totalCoin = 1;
+}
+message RedPacketBroadCasteMessage{
+  int32 redPacketNum = 1;
+  int64 nextOpenTime = 2;
+  string redPacketId = 3;
+}
+
+message GrabRedPacketRequest{
+  string redPacketId = 1;
+}
+
+message GrabRedPacketReply{
+  int32 coin = 1;
+  int32 leftNum = 2;
+  int64 totalCoin = 3;
+}
+
+message QueryRedPacketRecordRequest{
+  string redPacketId = 1;
+}
+
+message RedPacketRecord{
+  UserInfo userInfo = 1;
+  int32 coin = 2;
+  int64 openTime = 3;
+}
+
+message QueryRedPacketRecordReply{
+  repeated RedPacketRecord redPacketRecords = 1;
+}
+
+message QueryRedPacketInfoRequest{
+  string redPacketId = 1;
+}
+
+message RedPacketInfo{
+  string id = 1;
+  int32 coinAmount = 2;
+  int32 totalNum = 3;
+  int64 createTime = 4;
+  int64 openTime = 5;
+  int32 leftNum = 6;
+  bool openFlag = 7;    //This flag show whether your has openRedPacket
+  int64 countDownTime = 8;
+}
+
+message QueryRedPacketInfoReply{
+  UserInfo userInfo = 1;
+  RedPacketInfo redPacketInfo = 2;
+  int32 getCoin = 3;
+}
+
+message QueryRoomRedPacketSummaryRequest{
+  string roomId = 1;
+}
+
+message QueryRoomRedPacketSummaryReply{
+  int32 redPacketNum = 1;
+  int64 nextOpenTime = 2;
+  string redPacketId = 3;
+  int64 countDownTime = 4;
+}
+
+//zone----------------->
+message CreatePersonDiaryRequest{
+  string content = 1;
+  DiaryType type = 2;
+  int32 targetNum = 3;
+}
+
+message CreatePersonDiaryReply{
+  string diaryId = 1;
+  Diary unFinishDiary = 2;
+}
+message Diary{
+  string id = 1;
+  int64 uploadTime = 2;
+  string content = 3;
+  DiaryType type = 4;
+  DiaryStatue statue = 5;
+  int64 playNum = 6;
+  string userId = 7;
+  repeated string resourcePath = 8;
+  int64 starNumber = 9;
+  bool commentFlag = 10;
+  string thumbnailUrl = 11;
+}
+
+message UploadDiaryResultBroadcastMessage{
+  Diary diary = 1;
+}
+
+message UpdateZoneTextRequest{
+  string text = 1;
+}
+message UpdateZoneTextReply{
+  string text = 1;
+}
+
+message QueryZoneInfoRequest{
+  string userId = 1;
+}
+
+message Zone{
+  string id = 1;
+  string backGroundImage = 2;
+  string text = 3;
+  int32 diaryNum = 4;
+}
+
+message QueryZoneInfoReply{
+  UserInfo userInfo = 1;
+  LiveUserInfo liveUserInfo = 2;
+  Zone zone = 3;
+  int64 fansNum = 4;
+  int64 visitorNum = 5;
+  int64 starNum = 6;
+  int64 playNum = 7;
+  repeated Diary diary = 8;
+  bool isFollow = 9;
+}
+
+message QueryDiaryDetailRequest{
+  string diaryId = 1;
+}
+
+message QueryDiaryDetailReply{
+  Diary diary = 1;
+  UserInfo userInfo = 2;
+  int32 replyNum = 3;
+  bool isStar = 4;
+  bool isFollow = 5;
+}
+message MuteChatBroadcastMessage{
+  string userId = 1;
+  bool isMuteChat = 2;
+  MuteTimeType muteTime = 3;
+  MuteReason muteReason = 4;
+  MuteIdentity identity = 5;
+  MuteArea muteArea = 6;
+}
+
+message MuteConnectLiveBroadcastMessage{
+  string userId = 1;
+  bool isMuteLive = 2;
+  MuteIdentity identity = 3;
+}
+
+message AdministratorBroadcastMessage {
+  string userId = 1;
+  bool isAdd = 2;
+}
+
+message StarDiaryRequest{
+  string diaryId = 1;
+}
+
+message StarDiaryRequestReply{
+  int64 startNum = 1;
+  bool  isStar = 2;
+}
+
+message ReplyUserInfo{
+  string userName = 1;
+  string userId = 2;
+}
+
+message Reply{
+  string replyId = 1;
+  string text = 2;
+  int64 replyTime = 4;
+  string parentReplyId = 5;
+  int32 replyNum = 6;
+  ReplyUserInfo fromUser = 7;
+  ReplyUserInfo toUser = 8;
+}
+
+message QueryDiaryReplyRequest{
+  string diaryId = 1;
+  string replyId = 2; //if null,will find all root,if not notnull,will find reply
+  int32 page = 3;
+  int32 rows = 4;
+  repeated string excludeReplyIds = 5;
+}
+
+message QueryDiaryReplyReply{
+  repeated Reply reply = 1;
+}
+
+message ReplyDiaryRequest{
+  string diaryId = 1;
+  string text = 2;
+  string replyId = 3;
+  string targetUserId = 4;
+}
+
+message ReplyDiaryReply{
+  Reply reply = 1;
+}
+
+message DeleteDiaryRequest{
+  string diaryId = 1;
+}
+
+message DeleteDiaryReply{
+  string diaryId = 1;
+}
+
+message LoadDiaryListRequest{
+  int32 num = 1;
+}
+
+message LoadDiaryListReply{
+  repeated Diary diary = 1;
+}
+
+message FansContributionRequest{
+  QueryTimeType type = 1;
+  string userId = 2;
+}
+message FansContributionReply {
+  repeated RankInfo fansContribution = 1;
+}
+message RankInfo {
+  string userId = 1;
+  sint32 level = 2;
+  string avatarUrl = 3;
+  string displayName = 4;
+  VipType vipType = 5;
+  int32 amount = 6;
+  LiveStatus liveStatus = 7;
+}
+message QueryGiftRankRequest {
+  QueryTimeType type = 1;
+}
+message QueryGiftRankReply{
+  repeated RankInfo giftRanks = 1;
+}
+message UpgradeBroadcastMessage{
+  UserInfo userInfo = 1;
+}
+
+message QueryContributionRankRequest{
+  QueryTimeType type = 1;
+}
+message QueryContributionRankReply{
+  repeated RankInfo contributionRanks = 1;
+}
+
+message QueryGiftIncomeDetailRequest{
+
+}
+
+message QueryGiftIncomeDetailReply{
+  repeated GiftIncomeDetail giftIncomeDetails= 1;
+  int64 totalIncome = 2;
+}
+
+
+message GiftIncomeDetail{
+  string useId = 1;
+  string avatarUrl = 2;
+  string displayName = 3;
+  repeated GiftRecord giftRecords= 4;
+}
+
+message QueryCoinRechargeRecordRequest {
+
+}
+
+message QueryCoinRechargeRecordReply {
+  repeated RechargeInfo rechargeInfo = 1;
+  int64 totalRecharge = 2;
+}
+
+message RechargeInfo{
+  string time = 1;
+  int32 rechargeNum = 2;
+}
+
+//landlordRace
+message  LandlordRaceConfig{
+  int32 joinFee = 1;
+  int32 baseScore = 2;
+  int32 maxJoinNum = 3;
+  int32 firstCoin = 4;
+  int32 secondCoin = 5;
+  int32 thirdCoin = 6;
+}
+message LandlordRace{
+  string raceId = 1;
+  int64 createTime = 2;
+  int32 joinNum = 3;
+  RaceType raceType = 4;
+  LandlordRaceConfig raceConfig = 5;
+  string raceTitle = 6;
+  RaceStep raceStep = 7;
+  int32 leftGameNumber = 8;
+  repeated PokerPlayer promotionPLayers = 9;
+  int64 predictFinishTime = 10;
+  string raceImage = 11;
+}
+
+message PokerPlayer {
+  UserInfo userInfo = 1;
+  bool openRobot = 2;
+  int32 position = 3;
+  bool isLandlords = 4;
+  int32 playCardCount = 5;
+  int64  score = 6;
+  int32 rank = 7;
+}
+
+message LandlordsGameInfo{
+  string gameId = 1;
+  string raceId = 2;
+  repeated PokerPlayer players = 3;
+  int64 readyTimeCountDown = 4;
+  int32 round = 5;
+  LandlordsStep step = 6;
+  repeated Card landlordsCard = 7;
+  int32 baseScore = 8;
+  int32 maxRate = 9;
+  repeated UserRate userRates = 10;
+  repeated LandlordCardRecord cardRecord = 11;
+  repeated UserCardsNumberInfo userCardsNumberInfos = 12;
+}
+
+message LandlordRaceBeginBroadcastMessage {
+  LandlordsGameInfo gameInfo = 1;
+}
+
+message UserCardsNumberInfo{
+  string  userId = 1 ;
+  int32 cardCount = 2;
+}
+
+message LandlordUserCardsBroadcastMessage {
+  string gameId = 1;
+  repeated  Card userCards = 2;
+  LandlordsStep step = 3;
+  repeated UserCardsNumberInfo userCardsNumberInfos = 4;
+}
+
+message GrabLandlordBroadcastMessage{
+  PokerPlayer currentPlayer = 1;
+  int64 countDownTime = 2;
+  LandlordsStep step = 3;
+}
+
+message UserRate{
+  string userId = 1;
+  int32 rate = 2;
+}
+
+message GrabLandlordResultBroadcastMessage{
+  PokerPlayer grabLordPlayer = 1;
+  GrabLordStatue statue = 2;
+  LandlordsStep step = 3;
+  repeated UserRate userRates = 4;
+}
+
+
+message GrabLandlordOverInfoBroadcastMessage {
+  bool hasLandlords = 1;
+  int64 countDownTime = 2;
+  LandlordsStep step = 3;
+  repeated Card landlordsCard = 5;
+  PokerPlayer landlords = 6;
+}
+
+message LandlordChooseRateBroadcastMessage {
+  PokerPlayer currentPlayer = 1;
+  int64 countDownTime = 2;
+  LandlordsStep step = 3;
+}
+
+message LandlordChooseRateResultBroadcastMessage {
+  PokerPlayer currentPlayer = 1;
+  bool statue = 2;
+  LandlordsStep step = 3;
+  repeated UserRate userRates = 4;
+}
+
+message LandlordChooseRateOverBroadcastMessage{
+  string gameId = 1;
+  int64 countDownTime = 2;
+  repeated UserRate userRates = 3;
+  LandlordsStep step = 4;
+}
+
+message PlayLandlordBroadcastMessage {
+  PokerPlayer currentPlayer = 1;
+  int64 countDownTime = 2;
+  LandlordsStep step = 3;
+  bool isNewRound = 4;
+}
+
+message LandlordCardRecord {
+  LandlordsType type = 1;
+  repeated Card cards = 2;
+}
+
+message PlayLandlordResultBroadcastMessage {
+  PokerPlayer currentPlayer = 1;
+  repeated LandlordCardRecord cardRecord = 2;
+  bool isPass = 3;
+  LandlordsStep step = 4;
+  repeated UserCardsNumberInfo userCardsNumberInfos = 5;
+}
+
+message LandlordGameAmount{
+  PokerPlayer player = 1;
+  int32 amount = 2;
+}
+
+message LandlordGameResultBroadcastMessage {
+  string gameId = 1;
+  LandlordsStep step = 2;
+  LandlordsWinnerIdentity winnerType = 3;
+  repeated LandlordGameAmount gameAmount = 4;
+  int64 newRoundCountDownTime = 5;
+  repeated PokerPlayer players = 6;
+  bool hasSpring = 7;
+}
+
+message LandlordRaceRiseOrWeekOutBroadcastMessage{
+  bool isWeedOut = 1;
+  PokerPlayer player = 2;
+}
+
+message LandlordUserRateUpdateBroadcastMessage{
+  repeated UserRate userRates = 1;
+}
+
+message GrabLandlordRequest{
+  string gameId = 1;
+  bool grabLandlord = 2;
+}
+
+message GrabLandLordReply{
+  string gameId = 1;
+  int32 rate = 2;
+}
+
+message ChooseRateForLandlordRequest{
+  string gameId = 1;
+  bool chooseLandlord = 2;
+}
+
+message ChooseRateForLandlordReply{
+  string gameId = 1;
+  int32 rate = 2;
+}
+
+message PlayCardsForLandlordRequest{
+  string gameId = 1;
+  repeated Card cards = 2;
+}
+message PlayCardsForLandlordReply{
+  string gameId = 1;
+}
+
+message LandlordRaceOverResultBroadcastMessage{
+  PokerPlayer player = 1;
+  int32 awardCoin = 2;
+}
+message LandlordRaceBroadcastMessage{
+  LandlordRace race = 1;
+}
+
+message LandlordRaceFinalRaceBroadcastMessage{
+  PokerPlayer player = 1;
+  int32 leftGameNumber = 2;
+  int64 predictFinishTime = 3;
+}
+
+//  texas
+message TexasPokerPlayer {
+  UserInfo user = 1;
+  int32 seatNum = 2;
+  bool isFold = 3;
+  int32 chips = 4;
+  repeated Card handPokers = 5;
+}
+message BetRoundMap{
+  int32 seatNum = 1;
+  int64 betAmount = 2;
+}
+message TexasPrivateInfo{
+  repeated Card communityCards = 1;
+  int64 betAmount = 2;
+  int32 optTimeout = 3;
+  int32 bigBet = 4;
+  int32 roundMaxBet = 5;
+  int32 nextTurn = 6;
+  int32 dealer = 7;
+  int32 smallBetSeatNum = 8;
+  repeated TexasPokerPlayer  waitPlayers = 9;
+  repeated TexasPokerPlayer inGamePlayers = 10;
+  repeated BetRoundMap betRoundMap = 11;
+  repeated Card handPokers = 12;
+  repeated int32 seat = 13;
+  int32 preBet = 14;
+}
+message TexasCheckRequest{
+  string gameId = 1;
+}
+message TexasCheckReply{}
+message TexasFoldRequest{
+  string gameId = 1;
+}
+message TexasFoldReply{
+  string gameId = 1;
+}
+message TexasBetChipsRequest{
+  string gameId = 1;
+  int32 chips = 2;
+}
+message TexasBetChipsReply{}
+message StartTexasBroadcastMessage{
+  TexasPrivateInfo info = 1;
+}
+message BetChipsBroadcastMessage{
+  int32 chips = 1;
+  int32 InChips = 2;
+  int32 seatNum = 3;
+  int32 betAmount = 4;
+  int32 sumChips = 5;
+  bool isCompareCardBet = 6;
+}
+message NextTurnBroadcastMessage{
+  int32 nextTurn = 1;
+  int32 multipleRate = 2;
+}
+message CommonCardBroadcastMessage{
+  repeated Card commonCards = 1;
+}
+message FoldBroadcastMessage{
+  TexasPokerPlayer player = 1;
+}
+message CheckBroadcastMessage{
+  TexasPokerPlayer player = 1;
+}
+message WinPlayersMap{
+  int32 seatNum = 1;
+  int64 win = 2;
+}
+message CardsMap{
+  int32 seatNum = 1;
+  repeated Card cards = 2;
+}
+message EndTexasBroadcastMessage {
+  repeated WinPlayersMap winPlayersMap = 1;
+  repeated TexasPokerPlayer winPlayers = 2;
+  repeated CardsMap finalCardsMap = 3;
+  repeated TexasCardType type = 4;
+}
+message TexasCardType{
+  int32 seatNum = 1;
+  TexasType type = 2;
+}
+message ReadyStartBroadcastMessage{
+  int32 readyTime = 1;
+  string gameId = 2;
+  int32 gameCount = 3;
+  int32 cost = 4;
+}
+message RoundStartBroadcastMessage{
+  repeated BetRoundMap betRoundMap = 2;
+  int64 betAmount = 3;
+}
+message TexasRace{
+  string raceId = 1;
+  int32 raceFee = 2;
+  int32 serviceCharge = 3;
+  string title = 4;
+  RaceType raceType = 5;
+  string raceImage = 6;
+}
+message JoinRaceRequest{
+  string raceId = 1;
+  RaceType raceType = 2;
+}
+message JoinRaceReply{
+  TexasRaceReply texasRace = 1;
+  LandlordRace landlordRace = 2;
+  GoldenFlowerReply goldenFlowerRace = 3;
+}
+message GoldenFlowerReply{
+  UserInfo user = 1;
+  int32 chips = 2;
+  RaceType raceType = 3;
+  string raceId = 4;
+  GoldenFlowerRaceConfig config = 5;
+}
+message TexasRaceReply{
+  UserInfo user = 1;
+  int32 chips = 2;
+  RaceType raceType = 3;
+  string raceId = 4;
+  TexasRaceConfig config = 5;
+}
+message TexasRaceConfig{
+  int32 minPlayers = 1;
+  int32 maxPlayers = 2;
+  int32 startingChips = 3;
+  int32 increaseBetTime = 4;
+  int32 deadline = 5;
+  int32 startTime = 6;
+  repeated StructureTable table = 7;
+  repeated RewardMap reward = 8;
+  int32 rewardAmount = 9;
+}
+message StructureTable{
+  int32 level = 1;
+  int32 bet = 2;
+  int32 pre_bet = 3;
+  int32 time = 4;
+}
+message RewardMap{
+  int32 rank = 1;
+  double bonus = 2;
+}
+
+message QueryRaceListRequest{
+  RaceType raceType = 1;
+  int32 showNum = 2;
+}
+
+message QueryRaceListReply {
+  repeated LandlordRace landlordRaces = 1;
+  repeated TexasRace texasRaces = 2;
+  repeated GoldenFlowerRace goldenFlowerRace = 3;
+}
+message GoldenFlowerRace{
+  string raceId = 1;
+  int32 raceFee = 2;
+  string title = 5;
+  RaceType raceType = 6;
+  string raceImage = 7;
+}
+message GoldenFlowerRaceConfig{
+  int32 minPlayers = 1;
+  int32 maxPlayers = 2;
+  int32 startingChips = 3;
+  int32 gameCount = 4;
+  int32 cost = 5;
+  int32 rewardAmount = 6;
+  int32 startTime = 7;
+}
+message RewardAmountBroadcastMessage{
+  int32 rewardAmount = 1;
+}
+
+message QuitRaceRequest{
+  string raceId = 1;
+  RaceType raceType = 2;
+}
+
+message QuitRaceReply{
+
+}
+message QueryJoinedRaceRequest{
+  string raceId = 1;
+}
+
+message QueryJoinedRaceReply{
+  string raceGameId = 1;
+  oneof race{
+    LandlordRace landlordRace = 100;
+    TexasRaceReply texasRace = 2;
+    GoldenFlowerReply goldenFlowerRace = 3;
+  }
+}
+
+message QueryJoinedRaceGameInfoRequest{
+  string gameId = 1;
+}
+
+message GrabLandlordRecord{
+  PokerPlayer player = 1;
+  GrabLordStatue statue = 2;
+}
+
+message LandlordRateRecord{
+  PokerPlayer player = 1;
+  bool statue = 2;
+}
+
+message  UserLandlordsGame{
+  LandlordsGameInfo gameInfo = 1;
+  repeated Card userCards = 2;
+  PokerPlayer currentPlayer = 3;
+  repeated GrabLandlordRecord grabLandlordRecords = 4;
+  repeated LandlordRateRecord rateRecords = 5;
+  int64 countDownTime = 6;
+}
+message UserTexasGame{
+  repeated Card communityCards = 1;
+  int64 betAmount = 2;
+  int32 optTimeout = 3;
+  int32 roundMaxBet = 4;
+  int32 nextTurn = 5;
+  int32 dealer = 6;
+  int32 smallBetSeatNum = 7;
+  repeated TexasPokerPlayer waitPlayers = 8;
+  repeated TexasPokerPlayer inGamePlayers = 9;
+  repeated BetRoundMap betRoundMap = 10;
+  repeated Card handPokers = 11;
+  repeated int32 seat = 12;
+  int32 currentTurn = 13;
+  int32 countdown = 14;
+  GameStatus gameStatus = 15;
+  int32 bigBet = 16;
+  int32 preBet = 17;
+}
+message UserGoldenFlowerGame{
+  int32 betAmount = 1;
+  int32 optTimeout = 2;
+  int32 cost = 3;
+  int32 dealer = 4;
+  int32 baseRate = 5;
+  int32 baseBet = 6;
+  int32 nextTurn = 7;
+  repeated int32 seat = 8;
+  repeated FlowerUser inGamePlayers = 9;
+  repeated BetRoundMap betRoundMap = 10;
+  repeated Card handPokers = 11;
+  GameStatus gameStatus = 12;
+  int32 countdown = 13;
+}
+
+message QueryJoinedRaceGameInfoReply{
+  string userId = 1;
+  oneof raceGame{
+    UserLandlordsGame userLandlordsGame = 2;
+    UserTexasGame userTexasGame = 3;
+    UserGoldenFlowerGame userGoldenFlowerGame = 4;
+  }
+}
+message TexasRaceOverResultBroadcastMessage{
+  int32 awardCoin = 1;
+  int32 rank = 2;
+}
+
+// GoldenFlower
+message FlowerFoldRequest{
+  string gameId = 1;
+}
+message FlowerBetChipsRequest {
+  string gameId = 1;
+  int32 chips = 2;
+}
+message FlowerLookCardsRequest{
+  string gameId = 1;
+}
+message FlowerCompareCardsRequest{
+  string gameId = 1;
+  int32 seatNum = 2;
+}
+message LookCardsBroadcastMessage{
+  int32 seatNum = 1;
+}
+message FlowerLookCardsReply{
+  repeated Card handPokers = 1;
+}
+message FlowerFoldReply{
+}
+message FlowerCompareCardsReply{
+}
+message FlowerBetChipsReply{
+}
+message StartFlowerBroadcastMessage{
+  int32 betAmount = 1;
+  int32 optTimeout = 2;
+  int32 cost = 3;
+  int32 dealer = 4;
+  int32 baseRate = 5;
+  int32 baseBet = 6;
+  int32 nextTurn = 7;
+  repeated int32 seat = 8;
+  repeated FlowerUser inGamePlayers = 9;
+  repeated BetRoundMap betRoundMap = 10;
+}
+message FlowerUser{
+  UserInfo user = 1;
+  int32 seatNum = 2;
+  bool isFold = 3;
+  bool isLook = 4;
+  int32 chips = 5;
+  repeated Card handPokers = 6;
+}
+message EndFlowerBroadcastMessage{
+  repeated SettleInformation infos = 1;
+  repeated Card handPokers = 2;
+  repeated CardsMap cardsMap = 3;
+}
+message SettleInformation{
+  UserInfo user = 1;
+  bool isWin = 2;
+  int32 income = 3;
+  int32 seatNum = 4;
+  int32 chips = 5;
+}
+message CompareCardsBroadcastMessage {
+  repeated CompareInfo info = 1;
+}
+message CompareInfo {
+  UserInfo user = 1;
+  bool isWin = 2;
+  repeated Card handPokers = 6;
+}
+message GoldenFlowerRaceOverResultBroadcastMessage{
+  int32 awardCoin = 1;
+  int32 rank = 2;
+}
+message RaceCountdownBroadcastMessage{
+  int32 countdown = 1;
+}
+message QueryGuessListRequest {
+  GuessType guessType = 1;
+}
+
+message GuessItemList{
+  string optionContent = 2;
+}
+
+message GuessList{
+  string id = 1;
+  string title = 2;
+  string windowImg = 3;
+  GuessType guessType = 4;
+  int32 sort = 5;
+  GuessState state = 6;
+  int64 totalCoin = 7;
+}
+
+message QueryGuessListReply{
+  repeated GuessList guessList = 1;
+}
+
+message GuessWagerList{
+  string optionContent = 1;
+  int64 betNum = 2;
+}
+
+message GuessWagerRequest{
+  string guessId = 1;
+  string userId = 2;
+  repeated GuessWagerList guessWagerList = 3;
+}
+
+message GuessWagerReply{
+  string wagerRecordId = 1;
+  int64 wagerTime = 2;
+  int64 gameCoin = 3;
+  repeated GuessWagerList guessWagerList = 4;
+}
+
+message GuessDetailsRequest{
+  string guessId = 1;
+}
+
+message GuessDetailsItemList{
+  string optionContent = 1;
+  int64 totalCoin = 3;
+  int64 profitLoss = 4;
+}
+
+message GuessDetailsReply{
+  string title = 1;
+  string subtitle = 2;
+  string guessImg = 3;
+  int64 wagerStartTime = 4;
+  int64 wagerEndTime = 5;
+  int64 showEndTime = 6;
+  int64 total = 7;
+  int64 totalCoin = 8;
+  repeated GuessDetailsItemList guessDetailsItemList = 10;
+}
+
+message GuessWagerInformationRequest{
+  string userId = 1;
+  QueryTimeType queryTimeType = 2;
+}
+
+message GuessWagerInformationList{
+  string guessWagerRecordId = 1;
+  string orderNum = 2;
+  int64 totalCoin = 3;
+  string title = 4;
+  GuessState state = 5;
+  int64 profitLoss = 6;
+}
+
+message GuessWagerInformationReply{
+  repeated GuessWagerInformationList guessWagerInformationList = 1;
+}
+
+message GuessWagerDetailsRequest{
+  string guessWagerRecordId = 1;
+}
+
+message GuessWagerDetailsReply{
+  string guessId = 1;
+  string guessWagerRecordId = 2;
+  int64 showEndTime = 3;
+  string guessImg = 4;
+  repeated GuessDetailsItemList guessDetailsItemList = 5;
+  int64 wagerTime = 6;
+  GuessState state = 7;
+  int64 total = 8;
+}
+
+message BecomeLiveUserCheckRequest{
+}
+
+message BecomeLiveUserCheckReply{
+}
+
+message ModifyBindPhoneNumberRequest{
+  string phoneNumber = 1;
+}
+
+message ModifyBindPhoneNumberReply{
+}
+
+message QueryRoomChatHistoryRequest{
+  string roomId = 1;
+}
+
+message QueryRoomChatHistoryReply{
+  repeated ChatBroadcastMessage chatBroadcastMessage = 1;
+}
+
+//invite request==============>
+message QueryUserPromotionInfoRequest{
+}
+
+message QueryUserPromotionInfoReply{
+  UserPromotionInfo userPromotionInfo = 1;
+}
+
+message UserPromotionInfo{
+  double coin = 1;
+  double yesterdayIncome = 2;
+  double totalIncome = 3;
+  double todayInviteIncome = 4;
+  string shareUrl = 5;
+  bool canBeInvite = 6;
+}
+
+message QueryDayGroupContributionRequest{
+
+}
+
+message QueryDayGroupContributionReply{
+  repeated DayAgentIncomeDetail dayIncomeDetails = 1;
+}
+
+message DayAgentIncomeDetail{
+  int64 firstAgentFlow = 1;
+  int64 secondAgentFlow = 2;
+  double commission = 3;
+  int64 time = 4;
+}
+
+message QuerySubordinatesFlowRequest{
+}
+
+message QuerySubordinatesFlowReply{
+  repeated SubordinatesInfo subordinatesInfos = 1;
+}
+
+message SubordinatesInfo{
+  string userId = 1;
+  string userName = 2;
+  int64 dayFlow = 3;
+  int64 totalFlow = 4;
+  int64 teamFlow = 5;
+}
+
+message QueryCashWithdrawalRecordRequest{
+}
+
+message QueryCashWithdrawalRecordReply{
+  repeated  WithdrawalRecord withdrawalRecords = 1;
+}
+
+message WithdrawalRecord{
+  int64 time = 1;
+  int64 coin = 2;
+}
+
+message BindInviteUserCodeRequest{
+  string inviteUserId = 1;
+}
+
+message BindInviteUserCodeReply{
+  UserPromotionInfo userPromotionInfo = 1;
+}
+
+message WithdrawalCoinRequest{
+  int64 coin = 1;
+}
+
+message WithdrawalCoinReply{
+  double leftCoin = 1;
+}
+
+message Music{
+  string title = 1;
+  string singer = 2;
+  string musicTime =3;
+  string resourceUrl =4;
+}
+
+message PlayedMusicInfo{
+  MusicStatue statue = 1;
+  string playTime = 2;
+  Music music = 3;
+}
+
+message QueryRoomMusicRequest{
+  string userId = 1;
+  string liveUserDelayTime = 2;
+}
+
+message QueryRoomMusicReply{
+  repeated Music musicList = 1;
+  PlayedMusicInfo playMusicInfo = 2;
+  string liveUserDelayTime = 3;
+  int32 volume = 4;
+}
+
+message BackgroundMusicChangeBroadcastMessage{
+  PlayedMusicInfo playMusicInfo = 1;
+  string liveUserDelayTime = 2;
+  int32 volume = 3;
+}
+
+message RemoveMusicFromMusicListRequest{
+  Music music = 1;
+}
+message RemoveMusicFromMusicListReply{
+  Music music = 1;
+}
+
+message OperationRoomMusicRequest{
+    MusicStatue operation = 1;
+    Music music = 2;
+    string liveUserDelayTime = 3;
+}
+
+message OperationRoomMusicReply{
+}
+
+message AdjustBackgroundMusicVolumeRequest{
+  int32 volume = 1;
+}
+
+message AdjustBackgroundMusicVolumeReply{
+
+}
+message BackgroundMusicVolumeBroadcastMessage{
+  int32 volume = 1;
+}
+
+message SetRoomPlayingMusicInfoRequest{
+  string musicOptType = 1;
+  string music = 2;
+}
+
+message SetRoomPlayingMusicInfoReply{
+
+}
+message RoomPlayingMusicChangeBroadcastMessage{
+  string musicOptType = 1;
+  string music = 2;
+}
+
+message QueryResourceServerURLRequest{
+}
+
+message QueryResourceServerURLReply{
+  string resourceServer = 1;
+}
+
+message ResourceServerChangeURLBroadcastMessage{
+  string resourceServer = 1;
+}
+
+message SystemRollMessageBroadcastMessage{
+  string systemRollMessage = 1;
+}
+
+message CreateFeedbackRequest{
+  string feedbackContent = 1;
+}
+
+message CreateFeedbackReply{
+}
+
+message TimeToEndLiveBroadcastMessage{
+  int64 timeToEndLive = 1;
+}
+
+message SendCommonBroadcastMessageRequest{
+  string broadcastType = 1;
+  string content = 2;
+}
+
+message SendCommonBroadcastMessageReply{
+}
+
+message CommonBroadcastMessage{
+  string broadcastType = 1;
+  string content = 2;
+}
+
+message PlatformRechargeBroadcastMessage{
+  string userId = 1;
+  string displayName = 2;
+  int64 rechargeCoin = 3;
+  int64 gameCoin = 4;
+}
+
+message UpdateLiveNoticeRequest{
+  string  liveNotice = 1;
+}
+
+message  UpdateLiveNoticeReply{
+  string  liveNotice = 1;
+}
+
+message HeartConnectedRequest{
+}
+
+message RepeatLoginBroadcastMessage{
+
+}
+
+message BankerQuitBroadcastMessage{
+  BankerInfo currentBanker = 1;
+  int32 bankerKeepCount = 2;
+  int64 winOrLoseAmount = 3;
+}
+message UserBanBroadcastMessage{
+  AccountStatue statue = 1;
+}
+
+message LiveUserBanBroadcastMessage{
+  string userId = 1;
+  LiveStatus liveStatus = 2;
+}
+
+message GiftConfigChangeBroadcastMessage{
+}
+
+
+message SwitchLiveSourceLineRequest{
+  LiveSourceLine liveSourceLine = 1;
+  string liveDomain = 2;
+}
+
+message SwitchLiveSourceLineReply{
+  string txSecret = 1;
+}
+
+message SwitchLiveSourceLineBroadcastMessage{
+  LiveSourceLine liveSourceLine = 1;
+  string pushUrl = 2;
+  repeated string pullUrl = 3;
+}
+
+message QueryLiveSourceLineRequest{
+
+}
+message QueryLiveSourceLineReply{
+  repeated LiveSourceLine liveSourceLines = 1;
+}
+
+message LiveSourceChangeBroadcastMessage {
+  repeated LiveSourceLine liveSourceLines = 1;
+}
+
+message QuerySendGiftRecordRequest{
+  int32 recordSize = 1;
+}
+
+message QuerySendGiftRecordReply{
+  repeated GiftRecord giftRecords = 1;
+}
+message GiftRecord{
+  string giftId = 1;
+  int64 sendTime = 2;
+  int32 sendNum = 3;
+  int64 coinAmount = 4;
+  string liveUserId = 5;
+  PlatformType platformType = 6;
+}
+
+message QueryCarouselRequest{
+  CarouselType carouselType = 1;
+}
+
+message QueryCarouselReply{
+    repeated Carousel carousel= 1;
+}
+
+message Carousel{
+  string title = 1;
+  string imageUrl = 2;
+  CarouselType carouselType = 3;
+  string referenceId = 4;  //reference id (liveUserId or guessId)
+  RaceCarouselConfig raceCarouselConfig = 5; //only used by RACE_CAROUSEL
+}
+
+message RaceCarouselConfig{
+  RaceType raceType = 1;
+  int32 raceFee = 2;
+}
+
+message JoinRaceByRaceFeeRequest{
+  RaceType raceType = 1;
+  int32 raceFee = 2;
+}
+message JoinRaceByRaceFeeReply{
+  TexasRaceReply texasRace = 1;
+  LandlordRace landlordRace = 2;
+  GoldenFlowerReply goldenFlowerRace = 3;
+}
+
+message QueryUnReadMessageRequest {
+
+}
+
+message QueryUnReadMessageReply{
+  repeated MessageRecord messageRecord = 1;
+}
+
+message SharedPlatformChangeBroadcastMessage {
+  LiveUserInfo liveUserInfo = 1;
+}
+
+message SessionConnRequest {
+  string clientSession = 1;
+}
+
+message SessionConnReply {
+  string clientSession = 2;
+}
+
+message ModifyQuickChatRequest{
+  string quickChat =1;
+}
+
+message ModifyQuickChatReply{
+
+}
+
+message ModifyQuickChatBroadcastMessage{
+  LiveUserInfo liveUserInfo =1 ;
+}
+
+message LiveUserPermissionBroadcastMessage{
+  LiveUserInfo liveUserInfo =1 ;
+}

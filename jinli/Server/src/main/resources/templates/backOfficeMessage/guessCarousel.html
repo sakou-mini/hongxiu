@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/config/static/layui/css/layui.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/mainCss.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/guessCarousel.css}">
+    <script type="text/javascript" th:src="@{/config/static/js/jq.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/layui/layui.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/js/config.js}"></script>
+    <style type="text/css">
+        body{
+            overflow: auto;
+        }
+        .FormStyle{
+            padding:30px 20px;
+        }
+        .tabBox{
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .FormItem{
+            position: relative;
+            float: left;
+            margin-right: 20px;
+            margin-left: 0!important;
+        }
+        .selectDate>div{
+            float: left;
+            color: black;
+            line-height: 39px;
+        }
+        .selectDate{
+            overflow: hidden;
+            float: left;
+        }
+        .titleMsg{
+            margin-bottom: 20px;
+        }
+
+        .selectType>div{
+            float: left;
+            color: #000000;
+            line-height: 39px;
+        }
+        .buttonStyle{
+            float: left;
+            margin-left: 10px;
+        }
+        .buttonStyle>button{
+            margin-left: 10px;
+        }
+        @media screen and (max-width: 1063px) {
+            .clearfix>div{
+                display: block;
+                margin-top: 10px;
+            }
+            .tabBox{
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="bgcSidebar"></div>
+<div class="container app">
+    <header>
+        <!--头部导航-->
+        <ul class="layui-nav overStyle" lay-filter="">
+            <li class="logoOver"><div class="logoBox"><img class="logo" th:src="@{/config/static/img/default_logo.png}"></div><div class="logoText">锦鲤直播</div></li>
+            <!--<li class="layui-nav-item toItemChange" data-path="index"><a href="javascript:void(0);">首页</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="LiveUserExamine"><a href="javascript:void(0);">主播管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="reportList"><a href="javascript:void(0);">举报管理</a></li>-->
+            <!--<li class="layui-nav-item layui-this  toItemChange" data-path="personDiaryList"><a href="javascript:void(0);">动态审核</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="guessList"><a href="javascript:void(0);">竞猜管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="backOfficeManagement"><a href="javascript:void(0);">后台账号管理</a></li>-->
+            <li class="userMsg">
+                <div>
+                    <span>欢迎您：</span>
+                    <span id="loginName">admin</span>
+                </div>
+                <div>
+                    <a href="/logout"><button class="layui-btn layui-btn-danger" id="logout" >退出</button></a>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <main class="mainStyle">
+        <!--侧边栏-->
+        <div class="sidebar">
+            <div>
+                <ul class="layui-nav layui-nav-tree overStyle leftSide" id="sidebar" lay-filter="test">
+                    <!--<li class="layui-nav-item layui-this"><a  class="toItemChange" data-path="personDiaryList" href="javascript:void(0);">动态审核列表</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="personDiaryReject" href="javascript:void(0);">未通过列表</a></li>-->
+                    <!--<li class="layui-nav-item "><a  class="toItemChange" data-path="personDiaryApproved" href="javascript:void(0);">通过列表</a></li>-->
+                </ul>
+                <div class="mainBox clearfix" id="loadHtml">
+                    <div>
+                        <h2 class="headMsg">竞猜轮播图</h2>
+                    </div>
+                    <div class="FormStyle">
+                        <div>
+                            <form class="layui-form clearfix">
+                                <div class="buttonStyle">
+                                    <button class="layui-btn" id="addBtn" type="button">新增</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="carouselBox">
+
+                    </div>
+                </div>
+                <div class="clearFloat"></div>
+            </div>
+        </div>
+    </main>
+</div>
+<script type="text/javascript" th:src="@{/config/static/js/mainMethod.js}"></script>
+<script>
+    $("#addBtn").on("click",function () {
+        jumpUrl("addGuessCarousel")
+    })
+
+    $.get({
+        url:window.ioApi.backOfficeMessage.getCarouselData,
+        data:{
+            carouselType:"GUESS_CAROUSEL"
+        },
+        success:function (res) {
+            if(res.length === 0){
+                document.getElementById("carouselBox").innerHTML = "<h1 class='noDataBox'>暂无数据</h1>"
+                return
+            }
+            console.log(res);
+            document.getElementById("carouselBox").innerHTML = ""
+            for(var i=0;i<res.length;i++){
+                res[i].raceType=raceFormat(res[i].raceType)
+                res[i].referenceId = res[i].referenceId===""?"暂无":res[i].referenceId
+                document.getElementById("carouselBox").innerHTML +=`
+                <div class="carouselItem">
+                            <div>
+                                <div class="imgBox">
+                                    <img src="${res[i].imageUrl}" height="89"/>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="titleBox">
+                                    标题：<span>${res[i].title}</span>
+                                </div>
+                                <div class="selectBox">
+                                    <span class="selectText">跳转竞猜ID：<span>${res[i].referenceId}</span></span>
+                                </div>
+                            </div>
+                            <div>
+                                <button	class="layui-btn layui-btn-normal update" data-value="${res[i].id}">修改</button>
+                                <button	class="layui-btn layui-btn-danger remove" data-value="${res[i].id}">删除</button>
+                            </div>
+                        </div>
+                `
+            }
+            $(".remove").on("click",function () {
+                var removeId = this.getAttribute("data-value");
+                layer.open({
+                    title: '提示'
+                    ,content: '确定删除这条轮播吗？',
+                    btn:["确定"],
+                    btn1:function (index,layero) {
+                        var sendObj = {}
+                        sendObj.id= removeId;
+                        sendObj.carouselType="GUESS_CAROUSEL"
+                        $.post({
+                            url:window.ioApi.backOfficeMessage.removeCarousel,
+                            data:sendObj,
+                            success:function (res) {
+                                console.log(res);
+                                if(res.code===200){
+                                    layer.open({
+                                        title: '提示'
+                                        ,content: '删除成功',
+                                        btn:["确定"],
+                                        btn1:function (index,layero) {
+                                            layer.closeAll();
+                                            location.reload()
+                                        }
+                                    });
+                                }
+                            }
+                        })
+
+                    }
+                });
+            })
+            $(".update").on("click",function () {
+                var id =  this.getAttribute("data-value");
+                jumpDetailsUrl("addGuessCarousel","id",id)
+            })
+
+        }
+    })
+
+</script>
+</body>
+</html>

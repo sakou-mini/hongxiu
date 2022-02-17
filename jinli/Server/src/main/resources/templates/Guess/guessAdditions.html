@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/config/static/layui/css/layui.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/mainCss.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/InputAnimation.css}">
+    <link rel="stylesheet" th:href="@{/config/static/css/upLoadImg.css}" defer="defer">
+    <script type="text/javascript" th:src="@{/config/static/js/jq.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/layui/layui.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/js/config.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/js/upLoadImg.js}"></script>
+    <style type="text/css">
+        .titleMsg>h2,.titleMsg>div{
+            float: left;
+        }
+        .titleMsg>div{
+            margin-top: 38px;
+        }
+        .formStyle{
+            background-color: #fff;
+            padding: 10px 30px;
+            margin-top: 30px;
+        }
+
+        .firstEle{
+            margin-left: 20px;
+        }
+        .imgBox{
+            overflow: hidden;
+            padding: 20px;
+        }
+        #loadHtml{
+            padding: 0 30px;
+        }
+        .imgBox>div{
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            float: left;
+            margin-left: 30px;
+            margin-bottom: 30px;
+        }
+        .layui-layer-dialog{
+            width:auto!important;
+        }
+        @media screen and (max-width: 1000px) {
+            .firstEle{
+                margin-left: 0;
+            }
+        }
+        .layui-form-pane .layui-form-label{
+            width: 140px;
+        }
+        .layui-input{
+            width: 30%;
+            margin-left: 40px;
+            padding-right:0;!important;
+        }
+        .formItemStyle{
+            padding:10px 0 10px 0;
+        }
+        .layui-form-select {
+            width: 250px;
+            margin-left: 40px;
+        }
+        input[class="layui-input layui-unselect"]{
+            margin-left: 0;
+            width: 100%;
+        }
+        .guessItem{
+            margin-top: 10px;
+        }
+        .guessItem:nth-child(1){
+            margin-top: 0;
+        }
+        #upWindowImg,#upGuessImg{
+            margin-left: 40px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="bgcSidebar"></div>
+<div class="container app">
+    <header>
+        <!--头部导航-->
+        <ul class="layui-nav overStyle" lay-filter="">
+            <li class="logoOver"><div class="logoBox"><img class="logo" th:src="@{/config/static/img/default_logo.png}"></div><div class="logoText">锦鲤直播</div></li>
+            <!--<li class="layui-nav-item toItemChange" data-path="index"><a href="javascript:void(0);" >首页</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="LiveUserExamine"><a href="javascript:void(0);" >主播管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="reportList"><a href="javascript:void(0);" >举报管理</a></li>-->
+            <!--<li class="layui-nav-item  toItemChange" data-path="personDiaryList"><a href="javascript:void(0);">动态审核</a></li>-->
+            <!--<li class="layui-nav-item  layui-this toItemChange" data-path="guessList"><a href="javascript:void(0);">竞猜管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="backOfficeManagement"><a href="javascript:void(0);">后台账号管理</a></li>-->
+            <li class="userMsg">
+                <div>
+                    <span>欢迎您：</span>
+                    <span id="loginName">admin</span>
+                </div>
+                <div>
+                    <a href="/logout"><button class="layui-btn layui-btn-danger" id="logout" >退出</button></a>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <main class="mainStyle">
+        <!--侧边栏-->
+        <div class="sidebar">
+            <div>
+                <ul class="layui-nav layui-nav-tree overStyle leftSide" id="sidebar" lay-filter="test">
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="guessList" href="javascript:void(0);">竞猜展示列表</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="guessNotStart" href="javascript:void(0);">尚未开始</a></li>-->
+                    <!--<li class="layui-nav-item "><a  class="toItemChange" data-path="guessShowOver" href="javascript:void(0);">展示已结束</a></li>-->
+                    <!--<li class="layui-nav-item "><a  class="toItemChange" data-path="guessWagerOver" href="javascript:void(0);">投注已结束</a></li>-->
+                    <!--<li class="layui-nav-item "><a  class="toItemChange" data-path="guessWaitPrize" href="javascript:void(0);">待开奖</a></li>-->
+                    <!--<li class="layui-nav-item "><a  class="toItemChange" data-path="guessStatistics" href="javascript:void(0);">数据统计</a></li>-->
+                </ul>
+                <div class="mainBox clearfix" id="loadHtml">
+                    <div class="titleMsg clearfix">
+                        <div>
+                            <button type="button" class="layui-btn layui-btn-primary" onclick="window.history.back(-1)">
+                                <i class="layui-icon">&#xe603;</i>
+                            </button>
+                        </div>
+                        <h2 class="headMsg">新增竞猜</h2>
+                    </div>
+                    <div>
+                        <div>
+                            <form class="layui-form layui-form-pane formStyle" action="">
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">竞猜标题</label>
+                                    <div class="layui-input-block layui-row formItemStyle">
+                                        <input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input" id="title">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">竞猜副标题</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <input type="text" name="title" required  lay-verify="required" placeholder="请输入副标题" autocomplete="off" class="layui-input" id="subtitle">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">窗口图片</label>
+                                    <div class="layui-input-block formItemStyle" id="ImgWin">
+                                        <div id="upWindowImg"></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">竞猜页图片</label>
+                                    <div class="layui-input-block formItemStyle" id="ImgGuess">
+                                        <div id="upGuessImg"></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">竞猜项</label>
+                                    <div class="layui-input-block formItemStyle">
+                                        <select  name="city" lay-filter="itemSelect" class="selectStyle" id="itemSelect">
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">竞猜选项</label>
+                                    <div class="layui-input-block formItemStyle" id="itemListBox">
+                                        <input type="text" name="title" required  lay-verify="required" placeholder="选项1" autocomplete="off" class="layui-input guessItem">
+                                        <input type="text" name="title" required  lay-verify="required" placeholder="选项2" autocomplete="off" class="layui-input guessItem">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">展示开始时间</label>
+                                    <div class="layui-input-block formItemStyle">
+                                        <input type="text" class="layui-input" id="showStartTime" readonly>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">展示结束时间</label>
+                                    <div class="layui-input-block formItemStyle">
+                                        <input type="text" class="layui-input" id="showEndTime" readonly>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">下注开始时间</label>
+                                    <div class="layui-input-block formItemStyle">
+                                        <input type="text" class="layui-input" id="wagerStartTime" readonly>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">下注结束时间</label>
+                                    <div class="layui-input-block formItemStyle">
+                                        <input type="text" class="layui-input" id="wagerEndTime" readonly>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">排序</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <input type="number" class="layui-input" placeholder="1 至 100" id="guessSort">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">竞猜类型</label>
+                                    <div class="layui-input-block formItemStyle">
+                                        <select  name="city" lay-verify="required" lay-filter="handle" class="selectStyle" id="typeSelect">
+                                            <option value="0">政治</option>
+                                            <option value="1">体育</option>
+                                            <option value="2">电竞</option>
+                                            <option value="3">其他</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="confirmBtnBox">
+
+                                </div>
+                                <button class="layui-btn layui-btn-normal" type="button" id="upData">提交</button>
+                                <button class="layui-btn layui-btn-normal" type="button" id="resetData">重置</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="mtBox"></div>
+                </div>
+                <div class="clearFloat"></div>
+            </div>
+        </div>
+    </main>
+</div>
+<script type="text/javascript" th:src="@{/config/static/js/mainMethod.js}"></script>
+<script  type="text/javascript" th:src="@{/config/static/js/guessAdditions.js}"></script>
+</body>
+</html>

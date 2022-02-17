@@ -1,0 +1,137 @@
+{
+    "Vip": [
+        {
+            "vipId": 0,
+            "next_lvl": 1,
+            "upgradeLvl": 0,
+            "amount": 100,
+            "functionList": {
+                "privateMessage": false,
+                "approach": 0,
+                "car": 0,
+                "icon": 0,
+                "upgrade": 0,
+                "barrageColor": 0,
+                "chatMaxLength": 6,
+                "vipChair": false,
+                "avatarFrame": 0,
+                "connectLive": false
+            },
+            "Desc": "weijiesuo"
+        },
+        {
+            "vipId": 1,
+            "next_lvl": 2,
+            "upgradeLvl": 10,
+            "amount": 1000,
+            "functionList": {
+                "privateMessage": true,
+                "approach": 1,
+                "car": 0,
+                "icon": 1,
+                "upgrade": 0,
+                "barrageColor": 0,
+                "chatMaxLength": 9,
+                "vipChair": false,
+                "avatarFrame": 0,
+                "connectLive": false
+            },
+            "Desc": "youxia"
+        },
+        {
+            "vipId": 2,
+            "next_lvl": 3,
+            "upgradeLvl": 20,
+            "amount": 5000,
+            "functionList": {
+                "privateMessage": true,
+                "approach": 2,
+                "car": 0,
+                "icon": 2,
+                "upgrade": 1,
+                "barrageColor": 1,
+                "chatMaxLength": 15,
+                "vipChair": false,
+                "avatarFrame": 1,
+                "connectLive": true
+            },
+            "Desc": "qishi"
+        },
+        {
+            "vipId": 3,
+            "next_lvl": 4,
+            "upgradeLvl": 50,
+            "amount": 10000,
+            "functionList": {
+                "privateMessage": true,
+                "approach": 3,
+                "car": 80000,
+                "icon": 3,
+                "upgrade": 2,
+                "barrageColor": 2,
+                "chatMaxLength": 20,
+                "vipChair": true,
+                "avatarFrame": 2,
+                "connectLive": true
+            },
+            "Desc": "diwang"
+        },
+        {
+            "vipId": 4,
+            "next_lvl": 5,
+            "upgradeLvl": 80,
+            "amount": 50000,
+            "functionList": {
+                "privateMessage": true,
+                "approach": 4,
+                "car": 80001,
+                "icon": 4,
+                "upgrade": 3,
+                "barrageColor": 3,
+                "chatMaxLength": 50,
+                "vipChair": true,
+                "avatarFrame": 3,
+                "connectLive": true
+            },
+            "Desc": "huangdi"
+        },
+        {
+            "vipId": 5,
+            "next_lvl": 6,
+            "upgradeLvl": 100,
+            "amount": 100000,
+            "functionList": {
+                "privateMessage": true,
+                "approach": 5,
+                "car": 80001,
+                "icon": 5,
+                "upgrade": 4,
+                "barrageColor": 4,
+                "chatMaxLength": 50,
+                "vipChair": true,
+                "avatarFrame": 4,
+                "connectLive": true
+            },
+            "Desc": "xiansheng"
+        },
+        {
+            "vipId": 6,
+            "next_lvl": -1,
+            "upgradeLvl": 150,
+            "amount": -1,
+            "functionList": {
+                "privateMessage": true,
+                "approach": 6,
+                "car": 80002,
+                "icon": 6,
+                "upgrade": 5,
+                "barrageColor": 5,
+                "chatMaxLength": 50,
+                "vipChair": true,
+                "avatarFrame": 5,
+                "connectLive": true
+            },
+            "Desc": "chaoshen"
+        }
+    ]
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/config/static/layui/css/layui.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/mainCss.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/InputAnimation.css}">
+    <script type="text/javascript" th:src="@{/config/static/js/jq.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/layui/layui.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/js/config.js}"></script>
+    <style type="text/css">
+        .titleMsg>h2,.titleMsg>div{
+            float: left;
+        }
+        .titleMsg>div{
+            margin-top: 38px;
+        }
+        .formStyle{
+            background-color: #fff;
+            padding: 10px 30px;
+            margin-top: 30px;
+        }
+        .formStyle>div>div>div{
+            line-height: 36px;
+        }
+        .firstEle{
+            margin-left: 20px;
+        }
+        .imgBox{
+            overflow: hidden;
+            padding: 20px;
+        }
+        #loadHtml{
+            padding: 0 30px;
+        }
+        .imgBox>div{
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            float: left;
+            margin-left: 30px;
+            margin-bottom: 30px;
+        }
+        .layui-layer-dialog{
+            width:auto!important;
+        }
+        @media screen and (max-width: 1000px) {
+            .firstEle{
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="bgcSidebar"></div>
+<div class="container app">
+    <header>
+        <!--头部导航-->
+        <ul class="layui-nav overStyle" lay-filter="">
+            <li class="logoOver"><div class="logoBox"><img class="logo" th:src="@{/config/static/img/default_logo.png}"></div><div class="logoText">锦鲤直播</div></li>
+            <!--<li class="layui-nav-item toItemChange" data-path="index"><a href="javascript:void(0);" >首页</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="LiveUserExamine"><a href="javascript:void(0);" >主播管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="reportList"><a href="javascript:void(0);" >举报管理</a></li>-->
+            <!--<li class="layui-nav-item layui-this  toItemChange" data-path="personDiaryList"><a href="javascript:void(0);">动态审核</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="guessList"><a href="javascript:void(0);">竞猜管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="backOfficeManagement"><a href="javascript:void(0);">后台账号管理</a></li>-->
+            <li class="userMsg">
+                <div>
+                    <span>欢迎您：</span>
+                    <span id="loginName">admin</span>
+                </div>
+                <div>
+                    <a href="/logout"><button class="layui-btn layui-btn-danger" id="logout" >退出</button></a>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <main class="mainStyle">
+        <!--侧边栏-->
+        <div class="sidebar">
+            <div>
+                <ul class="layui-nav layui-nav-tree overStyle leftSide" id="sidebar" lay-filter="test">
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="personDiaryList" href="javascript:void(0);">动态审核列表</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="personDiaryReject" href="javascript:void(0);">未通过列表</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="personDiaryApproved" href="javascript:void(0);">通过列表</a></li>-->
+                </ul>
+                <div class="mainBox clearfix" id="loadHtml">
+                    <div class="titleMsg clearfix">
+                        <div>
+                            <button type="button" class="layui-btn layui-btn-primary" onclick="window.history.back(-1)">
+                                <i class="layui-icon">&#xe603;</i>
+                            </button>
+                        </div>
+                        <h2 class="headMsg">申请人详细信息</h2>
+                    </div>
+                    <div>
+                        <div>
+                            <form class="layui-form layui-form-pane formStyle" action="">
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">账户信息</label>
+                                    <div class="layui-input-block layui-row">
+                                        <div class="layui-col-md3 firstEle">申请人用户名：<span id="displayName"></span></div>
+                                        <div class="layui-col-md3">用户ID：<span id="id"></span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">申请人信息</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">真实姓名：<span id="realName"></span></div>
+                                        <div class="layui-col-md3">性别：<span id="gender"></span></div>
+                                        <div class="layui-col-md3">出生日期：<span id="birthDay"></span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">详细信息</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">国籍：<span id="country"></span></div>
+                                        <div class="layui-col-md3">地址：<span id="address"></span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">联系方式</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <div class="layui-col-md3 firstEle">手机号：<span id="phoneNumber"></span></div>
+                                        <div class="layui-col-md3">邮箱：<span id="email"></span></div>
+                                        <div class="layui-col-md3">微信/line/QQ：<span id="contactWay"></span></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">申请人图片</label>
+                                    <div class="layui-input-block">
+                                        <div class="imgBox" id="imgBox">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane id="showItem" style="display: none">
+                                    <label class="layui-form-label">不通过原因</label>
+                                    <div class="layui-input-block">
+                                        <textarea name="desc" rows="5" id="rejectReasons" placeholder="请输入内容" class="layui-textarea" disabled></textarea>
+                                    </div>
+                                </div>
+                                <div id="confirmBtnBox">
+                                    <button type="button" id="back" class="layui-btn">返回列表</button>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="mtBox"></div>
+                </div>
+                <div class="clearFloat"></div>
+            </div>
+        </div>
+    </main>
+</div>
+<script type="text/javascript" th:src="@{/config/static/js/mainMethod.js}"></script>
+<script th:inline="javascript">
+    var user = [[${data}]];
+    switch (user.gender) {
+        case "MALE":
+            user.gender = "男";
+            break;
+        case "FEMALE":
+            user.gender = "女";
+            break
+    }
+
+    user.birthDay =  dateFormat("YYYY-mm-dd",user.birthDay);
+    $("#displayName").text(user.displayName);
+    $("#id").text(user.id);
+    $("#realName").text(user.realName);
+    $("#gender").text(user.gender);
+    $("#birthDay").text(user.birthDay);
+    $("#country").text(user.country);
+    $("#address").text(user.address);
+    $("#phoneNumber").text(user.phoneNumber);
+    $("#email").text(user.email);
+    $("#contactWay").text(user.contactWay);
+    for(var i=0;i<user.images.length;i++){
+        var img = window.config.imgUrl+user.images[i];
+        $("#imgBox").get(0).innerHTML += '<div><img  class="imgSelect" width="150" src="'+img+'"></div>'
+    }
+    if(user.liveStatus === "APPROVED_FAIL"){
+        //失败
+        $("#showItem").attr("style", "");
+        $("#rejectReasons").text(user.rejectReasons);
+    }
+    else if(user.liveStatus === "UNAPPROVED"){
+        //未审核
+        $("#confirmBtnBox").get(0).innerHTML += '<button id="pass" type="button" class="layui-btn layui-btn-normal">通过审核</button><button id="reject"  type="button"  class="layui-btn layui-btn-danger">驳回审核</button>'
+        $("#pass").on("click",function () {
+            layer.confirm('确认通过审核吗？', {
+                btn: ['确认', '取消']
+            }, function(index){
+                $.get({
+                    url:window.ioApi.liveUser.passLiveUser,
+                    data: {
+                        id:user.id,
+                        AccountName:localStorage.getItem("loginMsg")
+                    },
+                    success:function(res){
+                        layer.msg('审核提交成功');
+                        $("#confirmBtnBox").get(0).removeChild(document.getElementById("pass"))
+                        $("#confirmBtnBox").get(0).removeChild(document.getElementById("reject"))
+                    },
+                    error:function () {
+                        layer.open({
+                            title: '错误信息'
+                            ,content: '审核提交失败，请联系管理员'
+                        });
+                    }
+                });
+                layer.closeAll();
+            }, function(index){
+            });
+        })
+        $("#reject").on("click",function () {
+            layer.confirm('确认驳回该主播吗？',{
+                btn: ['确认', '取消'] ,
+                area: ['500px'],
+                content: '<textarea id="rejectValue" name="desc" placeholder="请输入驳回理由" class="layui-textarea"></textarea>'
+            },function (index) {
+                var RejectionReasons = $("#rejectValue").val();
+                if(RejectionReasons === "" || RejectionReasons === null || RejectionReasons === undefined){
+                    $("#rejectValue").attr("class","errInput layui-textarea");
+                }
+                else {
+                    $.get({
+                        url:window.ioApi.liveUser.rejectLiveUser,
+                        data:{
+                            id:user.id,
+                            RejectionReasons:RejectionReasons,
+                            AccountName:localStorage.getItem("loginMsg")
+                        },
+                        success:function(res){
+                            layer.closeAll();
+                            layer.msg('审核提交成功');
+                            $("#confirmBtnBox").get(0).removeChild(document.getElementById("pass"))
+                            $("#confirmBtnBox").get(0).removeChild(document.getElementById("reject"))
+                            $("#showItem").attr("style", "");
+                            $("#rejectReasons").text(RejectionReasons);
+                        },
+                        error:function () {
+                            layer.open({
+                                title: '错误信息'
+                                ,content: '驳回主播错误，请联系管理员'
+                            });
+                        }
+                    })
+                }
+            });
+        })
+    }
+    else {
+        //成功
+    }
+
+    layui.use('element', function(){
+        var element = layui.element;
+    });
+    layui.use('form', function() {
+        var form = layui.form;
+    });
+    $(".imgSelect").on("click",function () {
+        var imgSrc = this.src;
+        layer.open({
+            title: '查看图片详情'
+            ,content: "<img src='"+imgSrc+"' style='height: 80vh'>",
+            offset: '30px'
+        });
+    });
+    $("#back").on("click",function () {
+        window.history.go(-1)
+    })
+    
+</script>
+</body>
+</html>

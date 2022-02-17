@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<link rel="stylesheet" th:href="@{/config/static/layui/css/layui.css}" defer="defer">
+<link rel="stylesheet" th:href="@{/config/static/bs/css/bootstrap.min.css}" defer="defer">
+<script type="text/javascript" th:src="@{/config/static/layui/layui.js}"></script>
+<style type="text/css">
+    .formBox{
+        width: 600px;
+        position: absolute;
+        left: 13%;
+        top: 20%;
+        padding: 3%;
+        border: 1px solid rgba(0, 0, 0,.3);
+        box-shadow:0px 0px 50px rgba(0,0,0,.5);
+        padding-right: 5%;
+        background: rgba(255,255,255,.2);
+        z-index: 80;
+    }
+    .layui-form {
+        width: 480px;
+        height: 290px;
+        margin-top: 10%;
+    }
+    .layui-form-item{
+        margin-bottom: 13%;
+    }
+    .title{
+        color: white;
+        font-weight: 600;
+    }
+    .back{
+        background-image: linear-gradient(rgb(22,97,185),rgb(4,234,242));
+        height: 100vh;
+    }
+    .layui-input{
+        color: #7b7b7b;
+        background-color: rgba(255,255,255,.5);
+    }
+    .layui-form-label{
+        color: white;
+    }
+    .layui-btn{
+        width: 100%;
+    }
+    .bgImg{
+        position: absolute;
+        right: 0;
+        top: 200px;
+        z-index: 0;
+    }
+    .glyphicon{
+        top: 0;
+    }
+    .input-group{
+        height: 40px;
+        margin-top: 50px;
+    }
+    .upbtn{
+        width: 100%;
+    }
+    .form-control{
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+    .input-group-addon{
+        background-color: rgba(255, 255, 255, 0.35);
+    }
+    .c{
+        color: #e0e0e0;
+    }
+    input::-webkit-input-placeholder {
+        /* WebKit, Blink, Edge 适配谷歌*/
+        color: #d5d5d5 !important;
+    }
+
+    input::-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 适配火狐*/
+        color: #d5d5d5 !important;
+    }
+
+    input:-moz-placeholder {
+        /* Mozilla Firefox 19+ 适配火狐*/
+        color: #d5d5d5 !important;
+    }
+
+    input:-ms-input-placeholder {
+        /* Internet Explorer 10-11 适配ie*/
+        color: #d5d5d5 !important;
+    }
+    .formStyle{
+        width: 95%;
+    }
+</style>
+<body class="back">
+<div class="formBox">
+    <h1 class="title">锦鲤后台管理系统</h1>
+    <form class="formStyle" action="/login" method="post">
+        <div class="input-group ">
+            <span class="input-group-addon c" id="basic-addon1">账号</span>
+            <input type="text" class="form-control" placeholder="请输入用户名" id="username" name="username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group ">
+            <span class="input-group-addon c">密码</span>
+            <input type="password" placeholder="请输入密码" required id="password" name="password" class="form-control">
+            <span class="input-group-addon glyphicon glyphicon-eye-close" id="demo"></span>
+        </div>
+        <div class="input-group">
+            <button id="upBtn"  class="layui-btn layui-btn-normal layui-btn-lg upbtn" lay-submit lay-filter="formDemo" type="button">登录</button>
+        </div>
+    </form>
+
+</div>
+<img class="bgImg" src="/config/static/img/wechart-banner-image.png"/>
+<script th:src="@{/config/static/js/jq.js}"></script>
+<script th:src="@{/config/static/bs/js/bootstrap.min.js}"></script>
+<script>
+    //Demo
+
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);  //获取url中"?"符后的字符串并正则匹配
+        var context = "";
+        if (r != null)
+            context = r[2];
+        reg = null;
+        r = null;
+        return context == null || context == "" || context == "undefined" ? "" : context;
+    }
+    layui.use('form', function(){
+        var form = layui.form;
+    });
+    sessionStorage.clear()
+
+
+    if(GetQueryString("error") === "true"){
+        layer.confirm('账号或者密码错误',{
+            btn: ['确认'],
+        },function (index) {
+            window.location.href="/login"
+        })
+    }
+
+    $('#demo').click(function () {
+        var img = $('#demo'); //找到输入框右边的图标
+        var input = $('#password');//找到输入框
+        if(img.attr("class") === "input-group-addon glyphicon glyphicon-eye-close"){//如果图标是闭眼（输入不显示）
+            img.attr( {
+                "class" : "input-group-addon glyphicon glyphicon-eye-open"
+            });
+            input.attr({
+                "type" : "text"
+            });
+        }
+        else {//如果图标是睁眼（输入显示）
+            img.attr({
+                "class" : "input-group-addon glyphicon glyphicon-eye-close"
+            });
+            input.attr({
+                "type" : "password"
+            });
+        }
+    });
+    var w = $(".formStyle").get(0).offsetWidth;
+    var h = $("#username").get(0).offsetHeight;
+    $("#upBtn").attr("style","width:"+w+"px;height:"+h+"px;line-height:"+h+"px");
+
+    window.addEventListener("resize", function () {
+        var w = $(".formStyle").get(0).offsetWidth;
+        var h = $("#username").get(0).offsetHeight;
+        $("#upBtn").attr("style","width:"+w+"px;height:"+h+"px;line-height:"+h+"px");
+    })
+
+    $("#upBtn").on("click",function () {
+        updateLogin()
+    })
+
+
+    function updateLogin(){
+        $.post({
+            url:"/login",
+            data:{
+                username:$("#username").val(),
+                password:$("#password").val()
+            },
+            success:function (res) {
+                console.log(res);
+                if(typeof res === "string"){
+                    layer.msg("api账号")
+                }else {
+                    if(res.code === 200){
+                        sessionStorage.setItem("nav",JSON.stringify(res.data))
+                        location.href = res.data[0].url
+                    }else if(res.code === 400){
+                        layer.msg("账号或者密码错误")
+                    }else if(res.code === 505){
+                        layer.msg("账号被冻结")
+                    }
+                }
+
+
+            }
+        })
+    }
+
+
+</script>
+</body>
+</html>

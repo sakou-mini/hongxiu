@@ -1,0 +1,668 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_package = "com.donglaistd.jinli";
+
+enum GameType{
+  EMPTY = 0;
+  BACCARAT = 1;
+  NIUNIU = 2;
+  GOLDENFLOWER = 3;
+  REDBLACK = 4;
+  LONGHU = 5;
+  LANDLORD_GAME = 6;
+  TEXAS_GAME = 7;
+  JIAOYOU = 1000;
+  MENGCHONG = 1001;
+  YANZHI = 1002;
+  TIAOWU = 1003;
+  CHANGGE = 1004;
+}
+
+enum UserType{
+  NORMAL = 0;
+  LIVE = 1;
+  LIVE_UNAPPROVED = 2;
+}
+
+enum LiveStatus{
+  OFFLINE = 0;
+  ONLINE = 1;
+  RECOMMENDED = 2;
+  UNAPPROVED = 3;
+  APPROVED_FAIL = 4;
+  UNUPLOAD_IMAGE = 5;
+  LIVE_BAN = 6;
+}
+
+enum ResultCode{
+  SUCCESS = 0;
+  NOT_AUTHORIZED = 2;
+  ACCOUNT_NAME_ALREADY_EXIST = 3;
+  LOGIN_FAILED = 4;
+  DATA_FORMAT_MALFORMED = 5;
+  USER_NOT_FOUND = 6;
+  ALREADY_LIVE_USER = 7;
+  NOT_LIVE_USER = 8;
+  ALREADY_HAVE_GAME = 9;
+  ALREADY_FOLLOWING = 10;
+  CAN_NOT_FOLLOWING_YOURSELF = 11;
+  NOT_FOLLOWING = 12;
+  GIFT_NOT_EXIST = 13;
+  GIFT_IS_DISABLED = 14;
+  USER_OFFLINE = 15;
+  NOT_TOURIST_BIND_ACCOUNT = 16;
+  DISPLAY_NAME_EXIST = 17;
+  APPROVE_STATUS_ERROR = 18;
+  NOT_CURRENT_CONNECT_LIVE = 19;
+  REPEATED_LOGIN = 20;
+
+  //  live
+  ROOM_ALREADY_EXISTS = 21;
+  MISSING_OR_ILLEGAL_PARAMETERS = 22;
+  ROOM_DOES_NOT_EXIST = 23;
+  START_OR_END_BROADCASTING_ERROR = 24;
+  NO_ENTERED_ROOM = 25;
+  CHAT_MESSAGE_FORMAT_ERROR = 26;
+  SEND_CHAT_MESSAGE_TOO_SOON = 27;
+  BYTES_IS_EMPTY = 28;
+  CONTENT_IS_EMPTY_OR_TOO_LONG = 29;
+  CAN_NOT_CHAT_YOURSELF = 30;
+  NOT_LINKUSER = 31;
+  LIVE_PLAYER_UNAPPROVED = 32;
+  NOT_BIND_PHONE = 33;
+  NOT_MODIFY_DISPLAY_NAME = 34;
+  ERROR_PHONE_NUMBER = 35;
+  PHONE_NUMBER_EXIT = 36;
+  ROOM_ID_REPEATED = 37;
+  ROOM_TITLE_REPEATED = 38;
+  LIVE_USER_IS_LIVE = 39;
+  LIVE_USER_NOT_BAN = 40;
+  LIVE_USER_IS_BAN = 41;
+  GIFT_CONFIG_NOT_RIGHT = 42;
+  LIVE_NOT_IN_ALLOW_TIME = 43;
+  LIVE_PLATFORM_LIMIT = 44;
+
+  //game
+  BANKER_OVER_LIMIT = 100;
+  NOT_ENOUGH_GAMECOIN = 101;
+  EXCEED_BET_LIMIT = 102;
+  GAME_STATUS_ERROR = 103;
+  GAME_ALREADY_EXISTS = 104;
+  NOT_GAME_OWNER = 105;
+  NO_GAME_TYPE = 106;
+  ILLEGAL_BET_TYPE = 107;
+  NOT_BANKER_GAME = 108;
+  ALREADY_IN_BANKER_QUEUE = 109;
+  GAME_NOT_EXISTS = 110;
+  BANKER_BET_NOT_ALLOWED = 111;
+  GAME_IS_NOT_OVER = 112;
+  CREATE_GAME_ERROR = 113;
+  GAME_ALREADY_PAUSE = 114;
+  BETTYPE_MUTUAL_EXCLUSION = 115;
+  BETTYPE_COMBINATION_ERROR = 116;
+  GAME_SWITCHING = 117;
+
+  REDPACKET_PARAM_ERROR = 118;
+  REDPACKET_NOT_EXISTS = 119;
+  REDPACKET_NOT_READY = 120;
+  REDPACKET_OVER = 130;
+  REDPACKET_GRAB_FAILED = 131;
+  ALREADY_OPEN_REDPACKET = 132;
+  THE_NUMBER_OF_PEOPLE_EXCEEDS_THE_LIMIT = 133;
+  HAS_LEFT_THE_ROOM = 134;
+  NOT_IN_THE_CONNECT_LIST = 136;
+  YOU_HAVE_BEEN_MUTED = 137;
+  ALREADY_IN_THE_MUTE_LIST = 138;
+  CURRENTLY_ALL_MUTED = 139;
+  NOT_IN_THE_MUTE_LIST = 140;
+  INSUFFICIENT_PERMISSIONS = 141;
+  ALREADY_IN_THE_CONNECT_LIST = 142;
+  ILLEGAL_OPERATION = 143;
+  CAN_NOT_MUTE_SELF = 144;
+  IS_NOT_BET_STATUE = 145;
+  CAN_NOT_MUTE_LIVEUSER = 146;
+
+
+  UPLOADPARAM_OVERLIMIT = 150;
+  DIARY_OVERLIMIT = 151;
+  DIARY_NOTFOUND = 152;
+  NOT_IN_THE_ROOM = 153;
+  ALREADY_AN_ADMINISTRATOR = 154;
+  NOT_AN_ADMINISTRATOR = 155;
+  THE_NUMBER_OF_ADMINISTRATORS_EXCEEDS_THE_LIMIT = 156;
+  PARAM_ERROR = 157;
+  REPLY_CONTENT_TOOLONG = 158;
+  REPLY_NOTFOUND = 159;
+  NOT_DIARY_OWNER = 160;
+  ILLEGAL_PARAMETER_LENGTH = 161;
+  REPORT_NOTFOUND = 162;
+  CANNOT_START_EMPTY_GAME = 163;
+  NOT_UNLOCKED_YET = 164;
+  CONTENT_WORDS_ILLEGAL = 165;
+  DIARY_NOTPASS = 166;
+  OPERATION_NOTALLOW = 167;
+  //landlordRace
+  RACE_NOT_EXISTS = 170;
+  JOIN_RACE_FAILED = 171;
+  NOT_GAME_MEMBER = 172;
+  GAME_OPERATION_ILLEGAL = 173;
+  CARDS_COMPARE_FAILED = 174;
+  CARDS_NOT_EXIST = 175;
+  CANNOT_PASS = 176;
+  NO_CARD_TYPE = 177;
+  ALREADY_JOIN_RACE = 178;
+  QUIT_RACE_FAILED = 179;
+
+  //texas
+  JOIN_TEXAS_FAILED = 200;
+  GAME_STATUS_NOT_BETTING = 201;
+  UNABLE_TO_JOIN = 202;
+  THE_NUMBER_IS_FULL = 203;
+  INVALID_BET_AMOUNT = 204;
+  THE_GAME_IS_NOT_OVER = 205;
+  BET_FAILED = 206;
+
+  NOT_JOIN_RACE = 210;
+
+  //guess
+  GUESS_WAGER_OVER = 230;
+  GUESS_WAGER_NOT_START = 231;
+  GUESS_WAGER_NOT_EXIT = 232;
+
+  NOT_INVITE_OTHERS = 240;
+  ERROR_COIN_NUMBER = 241;
+  BIND_FAILED = 242;
+  PASSWORD_ERROR = 243;
+  NO_PASSWORD_SET = 244;
+  ACCOUNT_HAS_BAN = 245;
+
+  //Task
+  FUNCTION_NOT_OPEN = 249;
+  ALREADY_SIGN_ALL_DAY = 250;
+  ALREADY_SIGN_TODAY = 251;
+  TASK_ALREADY_COLLECTION = 252;
+  TASK_NOT_FINISH = 253;
+  REPEATED_MUSIC = 254;
+  MUSIC_NOT_EXIST = 255;
+  MUSIC_IS_PLAYING = 256;
+  MUSIC_NOT_PAUSE = 257;
+  MUSIC_NOT_PLAYING = 258;
+
+  FEEDBACK_MESSAGE_FORMAT_ERROR = 259;
+  PERMISSION_NOT_EXIT = 260;
+  PERMISSION_DISABLED = 261;
+
+  ILLEGAL_DISPLAY_NAME_LENGTH = 270;
+  LIVE_SOURCE_LINE_NOT_AVAILABLE = 271;
+  OVER_MAX_RECOMMEND_NUM = 280;
+  RECOMMEND_POSITION_USED = 281;
+
+  NOT_IN_BANKER_QUEUE = 285;
+  ALREADY_BECOME_BANKER = 286;
+
+  OVER_MAX_CAROUSEL_NUM = 290;
+  NO_CAROUSEL_TYPE = 291;
+  CAROUSEL_NOT_EXIT = 292;
+  REQUEST_DEDUCTION_FEE_FAILED = 293;
+  QUICK_CHAT_ILLEGALITY = 294;
+
+  CONN_SESSION_ILLEGALITY = 990;
+  CONN_TIMEOUT = 991;
+  SERVER_IS_DISABLED = 999;
+  UNKNOWN = 1000;
+}
+
+enum GameStatus {
+  IDLE = 0;
+  BETTING = 1;
+  SETTLING = 2;
+  PAUSED = 3;
+  ENDED = 4;
+  READY = 5;
+}
+
+// -----------rank---------------
+enum RankType{
+  POPULARITY = 0;
+  INCOME = 1;
+  LEVEL = 2;
+  GIFT_RANK = 3;
+  CONTRIBUTION_RANK = 4;
+}
+
+enum Arrow{
+  UP = 0;
+  DOWNWARD = 1;
+  NO_CHANGE = 2;
+}
+
+enum EndType{
+  LIVE_USER_IS_DISCONNECTION = 0;
+  READY_TO_CLOSE_LIVE_ROOM = 1;
+  NORMAL_END = 2;
+}
+
+enum StatisticType{
+  REWARD = 0;
+  BET_AMOUNT = 1;
+  BET_POPULATION = 2;
+  LIVE_POPULATION = 3;
+  LIVE_TIME = 4;
+}
+enum QueryTimeType{
+  ALL = 0;
+  TODAY = 1;
+  WEEK = 2;
+  MONTH = 3;
+}
+
+enum CardNumber{
+  CARD_NUMBER_NO_SET = 0;
+  Two = 1;
+  Three = 2;
+  Four = 3;
+  Five = 4;
+  Six = 5;
+  Seven = 6;
+  Eight = 7;
+  Nine = 8;
+  Ten = 9;
+  Jack = 10;
+  Queen = 11;
+  King = 12;
+  Ace = 13;
+  BlackJoker = 20;
+  RedJoker = 21;
+}
+
+enum CardType {
+  CARD_TYPE_NO_SET = 0;
+  Spade = 1;
+  Heart = 2;
+  Club = 3;
+  Diamond = 4;
+  Joker = 5;
+}
+
+enum BullType {
+  BULL_TYPE_NOT_SET = 0;
+  No_Bull = 1;
+  Bull_1 = 2;
+  Bull_2 = 3;
+  Bull_3 = 4;
+  Bull_4 = 5;
+  Bull_5 = 6;
+  Bull_6 = 7;
+  Bull_7 = 8;
+  Bull_8 = 9;
+  Bull_9 = 10;
+  BullBull = 11;
+  FigureBull_4 = 12;
+  FigureBull_5 = 13;
+  Bomb = 14;
+  SmallBull_5 = 15;
+}
+enum RedBlackType{
+  Leopard = 0;//
+  Flush_Flowers = 1;
+  SAME_Flowers = 2;
+  Flush = 3;
+  Pair = 4;
+  Single = 5;
+}
+enum RedBlackResult{
+  Red = 0;
+  Black = 1;
+}
+
+
+//GoldenFlower type
+enum GoldenType{
+  GoldenType_NOT_SET = 0;
+  Golden_Single = 1;
+  Golden_Pair = 2;
+  Golden_Straight = 3;
+  Golden_GoldenFlower = 4;
+  Golden_SerialGold = 5;
+  Golden_Leopard = 6;
+}
+enum Pattern{
+  LIVE_VIDEO = 0;
+  LIVE_AUDIO = 1;
+}
+
+enum RedPacketConfig{
+  CONFIG_NOT_SET = 0;
+  FOLLOW_LIVEUSER = 1;
+  ROOM_ALL = 2;
+  GIFT = 3;
+}
+
+enum DiaryType{
+  DIARYTYPE_UNDEFINED = 0;
+  IMAGE = 1;
+  VIDEO = 2;
+}
+
+enum DiaryStatue{
+  Diary_NOSET = 0;
+  DIARY_UNAPPROVED = 1;
+  DIARY_APPROVAL_PASS = 2;
+  DIARY_APPROVED_FAIL = 3;
+  DIARY_UPLOADING = 4;
+}
+enum GenderType{
+  Gender_NULL = 0;
+  MALE = 1;
+  FEMALE = 2;
+}
+
+enum UploadHandlerType{
+  Upload_DEFAULT = 0;
+  DIARY = 1;
+  ZONEIMAGE = 2;
+  REPORT = 3;
+  GUESSCOVER = 4;
+  AVATAR = 5;
+  LIVEUSERIMAGE = 6;
+  UPDATEROOMIMAGE = 7;
+  MUSIC = 8;
+}
+enum ViolationType{
+  VULGAR = 0;
+  ILLEGAL = 1;
+  REACTIONARY = 2;
+  CHEAT = 3;
+  OTHERS = 4;
+}
+enum VipType{
+  LOCKED = 0;
+  RANGER = 1;
+  KNIGHT = 2;
+  BARON = 3;
+  ROYAL_FAMILY = 4;
+  EMPEROR = 5;
+  SAINT = 6;
+}
+
+enum UploadImageDescribe{
+  IMAGEDESCRIBE_DEFAULT = 0;
+  THUMBNAIL = 1;
+}
+
+
+enum LandlordsType {
+  Poker_null = 0;
+  Poker_single = 1;
+  Poker_pair = 2;
+  Poker_three = 3;
+  Poker_threeAndOne = 4;
+  Poker_threeAndTwo = 5;
+  Poker_serialPair = 6;
+  Poker_plane = 7;
+  Poker_planeAndSingle = 8;
+  Poker_planeAndPair = 9;
+  Poker_straight = 10 ;
+  Poker_fourAndTwo = 11;
+  Poker_bomb = 12;
+  Poker_jokerBomb = 13;
+}
+
+enum LandlordsStep{
+  Step_null = 0;
+  Ready_step = 1;
+  DealCard_step = 2;
+  GrabLandlord_step = 3;
+  AddPayRate_step = 4;
+  PlayCard_step = 5;
+  Settle_step = 6;
+}
+
+enum TexasType{
+  Illegal = 0;
+  HighCard = 1;
+  OnePair = 2;
+  TwoPair = 3;
+  ThreeOfAKind = 4;
+  Straight = 5;
+  Texas_Flush = 6;
+  FullHouse = 7;
+  FourOfAKind = 8;
+  StraightFlush = 9;
+  RoyalStraightFlush = 10;
+}
+
+enum GrabLordStatue{
+  GrabLordStatue_NO = 0;
+  GrabLordStatue_PASS = 1;
+  GrabLordStatue_APPLY = 2;
+}
+enum LandlordsWinnerIdentity {
+  IDENTITY_ILLEGAL = 0;
+  LANDLORD = 1;
+  FARMER = 2;
+}
+enum LandlordsRateType{
+  RATE_ILLEGAL = 0;
+  LANDLORDS_RATE = 1;
+  CHOOSE_RATE = 2;
+  BOMB_RATE = 3;
+  SPRING_RATE = 4;
+}
+enum TexasRound{
+  Round_Null = 0;
+  First_Round = 1;
+  Second_Round = 2;
+  Third_Round = 3;
+  Fourth_Round = 4;
+}
+
+enum RaceStep{
+  Race_Null = 0;
+  Race_Open = 1;
+  Race_FirstRound = 2;
+  Race_LastRound = 3;
+  Race_End = 4;
+}
+
+enum GuessType{
+  POLITICS = 0;
+  SPORTS = 1;
+  ELECTRONIC = 2;
+  OTHER = 3;
+  GUESS_ALL = 100;
+}
+
+enum GuessState{
+  PULL_OFF_SHELVES = 0;
+  NOT_WAGER = 1;
+  WAGER = 2;
+  WAGER_OVER = 3;
+  LOTTERY = 4;
+}
+
+enum RaceType{
+  RACE_NULL = 0;
+  LANDLORDS = 1;
+  TEXAS = 2;
+  GOLDEN_FLOWER = 3;
+  ALL_RACE = 100;
+}
+
+enum GuessShow{
+  INVISIBLE = 0;
+  SHOW = 1;
+}
+
+enum GamePlayType{
+  BankerGame_default = 0;
+  NO_BANKER = 1;
+  HAS_BANKER = 2 ;
+  GAME_EMPTY_GAME = 3;
+}
+
+enum TaskType{
+  TASK_NULL = 0;
+  TASK_SIGN_IN = 1;
+  TASK_DAILY = 2;
+  TASK_PERMANENT = 3;
+}
+
+enum TaskRewardType{
+  TASK_REWARD_NULL = 0;
+  TASK_REWARD_GOLDBEAN = 1;
+  TASK_REWARD_EXPERIENCE = 2;
+  TASK_REWARD_GAMECOIN = 3;
+}
+
+enum GiftPriceType{
+  GIFT_PRICE_NULL = 0;
+  GIFT_PRICE_GAMECOIN = 1;
+  GIFT_PRICE_GOLDBEAN = 2;
+}
+
+enum TaskStatus{
+  TASK_STATUS_NULL = 0;
+  TASK_STATUS_ACTIVE = 1;
+  TASK_STATUS_FINISHED = 2;
+  TASK_STATUS_CLOSED = 3;
+}
+
+enum JumpTarget{
+  JUMP_TARGET_NULL = 0;
+  JUMP_TARGET_LIVE = 1;
+  JUMP_TARGET_DISCOVERDIARY = 2;
+  JUMP_TARGET_BINDPHONE = 3;
+  JUMP_TARGET_USERINFO = 4;
+  JUMP_TARGET_CHARGE = 5;
+  JUMP_TARGET_BECOMELIVEUSER = 6;
+  JUMP_TARGET_UPLOADAVATAR = 7;
+  JUMP_TARGET_UPDATEUSERNAME = 8;
+}
+
+enum MusicStatue{
+  MUSIC_NULL = 0;
+  MUSIC_PLAY = 1;
+  MUSIC_PAUSE = 2;
+  MUSIC_STOP = 3;
+  MUSIC_RESUME = 4;
+}
+
+enum MobilePhoneBrand{
+  BRAND_OTHER = 0;
+  BRAND_IPHONE = 1;
+  BRAND_HUAWEI = 2;
+  BRAND_OPPO = 3;
+  BRAND_VIVO = 4;
+  BRAND_XIAOMI = 5;
+  BRAND_MEIZU = 6;
+  BRAND_SAMSUNG = 7;
+  BRAND_ONEPLUS = 8;
+  BRAND_REALME = 9;
+}
+
+enum MobilePhoneResolution{
+  PIXEL_OTHER = 0;
+  PIXEL_HD = 1;
+  PIXEL_FHD = 2;
+  PIXEL_UFD = 3;
+}
+
+enum MobilePhoneOS{
+    OS_OTHER = 0;
+    OS_ANDROID = 1;
+    OS_IOS = 2;
+}
+
+enum LiveSourceLine{
+  WANGSU_LINE = 0;
+  TENCENT_LINE = 1;
+  ALIYUN_LINE = 2;
+  NGINX_LINE = 3;
+}
+
+enum MuteReason{
+  REASON_EMPTY = 0;
+  MUTE_REACTIONARY = 1;
+  MUTE_PORNOGRAPHIC = 2;
+  MUTE_ADVERTISING_FRAUD = 3;
+  MUTE_HARASSMENT_ABUSE = 4;
+  MUTE_OTHER = 5;
+}
+
+enum MuteTimeType{
+  MUTE_TIME_DEFAULT =0;
+  MUTE_FIVE_MINUTE = 1;
+  MUTE_HALF_HOUR = 2;
+  MUTE_ONE_DAY = 3;
+  MUTE_THREE_DAY =4;
+  MUTE_ONE_WEEK = 5;
+  MUTE_ONE_MONTH = 6;
+  MUTE_ONE_YEAR = 7;
+  MUTE_FOREVER = 8;
+}
+
+enum MuteArea{
+  MUTE_AREA_DEFAULT = 0;
+  LOCAL_ROOM= 1;
+  ALL_ROOM= 2;
+}
+
+enum MuteIdentity{
+  IDENTITY_NULL = 0;
+  IDENTITY_LIVEUSER = 1;
+  IDENTITY_ADMINISTRATOR = 2;
+  IDENTITY_BACKOFFICE = 3;
+}
+
+enum WebMobileType{
+  WEBMOBILE_DEFAULT = 0;
+  WEBMOBILE_PLATFORM_T = 1;
+  WEBMOBILE_NORMAL = 2;
+  WEBMOBILE_PLATFORM_Q = 3;
+}
+enum PlatformType{
+    PLATFORM_DEFAULT = 0;
+    PLATFORM_JINLI = 1;
+    PLATFORM_T = 2;
+    PLATFORM_Q = 3;
+}
+
+enum AccountStatue{
+    ACCOUNT_NORMAL = 0;
+    ACCOUNT_BAN = 1;
+}
+
+enum LiveUserPermission{
+  PERMISSION_NULL = 0;
+  PERMISSION_GIFT = 1;
+  PERMISSION_PRIVATE_CHAT = 2;
+  PERMISSION_CHAT = 3;
+  PERMISSION_FREE_GIFT = 4;
+  PERMISSION_CHANGE_LINE = 5;
+  PERMISSION_REPORT = 6;
+  PERMISSION_PUBLIC_NOTICE = 7;
+  PERMISSION_EDIT_QUICK_CHAT = 8;
+}
+
+enum FollowType{
+    FOLLOW_TYPE_NULL = 0;
+    FOLLOW = 1;
+    UNFOLLOW = 2;
+}
+
+enum DiaryRecommendTimeType{
+    RECOMMEND_EMPTY = 0;
+    RECOMMEND_SIX_HOUR = 1;
+    RECOMMEND_TWELVE_HOUR = 2;
+    RECOMMEND_TWENTY_FOUR_HOUR = 3;
+    RECOMMEND_FORTY_EIGHT_HOUR = 4;
+}
+
+enum CarouselType{
+    EMPTY_CAROUSEL = 0;
+    RACE_CAROUSEL = 1;
+    LIVE_CAROUSEL = 2;
+    GUESS_CAROUSEL = 3;
+}

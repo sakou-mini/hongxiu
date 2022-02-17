@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body{
+            background-image: linear-gradient(to right, #217aff, #a7ffff);
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            color: white;
+        }
+        .isErr{
+            margin-top: 120px;
+            color: #ff625f;
+            font-size: 300px;
+            font-weight: 800;
+            width: calc(100% / 9.6 * 3);
+            margin-left: auto;
+            margin-right: auto;
+            transition: all 300ms ease;
+        }
+        .clearfix:after{
+            content: "";
+            display: block;
+            height: 0;
+            clear:both;
+            visibility: hidden;
+        }
+        .isErr>div{
+            width: calc(100% / 3);
+            text-align: center;
+            float: left;
+        }
+        .severErr{
+            width: calc(100% / 6);
+            font-size: 50px;
+            color: white;
+            font-weight: 600;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        .conten{
+            margin-top: 50px;
+            text-align: center;
+        }
+        .back{
+            margin-top: 30px;
+            text-align: center;
+        }
+        .back>button{
+            width: 150px;
+            height: 50px;
+            background-color: #ffae1b;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 15px;
+            outline: none;
+            cursor: pointer;
+        }
+        @media screen and (max-width: 1660px) {
+            .isErr{
+                font-size: 200px;
+            }
+            #textBox{
+                font-size:30px ;
+            }
+        }
+        @media screen and (max-width: 1000px) {
+            .isErr{
+                font-size: 100px;
+            }
+            #textBox{
+                font-size:12px ;
+            }
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div>
+        <div class="isErr clearfix">
+            <div id="it1">5</div>
+            <div id="it2">0</div>
+            <div id="it3">0</div>
+        </div>
+    </div>
+    <div class="severErr">
+        <div id="textBox" >服务器错误了</div>
+    </div>
+    <div class="conten">
+        <span>造成的原因可能是服务器出错了</span>
+    </div>
+    <div class="back"><button id="backLoginBtn">前往登录页面</button></div>
+</div>
+</body>
+<script>
+    function animateTime() {
+        const element1 = document.querySelector('#it1');
+        const element2 = document.querySelector('#it2');
+        const element3 = document.querySelector('#it3');
+        element1.classList.remove('animate__animated', 'animate__rubberBand');
+        element2.classList.remove('animate__animated', 'animate__rubberBand');
+        element3.classList.remove('animate__animated', 'animate__rubberBand');
+        setTimeout(function () {
+            element1.classList.add('animate__animated', 'animate__rubberBand');
+            setTimeout(function () {
+                element2.classList.add('animate__animated', 'animate__rubberBand');
+                setTimeout(function () {
+                    element3.classList.add('animate__animated','animate__rubberBand');
+                },300)
+            },300)
+        },300)
+    }
+    animateTime();
+    var theTimeForAnimate;
+    theTimeForAnimate = setInterval(function () {
+        animateTime();
+    },2000);
+    var changeBox = document.getElementsByClassName("severErr")[0];
+    var textBox = document.getElementById("textBox");
+    changeBox.onmouseover =function () {
+        textBox.classList.add("animate__bounceIn")
+    }
+    changeBox.onmouseleave =function () {
+        textBox.classList.remove("animate__bounceIn")
+    }
+    document.getElementById("backLoginBtn").onclick=function () {
+        window.location = "/login"
+    }
+</script>
+</html>

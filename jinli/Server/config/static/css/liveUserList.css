@@ -1,0 +1,110 @@
+.charts{
+    margin-top: 30px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content:space-between;
+}
+.charts>div{
+    padding: 20px 0 20px 0;
+    width: 45%;
+    background-color: #ffffff;
+    /*float: left;*/
+    height: 160px;
+    text-align: center;
+    line-height: 40px;
+}
+.charts>div>div:nth-child(1),.charts>div>div:nth-child(3){
+    font-size: 16px;
+    color: #4b4b4b;
+
+}
+.charts>div>div:nth-child(2),.charts>div>div:nth-child(4){
+    font-size: 30px;
+    font-weight: 600;
+    color: #969192;
+}
+.btn{
+    /*width: 95%;*/
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    padding: 0 0 20px 0;
+    overflow: hidden;
+    float: left;
+}
+.layui-table, .layui-table-view{
+    margin-top: 0;
+}
+/*.btn>div{*/
+    /*width: 20%;*/
+/*}*/
+.screen{
+    background-color: #fff;
+    margin-top: 20px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.search{
+    width: 90%;
+    padding: 10px 20px 10px 35px;
+    margin-right: 5%;
+
+}
+.search>input{
+    width: 250px;
+    /*display: inline-block;*/
+    float: left;
+    margin-right: 30px;
+}
+.platform{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-top:1px #e6e6e6 solid;
+    color: #747474;
+}
+.platform>div{
+    height: 50px;
+    float: left;
+}
+.platform>div:nth-child(1){
+    line-height: 50px;
+}
+.platformItem{
+    display: flex;
+    margin-left: 30px;
+    align-items:center;
+}
+.platformItemClick{
+    text-align: center;
+    box-shadow: 0 0 5px #888888;
+    padding: 2px 10px 2px 10px;
+    margin-left: 20px;
+    float: left;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all ease 300ms;
+    moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -o-user-select:none;
+    -khtml-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+.platformItemClick:hover{
+    box-shadow: 0 0 5px #888888;
+    /*border: 1px #bebebe solid;*/
+    background-color: #888888;
+    color: white;
+}
+
+.platformItemThis{
+    background-color: #b8b8b8;
+    color: white;
+}

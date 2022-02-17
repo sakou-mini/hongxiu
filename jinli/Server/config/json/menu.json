@@ -1,0 +1,495 @@
+{
+  "menuList":
+  [
+    {
+      "url": "/backOffice/home/index",
+      "name": "index",
+      "displayName": "首页",
+      "role":"INDEX",
+      "sidebar": [
+        {
+          "url":"/backOffice/home/index",
+          "name": "index",
+          "displayName": "首页",
+          "role":"INDEX"
+        }, {
+          "url":"/backOffice/home/overviewToday",
+          "name": "overviewToday",
+          "displayName": "今日总览"
+        },
+        {
+          "url":"/backOffice/home/liveDataSummary",
+          "name": "liveDataSummary",
+          "displayName": "直播数据汇总"
+        },{
+          "url":"/backOffice/home/userDataSummary",
+          "name": "userDataSummary",
+          "displayName": "用户数据汇总"
+        }
+      ]
+    },
+    {
+      "url": "/backOffice/user/userList",
+      "name": "userList",
+      "displayName": "用户管理",
+      "role": "USER",
+      "sidebar": [
+        {
+          "url": "/backOffice/user/userList",
+          "name": "userList",
+          "displayName": "用户列表",
+          "role": "USERLIST"
+        },
+        {
+          "url": "/backOffice/user/coinOperationRecord",
+          "name": "coinOperationRecord",
+          "displayName": "金币修改记录",
+          "role": "COINOPERATIONRECORD"
+        },{
+
+          "url": "/backOffice/user/userReport",
+          "name": "userReport",
+          "displayName": "用户报表"
+        }
+      ]
+    },
+    {
+      "url": "/backOffice/revenueAnalysis/newUserChart",
+      "name": "newUserChart",
+      "displayName": "数据分析",
+      "role": "REVENUEANALYSIS",
+      "sidebar": [
+        {
+          "childName": "用户分析",
+          "child": [
+            {
+              "url": "/backOffice/revenueAnalysis/newUserChart",
+              "name": "newUserChart",
+              "displayName": "新增用户",
+              "role": "NEWUSERCHART"
+            },
+            {
+              "url": "/backOffice/revenueAnalysis/activeUserChart",
+              "name": "activeUserChart",
+              "displayName": "活跃用户",
+              "role": "ACTIVEUSERCHART"
+            },
+            {
+              "url": "/backOffice/revenueAnalysis/retainedUserChart",
+              "name": "retainedUserChart",
+              "displayName": "用户留存",
+              "role": "RETAINEDUSERCHART"
+            },
+            {
+              "url": "/backOffice/revenueAnalysis/conversionRatesChart",
+              "name": "conversionRatesChart",
+              "displayName": "付费转换",
+              "role": "CONVERSIONRATESCHART"
+            },
+            {
+              "url": "/backOffice/revenueAnalysis/mobileDevicesChart",
+              "name": "mobileDevicesChart",
+              "displayName": "相关设备",
+              "role": "MOBILEDEVICESCHART"
+            }
+          ]
+        },
+        {
+          "url": "/backOffice/revenueAnalysis/revenueIndex",
+          "name": "revenueIndex",
+          "displayName": "收入分析",
+          "role": "REVENUEINDEX"
+        },
+        {
+          "url": "/backOffice/revenueAnalysis/betsRecordList",
+          "name": "betsRecordList",
+          "displayName": "投注记录",
+          "role": "BETSRECORDLIST"
+        },
+        {
+          "url": "/backOffice/revenueAnalysis/revenueData",
+          "name": "revenueData",
+          "displayName": "收入数据",
+          "role": "REVENUEDATA"
+        },
+        {
+          "url": "/backOffice/revenueAnalysis/paymentPenetration",
+          "name": "paymentPenetration",
+          "displayName": "付费渗透",
+          "role": "PAYMENTPENETRATION"
+        },
+        {
+          "url": "/backOffice/revenueAnalysis/newPlayerValue",
+          "name": "newPlayerValue",
+          "displayName": "新玩家价值",
+          "role": "NEWPLAYERVALUE"
+        },
+        {
+          "url": "/backOffice/revenueAnalysis/paymentHabit",
+          "name": "paymentHabit",
+          "displayName": "付费习惯",
+          "role": "PAYMENTHABIT"
+        }
+      ]
+    },
+    {
+      "url": "/backOffice/liveUser/liveUserList",
+      "name": "liveUserList",
+      "displayName": "主播管理",
+      "role": "LIVEUSER",
+      "sidebar": [
+
+        {
+          "url": "/backOffice/liveUser/liveUserList",
+          "name": "liveUserList",
+          "displayName": "主播列表",
+          "role": "LIVEUSERLIST"
+        },
+        {
+          "url": "/backOffice/liveUser/LiveUserExamine",
+          "name": "LiveUserExamine",
+          "displayName": "主播审核",
+          "role": "LIVEUSEREXAMINE"
+        },
+        {
+          "url": "/backOffice/liveUser/liveUserRecord",
+          "name": "liveUserRecord",
+          "displayName": "直播记录",
+          "role": "LIVEUSERRECORD"
+        },
+        {
+          "url": "/backOffice/liveUser/liveUserAttendance",
+          "name": "liveUserAttendance",
+          "displayName": "直播考勤",
+          "role": "LIVEUSERATTENDANCE"
+        },
+        {
+          "url": "/backOffice/liveUser/liveSourceLine",
+          "name": "liveSourceLine",
+          "displayName": "CDN管理",
+          "role": "LIVESOURCELINE"
+        },
+        {
+          "url": "/backOffice/liveUser/personDiaryApproved",
+          "name": "personDiaryApproved",
+          "displayName": "动态管理",
+          "role": "PERSONDIARYAPPROVED"
+        }
+      ]
+    },
+    {
+      "url": "/backOffice/gift/giftList",
+      "name": "backOfficeManagement",
+      "displayName": "礼物管理",
+      "role": "",
+      "sidebar": [
+        {
+          "url": "/backOffice/gift/giftList",
+          "name": "giftList",
+          "displayName": "礼物列表",
+          "role": ""
+        },
+        {
+          "url": "/backOffice/gift/giftConsumptionList",
+          "name": "giftConsumptionList",
+          "displayName": "消费记录",
+          "role": ""
+        },
+        {
+          "url": "/backOffice/gift/liveUserReceivedGiftList",
+          "name": "liveUserReceivedGiftList",
+          "displayName": "收礼记录",
+          "role": ""
+        }
+      ]
+    },
+    {
+      "url": "/backOffice/guess/liveUserRoom",
+      "name": "liveUserRoom",
+      "displayName": "锦鲤直播",
+      "role": "JINLI",
+      "sidebar": [
+        {
+          "url": "/backOffice/guess/liveUserRoom",
+          "name": "liveUserRoom",
+          "displayName": "直播监控",
+          "role": "LIVEUSERROOM"
+        },
+        {
+          "url": "/backOffice/guess/indexJinli",
+          "name": "indexJinli",
+          "displayName": "今日总览",
+          "role": "INDEXJINLI"
+
+        },
+        {
+          "url": "/backOffice/guess/liveUserListJinLi",
+          "name": "liveUserListJinLi",
+          "displayName": "主播列表",
+          "role": "LIVEUSERLISTJINLI"
+
+        }
+
+      ,
+        {
+          "url": "/backOffice/guess/feedback",
+          "name": "feedback",
+          "displayName": "反馈建议",
+          "role": "FEEDBACK"
+        }
+
+      ]
+    },
+    {
+      "url": "/backOffice/platformT/liveRoomListT",
+      "name": "liveRoomListT",
+      "displayName": "T平台",
+      "role": "BACKOFFICE_T",
+      "sidebar": [
+        {
+          "url": "/backOffice/platformT/liveRoomListT",
+          "name": "liveRoomListT",
+          "displayName": "直播监控",
+          "role": "LIVEROOMLISTT"
+        },{
+          "url": "/backOffice/platformT/indexT",
+          "name": "indexT",
+          "displayName": "今日总览",
+          "role": "INDEXT"
+        },
+
+        {
+          "url": "/backOffice/platformT/liveUserListT",
+          "name": "liveUserListT",
+          "displayName": "主播列表",
+          "role": "LIVEUSERLISTT"
+        },
+        {
+          "url": "/backOffice/platformT/liveUserApplyT",
+          "name": "liveUserApplyT",
+          "displayName": "主播审核",
+          "role": "LIVEUSERAPPLYT"
+        },
+        {
+          "url": "/backOffice/platformT/userListT",
+          "name": "userListT",
+          "displayName": "用户列表",
+          "role": "USERLISTT"
+        },
+        {
+          "url": "/backOffice/platformT/liveUserRecordT",
+          "name": "liveUserRecordT",
+          "displayName": "直播记录",
+          "role": "LIVEUSERRECORDT"
+        },
+        {
+          "url": "/backOffice/platformT/rechargeRecordT",
+          "name": "rechargeRecordT",
+          "displayName": "充值记录",
+          "role": "RECHARGERECORDT"
+        }
+      ]
+    },
+    {
+      "url": "/backOffice/platformQ/liveRoomListQ",
+      "name": "liveRoomListQ",
+      "displayName": "Q平台",
+      "role": "BACKOFFICE_Q",
+      "sidebar": [
+        {
+          "url": "/backOffice/platformQ/liveRoomListQ",
+          "name": "liveRoomListQ",
+          "displayName": "直播监控",
+          "role": "LIVEROOMLISTQ"
+        },{
+          "url": "/backOffice/platformQ/indexQ",
+          "name": "indexQ",
+          "displayName": "今日总览",
+          "role": "INDEXQ"
+        },
+        {
+          "url": "/backOffice/platformQ/liveUserListQ",
+          "name": "liveUserListQ",
+          "displayName": "主播列表",
+          "role": "LIVEUSERLISTQ"
+        },
+        {
+          "url": "/backOffice/platformQ/liveUserApplyQ",
+          "name": "liveUserApplyQ",
+          "displayName": "主播审核",
+          "role": "LIVEUSERAPPLYQ"
+        },
+        {
+          "url": "/backOffice/platformQ/userListQ",
+          "name": "userListQ",
+          "displayName": "用户列表",
+          "role": "USERLISTQ"
+        },
+        {
+          "url": "/backOffice/platformQ/liveUserRecordQ",
+          "name": "liveUserRecordQ",
+          "displayName": "直播记录",
+          "role": "LIVEUSERRECORDQ"
+        }
+
+      ]
+    },
+    {
+      "url": "/backOffice/backOfficeUser/admin/backOfficeManagement",
+      "name": "backOfficeManagement",
+      "displayName": "系统管理",
+      "role": "BACKOFFICE",
+      "sidebar": [
+        {
+          "url": "/backOffice/backOfficeUser/admin/backOfficeManagement",
+          "name": "backOfficeManagement",
+          "displayName": "账号管理",
+          "role": "BACKOFFICEMANAGEMENT"
+        },
+        {
+          "url": "/backOffice/backOfficeUser/admin/theServer",
+          "name": "theServer",
+          "displayName": "服务器管理",
+          "role": "THESERVER"
+        },
+        {
+          "url": "/backOffice/backOfficeUser/admin/changePasswordRecord",
+          "name": "changePasswordRecord",
+          "displayName": "后台密码操作记录",
+          "role": "CHANGEPASSWORDRECORD"
+        },
+        {
+          "childName": "域名管理",
+          "child": [
+            {
+              "url": "/backOffice/backOfficeUser/domainNameSetQ",
+              "name": "domainNameSetQ",
+              "displayName": "平台域名设置",
+              "role": "DOMAINNAMESETQ"
+            },
+            {
+              "url": "/backOffice/backOfficeUser/domainNameSetRecordQ",
+              "name": "domainNameSetRecordQ",
+              "displayName": "平台域名操作记录",
+              "role": "DOMAINNAMESETRECORDQ"
+            },   {
+              "url": "/backOffice/backOfficeUser/liveDomainNameSet",
+              "name": "liveDomainNameSet",
+              "displayName": "直播线路域名设置"
+            }
+
+          ]
+        },
+        {
+          "url": "/backOffice/backOfficeUser/reportList",
+          "name": "reportList",
+          "displayName": "举报管理",
+          "role": "REPORTLIST"
+        },
+        {
+          "childName": "竞猜管理",
+          "child": [
+            {
+              "url": "/backOffice/backOfficeUser/guessNotStart",
+              "name": "guessNotStart",
+              "displayName": "尚未开始列表",
+              "role": "GUESSNOTSTART"
+            },
+            {
+              "url": "/backOffice/backOfficeUser/guessList",
+              "name": "guessList",
+              "displayName": "竞猜列表",
+              "role": "GUESSLIST"
+            },
+            {
+              "url": "/backOffice/backOfficeUser/lottery/guessWaitPrize",
+              "name": "guessWaitPrize",
+              "displayName": "尚未开奖列表",
+              "role": "GUESSWAITPRIZE"
+            },
+            {
+              "url": "/backOffice/backOfficeUser/guessShowOver",
+              "name": "guessShowOver",
+              "displayName": "已开奖列表",
+              "role": "GUESSSHOWOVER"
+            },
+            {
+              "url": "/backOffice/backOfficeUser/lottery/guessStatistics",
+              "name": "guessStatistics",
+              "displayName": "已开奖统计",
+              "role": "GUESSSTATISTICS"
+            }
+          ]
+        },
+        {
+          "childName": "官方直播间管理",
+          "child": [
+            {
+              "url": "/backOffice/backOfficeUser/officialLiveList",
+              "name": "officialLiveList",
+              "displayName": "当前官方直播间列表",
+              "role": "OFFICIALLIVELIST"
+            },
+            {
+              "url": "/backOffice/backOfficeUser/officialLiveRecords",
+              "name": "officialLiveRecords",
+              "displayName": "历史官方直播间列表",
+              "role": "OFFICIALLIVERECORDS"
+            }
+          ]
+        },
+        {
+          "childName": "轮播图设置",
+          "child": [
+            {
+              "url": "/backOffice/backOfficeUser/matchCarousel",
+              "name": "matchCarousel",
+              "displayName": "赛事轮播图",
+              "role": "MATCHCAROUSEL"
+            },
+            {
+              "url": "/backOffice/backOfficeUser/liveCarousel",
+              "name": "liveCarousel",
+              "displayName": "直播轮播图",
+              "role": "LIVECAROUSEL"
+            },
+            {
+              "url": "/backOffice/backOfficeUser/guessCarousel",
+              "name": "guessCarousel",
+              "displayName": "竞猜轮播图",
+              "role": "GUESSCAROUSEL"
+            }
+          ]
+        },
+        {
+          "childName": "消息设置",
+          "child": [
+            {
+              "url": "/backOffice/backOfficeUser/messageSettingsQ",
+              "name": "messageSettingsQ",
+              "displayName": "直播公告",
+              "role": "MESSAGESETTINGSQ"
+            },
+            {
+              "url": "/backOffice/backOfficeUser/backOfficeMessageQ",
+              "name": "backOfficeMessageQ",
+              "displayName": "走马灯消息",
+              "role": "BACKOFFICEMESSAGEQ"
+            },   {
+              "url": "/backOffice/backOfficeUser/messageSettingsRecordQ",
+              "name": "messageSettingsRecordQ",
+              "displayName": "直播公告操作记录",
+              "role": "MESSAGESETTINGSRECORDQ"
+            },
+            {
+              "url": "/backOffice/backOfficeUser/backOfficeMessageRecordQ",
+              "name": "backOfficeMessageRecordQ",
+              "displayName": "走马灯操作记录",
+              "role": "BACKOFFICEMESSAGERECORDQ"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

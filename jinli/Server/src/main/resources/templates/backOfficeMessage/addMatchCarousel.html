@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/config/static/layui/css/layui.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/mainCss.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/upLoadImg.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/cropper.css}" defer="defer">
+    <script type="text/javascript" th:src="@{/config/static/js/jq.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/layui/layui.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/js/config.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/js/upLoadImg.js}"></script>
+    <style type="text/css">
+        .titleMsg>h2,.titleMsg>div{
+            float: left;
+        }
+        .titleMsg>div{
+            margin-top: 38px;
+        }
+        .formStyle{
+            background-color: #fff;
+            padding: 10px 30px;
+            margin-top: 30px;
+        }
+
+        .firstEle{
+            margin-left: 20px;
+        }
+        .imgBox{
+            overflow: hidden;
+            padding: 20px;
+        }
+        #loadHtml{
+            padding: 0 30px;
+        }
+        .imgBox>div{
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            float: left;
+            margin-left: 30px;
+            margin-bottom: 30px;
+        }
+        .layui-layer-dialog{
+            width:auto!important;
+        }
+        @media screen and (max-width: 1000px) {
+            .firstEle{
+                margin-left: 0;
+            }
+        }
+        .layui-form-pane .layui-form-label{
+            width: 140px;
+        }
+        .layui-input{
+            width: 30%;
+            margin-left: 40px;
+            padding-right:0;!important;
+        }
+        .formItemStyle{
+            padding:10px 0 10px 0;
+        }
+        .layui-form-select {
+            width: 250px;
+            margin-left: 40px;
+        }
+        input[class="layui-input layui-unselect"]{
+            margin-left: 0;
+            width: 100%;
+        }
+        .guessItem{
+            margin-top: 10px;
+        }
+        .guessItem:nth-child(1){
+            margin-top: 0;
+        }
+        #upWindowImg,#upGuessImg{
+            margin-left: 40px;
+        }
+        #loadHtml{
+            width: 83%;
+        }
+
+
+        #l-dialog{
+            width: 600px;
+            position: fixed;
+            top: 10%;left: 0;right: 0;
+            margin: 0 auto;
+            background-color: #F7F7F7;
+            padding: 24px 24px 0;
+            box-shadow: 2px 2px 10px darkgray;
+        }
+        #imgbox{
+            height: 364px;
+            width: 100%;
+            border: dashed 1px dimgray;
+        }
+        #imgCover{
+            display: block;
+            max-width: 100%;
+        }
+        #imgAfter{
+            display: block;
+            height: 182px;
+            width: 300px;
+            border: solid 2px #004085;
+            position: fixed;
+            top: 20%;
+            left: 10%;
+        }
+        #l-aptbtn{
+            margin: 32px 0 16px;
+            text-align: right;
+        }
+        #l-aptbtn button{
+            border: none;
+            outline: none;
+            background: none;
+            background-color: #0062CC;
+            color: #fff;border-radius: 4px;
+            padding: 8px 24px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 12px;
+        }
+        #l-aptbtn button:hover{
+            opacity: .9;
+            box-shadow: 1px 1px 10px darkgray;
+        }
+        #roomImgBtn{
+            margin-left: 50px;
+        }
+        .selectBox{
+            margin-left: 50px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="bgcSidebar"></div>
+<div class="container app">
+    <header>
+        <!--头部导航-->
+        <ul class="layui-nav overStyle" lay-filter="">
+            <li class="logoOver"><div class="logoBox"><img class="logo" th:src="@{/config/static/img/default_logo.png}"></div><div class="logoText">锦鲤直播</div></li>
+            <!--<li class="layui-nav-item toItemChange" data-path="index"><a href="javascript:void(0);" >首页</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="LiveUserExamine"><a href="javascript:void(0);" >主播管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="reportList"><a href="javascript:void(0);" >举报管理</a></li>-->
+            <!--<li class="layui-nav-item  toItemChange" data-path="personDiaryList"><a href="javascript:void(0);">动态审核</a></li>-->
+            <!--<li class="layui-nav-item  layui-this toItemChange" data-path="guessList"><a href="javascript:void(0);">竞猜管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="backOfficeManagement"><a href="javascript:void(0);">后台账号管理</a></li>-->
+            <li class="userMsg">
+                <div>
+                    <span>欢迎您：</span>
+                    <span id="loginName">admin</span>
+                </div>
+                <div>
+                    <a href="/logout"><button class="layui-btn layui-btn-danger" id="logout" >退出</button></a>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <main class="mainStyle">
+        <!--侧边栏-->
+        <div class="sidebar">
+            <div>
+                <ul class="layui-nav layui-nav-tree overStyle leftSide" id="sidebar" lay-filter="test">
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="guessList" href="javascript:void(0);">竞猜展示列表</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="guessNotStart" href="javascript:void(0);">尚未开始</a></li>-->
+                    <!--<li class="layui-nav-item "><a  class="toItemChange" data-path="guessShowOver" href="javascript:void(0);">展示已结束</a></li>-->
+                    <!--<li class="layui-nav-item "><a  class="toItemChange" data-path="guessWagerOver" href="javascript:void(0);">投注已结束</a></li>-->
+                    <!--<li class="layui-nav-item "><a  class="toItemChange" data-path="guessWaitPrize" href="javascript:void(0);">待开奖</a></li>-->
+                    <!--<li class="layui-nav-item "><a  class="toItemChange" data-path="guessStatistics" href="javascript:void(0);">数据统计</a></li>-->
+                </ul>
+                <div class="mainBox clearfix" id="loadHtml">
+                    <div class="titleMsg clearfix">
+                        <div>
+                            <button type="button" class="layui-btn layui-btn-primary" onclick="window.history.back(-1)">
+                                <i class="layui-icon">&#xe603;</i>
+                            </button>
+                        </div>
+                        <h2 class="headMsg">新增竞猜</h2>
+                    </div>
+                    <div>
+                        <div>
+                            <form class="layui-form layui-form-pane formStyle" action="">
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">轮播图片</label>
+                                    <div class="layui-input-block formItemStyle" id="imageBox">
+                                        <div id="imageUrl"><label type="button" class="xdg_LoadImgBtn" id="roomImgBtn"><span>选择图片</span><input type="file" id="imgFile"></label></div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">标题</label>
+                                    <div class="layui-input-block layui-row formItemStyle">
+                                        <input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input" id="title">
+                                    </div>
+                                </div>
+
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">赛事类型</label>
+                                    <div class="layui-input-block formItemStyle">
+                                        <div class="selectBox" style="display: none">当前选择：<span id="nowTypeSelect"></span></div>
+                                        <select  name="city" lay-verify="required" lay-filter="raceType" class="selectStyle" id="typeSelect">
+                                            <option value="LANDLORDS">斗地主</option>
+                                            <option value="GOLDEN_FLOWER">炸金花</option>
+                                            <option value="TEXAS">德州扑克</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">入场金额</label>
+                                    <div class="layui-input-block formItemStyle">
+                                        <div class="selectBox" style="display: none">当前选择：<span id="nowRaceFee"></span></div>
+                                        <select  name="city" lay-verify="required" lay-filter="handle" class="selectStyle" id="raceFee">
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="confirmBtnBox">
+
+                                </div>
+                                <button class="layui-btn layui-btn-normal" type="button" id="upData">提交</button>
+                                <button class="layui-btn layui-btn-normal" type="button" id="resetData">重置</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="mtBox"></div>
+                </div>
+                <div class="clearFloat"></div>
+            </div>
+        </div>
+    </main>
+</div>
+<div id="l-dialog" style="display: none">
+
+    <!-- 外层div的所用,是用于限制一个裁剪的可视范围 -->
+    <div id="imgbox">
+        <img src="" id="imgCover" alt="图片块">
+    </div>
+    <div id="l-aptbtn">
+        <button type="button" id="al-cancel">取消</button>
+        <button type="button" id="al-crop">确定</button>
+    </div>
+</div>
+<script type="text/javascript" th:src="@{/config/static/js/mainMethod.js}"></script>
+<script type="text/javascript" th:src="@{/config/static/js/cropper.js}"></script>
+<script>
+    var id = GetQueryString("id");
+    console.log(id);
+    var raceType = "LANDLORDS"
+    var image="";
+    var oldData
+    var sta = "add"
+    if(id === null || id === undefined || id === ""){
+        $(".headMsg").html("新增赛事轮播")
+        sta = "add"
+        $("#upData").on("click",function () {
+            var d = getNotNullData()
+            if(d.code !== 200){
+                layer.msg(d.msg)
+                return
+            }
+            $.get({
+                url:window.ioApi.backOfficeMessage.addCarousel,
+                data:d.data,
+                success:function (res) {
+                    console.log(res);
+                    if(res.code === 200){
+                        layer.open({
+                            title: '提示'
+                            ,content: '上传成功',
+                            btn:["确定"],
+                            btn1:function (index,layero) {
+                                layer.closeAll();
+                                location.reload()
+                            }
+                        });
+                    }else {
+                        layer.open({
+                            title: '提示'
+                            ,content: '上传失败，请联系管理员',
+                            btn:["确定"],
+                            btn1:function (index,layero) {
+                                layer.closeAll();
+                            }
+                        });
+                    }
+                }
+            })
+        })
+    }else {
+        /**
+         *
+         * 修改逻辑
+         *
+         * **/
+        sta="upd";
+        $(".headMsg").html("修改赛事轮播")
+        $("#upData").text("修改");
+        $("#upData").on("click",function () {
+            var nowData = getNotNullData()
+            nowData.data.id = id
+            $.get({
+                url:window.ioApi.backOfficeMessage.updateCarousel,
+                data:nowData.data,
+                success:function (res) {
+                    if(res.code === 200){
+                        layer.open({
+                            title: '提示'
+                            ,content: '修改成功',
+                            btn:["确定"],
+                            btn1:function (index,layero) {
+                                layer.closeAll();
+                                location.reload()
+                            }
+                        });
+                    }else {
+                        layer.open({
+                            title: '提示'
+                            ,content: '修改失败，请联系管理员',
+                            btn:["确定"],
+                            btn1:function (index,layero) {
+                                layer.closeAll();
+                            }
+                        });
+                    }
+                }
+            })
+        })
+        $(".selectBox").attr("style"," display: block")
+        $.get({
+            url:window.ioApi.backOfficeMessage.findCarousel,
+            data:{
+                id:id,
+                carouselType:"RACE_CAROUSEL",
+            },
+            success:function (res) {
+                console.log(res);
+                $("#title").val(res.title)
+                $("#nowTypeSelect").text(raceFormat(res.raceType))
+                $("#nowRaceFee").text(res.raceFee)
+                image = res.imageUrl
+                upRoomImg([res.imageUrl])
+                oldData = res;
+            }
+        })
+    }
+    getRaceFreeList()
+    function getRaceFreeList(){
+        $.get({
+            url:window.ioApi.backOfficeMessage.getRaceFree,
+            data:{
+                raceType:raceType,
+            },
+            success:function (res) {
+                console.log(res);
+                $("#raceFee").get(0).innerHTML =""
+                for(var i=0;i<res.length;i++){
+                    $("#raceFee").get(0).innerHTML += '<option value="'+res[i]+'">'+res[i]+'</option>'
+                }
+                renderForm()
+            }
+        })
+    }
+
+
+    layui.use('form', function(){
+        var form = layui.form;
+        form.on('submit(formDemo)', function(data){
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+        form.on('select(raceType)', function(data){
+            raceType = data.value;
+            getRaceFreeList();
+        });
+    });
+
+
+
+    function getNotNullData() {
+        var send = {};
+        var obj = {};
+        obj.carouselType = "RACE_CAROUSEL";
+        obj.title = $("#title").val();
+        obj.imageUrl = image;
+        obj.raceType = raceType;
+        obj.raceFee = parseInt($("#raceFee").val());
+        if(obj.imageUrl===""){
+            send.code = 401;
+            send.msg = "未上传图片";
+            return send
+        }
+        if(obj.title === ""){
+            send.code = 402;
+            send.msg = "未填写标题";
+            return send
+        }
+        send.code = 200;
+        send.data = obj;
+        return send
+    }
+
+
+    function renderForm(){
+        layui.use('form', function(){
+            var form = layui.form;
+            form.render();
+        });
+    }
+
+    function upRoomImg(res) {
+        image = res[0];
+        $("#imageBox").get(0).innerHTML ="";
+        $("#imageBox").get(0).innerHTML +='<button style="margin-left: 40px;position: absolute;top: 10px;" class="layui-btn layui-btn-normal" id="resetImgBtn" type="button">重新上传</button>'+
+            '<img class="lookImg" style="width: 40%;margin-left: 150px" src="'+window.config.imgUrl+image+'" data-value="'+window.config.imgUrl+image+'" type="button">';
+        $(".lookImg").on("click",function () {
+            openLayer(this.getAttribute("data-value"));
+        });
+        $("#resetImgBtn").on("click",function () {
+            image = ""
+            $("#imageBox").get(0).innerHTML ="";
+            $("#imageBox").get(0).innerHTML +='<div id="imageUrl"><label type="button" class="xdg_LoadImgBtn" id="roomImgBtn"><span>选择图片</span><input type="file" id="imgFile"></label></div>';
+            info()
+        })
+    }
+
+    function openLayer(imgSrc) {
+        layer.open({
+            title: '查看图片详情'
+            ,content:"<img src='"+imgSrc+"' style='width: 700px' >",
+            offset: '100px'
+        });
+    }
+</script>
+<script>
+    var c;				//实例化Cropper对象
+    var options = {		//Cropper实例化参数
+        aspectRatio: 16 / 9,
+        viewMode:1,
+        crop:function (e) {
+
+        }
+    };
+    info();
+    function info(){
+        var imgFile = document.querySelector("#imgFile");		//上传图片文件
+        var imgCover = document.querySelector("#imgCover");		//显示图片
+        imgFile.onchange = function() {
+            console.log("FileChange !");
+            var f = new FileReader();
+            f.onload = function(e){
+                console.log(e);
+                $("#l-dialog").attr("style","display: block");
+                $(imgCover).attr("src",e.target.result);
+                c = new Cropper(imgCover,options);
+            }
+            f.readAsDataURL(imgFile.files[0]);
+        }
+    }
+    $("#al-crop").click(function(){
+        if(c){
+            var afterImg = c.getCroppedCanvas({
+                imageSmoothingQuality: 'high'
+            }).toDataURL('image/jpeg');
+            var blob = dataURItoBlob(afterImg); // 上一步中的函数
+            var canvas = document.createElement('canvas');
+            var dataURL = canvas.toDataURL('image/jpeg', 0.5);
+            var fd = new FormData(document.forms[0]);
+            fd.append("file", blob);
+            fd.append("handlerType",4);
+            $.post({
+                url:window.config.imgUrl+"/uploadImage",
+                data:fd,
+                cache: false,
+                xhr: function () {
+                    return $.ajaxSettings.xhr();
+                },
+                contentType: false,
+                processData: false,
+                success:function (res) {
+                    console.log(res);
+                    upRoomImg(res)
+                },
+                error:function () {
+                    layer.open({
+                        title: '错误信息'
+                        ,content: '图片上传出错，请联系管理员'
+                    });
+                }
+            })
+            $("#l-dialog").attr("style","display: none");
+            CropperClose();
+        }
+    });
+    $("#al-cancel").on("click",function(){
+        $("#l-dialog").attr("style","display: none")
+        CropperClose();
+    })
+    function CropperClose(){
+        if(c){
+            c.clear();
+            c.destroy();
+            c = null;			//销毁Cropper对象
+            $(imgCover).attr("src","");		//清空base64图片
+            $(imgFile).val("");				//清空InputFile的值
+            console.log('Cropper Cleared!');//log
+        }
+    }
+    function dataURItoBlob(base64Data) {
+        var byteString;
+        if (base64Data.split(',')[0].indexOf('base64') >= 0)
+            byteString = atob(base64Data.split(',')[1]);
+        else{
+            byteString = unescape(base64Data.split(',')[1]);
+        }
+        var mimeString = base64Data.split(',')[0].split(':')[1].split(';')[0];
+        var ia = new Uint8Array(byteString.length);
+        for (var i = 0; i < byteString.length; i++) {
+            ia[i] = byteString.charCodeAt(i);
+        }
+        return new Blob([ia], {type:mimeString});
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+syntax = "proto3";
+
+
+import "Constant.proto";
+option java_multiple_files = false;
+option java_package = "com.donglaistd.jinli";
+
+message RoomManagementRequest {
+    string roomId = 1;
+    oneof request {
+        MuteAllConnectLiveRequest muteAllConnectLiveRequest = 2;
+        UnMuteAllConnectLiveRequest unMuteAllConnectLiveRequest = 3;
+        ApplyConnectLiveRequest applyConnectLiveRequest = 4;
+        QueryConnectLiveListRequest queryConnectLiveListRequest = 5;
+        StartConnectLiveRequest startConnectLiveRequest = 6;
+        MuteConnectLiveRequest muteConnectLiveRequest = 7;
+        UnMuteConnectLiveRequest unMuteConnectLiveRequest = 8;
+        RemoveConnectLiveRequest removeConnectLiveRequest = 9;
+        MuteChatRequest muteChatRequest = 11;
+        UnMuteChatRequest unMuteChatRequest = 12;
+        AddAdministratorRequest addAdministratorRequest = 13;
+        RevokeAdministratorRequest revokeAdministratorRequest = 14;
+        ReportRequest reportRequest = 15;
+        QueryUserAudienceInfoRequest  queryUserAudienceInfoRequest= 16;
+    }
+}
+
+message RoomManagementReply {
+    oneof reply {
+        MuteAllConnectLiveReply muteAllConnectLiveReply = 1;
+        UnMuteAllConnectLiveReply UnMuteAllConnectLiveReply = 2;
+        ApplyConnectLiveReply applyConnectLiveReply = 3;
+        QueryConnectLiveListReply queryConnectLiveListReply = 4;
+        StartConnectLiveReply startConnectLiveReply = 5;
+        MuteConnectLiveReply muteConnectLiveReply = 6;
+        UnMuteConnectLiveReply unMuteConnectLiveReply = 7;
+        RemoveConnectLiveReply removeConnectLiveReply = 8;
+        MuteChatReply muteChatReply = 10;
+        UnMuteChatReply unMuteChatReply = 11;
+        AddAdministratorReply addAdministratorReply = 12;
+        RevokeAdministratorReply revokeAdministratorReply = 13;
+        ReportReply reportReply = 14;
+        QueryUserAudienceInfoReply queryUserAudienceInfoReply = 15;
+    }
+}
+message MuteAllConnectLiveRequest {
+}
+message MuteAllConnectLiveReply {
+}
+message UnMuteAllConnectLiveRequest {
+}
+message UnMuteAllConnectLiveReply {
+}
+message ApplyConnectLiveRequest {
+}
+
+message ApplyConnectLiveReply {
+}
+message QueryConnectLiveListRequest {
+}
+message QueryConnectLiveListReply {
+    string currentConnectLiveUserId = 1;
+    bool muteAll = 2;
+    repeated Audience summary = 3;
+    repeated Audience audience = 4;
+    repeated Audience vipChairs = 5;
+    repeated Audience muteChatRecords = 6;
+}
+message Audience {
+    string userId = 1;
+    string displayName = 2;
+    string avatarUrl = 3;
+    int32 level = 4;
+    bool isMute = 5;
+    bool isMuteChat = 6;
+    bool isManager = 7;
+    VipType vipId = 8;
+    MuteProperty muteChatProperty = 9;
+    string muteOptUserDisplayName = 10;
+    PlatformType platformType = 11;
+}
+message MuteProperty{
+    MuteReason muteReason = 1;
+    MuteTimeType muteTime = 2;
+    string muteEndTime = 3;
+    MuteIdentity muteOptIdentity = 4;
+    string muteOptUserId = 5;
+    MuteArea muteArea = 6;
+}
+message StartConnectLiveRequest {
+    string userId = 1;
+}
+message StartConnectLiveReply {
+}
+message MuteConnectLiveRequest {
+    string userId = 1;
+}
+message MuteConnectLiveReply {
+}
+message UnMuteConnectLiveRequest {
+    string userId = 1;
+}
+message UnMuteConnectLiveReply {
+}
+message RemoveConnectLiveRequest {
+    string userId = 1;
+}
+message RemoveConnectLiveReply {
+}
+
+message MuteChatRequest {
+    string userId = 1;
+    MuteTimeType muteTime = 2;
+    MuteReason muteReason = 3;
+}
+message MuteChatReply {
+}
+message UnMuteChatRequest {
+    string userId = 1;
+}
+message UnMuteChatReply {
+}
+message AddAdministratorRequest {
+    string userId = 1;
+}
+message AddAdministratorReply {
+}
+message RevokeAdministratorRequest {
+    string userId = 1;
+}
+message RevokeAdministratorReply {
+}
+message ReportRequest{
+    ViolationType type = 1;
+    string content = 2;
+    string contact = 3;
+}
+message ReportReply{
+    string reportId = 1;
+}
+
+message QueryUserAudienceInfoRequest{
+    string userId = 1;
+}
+
+message QueryUserAudienceInfoReply{
+    Audience userAudienceInfo = 1;
+}

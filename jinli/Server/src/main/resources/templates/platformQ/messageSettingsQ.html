@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/config/static/layui/css/layui.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/mainCss.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/InputAnimation.css}">
+    <script type="text/javascript" th:src="@{/config/static/js/jq.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/layui/layui.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/js/config.js}"></script>
+    <style type="text/css">
+        .titleMsg>h2,.titleMsg>div{
+            float: left;
+        }
+        .titleMsg>div{
+            margin-top: 38px;
+        }
+        .bg{
+            background-color: #fff;
+            padding: 10px 30px;
+            margin-top: 30px;
+        }
+        .formStyle>div>div>div{
+            line-height: 36px;
+        }
+        .firstEle{
+            margin-left: 20px;
+        }
+        .imgBox{
+            overflow: hidden;
+            padding: 20px;
+        }
+        #loadHtml{
+            padding: 0 30px;
+        }
+        .imgBox>div{
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            float: left;
+            margin-left: 30px;
+            margin-bottom: 30px;
+        }
+        .layui-layer-dialog{
+            width:auto!important;
+        }
+        @media screen and (max-width: 1000px) {
+            .firstEle{
+                margin-left: 0;
+            }
+        }
+
+        .layui-elem-field{
+            border-color: #5f8fe2;
+        }
+        .titleBox{
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        .titleBox>ul{
+            background-color: rgb(255, 255, 255);
+            color: #535353;
+            display: inline-block;
+            border-bottom:1px solid #ffffff !important;;
+        }
+    </style>
+</head>
+<body>
+<div class="bgcSidebar"></div>
+<div class="container app">
+    <header>
+        <!--头部导航-->
+        <ul class="layui-nav overStyle" lay-filter="">
+            <li class="logoOver"><div class="logoBox"><img class="logo" th:src="@{/config/static/img/default_logo.png}"></div><div class="logoText">锦鲤直播</div></li>
+            <!--<li class="layui-nav-item toItemChange" data-path="index"><a href="javascript:void(0);" >首页</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="LiveUserExamine"><a href="javascript:void(0);" >主播管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="reportList"><a href="javascript:void(0);" >举报管理</a></li>-->
+            <!--<li class="layui-nav-item layui-this  toItemChange" data-path="personDiaryList"><a href="javascript:void(0);">动态审核</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="guessList"><a href="javascript:void(0);">竞猜管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="backOfficeManagement"><a href="javascript:void(0);">后台账号管理</a></li>-->
+            <li class="userMsg">
+                <div>
+                    <span>欢迎您：</span>
+                    <span id="loginName">admin</span>
+                </div>
+                <div>
+                    <a href="/logout"><button class="layui-btn layui-btn-danger" id="logout" >退出</button></a>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <main class="mainStyle">
+        <!--侧边栏-->
+        <div class="sidebar">
+            <div>
+                <ul class="layui-nav layui-nav-tree overStyle leftSide" id="sidebar" lay-filter="test">
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="personDiaryList" href="javascript:void(0);">动态审核列表</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="personDiaryReject" href="javascript:void(0);">未通过列表</a></li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="personDiaryApproved" href="javascript:void(0);">通过列表</a></li>-->
+                </ul>
+                <div class="mainBox clearfix" id="loadHtml">
+                    <div class="titleMsg clearfix" style="margin-bottom: 40px">
+                        <div>
+                            <button type="button" class="layui-btn layui-btn-primary" onclick="window.history.back(-1)">
+                                <i class="layui-icon">&#xe603;</i>
+                            </button>
+                        </div>
+                        <h2 class="headMsg">直播公告</h2>
+                    </div>
+                    <div>
+                        <div class="bg">
+                            <div class="titleBox layui-tab layui-tab-brief"  lay-filter="docDemoTabBrief">
+                                <ul class="layui-tab-title">
+                                    <li class="titleClick layui-this" data-value="0">全部</li>
+                                    <li class="titleClick" data-value="1">锦鲤平台</li>
+                                    <li class="titleClick" data-value="2">T平台</li>
+                                    <li class="titleClick" data-value="3">Q平台</li>
+                                </ul>
+                            </div>
+                            <form class="layui-form layui-form-pane formStyle" action="">
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">当前信息</label>
+                                    <div class="layui-input-block layui-row">
+                                        <div style="padding: 5px 10px;" id="nowMsg">
+                                            锦鲤直播倡导绿色健康的直播环境，平台将对直播内容进行巡查，不得出现违法、侵权、低俗、非法广告、赌博等不良内容，不得推广其他网站以及个人联系方式，一经发现均会被处理并追责。直播间主播以及用户仅代表个人观点，不代表官方意见，请各位用户不要随意添加他人微信等联系方式，谨防欺诈！如有问题请与客服联系。
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item" pane>
+                                    <label class="layui-form-label">修改内容</label>
+                                    <div class="layui-input-block formItemStyle clearfix">
+                                        <textarea name="desc" rows="5" id="message"  placeholder="请输入新的聊天框消息" class="layui-textarea" onkeyup="value.length > 80?value = value.slice(0, 80):value"></textarea>
+                                    </div>
+                                </div>
+                                <button class="layui-btn layui-btn-normal" type="button" id="save">发送</button>
+                                <button class="layui-btn" type="button" id="clear">清空消息</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="mtBox"></div>
+                </div>
+                <div class="clearFloat"></div>
+            </div>
+        </div>
+    </main>
+</div>
+<script type="text/javascript" th:src="@{/config/static/js/mainMethod.js}"></script>
+<script th:inline="javascript">
+    
+    
+    var platform = 0
+
+    $(".titleClick").on("click",function () {
+        platform = this.getAttribute("data-value")
+        //初始化
+        initMessage()
+    })
+    initMessage()
+    function initMessage() {
+        $.get({
+            url:window.ioApi.backOfficeMessage.platformMessage,
+            data:{
+                platform:platform
+            },
+            success:function (res) {
+                console.log(res.systemTipMessage);
+                $("#nowMsg").text(res.systemTipMessage)
+            }
+        })
+    }
+
+
+    $("#save").on('click',function () {
+        var message = $("#message").val()
+        if(message.length > 80) {
+            layer.msg("直播公告长度不得超过80");
+            return;
+        }
+        $.get({
+            url:window.ioApi.backOfficeMessage.tipsMessage,
+            data:{
+                message,
+                platform:platform
+            },
+            success:function (res) {
+                if(res === "success"){
+                    layer.open({
+                        title: '提示'
+                        ,content:"设置成功",
+                        btn: ['确认']
+                        ,btn1: function(index, layero){
+                            layer.closeAll();
+                            initMessage()
+                            $("#message").text("")
+                        },
+                        cancel: function(layero,index){
+                            layer.closeAll();
+                            initMessage()
+                            $("#message").text("")
+                        }
+                    });
+                }
+            }
+        })
+    })
+    $("#clear").on("click",function () {
+        $("#message").text("")
+    })
+</script>
+</body>
+</html>

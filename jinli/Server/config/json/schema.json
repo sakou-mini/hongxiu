@@ -1,0 +1,225 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "giftLists": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "price": {
+            "type": "integer",
+            "exclusiveMinimum": 0
+          },
+          "priceType": {
+            "type": "integer",
+            "exclusiveMinimum": 0,
+            "exclusiveMaximum": 3
+          },
+          "name": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
+          "className": {
+            "type": "string",
+            "enum": [
+              "basic",
+              "fancy"
+            ]
+          },
+		  "animationRequirement": {
+            "type": "integer",
+            "exclusiveMinimum": 0
+          }
+        },
+        "required": [
+          "id",
+          "price",
+          "priceType",
+          "name",
+          "image",
+          "className",
+		  "animationRequirement"
+        ]
+      }
+    },
+    "GiftSelectNums": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "num": {
+            "type": "integer",
+            "exclusiveMinimum": 0
+          },
+          "str": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "dailyTaskConfigs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "taskId": {
+            "type": "integer"
+          },
+          "description": {
+            "type": "string"
+          },
+          "condition": {
+            "type": "object",
+            "properties": {
+              "conditionType": {
+                "type": "string"
+              },
+              "amount":{
+                "type": "integer",
+                "exclusiveMinimum": 0
+              }
+            },
+            "required": [
+              "conditionType",
+              "amount"
+            ]
+          },
+          "reward": {
+            "type": "array",
+            "items":{
+              "type": "object",
+              "properties": {
+                "rewardType": {
+                  "type": "integer",
+                  "exclusiveMinimum": 0,
+                  "exclusiveMaximum": 4
+                },
+                "amount": {
+                  "type": "integer",
+                  "exclusiveMinimum": 0
+                }
+              },
+              "required": [
+                "rewardType",
+                "amount"
+              ]
+            }
+          },
+          "jumpTarget": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "taskId",
+          "description",
+          "condition",
+          "reward",
+          "jumpTarget"
+        ]
+      }
+    },
+    "signInTaskConfigs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "taskId": {
+            "type": "integer"
+          },
+          "reward": {
+            "type": "array",
+            "items":{
+              "type": "object",
+              "properties": {
+                "rewardType": {
+                  "type": "integer",
+                  "exclusiveMinimum": 0,
+                  "exclusiveMaximum": 4
+                },
+                "amount": {
+                  "type": "integer",
+                  "exclusiveMinimum": 0
+                }
+              },
+              "required": [
+                "rewardType",
+                "amount"
+              ]
+            }
+          }
+        },
+        "required": [
+          "taskId",
+          "reward"
+        ]
+      }
+    },
+    "permanentTaskConfigs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "taskId": {
+            "type": "integer"
+          },
+          "description": {
+            "type": "string"
+          },
+          "condition": {
+            "type": "object",
+
+            "properties": {
+              "conditionType": {
+                "type": "string"
+              },
+              "amount":{
+                "type": "integer",
+                "exclusiveMinimum": 0
+              }
+            },
+            "required": [
+              "conditionType",
+              "amount"
+            ]
+          },
+          "reward": {
+            "type": "array",
+            "items":{
+              "type": "object",
+              "properties": {
+                "rewardType": {
+                  "type": "integer",
+                  "exclusiveMinimum": 0,
+                  "exclusiveMaximum": 4
+                },
+                "amount": {
+                  "type": "integer",
+                  "exclusiveMinimum": 0
+                }
+              },
+              "required": [
+                "rewardType",
+                "amount"
+              ]
+            }
+          },
+          "jumpTarget": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "taskId",
+          "description",
+          "condition",
+          "reward"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.xdg_LoadImgBtn{
+    position: relative;
+    display: inline-block;
+    width: 75px;
+    height: 38px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 14px;
+    line-height: 38px;
+    vertical-align: center;
+    border: 1px solid #009688;
+    background-color: #009688;
+    color:#fff;
+    border-radius: 3px;
+    margin-right: 30px;
+}
+.xdg_LoadImgBtn:hover{
+    border: 1px solid #008879;
+    background-color: #008879;
+}
+.xdg_LoadImgBtn input{
+    position: absolute;
+    top:0;
+    left: 0;
+    opacity: 0;
+}
+
+
+#upGuessImg,#upWindowImg{
+    width: 100px;
+    float: left;
+    overflow: hidden;
+}
+
+#liveUserImg,#roomImg{
+    width: 100px;
+    float: left;
+    overflow: hidden;
+}

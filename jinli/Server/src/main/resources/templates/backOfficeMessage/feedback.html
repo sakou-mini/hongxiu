@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/config/static/layui/css/layui.css}" defer="defer">
+    <link rel="stylesheet" th:href="@{/config/static/css/mainCss.css}" defer="defer">
+    <!--<link rel="stylesheet" th:href="@{/config/static/css/InputAnimation.css}">-->
+    <script type="text/javascript" th:src="@{/config/static/js/jq.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/layui/layui.js}"></script>
+    <script type="text/javascript" th:src="@{/config/static/js/config.js}"></script>
+    <style>
+        body{
+            overflow: auto;
+        }
+        .FormStyle{
+            /*height: 60px;*/
+            padding: 0 20px;
+        }
+
+        /*#loadHtml{*/
+        /*width: 1617.55px;*/
+        /*}*/
+        .tabBox{
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .FormItem{
+            position: relative;
+            float: left;
+            margin-right: 20px;
+            margin-left: 0!important;
+        }
+        .selectDate>div{
+            float: left;
+            color: black;
+            line-height: 39px;
+        }
+        .selectDate{
+            overflow: hidden;
+            float: left;
+        }
+        .titleMsg{
+            margin-bottom: 20px;
+        }
+
+        .selectType>div{
+            float: left;
+            color: #000000;
+            line-height: 39px;
+        }
+        .selectType{
+            float: left;
+            margin-right:20px;
+            margin-left: 0;
+        }
+        .buttonStyle{
+            float: left;
+            margin-left: 10px;
+        }
+        .buttonStyle>button{
+            margin-left: 10px;
+        }
+        .selectStyle{
+            width: 100px!important;
+        }
+        input.layui-input.layui-unselect {width:100px}
+        @media screen and (max-width: 1770px) {
+            .clearfix>div{
+                display: block;
+                margin-top: 10px;
+            }
+            .tabBox{
+                margin-top: 30px;
+            }
+        }
+        .layui-table-cell {
+            height:auto;
+            padding:0 8px;
+            font-size:14px;
+            overflow:visible;
+            text-overflow:inherit;
+            white-space:normal;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+<div class="bgcSidebar"></div>
+<div class="container app">
+    <header>
+        <!--头部导航-->
+        <ul class="layui-nav overStyle" lay-filter="">
+            <li class="logoOver"><div class="logoBox"><img class="logo" th:src="@{/config/static/img/default_logo.png}"></div><div class="logoText">锦鲤直播</div></li>
+            <!--<li class="layui-nav-item toItemChange" data-path="index"><a href="javascript:void(0);">首页</a></li>-->
+            <!--<li class="layui-nav-item layui-this  toItemChange" data-path="LiveUserExamine"><a href="javascript:void(0);">主播管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="reportList"><a href="javascript:void(0);">举报管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="personDiaryList"><a href="javascript:void(0);">动态审核</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="guessList"><a href="javascript:void(0);">竞猜管理</a></li>-->
+            <!--<li class="layui-nav-item toItemChange" data-path="backOfficeManagement"><a href="javascript:void(0);">后台账号管理</a></li>-->
+            <li class="userMsg">
+                <div>
+                    <span>欢迎您：</span>
+                    <span id="loginName">admin</span>
+                </div>
+                <div>
+                    <a href="/logout"><button class="layui-btn layui-btn-danger" id="logout" >退出</button></a>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <main class="mainStyle">
+        <!--侧边栏-->
+        <div class="sidebar">
+            <div>
+                <ul class="layui-nav layui-nav-tree overStyle leftSide" id="sidebar" lay-filter="test">
+                    <!--<li class="layui-nav-item layui-this"><a  class="toItemChange" data-path="liveUserList" href="javascript:void(0);">主播列表</a></li>-->
+                    <!--<li class="layui-nav-item layui-nav-itemed">-->
+                    <!--<a href="javascript:;">主播审核</a>-->
+                    <!--<dl class="layui-nav-child">-->
+                    <!--<dd><a class="toItemChange" data-path="LiveUserExamine" href="javascript:void(0);">主播待审认证</a></dd>-->
+                    <!--<dd><a class="toItemChange" data-path="rejectLiveUser" href="javascript:void(0);">认证未通过</a></dd>-->
+                    <!--<dd><a class="toItemChange" data-path="approvedLiveUser" href="javascript:void(0);">认证已通过</a></dd>-->
+                    <!--</dl>-->
+                    <!--</li>-->
+                    <!--<li class="layui-nav-item"><a  class="toItemChange" data-path="liveUserRoom" href="javascript:void(0);">直播间列表</a></li>-->
+                </ul>
+                <div class="mainBox" id="loadHtml">
+                    <div style="margin-bottom: 30px;">
+                        <h2 class="headMsg">反馈列表</h2>
+                    </div>
+                    <div class="FormStyle">
+                        <div>
+                            <form class="layui-form clearfix">
+                                <div class="selectType layui-input-block">
+                                    <div>状态：</div>
+                                    <div>
+                                        <select  name="city"  lay-verify="required" class="selectStyle" id="violationType">
+                                            <option value="">全部</option>
+                                            <option value="0">已处理</option>
+                                            <option value="1">未处理</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="selectDate">
+                                    <div>提交时间：</div>
+                                    <div><input type="text" class="layui-input" id="test1" readonly style="width: 100px"></div>
+                                    <div>&nbsp;&nbsp;-&nbsp;&nbsp;</div>
+                                    <div><input type="text" class="layui-input" id="test2" readonly style="width: 100px"></div>
+                                </div>
+                                <div class="FormItem">
+                                    <label class="layui-form-label">关键字：</label>
+                                    <div class="layui-input-block">
+                                        <input type="text" name="title" id="room" lay-verify="title" autocomplete="off" placeholder="请输入房间ID" class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="buttonStyle">
+                                    <button class="layui-btn" id="searchBtn" type="button">搜索</button>
+                                    <button class="layui-btn layui-btn-primary" type="button" id="resetBtn">重置</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="tabBox">
+                        <table id="demo" lay-filter="demo"></table>
+                        <!--<table id="tableEl" class="layui-table" lay-filter="demo">-->
+                        <!--<thead>-->
+                        <!--<tr>-->
+                        <!--<th lay-data="{field:'id', width:250}">游戏ID</th>-->
+                        <!--<th lay-data="{field:'displayName'}">昵称</th>-->
+                        <!--<th lay-data="{field:'phoneNumber'}">手机号</th>-->
+                        <!--<th lay-data="{field:'realName'}">真实姓名</th>-->
+                        <!--<th lay-data="{field:'getGameCoin', width:150, sort: true}">所持金币</th>-->
+                        <!--<th lay-data="{width:400, align:'center', toolbar: '#barDemo'}">操作</th>-->
+                        <!--</tr>-->
+                        <!--</thead>-->
+                        <!--</table>-->
+                        <div id="paging"></div>
+                    </div>
+                    <div class="mtBox"></div>
+                </div>
+                <div class="clearFloat"></div>
+            </div>
+        </div>
+    </main>
+</div>
+<script type="text/javascript" th:src="@{/config/static/js/mainMethod.js}"></script>
+<script type="text/javascript" th:inline="javascript" th:src="@{/config/static/js/feedback.js}"></script>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-sm layui-btn-radius layui-btn-danger" lay-event="b">
+        查看用户
+    </a>
+</script>
+
+</body>
+</html>
