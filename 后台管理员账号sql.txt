@@ -1,0 +1,16 @@
+
+%sed% -i s/jinli-video/host.docker.internal/g config\nginx.conf
+%sed% -i s/jinli-game/host.docker.internal/g config\nginx.video.conf
+
+T接口调用账号
+platformAccount
+123456
+
+jinlihqanet
+密码：4omj5WN5gM
+
+
+新后台管理员
+账号 adminjinli
+密码：VJPYVcMsF9
+
